@@ -22,7 +22,7 @@ function App() {
         setUserData(response.results.userInfo);
         navigate("action-plan");
       } else {
-        navigate("supplier-view/action-plan");
+        navigate("home");
       }
     };
     fetchSessionInfo();
