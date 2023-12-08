@@ -1,0 +1,34 @@
+//delete alert box
+.delete-alert-container {
+  @include make-modal;
+  .MuiDialog-paperFullWidth {
+    max-width: 500px;
+    border-radius: 15px;
+  }
+  .alert-container {
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    .alert-description {
+      font-weight: 600;
+      font-size: 1.1rem;
+      line-height: 2;
+    }
+    .alert-btn-wrapper {
+      @include flexCenter;
+      margin-bottom: 15px;
+      .alert-cancel-button {
+        @include buttonStyle-black-outline($width: 30%, $height: 50px);
+      }
+      .alert-confirm-button {
+        @include buttonStyle-red($width: 30%, $height: 50px);
+      }
+      > *:not(:last-child) {
+        margin-right: 45px;
+      }
+    }
+    > *:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+}

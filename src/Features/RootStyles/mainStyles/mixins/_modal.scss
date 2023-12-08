@@ -1,0 +1,66 @@
+@mixin make-modal {
+  z-index: 99;
+  .dialog-header {
+    width: 100%;
+    padding: 0.75rem 24px;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: calc(0.3rem - 1px);
+    border-top-right-radius: calc(0.3rem - 1px);
+    .dialog-title {
+      @include spaceBetween;
+      .title {
+        @include modalHeaderFontStyle;
+        margin-bottom: 0;
+        line-height: 1.5;
+      }
+      .dialog-icon-remove {
+        cursor: pointer;
+        svg {
+          color: #292929;
+        }
+      }
+    }
+  }
+  .dialog-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding: 0.75rem 24px !important;
+    border-top: 1px solid #dee2e6;
+    border-bottom-right-radius: calc(0.3rem - 1px);
+    border-bottom-left-radius: calc(0.3rem - 1px);
+    & > * {
+      margin: 0.25rem;
+    }
+    .dialog-btn {
+      @include buttonStyle-1($width: auto, $height: 40px);
+      text-transform: none;
+      &.disabled {
+        pointer-events: none;
+        background-color: lightgray;
+        border: 1px solid lightgray;
+      }
+    }
+  }
+  .dialog-content {
+    padding: 1rem !important;
+    overflow-y: hidden !important;
+  }
+  .dialog-content-scroll {
+    padding: 1rem !important;
+    overflow-y: auto !important;
+  }
+  .dialog-search-list-scroll-bar {
+    height: 45vh;
+    overflow: overlay;
+    margin-right: -50px;
+  }
+}

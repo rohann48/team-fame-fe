@@ -1,0 +1,32 @@
+@mixin bottom-border-list {
+  .list-item {
+    @include ContentStartTop;
+    cursor: pointer;
+    border-bottom: 1px solid $borderColor;
+    padding: 10px 1.25rem;
+    & > *:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+  .list-selected {
+    background-color: #f7fafc;
+  }
+}
+@mixin search-list {
+  border: 1px solid $borderColor;
+  //  margin: 10px 0;
+  border-top: 0;
+  .search-list-box {
+    @include spaceBetween;
+    padding: 8px 0.9rem;
+    & + .search-list-box {
+      border-top: 1px solid $borderColor;
+    }
+  }
+  .sub-lists-space {
+    padding: 8px 0.9rem;
+    & + .sub-lists-space {
+      border-top: 1px solid $borderColor;
+    }
+  }
+}

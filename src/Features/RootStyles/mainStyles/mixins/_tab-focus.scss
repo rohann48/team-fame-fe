@@ -1,0 +1,22 @@
+/* company profile tab*/
+@mixin tab-company($width: 25%) {
+  display: flex;
+  flex-wrap: wrap;
+  .tab-common {
+    @include make-column($width);
+    background-color: white;
+    color: #8a8a8a;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    @include flexCenter;
+    border: 1px solid #ececec;
+  }
+  .tab-selected {
+    background-color: #eef3ff;
+    color: #2863ff;
+  }
+}

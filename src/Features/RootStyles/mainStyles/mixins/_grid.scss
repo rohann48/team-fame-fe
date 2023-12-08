@@ -1,0 +1,32 @@
+@mixin mainContainer {
+  position: relative;
+  padding-right: 25px;
+  padding-left: 25px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@mixin contentContainer {
+  @include mainContainer;
+  height: calc(100vh - 130px);
+  overflow-y: auto;
+}
+// Creates a wrapper for a series of columns
+@mixin make-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+@mixin make-column($width: 100%) {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  -ms-flex: 0 0 $width;
+  flex: 0 0 $width;
+  max-width: $width;
+  border-radius: 1px;
+}

@@ -1,0 +1,7 @@
+<svg id="Component_402_23" data-name="Component 402 – 23" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <path id="Path_7561" data-name="Path 7561" d="M4,0H26a4,4,0,0,1,4,4V26a4,4,0,0,1-4,4H4a4,4,0,0,1-4-4V4A4,4,0,0,1,4,0Z" fill="rgba(255,255,255,0)"/>
+  <g id="Group_6084" data-name="Group 6084" transform="translate(6 6)">
+    <path id="Path_1479" data-name="Path 1479" d="M0,0H18V18H0Z" fill="none"/>
+    <path id="Icon_feather-filter" data-name="Icon feather-filter" d="M18.19,4.5H3l6.076,7.185v4.967l3.038,1.519V11.685Z" transform="translate(-1.595 -2.335)" fill="none" stroke="#667286" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

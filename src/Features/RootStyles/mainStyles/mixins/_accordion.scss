@@ -1,0 +1,33 @@
+@mixin make-accordion {
+  border: 1px solid $borderColor;
+  border-radius: 2px;
+  .accordion_button {
+    box-shadow: none;
+    &:before {
+      display: none;
+    }
+    &.Mui-expanded {
+      margin: auto;
+    }
+    & + .accordion_button {
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+  .accordion_summary {
+    min-height: 40px;
+    &.Mui-expanded {
+      min-height: 56px;
+      background: #f7fafc;
+    }
+    .MuiAccordionSummary-content {
+      margin: 0;
+      &.Mui-expanded {
+        margin: auto;
+      }
+    }
+  }
+  .accordion_detail {
+    padding: 0;
+    display: block;
+  }
+}

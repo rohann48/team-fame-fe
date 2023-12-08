@@ -1,0 +1,27 @@
+@mixin badge(
+  $background: $successTextColor,
+  $color: white,
+  $width: 25%,
+  $height: 30px
+) {
+  background-color: $background;
+  color: $color;
+  width: $width;
+  height: $height;
+  @include flexCenter;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0 10px;
+}
+//understand, location add tag
+@mixin badge-green($width: fit-content) {
+  @include badge(
+    $background: $primaryColor,
+    $color: white,
+    $width: $width,
+    $height: 30px
+  );
+}

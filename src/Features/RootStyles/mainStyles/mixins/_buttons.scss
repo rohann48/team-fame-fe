@@ -1,0 +1,165 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+@mixin buttonStyle_1_no_hover(
+  $width: auto,
+  $height: auto,
+  $radius: 5px,
+  $backgroundColor,
+  $color,
+  $hoverColor: "none",
+  $fontSize: "12px"
+) {
+  @include flexCenter;
+  background-color: $backgroundColor;
+  border-radius: $radius;
+  color: $color;
+  width: $width;
+  height: $height;
+  padding: 10px 20px;
+  outline: none;
+  text-decoration: none;
+  font-size: $fontSize;
+  cursor: pointer;
+  border: 1px solid $color;
+  &:hover {
+    background-color: $hoverColor;
+    color: $hoverColor;
+    border: 1px solid $hoverColor;
+  }
+  &:focus {
+    border: 1px solid $primaryColor;
+    box-shadow: none;
+    background-color: white;
+    color: $primaryColor;
+  }
+}
+@mixin buttonStyle-1($width: auto, $height: auto, $radius: 5px) {
+  @include flexCenter;
+  @include buttonFont;
+  background-color: $primaryColor;
+  border-radius: 5px;
+  color: white;
+  width: $width;
+  height: $height;
+  padding: 10px 20px;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid $primaryColor;
+  &:hover {
+    background-color: white;
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
+  }
+  &:focus {
+    border: 1px solid $primaryColor;
+    box-shadow: none;
+    background-color: white;
+    color: $primaryColor;
+  }
+}
+@mixin buttonStyle-2($width: auto, $height: auto, $radius: 5px) {
+  @include flexCenter;
+  @include buttonFont;
+  background-color: white;
+  color: $primaryColor;
+  border: 1px solid $primaryColor;
+  width: $width;
+  height: $height;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: $radius;
+  // margin:0px 15px;
+  cursor: pointer;
+  &:hover {
+    background-color: $primaryColor;
+    color: white;
+    border: 1px solid $primaryColor;
+  }
+  &:focus {
+    border: 1px solid $primaryColor;
+    box-shadow: none;
+    background-color: white;
+    color: $primaryColor;
+  }
+}
+@mixin buttonStyle-red($width: auto, $height: auto, $radius: 5px) {
+  @include flexCenter;
+  @include buttonFont;
+  background-color: #eb5b0f;
+  border-radius: $radius;
+  color: white;
+  width: $width;
+  height: $height;
+  padding: 10px 20px;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #eb5b0f;
+  &:hover {
+    background-color: white;
+    color: #eb5b0f;
+    border: 1px solid #eb5b0f;
+  }
+  &:focus {
+    border: 1px solid #eb5b0f;
+    box-shadow: none;
+    background-color: white;
+    color: #eb5b0f;
+  }
+}
+@mixin buttonStyle-black-outline($width: auto, $height: auto, $radius: 5px) {
+  @include flexCenter;
+  @include buttonFont;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  width: $width;
+  height: $height;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: $radius;
+  // margin:0px 15px;
+  cursor: pointer;
+  &:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+  }
+  &:focus {
+    border: 1px solid black;
+    box-shadow: none;
+    background-color: white;
+    color: black;
+  }
+}
+@mixin buttonStyle-disabled-1($width: auto, $height: auto, $radius: 5px) {
+  @include flexCenter;
+  @include buttonFont;
+  background-color: #eafaf5;
+  color: $primaryColor;
+  border: 1px solid $primaryColor;
+  width: $width;
+  height: $height;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: $radius;
+  // margin:0px 15px;
+  cursor: not-allowed;
+}
+@mixin buttonStyle-disabled-2($width: auto, $height: auto, $radius: 5px) {
+  @include flexCenter;
+  @include buttonFont;
+  background-color: grey;
+  color: white;
+  width: $width;
+  height: $height;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: $radius;
+  // margin:0px 15px;
+  cursor: not-allowed;
+  pointer-events: none;
+}

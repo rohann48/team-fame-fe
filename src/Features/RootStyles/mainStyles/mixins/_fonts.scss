@@ -1,0 +1,46 @@
+/*content top navigation font*/
+@mixin navFont {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+@mixin buttonFont {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+@mixin labelFont {
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+@mixin inputFont {
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: black;
+}
+@mixin cardValueFont {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+@mixin modalHeaderFontStyle {
+  font-size: 15px !important;
+  text-transform: uppercase;
+  font-weight: 700 !important;
+  color: #292929;
+}
+@mixin pageHeaderFontStyle {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: black;
+}
+@mixin breadcrumbFontStyle {
+  font-size: 0.7rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: black;
+  .active {
+    color: #0f70eb;
+  }
+}

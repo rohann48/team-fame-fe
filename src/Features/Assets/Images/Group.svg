@@ -1,0 +1,13 @@
+<svg id="Group_3513" data-name="Group 3513" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+  <circle id="Ellipse_2686" data-name="Ellipse 2686" cx="19" cy="19" r="19" fill="#e5e8f9"/>
+  <g id="Group_9141" data-name="Group 9141" transform="translate(10.5 8.5)">
+    <g id="Ellipse_2945" data-name="Ellipse 2945" transform="translate(3)" fill="none" stroke="#2863ff" stroke-width="2">
+      <circle cx="5.5" cy="5.5" r="5.5" stroke="none"/>
+      <circle cx="5.5" cy="5.5" r="4.5" fill="none"/>
+    </g>
+    <g id="Rectangle_5323" data-name="Rectangle 5323" transform="translate(0 10)" fill="none" stroke="#2863ff" stroke-width="2">
+      <path d="M4,0h9a4,4,0,0,1,4,4v7a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V4A4,4,0,0,1,4,0Z" stroke="none"/>
+      <path d="M4,1h9a3,3,0,0,1,3,3v6a0,0,0,0,1,0,0H1a0,0,0,0,1,0,0V4A3,3,0,0,1,4,1Z" fill="none"/>
+    </g>
+  </g>
+</svg>

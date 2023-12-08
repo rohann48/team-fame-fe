@@ -1,0 +1,22 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16.x
+    commands:
+      - echo Installing source npm dependencies
+      - npm install -f
+  pre_build:
+    commands:
+      - echo Install complete, Build started on 'date'
+  build:
+    commands:
+      - echo Build started on 'date'
+      - npm run build
+      - echo Build finished, Moving build to S3
+  post_build:
+    commands:
+      - echo Build completed on 'date'
+artifacts:
+  files:
+    - "build/**/*"
