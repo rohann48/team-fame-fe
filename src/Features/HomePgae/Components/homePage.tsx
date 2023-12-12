@@ -226,7 +226,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <div className="home-testimonial-cover">testimonial</div>
+        <div className="home-testimonial-cover">testissssmonial</div>
         <div className="home-videos-and-news-cover">vid/news</div>
         <div className="home-join-community-cover">join</div>
         <div className="home-footer-cover">footer</div>
