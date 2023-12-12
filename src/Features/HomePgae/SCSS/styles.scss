@@ -1,0 +1,443 @@
+.home-page-container {
+  width: 100%;
+  height: 100%;
+  .home-page-cover {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 6px;
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #c1b8b8;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .home-revolution-logo-cover {
+      width: 100%;
+      height: 80%;
+      background-image: url("../../Assets/Images/logoBackground.svg");
+      background-size: cover;
+      .logo-and-btn-cover {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .logo-img {
+          opacity: 0.8;
+        }
+        .contact-us-btn {
+          color: #bd9255;
+          outline: none;
+          padding: 10px;
+          font-size: 16px;
+          border-radius: 25px;
+          border: 1px solid #bd9255;
+          background-color: transparent;
+          width: 142px;
+          height: 40px;
+          cursor: pointer;
+          text-transform: uppercase;
+          &:hover {
+            color: white;
+            background-color: #bd9255;
+          }
+        }
+      }
+    }
+    .home-four-icons-cover {
+      width: 100%;
+      height: 25%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background-color: #272727;
+      .education-logo-cover {
+        position: relative;
+        cursor: pointer;
+        .education-logo {
+          background-color: transparent;
+        }
+        .img-description {
+          position: absolute;
+          font-size: 50px;
+          font-weight: 500;
+          color: #bd9255;
+          transform: translate(-27%, -180%);
+          visibility: hidden;
+          opacity: 0;
+          transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        &:hover {
+          .education-logo {
+            opacity: 0.3 !important;
+          }
+          .img-description {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+      .sports-logo-cover {
+        position: relative;
+        cursor: pointer;
+        .sports-logo {
+          background-color: transparent;
+        }
+        .img-description {
+          position: absolute;
+          font-size: 50px;
+          font-weight: 500;
+          color: #bd9255;
+          transform: translate(-5%, -178%);
+          visibility: hidden;
+          opacity: 0;
+          transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        &:hover {
+          .sports-logo {
+            opacity: 0.3 !important;
+          }
+          .img-description {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+      .spirituality-logo-cover {
+        position: relative;
+        cursor: pointer;
+        .spirituality-logo {
+          background-color: transparent;
+        }
+        .img-description {
+          position: absolute;
+          font-size: 50px;
+          font-weight: 500;
+          color: #bd9255;
+          transform: translate(-22%, -180%);
+          visibility: hidden;
+          opacity: 0;
+          transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        &:hover {
+          .spirituality-logo {
+            opacity: 0.3 !important;
+          }
+          .img-description {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+      .Politics-logo-cover {
+        position: relative;
+        cursor: pointer;
+        .Politics-logo {
+          background-color: transparent;
+        }
+        .img-description {
+          position: absolute;
+          font-size: 50px;
+          font-weight: 500;
+          color: #bd9255;
+          transform: translate(3%, -180%);
+          visibility: hidden;
+          opacity: 0;
+          transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        &:hover {
+          .Politics-logo {
+            opacity: 0.3 !important;
+          }
+          .img-description {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .home-about-us-cover {
+      width: 100%;
+      height: 30%;
+      background-color: #272727;
+      padding: 2%;
+      display: flex;
+      .about-us-header {
+        font-size: 83px;
+        font-weight: 600;
+        color: #bd9255;
+        border-top: 2px solid #bd9255;
+        .us-text {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .about-us-description {
+        font-size: 16px;
+        font-weight: 400;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        line-height: 25px;
+        padding: 1% 5%;
+        border-top: 2px solid #bd9255;
+      }
+    }
+    .home-sponser-cover {
+      width: 100%;
+      height: 15%;
+      text-align: center;
+      background-color: rgb(0, 255, 102);
+    }
+    .home-mission-cover {
+      width: 100%;
+      height: 65%;
+      display: flex;
+      background-color: #272727;
+      padding: 1%;
+      .mission-left-image-cover {
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        .mission-img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .mission-right-content-cover {
+        width: 50%;
+        background-color: #ffffff;
+        .mission-header-text {
+          font-size: 16px;
+          font-weight: 500;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 10%;
+          color: #bd9255;
+        }
+        .flower-horizontal-img-cover {
+          width: 100%;
+          height: 8%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .mission-content-cover {
+          width: 100%;
+          height: 82%;
+          display: flex;
+          .inverted-comma-img-cover {
+            width: 10%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+          }
+          .mission-header-content-cover {
+            width: 80%;
+            .mission-header {
+              width: 100%;
+              height: 45%;
+              font-weight: 500;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 50px;
+              flex-direction: column;
+              color: #bd9255;
+            }
+            .mission-content {
+              width: 100%;
+              height: 55%;
+              font-size: 16px;
+              font-weight: 400;
+              color: #bd9255;
+              word-break: break-word;
+            }
+          }
+          .comma-img-cover {
+            width: 10%;
+            padding-top: 16%;
+          }
+        }
+      }
+    }
+    .home-vision-cover {
+      width: 100%;
+      height: 80%;
+      background-image: url("../../Assets//Images/teamGroupPic.svg");
+      background-size: cover;
+      .vission-header {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #bd9255;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+      .vission-description {
+        color: #ffffff;
+        font-size: 150px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 90%;
+      }
+    }
+    .home-events-cover {
+      width: 100%;
+      height: 70%;
+      background-image: url("../../Assets/Images/eventBackground.svg");
+      background-size: cover;
+      .event-title {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 35px;
+        font-weight: 600;
+        color: #bd9255;
+        text-transform: capitalize;
+      }
+      .cards-cover {
+        width: 100%;
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .cards {
+          background-color: #000000;
+          width: 359px;
+          height: 490px;
+          display: flex;
+          .card-left-cover {
+            width: 5%;
+            overflow: hidden;
+            height: 100%;
+            .card-label-side-img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .card-right-cover {
+            width: 95%;
+            height: 100%;
+            padding: 1rem;
+            .day {
+              font-size: 14px;
+              font-weight: 400;
+              background-color: #bd9255;
+              color: #000000;
+              padding: 10px;
+              width: 130px;
+              height: 5%;
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
+              display: flex;
+              align-items: center;
+              justify-content: start;
+            }
+            .marathon-img-cover {
+              width: 100%;
+              height: 30%;
+              object-fit: cover;
+              overflow: hidden;
+              .marathon-img {
+                width: 100%;
+              }
+            }
+            .marathon-header {
+              font-size: 22px;
+              color: #ffffff;
+              font-weight: 400;
+              height: 10%;
+            }
+            .date-cover {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              height: 10%;
+
+              .date {
+                font-size: 14px;
+                font-weight: 400;
+                color: #ffffff;
+                text-transform: uppercase;
+              }
+            }
+            .time-cover {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              height: 10%;
+
+              .time {
+                font-size: 14px;
+                font-weight: 400;
+                color: #ffffff;
+                text-transform: uppercase;
+              }
+            }
+            .location-cover {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              height: 10%;
+
+              .location {
+                font-size: 14px;
+                font-weight: 400;
+                color: #ffffff;
+                text-transform: uppercase;
+              }
+            }
+            .contact-us-cover {
+              height: 10%;
+              .contact-us-btn {
+                width: 92px;
+                height: 40px;
+                color: #ffffff;
+                outline: none;
+                border: none;
+                background-color: #2b2b2b;
+                font-size: 14px;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+      }
+    }
+    .home-testimonial-cover {
+      width: 100%;
+      height: 5%;
+      background-color: rgb(193, 190, 168);
+    }
+    .home-videos-and-news-cover {
+      width: 100%;
+      height: 15%;
+      background-color: rgb(179, 75, 75);
+    }
+    .home-join-community-cover {
+      width: 100%;
+      height: 2.5%;
+      background-color: rgb(225, 141, 141);
+    }
+    .home-footer-cover {
+      width: 100%;
+      height: 2.5%;
+      background-color: rgb(93, 196, 109);
+    }
+  }
+}

@@ -1,0 +1,541 @@
+.home-page-container {
+  width: 100%;
+  height: 100%;
+}
+.home-page-container .home-page-cover {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+.home-page-container .home-page-cover::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+.home-page-container .home-page-cover::-webkit-scrollbar-thumb {
+  background: #c1b8b8;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.home-page-container .home-page-cover .home-revolution-logo-cover {
+  width: 100%;
+  height: 80%;
+  background-image: url("../../Assets/Images/logoBackground.svg");
+  background-size: cover;
+}
+.home-page-container .home-page-cover .home-revolution-logo-cover .logo-and-btn-cover {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.home-page-container .home-page-cover .home-revolution-logo-cover .logo-and-btn-cover .logo-img {
+  opacity: 0.8;
+}
+.home-page-container .home-page-cover .home-revolution-logo-cover .logo-and-btn-cover .contact-us-btn {
+  color: #bd9255;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 1px solid #bd9255;
+  background-color: transparent;
+  width: 142px;
+  height: 40px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.home-page-container .home-page-cover .home-revolution-logo-cover .logo-and-btn-cover .contact-us-btn:hover {
+  color: white;
+  background-color: #bd9255;
+}
+.home-page-container .home-page-cover .home-four-icons-cover {
+  width: 100%;
+  height: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #272727;
+}
+.home-page-container .home-page-cover .home-four-icons-cover .education-logo-cover {
+  position: relative;
+  cursor: pointer;
+}
+.home-page-container .home-page-cover .home-four-icons-cover .education-logo-cover .education-logo {
+  background-color: transparent;
+}
+.home-page-container .home-page-cover .home-four-icons-cover .education-logo-cover .img-description {
+  position: absolute;
+  font-size: 50px;
+  font-weight: 500;
+  color: #bd9255;
+  -webkit-transform: translate(-27%, -180%);
+          transform: translate(-27%, -180%);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.home-page-container .home-page-cover .home-four-icons-cover .education-logo-cover:hover .education-logo {
+  opacity: 0.3 !important;
+}
+.home-page-container .home-page-cover .home-four-icons-cover .education-logo-cover:hover .img-description {
+  visibility: visible;
+  opacity: 1;
+}
+.home-page-container .home-page-cover .home-four-icons-cover .sports-logo-cover {
+  position: relative;
+  cursor: pointer;
+}
+.home-page-container .home-page-cover .home-four-icons-cover .sports-logo-cover .sports-logo {
+  background-color: transparent;
+}
+.home-page-container .home-page-cover .home-four-icons-cover .sports-logo-cover .img-description {
+  position: absolute;
+  font-size: 50px;
+  font-weight: 500;
+  color: #bd9255;
+  -webkit-transform: translate(-5%, -178%);
+          transform: translate(-5%, -178%);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.home-page-container .home-page-cover .home-four-icons-cover .sports-logo-cover:hover .sports-logo {
+  opacity: 0.3 !important;
+}
+.home-page-container .home-page-cover .home-four-icons-cover .sports-logo-cover:hover .img-description {
+  visibility: visible;
+  opacity: 1;
+}
+.home-page-container .home-page-cover .home-four-icons-cover .spirituality-logo-cover {
+  position: relative;
+  cursor: pointer;
+}
+.home-page-container .home-page-cover .home-four-icons-cover .spirituality-logo-cover .spirituality-logo {
+  background-color: transparent;
+}
+.home-page-container .home-page-cover .home-four-icons-cover .spirituality-logo-cover .img-description {
+  position: absolute;
+  font-size: 50px;
+  font-weight: 500;
+  color: #bd9255;
+  -webkit-transform: translate(-22%, -180%);
+          transform: translate(-22%, -180%);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.home-page-container .home-page-cover .home-four-icons-cover .spirituality-logo-cover:hover .spirituality-logo {
+  opacity: 0.3 !important;
+}
+.home-page-container .home-page-cover .home-four-icons-cover .spirituality-logo-cover:hover .img-description {
+  visibility: visible;
+  opacity: 1;
+}
+.home-page-container .home-page-cover .home-four-icons-cover .Politics-logo-cover {
+  position: relative;
+  cursor: pointer;
+}
+.home-page-container .home-page-cover .home-four-icons-cover .Politics-logo-cover .Politics-logo {
+  background-color: transparent;
+}
+.home-page-container .home-page-cover .home-four-icons-cover .Politics-logo-cover .img-description {
+  position: absolute;
+  font-size: 50px;
+  font-weight: 500;
+  color: #bd9255;
+  -webkit-transform: translate(3%, -180%);
+          transform: translate(3%, -180%);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.home-page-container .home-page-cover .home-four-icons-cover .Politics-logo-cover:hover .Politics-logo {
+  opacity: 0.3 !important;
+}
+.home-page-container .home-page-cover .home-four-icons-cover .Politics-logo-cover:hover .img-description {
+  visibility: visible;
+  opacity: 1;
+}
+.home-page-container .home-page-cover .home-about-us-cover {
+  width: 100%;
+  height: 30%;
+  background-color: #272727;
+  padding: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.home-page-container .home-page-cover .home-about-us-cover .about-us-header {
+  font-size: 83px;
+  font-weight: 600;
+  color: #bd9255;
+  border-top: 2px solid #bd9255;
+}
+.home-page-container .home-page-cover .home-about-us-cover .about-us-header .us-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.home-page-container .home-page-cover .home-about-us-cover .about-us-description {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 25px;
+  padding: 1% 5%;
+  border-top: 2px solid #bd9255;
+}
+.home-page-container .home-page-cover .home-sponser-cover {
+  width: 100%;
+  height: 15%;
+  text-align: center;
+  background-color: rgb(0, 255, 102);
+}
+.home-page-container .home-page-cover .home-mission-cover {
+  width: 100%;
+  height: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #272727;
+  padding: 1%;
+}
+.home-page-container .home-page-cover .home-mission-cover .mission-left-image-cover {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.home-page-container .home-page-cover .home-mission-cover .mission-left-image-cover .mission-img {
+  width: 100%;
+  height: 100%;
+}
+.home-page-container .home-page-cover .home-mission-cover .mission-right-content-cover {
+  width: 50%;
+  background-color: #ffffff;
+}
+.home-page-container .home-page-cover .home-mission-cover .mission-right-content-cover .mission-header-text {
+  font-size: 16px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 10%;
+  color: #bd9255;
+}
+.home-page-container .home-page-cover .home-mission-cover .mission-right-content-cover .flower-horizontal-img-cover {
+  width: 100%;
+  height: 8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.home-page-container .home-page-cover .home-mission-cover .mission-right-content-cover .mission-content-cover {
+  width: 100%;
+  height: 82%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.home-page-container .home-page-cover .home-mission-cover .mission-right-content-cover .mission-content-cover .inverted-comma-img-cover {
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.home-page-container .home-page-cover .home-mission-cover .mission-right-content-cover .mission-content-cover .mission-header-content-cover {
+  width: 80%;
+}
+.home-page-container .home-page-cover .home-mission-cover .mission-right-content-cover .mission-content-cover .mission-header-content-cover .mission-header {
+  width: 100%;
+  height: 45%;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 50px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #bd9255;
+}
+.home-page-container .home-page-cover .home-mission-cover .mission-right-content-cover .mission-content-cover .mission-header-content-cover .mission-content {
+  width: 100%;
+  height: 55%;
+  font-size: 16px;
+  font-weight: 400;
+  color: #bd9255;
+  word-break: break-word;
+}
+.home-page-container .home-page-cover .home-mission-cover .mission-right-content-cover .mission-content-cover .comma-img-cover {
+  width: 10%;
+  padding-top: 16%;
+}
+.home-page-container .home-page-cover .home-vision-cover {
+  width: 100%;
+  height: 80%;
+  background-image: url("../../Assets//Images/teamGroupPic.svg");
+  background-size: cover;
+}
+.home-page-container .home-page-cover .home-vision-cover .vission-header {
+  width: 100%;
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #bd9255;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.home-page-container .home-page-cover .home-vision-cover .vission-description {
+  color: #ffffff;
+  font-size: 150px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 90%;
+}
+.home-page-container .home-page-cover .home-events-cover {
+  width: 100%;
+  height: 70%;
+  background-image: url("../../Assets/Images/eventBackground.svg");
+  background-size: cover;
+}
+.home-page-container .home-page-cover .home-events-cover .event-title {
+  width: 100%;
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 35px;
+  font-weight: 600;
+  color: #bd9255;
+  text-transform: capitalize;
+}
+.home-page-container .home-page-cover .home-events-cover .cards-cover {
+  width: 100%;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.home-page-container .home-page-cover .home-events-cover .cards-cover .cards {
+  background-color: #000000;
+  width: 359px;
+  height: 490px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-left-cover {
+  width: 5%;
+  overflow: hidden;
+  height: 100%;
+}
+.home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-left-cover .card-label-side-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover {
+  width: 95%;
+  height: 100%;
+  padding: 1rem;
+}
+.home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .day {
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #bd9255;
+  color: #000000;
+  padding: 10px;
+  width: 130px;
+  height: 5%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+.home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .marathon-img-cover {
+  width: 100%;
+  height: 30%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+.home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .marathon-img-cover .marathon-img {
+  width: 100%;
+}
+.home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .marathon-header {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 400;
+  height: 10%;
+}
+.home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .date-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  height: 10%;
+}
+.home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .date-cover .date {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .time-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  height: 10%;
+}
+.home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .time-cover .time {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .location-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  height: 10%;
+}
+.home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .location-cover .location {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .contact-us-cover {
+  height: 10%;
+}
+.home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .contact-us-cover .contact-us-btn {
+  width: 92px;
+  height: 40px;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  background-color: #2b2b2b;
+  font-size: 14px;
+  font-weight: 400;
+}
+.home-page-container .home-page-cover .home-testimonial-cover {
+  width: 100%;
+  height: 5%;
+  background-color: rgb(193, 190, 168);
+}
+.home-page-container .home-page-cover .home-videos-and-news-cover {
+  width: 100%;
+  height: 15%;
+  background-color: rgb(179, 75, 75);
+}
+.home-page-container .home-page-cover .home-join-community-cover {
+  width: 100%;
+  height: 2.5%;
+  background-color: rgb(225, 141, 141);
+}
+.home-page-container .home-page-cover .home-footer-cover {
+  width: 100%;
+  height: 2.5%;
+  background-color: rgb(93, 196, 109);
+}/*# sourceMappingURL=styles.css.map */

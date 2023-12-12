@@ -6,10 +6,12 @@ import {
   faTimes,
   faPaperclip,
   faCircle,
+  faCalendar,
+  faClock,
 } from "@fortawesome/free-solid-svg-icons";
 import { faMessage, faTrashCan } from "@fortawesome/free-regular-svg-icons";
 const icons = {
-  location: <FontAwesomeIcon icon={faLocationDot} size="1x" color="#293C6F" />,
+  location: <FontAwesomeIcon icon={faLocationDot} size="1x" color="#bd9255" />,
   phone: <FontAwesomeIcon icon={faPhone} size="1x" color="#293C6F" />,
   envelope: <FontAwesomeIcon icon={faEnvelope} size="1x" color="#293C6F" />,
   cross: <FontAwesomeIcon icon={faTimes} size="1x" color="black" />,
@@ -19,5 +21,7 @@ const icons = {
   noteBlue: <FontAwesomeIcon icon={faMessage} size="1x" color="blue" />,
   delete: <FontAwesomeIcon icon={faTrashCan} size="1x" color="red" />,
   info: <FontAwesomeIcon icon={faCircle} size="1x" color="red" />,
+  date: <FontAwesomeIcon icon={faCalendar} size="1x" color="#bd9255" />,
+  clock: <FontAwesomeIcon icon={faClock} size="1x" color="#bd9255" />,
 };
 export default icons;

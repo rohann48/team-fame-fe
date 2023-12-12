@@ -1,37 +1,29 @@
 .headernav-container {
-  background-color: white;
+  background-color: #bd9255;
   width: 100%;
   height: 7%;
-  border-bottom: 1px solid #eef3ff;
-  box-shadow: 0 1px 6px #eef3ff;
+  border-bottom: 1px solid #bd9255;
+  box-shadow: 0 1px 6px #bd9255;
   display: flex;
-  .back {
-    height: 100%;
-    width: 6%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-right: 1px solid #eef3ff;
-    cursor: pointer;
-    img {
-      width: 65%;
-    }
-  }
+
   .icon-cover {
-    width: 10%;
+    width: 20%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 1%;
+    background-color: #3e3c3c;
+
     .logo-image {
       width: 94%;
       height: 90%;
     }
   }
   .tool-options-cover {
-    width: 50%;
+    width: 60%;
     height: 100%;
+    display: flex;
+    align-items: center;
 
     .nav-options {
       text-align: center;
@@ -44,7 +36,7 @@
       align-items: center;
       justify-content: center;
       text-decoration: none;
-      color: #8a8a8a;
+      color: #000000;
       font-weight: 600;
       font-size: 16px;
     }
@@ -60,57 +52,16 @@
       font-weight: 600;
       width: 30%;
       height: 100%;
-    }
-    img {
-      height: 40%;
-      width: 20%;
     }
   }
-  .config-notification-container {
-    width: 40%;
+  .loggin-register-container {
+    width: 20%;
     display: flex;
-    justify-content: end;
-    .nav-options {
-      width: 8%;
-      display: flex;
-      align-items: center;
-    }
-    .user-info-active {
-      width: 16%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      .user-info-inner {
-        width: 2.7rem;
-        height: 2.6rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50px;
-        background-color: rgb(252, 239, 224);
-        color: rgb(232, 143, 39);
-        font-weight: bold;
-        font-size: 14px;
-        cursor: pointer;
-      }
-    }
-    .nav-options-selected {
-      color: #2863ff;
-      box-shadow: 0 1px 1px #323a461a;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-bottom: 5px solid #2863ff;
-      font-size: 16px;
-      font-weight: 600;
-      width: 30%;
-      height: 100%;
-    }
-    img {
-      height: 100%;
-      width: 100%;
-    }
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+    gap: 5px;
   }
 }

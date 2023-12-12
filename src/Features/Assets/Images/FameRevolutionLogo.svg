@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="734.632" height="320" viewBox="0 0 734.632 320">
+  <defs>
+    <filter id="evolution" x="121.632" y="131" width="613" height="189" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.62"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_9700" data-name="Group 9700" transform="translate(-35.185 -383)">
+    <text id="Fame" transform="translate(297.184 484)" fill="#bd9255" font-size="100" font-family="Impact"><tspan x="0" y="0">FAME</tspan></text>
+    <g id="Group_9685" data-name="Group 9685" transform="translate(-0.184)">
+      <g transform="matrix(1, 0, 0, 1, 35.37, 383)" filter="url(#evolution)">
+        <text id="evolution-2" data-name="evolution" transform="translate(130.63 278)" fill="#fff" font-size="140" font-family="Impact" opacity="0.8"><tspan x="0" y="0">EVOLUTION</tspan></text>
+      </g>
+      <g id="Group_9682" data-name="Group 9682" transform="translate(-30.72 -37.538)">
+        <g id="Group_9653" data-name="Group 9653" transform="translate(66.088 538.538)">
+          <path id="Path_6803" data-name="Path 6803" d="M6182.088,81.356l35.179-.15V-19.356l3.1-.718v-6.459l-3.1-2.947V-47.715h51.37v7.541l6.769,7.331V-7.156L6256.663,4.8V34.619l17.487,46.587h38.569l-20.937-53.723,18.319-13.8v-61.4s.068-18.472-10.377-26.282-24.319-4.958-24.319-4.958h-93.317Z" transform="translate(-6182.088 79.462)"/>
+          <path id="Path_6804" data-name="Path 6804" d="M6209.119-29.638h15.53l10.389,9.794,11.234-9.794h9.393v-6.136h-15.922l-4.7-6.478V-48.41h25.8" transform="translate(-6173.737 89.056)" fill="none" stroke="#000" stroke-width="1"/>
+          <path id="Path_6805" data-name="Path 6805" d="M6218.8-54.769V-37.79a7.218,7.218,0,0,0,6.722,4.129,6.217,6.217,0,0,0,6.231-4.129V-54.769" transform="translate(-6170.746 87.092)" fill="none" stroke="#000" stroke-width="1"/>
+          <path id="Path_6806" data-name="Path 6806" d="M6238.6-55.343v8.953" transform="translate(-6164.63 86.914)" fill="none" stroke="#000" stroke-width="1"/>
+          <path id="Path_6807" data-name="Path 6807" d="M6209.119-41.8s2.281,3.943,6.288,3.988,6.478-3.988,6.478-3.988" transform="translate(-6173.737 91.099)" fill="none" stroke="#000" stroke-width="1"/>
+          <path id="Path_6808" data-name="Path 6808" d="M6228.874-26.153V-10.1" transform="translate(-6167.634 95.932)" fill="none" stroke="#000" stroke-width="1"/>
+          <path id="Path_6809" data-name="Path 6809" d="M6209.119-13.891H6248.8" transform="translate(-6173.737 99.721)" fill="none" stroke="#bd9255" stroke-width="1"/>
+        </g>
+        <g id="india" transform="translate(101.314 624.362)">
+          <path id="Path_6810" data-name="Path 6810" d="M0,408.749V400H39.37v8.749Z" transform="translate(0 -382.502)" fill="#27ae60"/>
+          <path id="Path_6811" data-name="Path 6811" d="M0,208.749V200H39.37v8.749Z" transform="translate(0 -191.251)" fill="#fff"/>
+          <path id="Path_6812" data-name="Path 6812" d="M0,8.749V0H39.37V8.749Z" fill="#f39c12"/>
+          <g id="Group_9681" data-name="Group 9681" transform="translate(14.836 8.274)">
+            <circle id="Ellipse_2940" data-name="Ellipse 2940" cx="3.828" cy="3.828" r="3.828" transform="translate(1.021 1.022)" fill="#008"/>
+            <circle id="Ellipse_2941" data-name="Ellipse 2941" cx="3.349" cy="3.349" r="3.349" transform="translate(1.5 1.5)" fill="#fff"/>
+            <circle id="Ellipse_2942" data-name="Ellipse 2942" cx="0.67" cy="0.67" r="0.67" transform="translate(4.179 4.179)" fill="#008"/>
+            <g id="Group_9662" data-name="Group 9662" transform="translate(0.706 3.871)">
+              <g id="Group_9654" data-name="Group 9654" transform="translate(4.028 1.227)">
+                <circle id="Ellipse_2943" data-name="Ellipse 2943" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6813" data-name="Path 6813" d="M-2.51,11.716l.115-2.01L-2.51,8.75l-.115.957Z" transform="translate(2.625 -8.617)" fill="#008"/>
+              </g>
+              <g id="Group_9655" data-name="Group 9655" transform="translate(3.968 1.189) rotate(15)">
+                <circle id="Ellipse_2944" data-name="Ellipse 2944" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6814" data-name="Path 6814" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+              <g id="Group_9656" data-name="Group 9656" transform="matrix(0.866, 0.5, -0.5, 0.866, 3.919, 1.136)">
+                <circle id="Ellipse_2945" data-name="Ellipse 2945" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6815" data-name="Path 6815" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+              <g id="Group_9657" data-name="Group 9657" transform="translate(3.886 1.073) rotate(45)">
+                <circle id="Ellipse_2946" data-name="Ellipse 2946" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6816" data-name="Path 6816" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+              <g id="Group_9658" data-name="Group 9658" transform="matrix(0.5, 0.866, -0.866, 0.5, 3.87, 1.003)">
+                <circle id="Ellipse_2947" data-name="Ellipse 2947" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6817" data-name="Path 6817" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+              <g id="Group_9659" data-name="Group 9659" transform="translate(3.873 0.931) rotate(75)">
+                <circle id="Ellipse_2948" data-name="Ellipse 2948" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6818" data-name="Path 6818" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+              <g id="Group_9660" data-name="Group 9660" transform="translate(3.894 0.863) rotate(90)">
+                <circle id="Ellipse_2949" data-name="Ellipse 2949" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6819" data-name="Path 6819" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+              <g id="Group_9661" data-name="Group 9661" transform="translate(3.932 0.802) rotate(105)">
+                <circle id="Ellipse_2950" data-name="Ellipse 2950" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6820" data-name="Path 6820" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+            </g>
+            <g id="Group_9671" data-name="Group 9671" transform="translate(0 0)">
+              <g id="Group_9663" data-name="Group 9663" transform="matrix(-0.5, 0.866, -0.866, -0.5, 4.691, 4.625)">
+                <circle id="Ellipse_2951" data-name="Ellipse 2951" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6821" data-name="Path 6821" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+              <g id="Group_9664" data-name="Group 9664" transform="translate(4.754 4.592) rotate(135)">
+                <circle id="Ellipse_2952" data-name="Ellipse 2952" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6822" data-name="Path 6822" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+              <g id="Group_9665" data-name="Group 9665" transform="matrix(-0.866, 0.5, -0.5, -0.866, 4.824, 4.576)">
+                <circle id="Ellipse_2953" data-name="Ellipse 2953" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6823" data-name="Path 6823" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+              <g id="Group_9666" data-name="Group 9666" transform="translate(4.895 4.579) rotate(165)">
+                <circle id="Ellipse_2954" data-name="Ellipse 2954" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6824" data-name="Path 6824" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+              <g id="Group_9667" data-name="Group 9667" transform="translate(4.964 4.6) rotate(180)">
+                <circle id="Ellipse_2955" data-name="Ellipse 2955" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6825" data-name="Path 6825" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+              <g id="Group_9668" data-name="Group 9668" transform="translate(5.024 4.638) rotate(-165)">
+                <circle id="Ellipse_2956" data-name="Ellipse 2956" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6826" data-name="Path 6826" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+              <g id="Group_9669" data-name="Group 9669" transform="matrix(-0.866, -0.5, 0.5, -0.866, 5.073, 4.691)">
+                <circle id="Ellipse_2957" data-name="Ellipse 2957" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6827" data-name="Path 6827" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+              <g id="Group_9670" data-name="Group 9670" transform="translate(5.106 4.754) rotate(-135)">
+                <circle id="Ellipse_2958" data-name="Ellipse 2958" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6828" data-name="Path 6828" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+            </g>
+            <g id="Group_9680" data-name="Group 9680" transform="translate(3.311 0.136)">
+              <g id="Group_9672" data-name="Group 9672" transform="matrix(-0.5, -0.866, 0.866, -0.5, 1.812, 4.688)">
+                <circle id="Ellipse_2959" data-name="Ellipse 2959" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6829" data-name="Path 6829" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+              <g id="Group_9673" data-name="Group 9673" transform="translate(1.809 4.759) rotate(-105)">
+                <circle id="Ellipse_2960" data-name="Ellipse 2960" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6830" data-name="Path 6830" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+              <g id="Group_9674" data-name="Group 9674" transform="translate(1.788 4.828) rotate(-90)">
+                <circle id="Ellipse_2961" data-name="Ellipse 2961" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6831" data-name="Path 6831" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+              <g id="Group_9675" data-name="Group 9675" transform="translate(1.749 4.888) rotate(-75)">
+                <circle id="Ellipse_2962" data-name="Ellipse 2962" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6832" data-name="Path 6832" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+              <g id="Group_9676" data-name="Group 9676" transform="matrix(0.5, -0.866, 0.866, 0.5, 1.697, 4.937)">
+                <circle id="Ellipse_2963" data-name="Ellipse 2963" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6833" data-name="Path 6833" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+              <g id="Group_9677" data-name="Group 9677" transform="translate(1.634 4.97) rotate(-45)">
+                <circle id="Ellipse_2964" data-name="Ellipse 2964" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6834" data-name="Path 6834" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+              <g id="Group_9678" data-name="Group 9678" transform="matrix(0.866, -0.5, 0.5, 0.866, 1.564, 4.986)">
+                <circle id="Ellipse_2965" data-name="Ellipse 2965" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6835" data-name="Path 6835" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+              <g id="Group_9679" data-name="Group 9679" transform="translate(1.492 4.983) rotate(-15)">
+                <circle id="Ellipse_2966" data-name="Ellipse 2966" cx="0.167" cy="0.167" r="0.167" transform="matrix(0.991, 0.131, -0.131, 0.991, 3.291, 0)" fill="#008"/>
+                <path id="Path_6836" data-name="Path 6836" d="M.115,2.966.23.957.115,0,0,.957Z" transform="translate(0 0.133)" fill="#008"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

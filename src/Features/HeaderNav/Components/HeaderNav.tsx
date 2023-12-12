@@ -7,53 +7,97 @@ import { HeaderNavProps } from "../HeaderNavTypes";
 
 const HeaderNav = ({ activeTab, setActiveTab }: HeaderNavProps) => {
   return (
-    <>
-      <div className="headernav-container">
-        <div className="icon-cover">
-          <img
-            className="logo-image"
-            src={images.updaptLogo}
-            alt="updapt logo"
-          ></img>
-        </div>
-        <div className="tool-options-cover"></div>
-        <div className="config-notification-container">
-          <NavLink
-            to="/settings"
-            className={
-              // ({ isActive }) => {
-              // isActive && setActiveTab("configuration");
-              // return isActive ? "nav-options-selected" :
-              "nav-options"
-              // }
-            }
-            onClick={() => {
-              setActiveTab("configuration");
-            }}
-          >
-            <Tippy
-              placement="bottom-start"
-              theme="light"
-              content="Configuration"
-            >
-              <img
-                className="img"
-                src={images.bellIcon}
-                // src={
-                //   activeTab === "configuration"
-                //     ? images.settingsActive
-                //     : images.settings
-                // }
-                alt="configuration"
-              ></img>
-            </Tippy>
-          </NavLink>
-          <div className="user-info-active">
-            <div className="user-info-inner">S</div>
-          </div>
-        </div>
+    <div className="headernav-container">
+      <div className="icon-cover">
+        <img
+          className="logo-image"
+          src={images.teamFameLogo}
+          alt="updapt logo"
+        ></img>
       </div>
-    </>
+      <div className="tool-options-cover">
+        <NavLink
+          to="home"
+          className={
+            // ({ isActive }) => {
+            // isActive && setActiveTab("configuration");
+            // return isActive ? "nav-options-selected" :
+            "nav-options"
+            // }
+          }
+          onClick={() => {
+            setActiveTab("homepage");
+          }}
+        >
+          HOME
+        </NavLink>
+        <NavLink
+          to="about-us"
+          className={
+            // ({ isActive }) => {
+            // isActive && setActiveTab("configuration");
+            // return isActive ? "nav-options-selected" :
+            "nav-options"
+            // }
+          }
+          onClick={() => {
+            setActiveTab("about-us");
+          }}
+        >
+          ABOUT US{" "}
+        </NavLink>
+        <NavLink
+          to="our-event"
+          className={
+            // ({ isActive }) => {
+            // isActive && setActiveTab("configuration");
+            // return isActive ? "nav-options-selected" :
+            "nav-options"
+            // }
+          }
+          onClick={() => {
+            setActiveTab("our-event");
+          }}
+        >
+          OUR EVENT{" "}
+        </NavLink>
+        <NavLink
+          to="latest-news"
+          className={
+            // ({ isActive }) => {
+            // isActive && setActiveTab("configuration");
+            // return isActive ? "nav-options-selected" :
+            "nav-options"
+            // }
+          }
+          onClick={() => {
+            setActiveTab("latest-news");
+          }}
+        >
+          LATEST NEWS{" "}
+        </NavLink>
+        <NavLink
+          to="shop"
+          className={
+            // ({ isActive }) => {
+            // isActive && setActiveTab("configuration");
+            // return isActive ? "nav-options-selected" :
+            "nav-options"
+            // }
+          }
+          onClick={() => {
+            setActiveTab("shop");
+          }}
+        >
+          SHOP{" "}
+        </NavLink>
+      </div>
+      <div className="loggin-register-container">
+        <div className="nav-link-loggin-cover">LOGIN</div>
+        <div>|</div>
+        <div className="nav-link-register-cover">REGISTER</div>
+      </div>
+    </div>
   );
 };
 

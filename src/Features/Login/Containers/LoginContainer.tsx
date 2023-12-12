@@ -95,19 +95,19 @@ function LoginContainer({ isLogin, isForgotPassword }: LoginContainerTypes) {
   const handleUserLogin = async (e: any) => {
     e.preventDefault();
     // RippleEffect(".input-submit");
-    if (validateLogin()) {
-      try {
-        const signInResponse = await ApiHandler.authenticateUser(formData);
-        if (signInResponse.results === "success") {
-          window.location.href = "/action-plan";
-        }
-      } catch (error: any) {
-        setErrMsg((prevState) => ({
-          ...prevState,
-          passwordErr: error.response.data.error.message || null,
-        }));
-      }
-    }
+    // if (validateLogin()) {
+    //   try {
+    //     const signInResponse = await ApiHandler.authenticateUser(formData);
+    //     if (signInResponse.results === "success") {
+    //       window.location.href = "/action-plan";
+    //     }
+    //   } catch (error: any) {
+    //     setErrMsg((prevState) => ({
+    //       ...prevState,
+    //       passwordErr: error.response.data.error.message || null,
+    //     }));
+    //   }
+    // }
   };
   /**push the user from login if he has session */
   useEffect(() => {

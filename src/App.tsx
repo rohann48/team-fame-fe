@@ -76,9 +76,7 @@ function App() {
       <div className="App">
         <div className="main-header-container">
           <HeaderNav />
-
-          <div className="header-nav">
-            <div className="nav-bars"> {/* <SideBarNav /> */}</div>
+          <div className="home-render-routes-cover">
             <div className="rendering-routes-components">{renderRoutes}</div>
           </div>
         </div>
