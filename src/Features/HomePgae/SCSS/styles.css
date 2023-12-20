@@ -217,9 +217,45 @@
 }
 .home-page-container .home-page-cover .home-sponser-cover {
   width: 100%;
-  height: 15%;
-  text-align: center;
-  background-color: rgb(0, 255, 102);
+  height: 20%;
+}
+.home-page-container .home-page-cover .home-sponser-cover img {
+  width: 100px;
+  height: 100px;
+  -webkit-animation: scroll 10s linear infinite;
+          animation: scroll 10s linear infinite;
+}
+.home-page-container .home-page-cover .home-sponser-cover .slide-track {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3em;
+  overflow: hidden;
+}
+.home-page-container .home-page-cover .home-sponser-cover .slider {
+  background-color: whitesmoke;
+  padding: 1em 2em;
+}
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translatex(-1000%);
+            transform: translatex(-1000%);
+  }
+}
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translatex(-1000%);
+            transform: translatex(-1000%);
+  }
 }
 .home-page-container .home-page-cover .home-mission-cover {
   background-color: #272727;
