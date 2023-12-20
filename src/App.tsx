@@ -25,7 +25,7 @@ function App() {
         navigate("home");
       }
     };
-    fetchSessionInfo();
+    // fetchSessionInfo();
   }, []);
   //will change logout func later
   const logoutUser = async () => {

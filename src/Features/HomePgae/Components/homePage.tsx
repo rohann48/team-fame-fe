@@ -1,4 +1,5 @@
 import icons from "../../Assets/Icons/icons";
+import Footer from "../../Common/CommonComponent/Footer";
 import images from "../../ImageVariables";
 import "../SCSS/styles.scss";
 
@@ -70,54 +71,6 @@ const HomePage = () => {
             originated in the eastern world and continues to be a source of
             inspiration is the ancient Indian Gurukul System of Education.
           </div>
-        </div>
-        <div className="home-sponser-cover">add sponser here</div>
-
-        <div className="home-mission-cover">
-          <div className="mission-left-image-cover">
-            <img
-              src={images.missionHandImage}
-              alt="missionHandImage"
-              className="mission-img"
-            />
-          </div>
-          <div className="mission-right-content-cover">
-            <div className="mission-header-text">MISSION</div>
-            <div className="flower-horizontal-img-cover">
-              <img
-                src={images.flowerHorizontal}
-                alt="flowerHorizontal"
-                className="flowerHorizontal-img"
-              />
-            </div>
-            <div className="mission-content-cover">
-              <div className="inverted-comma-img-cover">
-                <img src={images.invertedCommas} alt="comma" />
-              </div>
-              <div className="mission-header-content-cover">
-                <div className="mission-header">
-                  <div className="line-one">Society is overripe for</div>
-                  <div className="line-two"> a spiritual process</div>
-                </div>
-                <div className="mission-content">
-                  Our fundamental mission is to offer the science of inner
-                  wellbeing to every human being – a science that helps a person
-                  realize the ultimate potential within. From this vision stem a
-                  multitude of projects, programs, and methods, all towards the
-                  same aim: to raise every human being to the peak of their
-                  potential, so that they are exuberant, all-inclusive, and in
-                  harmony within themselves and the world.
-                </div>
-              </div>
-              <div className="comma-img-cover">
-                <img src={images.comma} alt="comma" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="home-vision-cover">
-          <div className="vission-header">Vission</div>
-          <p className="vission-description">तमसो मा ज्योतिर्गमय</p>
         </div>
         <div className="home-events-cover">
           <div className="event-title">Upcoming Events</div>
@@ -226,10 +179,87 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <div className="home-testimonial-cover">testissssmonial</div>
-        <div className="home-videos-and-news-cover">vid/news</div>
-        <div className="home-join-community-cover">join</div>
-        <div className="home-footer-cover">footer</div>
+        <div className="home-mission-cover">
+          <img
+            src={images.mission}
+            alt="missionHandImage"
+            className="mission-img"
+          />
+        </div>
+        <div className="home-vision-cover">
+          <div className="vission-header">Vission</div>
+          <p className="vission-description">तमसो मा ज्योतिर्गमय</p>
+        </div>
+        <div className="home-testimonial-cover">
+          <div className="testimonial-left">
+            <div className="clients-logo-wrapper">
+              <div className="clients-logo-wrapper-icon">
+                <div className="img" style={{ width: "74px" }}>
+                  <i>{icons.userIcon}</i>
+                </div>
+                <div className="author-name">
+                  <span
+                    style={{
+                      marginLeft: "9%",
+                    }}
+                  >
+                    {"kohli"}
+                  </span>
+                </div>
+              </div>
+              <div className="clients-logo-wrapper-author">
+                <p className="para">
+                  Short testimonial about the organization short testimonial
+                  about the organization. short organization short testimonial
+                  short testimonial organization short testimonial about the
+                  about the organization short testimonial ab.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="testimonial-right"></div>
+        </div>
+        <div className="home-sponser-cover">add sponser here</div>
+
+        <div className="home-videos-and-news-cover">
+          {/* <div className="home-events-cover"> */}
+          <div className="heading">Videos/News</div>
+          <div className="cards-cover">
+            {[1, 2, 3].map((i) => (
+              <div className="cards">
+                <div className="cards-img">
+                  <img src={images.logoBackground} className="thumbnail" />
+                </div>
+                <div className="cards-content">
+                  <div className="title">
+                    Embracing the journey: Unraveling the life changing benefits
+                    of running
+                  </div>
+                  <div className="para">
+                    Explore the myriad health advantages that running offers,
+                    from enhancing cardiovascular fitness...
+                  </div>
+                  <button className="btn">Play</button>
+                </div>
+              </div>
+            ))}
+          </div>
+          {/* </div> */}
+        </div>
+        <div className="home-join-community-cover">
+          <div className="cover-line"></div>
+          <div className="join-now-cover">
+            <div className="join-now-title">Join Our Community</div>
+            <div className="join-now-para">
+              <p>Farmer join our community</p>
+              <p>From the students, for the students, to the students</p>
+            </div>
+            <button className="join-now-btn">Join Now</button>
+          </div>
+        </div>
+        <div>
+          <Footer />
+        </div>
       </div>
     </div>
   );

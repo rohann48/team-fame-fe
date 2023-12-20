@@ -48,5 +48,10 @@ const images = {
   comma: require("./Assets/Images/comma.svg").default,
   eventBackground: require("./Assets/Images/eventBackground.svg").default,
   cardLabelSide: require("./Assets/Images/cardLabelSide.svg").default,
+
+  facebook: require("./Assets/Images/facebook.svg").default,
+  instagram: require("./Assets/Images/instagram.svg").default,
+  whatsapp: require("./Assets/Images/whatsapp.svg").default,
+  mission: require("./Assets/Images/mission.svg").default,
 };
 export default images;
