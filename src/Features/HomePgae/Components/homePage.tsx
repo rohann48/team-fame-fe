@@ -74,109 +74,112 @@ const HomePage = () => {
         </div>
         <div className="home-events-cover">
           <div className="event-title">Upcoming Events</div>
-          <div className="cards-cover">
+          {/* <div className="cards-cover">
             {/* {card 1} */}
-            <div className="cards">
-              <div className="card-left-cover">
-                <img
-                  src={images.cardLabelSide}
-                  alt="cardLabelSide"
-                  className="card-label-side-img"
-                />
+          {/* <div className="cards">
+            <div className="card-left-cover">
+              <img
+                src={images.cardLabelSide}
+                alt="cardLabelSide"
+                className="card-label-side-img"
+              />
+            </div>
+            <div className="card-right-cover">
+              <div className="day">TOMORROW</div>
+              <div className="marathon-img-cover">
+                <img src={images.logoBackground} className="marathon-img" />
               </div>
-              <div className="card-right-cover">
-                <div className="day">TOMORROW</div>
-                <div className="marathon-img-cover">
-                  <img src={images.logoBackground} className="marathon-img" />
-                </div>
-                <div className="marathon-header">Marathon event 2023</div>
-                <div className="date-cover">
-                  <span className="date-icon">{icons.date}</span>
-                  <span className="date">DEC 20, 2023</span>
-                </div>
-                <div className="time-cover">
-                  <span className="time-icon">{icons.clock}</span>
-                  <span className="time">10:00 AM</span>
-                </div>
-                <div className="location-cover">
-                  <span className="location-icon">{icons.location}</span>
-                  <span className="location">
-                    MANGALA STADIUM LADYHILL, MANGALORE 575006
-                  </span>
-                </div>{" "}
-                <div className="contact-us-cover">
-                  <button className="contact-us-btn">Contact us</button>
-                </div>
+              <div className="marathon-header">Marathon event 2023</div>
+              <div className="date-cover">
+                <span className="date-icon">{icons.date}</span>
+                <span className="date">DEC 20, 2023</span>
+              </div>
+              <div className="time-cover">
+                <span className="time-icon">{icons.clock}</span>
+                <span className="time">10:00 AM</span>
+              </div>
+              <div className="location-cover">
+                <span className="location-icon">{icons.location}</span>
+                <span className="location">
+                  MANGALA STADIUM LADYHILL, MANGALORE 575006
+                </span>
+              </div>{" "}
+              <div className="contact-us-cover">
+                <button className="contact-us-btn">Contact us</button>
               </div>
             </div>
-            {/* {card 2} */}
-            <div className="cards">
-              <div className="card-left-cover">
-                <img
-                  src={images.cardLabelSide}
-                  alt="cardLabelSide"
-                  className="card-label-side-img"
-                />
+          </div> */}
+          {/* {card 2} */}
+          {/* <div className="cards">
+            <div className="card-left-cover">
+              <img
+                src={images.cardLabelSide}
+                alt="cardLabelSide"
+                className="card-label-side-img"
+              />
+            </div>
+            <div className="card-right-cover">
+              <div className="day">TOMORROW</div>
+              <div className="marathon-img-cover">
+                <img src={images.logoBackground} className="marathon-img" />
               </div>
-              <div className="card-right-cover">
-                <div className="day">TOMORROW</div>
-                <div className="marathon-img-cover">
-                  <img src={images.logoBackground} className="marathon-img" />
-                </div>
-                <div className="marathon-header">Marathon event 2023</div>
-                <div className="date-cover">
-                  <span className="date-icon">{icons.date}</span>
-                  <span className="date">DEC 20, 2023</span>
-                </div>
-                <div className="time-cover">
-                  <span className="time-icon">{icons.clock}</span>
-                  <span className="time">10:00 AM</span>
-                </div>
-                <div className="location-cover">
-                  <span className="location-icon">{icons.location}</span>
-                  <span className="location">
-                    MANGALA STADIUM LADYHILL, MANGALORE 575006
-                  </span>
-                </div>{" "}
-                <div className="contact-us-cover">
-                  <button className="contact-us-btn">Contact us</button>
-                </div>
+              <div className="marathon-header">Marathon event 2023</div>
+              <div className="date-cover">
+                <span className="date-icon">{icons.date}</span>
+                <span className="date">DEC 20, 2023</span>
+              </div>
+              <div className="time-cover">
+                <span className="time-icon">{icons.clock}</span>
+                <span className="time">10:00 AM</span>
+              </div>
+              <div className="location-cover">
+                <span className="location-icon">{icons.location}</span>
+                <span className="location">
+                  MANGALA STADIUM LADYHILL, MANGALORE 575006
+                </span>
+              </div>{" "}
+              <div className="contact-us-cover">
+                <button className="contact-us-btn">Contact us</button>
               </div>
             </div>
-            {/* {card 3} */}
-            <div className="cards">
-              <div className="card-left-cover">
-                <img
-                  src={images.cardLabelSide}
-                  alt="cardLabelSide"
-                  className="card-label-side-img"
-                />
+          </div> */}
+          {/* {card 3} */}
+          {/* <div className="cards">
+            <div className="card-left-cover">
+              <img
+                src={images.cardLabelSide}
+                alt="cardLabelSide"
+                className="card-label-side-img"
+              />
+            </div>
+            <div className="card-right-cover">
+              <div className="day">TOMORROW</div>
+              <div className="marathon-img-cover">
+                <img src={images.logoBackground} className="marathon-img" />
               </div>
-              <div className="card-right-cover">
-                <div className="day">TOMORROW</div>
-                <div className="marathon-img-cover">
-                  <img src={images.logoBackground} className="marathon-img" />
-                </div>
-                <div className="marathon-header">Marathon event 2023</div>
-                <div className="date-cover">
-                  <span className="date-icon">{icons.date}</span>
-                  <span className="date">DEC 20, 2023</span>
-                </div>
-                <div className="time-cover">
-                  <span className="time-icon">{icons.clock}</span>
-                  <span className="time">10:00 AM</span>
-                </div>
-                <div className="location-cover">
-                  <span className="location-icon">{icons.location}</span>
-                  <span className="location">
-                    MANGALA STADIUM LADYHILL, MANGALORE 575006
-                  </span>
-                </div>{" "}
-                <div className="contact-us-cover">
-                  <button className="contact-us-btn">Contact us</button>
-                </div>
+              <div className="marathon-header">Marathon event 2023</div>
+              <div className="date-cover">
+                <span className="date-icon">{icons.date}</span>
+                <span className="date">DEC 20, 2023</span>
+              </div>
+              <div className="time-cover">
+                <span className="time-icon">{icons.clock}</span>
+                <span className="time">10:00 AM</span>
+              </div>
+              <div className="location-cover">
+                <span className="location-icon">{icons.location}</span>
+                <span className="location">
+                  MANGALA STADIUM LADYHILL, MANGALORE 575006
+                </span>
+              </div>{" "}
+              <div className="contact-us-cover">
+                <button className="contact-us-btn">Contact us</button>
               </div>
             </div>
+          </div> */}
+          {/* </div> */}
+          <div className="event-mom-logo-cover">
+            <img src={images.eventMom} alt="event" />
           </div>
         </div>
         <div className="home-mission-cover">

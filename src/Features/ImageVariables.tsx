@@ -48,6 +48,7 @@ const images = {
   comma: require("./Assets/Images/comma.svg").default,
   eventBackground: require("./Assets/Images/eventBackground.svg").default,
   cardLabelSide: require("./Assets/Images/cardLabelSide.svg").default,
+  eventMom: require("./Assets/Images/eventMom.svg").default,
 
   facebook: require("./Assets/Images/facebook.svg").default,
   instagram: require("./Assets/Images/instagram.svg").default,
