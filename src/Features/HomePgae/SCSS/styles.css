@@ -17,9 +17,8 @@
   overflow: hidden;
 }
 .home-page-container .home-page-cover .home-revolution-logo-cover {
-  width: 100%;
-  height: 80%;
-  background-size: cover;
+  height: 69.8%;
+  position: relative;
 }
 .home-page-container .home-page-cover .home-revolution-logo-cover .logo-and-btn-cover {
   height: 100%;
@@ -36,6 +35,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  right: 50%;
 }
 .home-page-container .home-page-cover .home-revolution-logo-cover .logo-and-btn-cover .logo-img {
   opacity: 0.8;

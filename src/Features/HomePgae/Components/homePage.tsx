@@ -8,7 +8,11 @@ const HomePage = () => {
     <div className="home-page-container">
       <div className="home-page-cover">
         <div className="home-revolution-logo-cover">
-          <img src={images.backgroundLog} alt="fameRevolutionBackground" />
+          <img
+            src={images.backgroundLog}
+            alt="fameRevolutionBackground"
+            height={"100%"}
+          />
           <div className="logo-and-btn-cover">
             <img
               className="logo-img"
@@ -335,7 +339,7 @@ const HomePage = () => {
             {[1, 2, 3].map((i) => (
               <div className="cards">
                 <div className="cards-img">
-                  <img src={images.logoBackground} className="thumbnail" />
+                  <img src={images.videoThumbnail} className="thumbnail" />
                 </div>
                 <div className="cards-content">
                   <div className="title">
