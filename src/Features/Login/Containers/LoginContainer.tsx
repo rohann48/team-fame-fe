@@ -143,22 +143,22 @@ function LoginContainer({ isLogin, isForgotPassword }: LoginContainerTypes) {
     }
   }
   const handleForgotPassword = async (e: any) => {
-    e.preventDefault();
-    RippleEffect(".input-submit");
-    if (validateEmail()) {
-      try {
-        await ApiHandler.forgotPassword({
-          email: formData.email,
-        });
-        setFormData(initialData);
-        NotificationManager.success("Link sent succesfully", "", 2000);
-      } catch (error: any) {
-        setErrMsg((prevState) => ({
-          ...prevState,
-          emailErr: error.response.data.error.message || error.message,
-        }));
-      }
-    }
+    // e.preventDefault();
+    // RippleEffect(".input-submit");
+    // if (validateEmail()) {
+    //   try {
+    //     await ApiHandler.forgotPassword({
+    //       email: formData.email,
+    //     });
+    //     setFormData(initialData);
+    //     NotificationManager.success("Link sent succesfully", "", 2000);
+    //   } catch (error: any) {
+    //     setErrMsg((prevState) => ({
+    //       ...prevState,
+    //       emailErr: error.response.data.error.message || error.message,
+    //     }));
+    //   }
+    // }
   };
   console.log(errMsg);
   return (

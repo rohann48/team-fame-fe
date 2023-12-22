@@ -19,34 +19,34 @@ function App() {
     // navigate("home");
   }, []);
   //will change logout func later
-  const logoutUser = async () => {
-    try {
-      const logoutResult = await ApiHandler.logoutUser();
-      if (logoutResult?.status) {
-        window.location.href = "/login";
-      }
-    } catch (error) {
-      confirmAlert({
-        title: "Connection Lost",
-        message: "your session may have timed out. Please reload",
-        buttons: [
-          {
-            label: "reload",
-            onClick: () => {
-              window.location.reload();
-            },
-          },
-        ],
-      });
-    }
-  };
+  // const logoutUser = async () => {
+  //   try {
+  //     const logoutResult = await ApiHandler.logoutUser();
+  //     if (logoutResult?.status) {
+  //       window.location.href = "/login";
+  //     }
+  //   } catch (error) {
+  //     confirmAlert({
+  //       title: "Connection Lost",
+  //       message: "your session may have timed out. Please reload",
+  //       buttons: [
+  //         {
+  //           label: "reload",
+  //           onClick: () => {
+  //             window.location.reload();
+  //           },
+  //         },
+  //       ],
+  //     });
+  //   }
+  // };
 
   const onIdle = () => {
     // Close Modal Prompt
     // Do some idle action like log out your user
     //console.log("idle", new Date());
     try {
-      logoutUser();
+      // logoutUser();
     } catch (error) {}
   };
   const onActive = (event: any) => {
