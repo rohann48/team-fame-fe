@@ -54,8 +54,8 @@ const HomePage = () => {
         </div>
         <div className="home-about-us-cover">
           <div className="about-us-header">
-            <div className="about-text">About</div>
-            <div className="us-text">Us</div>
+            <div className="about-text">ABOUT</div>
+            <div className="us-text">US</div>
           </div>
           <div className="about-us-description">
             Education is not the learning of facts, but the training of the mind
@@ -201,21 +201,13 @@ const HomePage = () => {
                   <i>{icons.userIcon}</i>
                 </div>
                 <div className="author-name">
-                  <span
-                    style={{
-                      marginLeft: "9%",
-                    }}
-                  >
-                    {"kohli"}
-                  </span>
+                  <span>{"Sanal Padmanabhan"}</span>
                 </div>
               </div>
               <div className="clients-logo-wrapper-author">
                 <p className="para">
-                  Short testimonial about the organization short testimonial
-                  about the organization. short organization short testimonial
-                  short testimonial organization short testimonial about the
-                  about the organization short testimonial ab.
+                  Congratulations and good luck brother. I believe in your work
+                  ethics. Feeling happy to see your growing. #ImWithTeamFame
                 </p>
               </div>
             </div>
@@ -363,10 +355,12 @@ const HomePage = () => {
         <div className="home-join-community-cover">
           <div className="cover-line"></div>
           <div className="join-now-cover">
-            <div className="join-now-title">Join Our Community</div>
+            <div className="join-now-title">
+              FA<span>R</span>ME<span>R</span>
+            </div>
             <div className="join-now-para">
-              <p>Farmer join our community</p>
-              <p>From the students, for the students, to the students</p>
+              {/* <p>Farmer join our community</p> */}
+              <p>From the students ; for the students ; to the students</p>
             </div>
             <button className="join-now-btn">Join Now</button>
           </div>
