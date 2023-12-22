@@ -54,5 +54,6 @@ const images = {
   instagram: require("./Assets/Images/instagram.svg").default,
   whatsapp: require("./Assets/Images/whatsapp.svg").default,
   mission: require("./Assets/Images/mission.svg").default,
+  backgroundLog: require("./Assets/Images/Group-9720.jpg").default,
 };
 export default images;

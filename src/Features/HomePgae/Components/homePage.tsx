@@ -8,7 +8,7 @@ const HomePage = () => {
     <div className="home-page-container">
       <div className="home-page-cover">
         <div className="home-revolution-logo-cover">
-          <img src={images.logoBackground} alt="fameRevolutionBackground" />
+          <img src={images.backgroundLog} alt="fameRevolutionBackground" />
           <div className="logo-and-btn-cover">
             <img
               className="logo-img"
