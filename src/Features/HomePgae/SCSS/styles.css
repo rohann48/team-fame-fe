@@ -502,7 +502,7 @@
   display: flex;
   padding: 0px 0 0 10%;
   width: 90%;
-  gap: 4%;
+  gap: 8%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -518,12 +518,11 @@
 }
 .home-page-container .home-page-cover .home-testimonial-cover .testimonial-left .clients-logo-wrapper .clients-logo-wrapper-icon .img {
   width: 74px;
-  margin-left: 5%;
 }
 .home-page-container .home-page-cover .home-testimonial-cover .testimonial-left .clients-logo-wrapper .clients-logo-wrapper-icon .author-name {
   font-size: 1em;
   color: white;
-  margin-top: 10%;
+  margin-top: 4%;
   border-left: 2px solid #bd9255;
   padding-left: 6%;
 }

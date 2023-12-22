@@ -17,7 +17,7 @@ const HeaderNav = ({ activeTab, setActiveTab }: HeaderNavProps) => {
       </div>
       <div className="tool-options-cover">
         <NavLink
-          to="home"
+          to="/"
           className={
             // ({ isActive }) => {
             // isActive && setActiveTab("configuration");

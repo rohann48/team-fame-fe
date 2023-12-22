@@ -537,7 +537,7 @@
           display: flex;
           padding: 0px 0 0 10%;
           width: 90%;
-          gap: 4%;
+          gap: 8%;
           align-items: center;
           height: 82%;
 
@@ -550,13 +550,13 @@
 
             .img {
               width: 74px;
-              margin-left: 5%;
+              // margin-left: 5%;
             }
 
             .author-name {
               font-size: 1em;
               color: white;
-              margin-top: 10%;
+              margin-top: 4%;
               border-left: 2px solid #bd9255;
               padding-left: 6%;
             }

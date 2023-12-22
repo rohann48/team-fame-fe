@@ -36,7 +36,7 @@ const images = {
   disableEdit: require("./Assets/Images/disableEdit.svg").default,
   teamFameLogo: require("./Assets/Images/teamFameLogo.svg").default,
   teamGroupPic: require("./Assets/Images/teamGroupPic.svg").default,
-  logoBackground: require("./Assets/Images/logoBackground.svg").default,
+  logoBackground: require("./Assets/Images/logoBackground.jpg"),
   fameRevolutionLogo: require("./Assets/Images/FameRevolutionLogo.svg").default,
   educationLogo: require("./Assets/Images/educationLogo.svg").default,
   sportsLogo: require("./Assets/Images/sportsLogo.svg").default,
@@ -54,7 +54,7 @@ const images = {
   instagram: require("./Assets/Images/instagram.svg").default,
   whatsapp: require("./Assets/Images/whatsapp.svg").default,
   mission: require("./Assets/Images/mission.svg").default,
-  backgroundLog: require("./Assets/Images/Group-9720.jpg"),
   videoThumbnail: require("./Assets/Images/videoThumbnail.png"),
+  testimonial: require("./Assets/Images/testimonial.svg").default,
 };
 export default images;

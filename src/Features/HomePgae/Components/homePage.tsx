@@ -9,7 +9,7 @@ const HomePage = () => {
       <div className="home-page-cover">
         <div className="home-revolution-logo-cover">
           <img
-            src={images.backgroundLog}
+            src={images.logoBackground}
             alt="fameRevolutionBackground"
             height={"100%"}
           />
@@ -202,7 +202,9 @@ const HomePage = () => {
             <div className="clients-logo-wrapper">
               <div className="clients-logo-wrapper-icon">
                 <div className="img" style={{ width: "74px" }}>
-                  <i>{icons.userIcon}</i>
+                  <i>
+                    <img src={images.testimonial} alt="testimonial" />
+                  </i>
                 </div>
                 <div className="author-name">
                   <span>{"Sanal Padmanabhan"}</span>
