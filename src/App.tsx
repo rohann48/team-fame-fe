@@ -16,16 +16,7 @@ function App() {
   const [userData, setUserData] = useState(null);
   const navigate = useNavigate();
   useEffect(() => {
-    const fetchSessionInfo = async () => {
-      const response = await ApiHandler.getSessionInfo();
-      if (response?.results?.userInfo) {
-        setUserData(response.results.userInfo);
-        navigate("action-plan");
-      } else {
-        navigate("home");
-      }
-    };
-    // fetchSessionInfo();
+    // navigate("home");
   }, []);
   //will change logout func later
   const logoutUser = async () => {

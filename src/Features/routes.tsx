@@ -15,7 +15,7 @@ export const mainRoutes = [
     element: <Login isForgotPassword={true} />,
   },
   {
-    path: "/home",
+    index: true,
     element: <HomePage />,
   },
 ];
