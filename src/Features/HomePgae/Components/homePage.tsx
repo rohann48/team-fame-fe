@@ -4,11 +4,11 @@ import images from "../../ImageVariables";
 import "../SCSS/styles.scss";
 
 const HomePage = () => {
-  const array = [{}];
   return (
     <div className="home-page-container">
       <div className="home-page-cover">
         <div className="home-revolution-logo-cover">
+          <img src={images.logoBackground} alt="fameRevolutionBackground" />
           <div className="logo-and-btn-cover">
             <img
               className="logo-img"
