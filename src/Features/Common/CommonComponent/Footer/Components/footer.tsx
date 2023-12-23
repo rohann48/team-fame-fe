@@ -23,12 +23,15 @@ function Footer() {
           <div className="title">Contact us</div>
           <div>
             <i>{icons.location}</i>
-            <p>address</p>
+            <p>
+              SHREE RAKSHA 1-168/1 NEAR SNEHA CIRCLE DEVINAGAR ROAD KUNJATHBAIL
+              MANGALORE-575015
+            </p>
           </div>
 
           <div>
             <i>{icons.phone}</i>
-            <p>+91 9876543212</p>
+            <p>+91 9481770086</p>
           </div>
 
           <div>
@@ -43,21 +46,21 @@ function Footer() {
             <i>
               <img src={images.facebook} alt="facebook" />
             </i>
-            <p>facebook</p>
+            <p>@teamfame</p>
           </div>
 
           <div>
             <i>
               <img src={images.instagram} alt="instagram" />
             </i>
-            <p>instagram</p>
+            <p>@_teamfame_</p>
           </div>
 
           <div>
             <i>
               <img src={images.whatsapp} alt="whatsapp" />
             </i>
-            <p>watsapp</p>
+            <p>+91 9481770086</p>
           </div>
         </div>
       </div>
