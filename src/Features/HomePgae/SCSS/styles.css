@@ -17,7 +17,7 @@
   overflow: hidden;
 }
 .home-page-container .home-page-cover .home-revolution-logo-cover {
-  height: 69.8%;
+  height: 68.25%;
   position: relative;
 }
 .home-page-container .home-page-cover .home-revolution-logo-cover .logo-and-btn-cover {
@@ -486,7 +486,7 @@
 }
 .home-page-container .home-page-cover .home-testimonial-cover {
   width: 100%;
-  height: 50%;
+  height: 42%;
   background-color: rgb(193, 190, 168);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -506,7 +506,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 82%;
+  height: 61%;
 }
 @media (max-width: 768px) {
   .home-page-container .home-page-cover .home-testimonial-cover .testimonial-left .clients-logo-wrapper {
@@ -737,6 +737,7 @@
 }
 .home-page-container .home-page-cover .home-join-community-cover .join-now-cover .join-now-para p {
   text-transform: uppercase;
+  color: #bd9255;
 }
 .home-page-container .home-page-cover .slide-container .back-button {
   display: -webkit-box;

@@ -220,7 +220,7 @@ const HomePage = () => {
           </div>
           <div className="testimonial-right"></div>
         </div>
-        <div className="home-sponser-cover">
+        {/* <div className="home-sponser-cover">
           <div className="slider">
             <div className="slide-track">
               <div className="slide">
@@ -333,7 +333,7 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="home-videos-and-news-cover">
           <div className="heading">Videos/News</div>
