@@ -6,14 +6,14 @@ export const mainRoutes = [
     path: "*",
     element: <PageNotFound />,
   },
-  {
-    path: "/login",
-    element: <Login isLogin={true} />,
-  },
-  {
-    path: "/forgot/password",
-    element: <Login isForgotPassword={true} />,
-  },
+  // {
+  //   path: "/login",
+  //   element: <Login />,
+  // },
+  // {
+  //   path: "/forgot/password",
+  //   element: <Login />,
+  // },
   {
     index: true,
     element: <HomePage />,

@@ -1,0 +1,187 @@
+.sign-up-modal-container .sign-up-modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+.sign-up-modal-container .sign-up-modal-header .sign-up-modal-close {
+  all: unset !important;
+  color: #bd9255 !important;
+  font-size: 23px;
+  cursor: pointer;
+}
+.sign-up-modal-container .content-logo-cover {
+  width: 100%;
+  height: auto;
+}
+.sign-up-modal-container .content-logo-cover .logo-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.sign-up-modal-container .content-logo-cover .logo-cover .logo-image {
+  width: 91px;
+  height: 91px;
+}
+.sign-up-modal-container .content-logo-cover .sign-up-text {
+  font-size: 50px;
+  color: #bd9255;
+  font-weight: 700;
+  text-align: center;
+}
+.sign-up-modal-container .content-logo-cover .sign-up-member-text {
+  font-size: 14px;
+  color: #bd9255;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 5px;
+}
+.sign-up-modal-container .form-main-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+}
+.sign-up-modal-container .form-main-cover .first-name-label-cover {
+  margin-bottom: 20px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20rem;
+  font-size: 16px;
+  color: #bd9255;
+}
+.sign-up-modal-container .form-main-cover .first-name-label-cover .first-name-input {
+  all: unset;
+  border-bottom: 1px solid #bd9255;
+  height: 30px;
+}
+.sign-up-modal-container .form-main-cover .last-name-label-cover {
+  margin-bottom: 20px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20rem;
+  font-size: 16px;
+  color: #bd9255;
+}
+.sign-up-modal-container .form-main-cover .last-name-label-cover .last-name-input {
+  all: unset;
+  border-bottom: 1px solid #bd9255;
+  height: 30px;
+}
+.sign-up-modal-container .form-main-cover .contact-label-cover {
+  margin-bottom: 20px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20rem;
+  font-size: 16px;
+  color: #bd9255;
+}
+.sign-up-modal-container .form-main-cover .contact-label-cover .contact-number-input {
+  all: unset;
+  border-bottom: 1px solid #bd9255;
+  height: 30px;
+}
+.sign-up-modal-container .form-main-cover .email-label-cover {
+  margin-bottom: 20px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20rem;
+  font-size: 16px;
+  color: #bd9255;
+}
+.sign-up-modal-container .form-main-cover .email-label-cover .email-input {
+  all: unset;
+  border-bottom: 1px solid #bd9255;
+  height: 30px;
+}
+.sign-up-modal-container .form-main-cover .password-label-cover {
+  margin-bottom: 15px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20rem;
+  font-size: 16px;
+  color: #bd9255;
+}
+.sign-up-modal-container .form-main-cover .password-label-cover .password-input {
+  all: unset;
+  border-bottom: 1px solid #bd9255;
+  height: 30px;
+}
+.sign-up-modal-container .form-main-cover .sign-up-btn {
+  background-color: #bd9255;
+  color: #2b2b2b;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 315px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 5px;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,9 +1,9 @@
-.login-modal-container {
-  .login-modal-header {
+.sign-up-modal-container {
+  .sign-up-modal-header {
     display: flex;
     align-items: center;
     justify-content: end;
-    .login-modal-close {
+    .sign-up-modal-close {
       all: unset !important;
       color: #bd9255 !important;
       font-size: 23px;
@@ -22,13 +22,13 @@
         height: 91px;
       }
     }
-    .login-text {
+    .sign-up-text {
       font-size: 50px;
       color: #bd9255;
       font-weight: 700;
       text-align: center;
     }
-    .login-member-text {
+    .sign-up-member-text {
       font-size: 14px;
       color: #bd9255;
       font-weight: 400;
@@ -42,7 +42,38 @@
     justify-content: center;
     align-items: center;
     margin-top: 15px;
+    .first-name-label-cover {
+      margin-bottom: 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 20rem;
+      font-size: 16px;
+      color: #bd9255;
 
+      .first-name-input {
+        all: unset;
+        border-bottom: 1px solid #bd9255;
+        height: 30px;
+      }
+    }
+    .last-name-label-cover {
+      margin-bottom: 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 20rem;
+      font-size: 16px;
+      color: #bd9255;
+
+      .last-name-input {
+        all: unset;
+        border-bottom: 1px solid #bd9255;
+        height: 30px;
+      }
+    }
     .contact-label-cover {
       margin-bottom: 20px;
       font-weight: bold;
@@ -54,6 +85,22 @@
       color: #bd9255;
 
       .contact-number-input {
+        all: unset;
+        border-bottom: 1px solid #bd9255;
+        height: 30px;
+      }
+    }
+    .email-label-cover {
+      margin-bottom: 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 20rem;
+      font-size: 16px;
+      color: #bd9255;
+
+      .email-input {
         all: unset;
         border-bottom: 1px solid #bd9255;
         height: 30px;
@@ -75,25 +122,7 @@
         height: 30px;
       }
     }
-
-    .remember-me {
-      display: flex;
-      align-items: center;
-
-      .remember-me-input {
-        margin-right: 8px;
-        border-color: #bd9255;
-        &:checked {
-          background-color: #bd9255;
-        }
-      }
-      .remember-me-text {
-        font-size: 14px;
-        font-weight: 400;
-        color: #bd9255;
-      }
-    }
-    .login-btn {
+    .sign-up-btn {
       background-color: #bd9255;
       color: #2b2b2b;
       border: none;
@@ -106,20 +135,20 @@
       margin-top: 5px;
     }
   }
-  .sign-up-cover {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    justify-content: center;
-    font-size: 14px;
-    color: #bd9255;
-    .sign-up-btn {
-      all: unset;
-      color: #bd9255;
-      border: none;
-      cursor: pointer;
-      font-size: 14px;
-      margin-left: 5px;
-    }
-  }
+  //   .sign-up-cover {
+  //     display: flex;
+  //     align-items: center;
+  //     margin-top: 10px;
+  //     justify-content: center;
+  //     font-size: 14px;
+  //     color: #bd9255;
+  //     .sign-up-btn {
+  //       all: unset;
+  //       color: #bd9255;
+  //       border: none;
+  //       cursor: pointer;
+  //       font-size: 14px;
+  //       margin-left: 5px;
+  //     }
+  //   }
 }

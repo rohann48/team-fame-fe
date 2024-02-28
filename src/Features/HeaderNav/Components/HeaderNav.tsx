@@ -5,14 +5,19 @@ import "tippy.js/dist/tippy.css";
 import { NavLink } from "react-router-dom";
 import { HeaderNavProps } from "../HeaderNavTypes";
 
-const HeaderNav = ({ activeTab, setActiveTab }: HeaderNavProps) => {
+const HeaderNav = ({
+  activeTab,
+  setActiveTab,
+  handleLoginModalToggle,
+  handleSignUpModalToggle,
+}: HeaderNavProps) => {
   return (
     <div className="headernav-container">
       <div className="icon-cover">
         <img
           className="logo-image"
           src={images.teamFameLogo}
-          alt="updapt logo"
+          alt="fame logo"
         ></img>
       </div>
       <div className="tool-options-cover">
@@ -93,9 +98,19 @@ const HeaderNav = ({ activeTab, setActiveTab }: HeaderNavProps) => {
         </NavLink>
       </div>
       <div className="loggin-register-container">
-        <div className="nav-link-loggin-cover">LOGIN</div>
+        <button
+          className="nav-link-loggin-cover"
+          onClick={() => handleLoginModalToggle()}
+        >
+          LOGIN
+        </button>
         <div>|</div>
-        <div className="nav-link-register-cover">REGISTER</div>
+        <button
+          className="nav-link-register-cover"
+          onClick={() => handleSignUpModalToggle()}
+        >
+          REGISTER
+        </button>
       </div>
     </div>
   );

@@ -1,108 +1,113 @@
-.login-page-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  padding: 6% 4% 4% 4%;
-  background-image: url("../../Assets/Images/page-not-found-img.svg");
-  background-size: cover;
-}
-.login-page-wrapper .login-page-inner-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
-          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
-  opacity: 1;
-  -webkit-backdrop-filter: blur(6px);
-          backdrop-filter: blur(6px);
-  background: rgba(0, 0, 0, 0.1607843137);
-}
-.login-page-wrapper .login-page-inner-wrapper .login-page-left-container {
-  width: 70%;
-  height: 100%;
+.login-modal-container .login-modal-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container {
-  width: 30%;
-  height: 100%;
+.login-modal-container .login-modal-header .login-modal-close {
+  all: unset !important;
+  color: #bd9255 !important;
+  font-size: 23px;
+  cursor: pointer;
+}
+.login-modal-container .content-logo-cover {
+  width: 100%;
+  height: auto;
+}
+.login-modal-container .content-logo-cover .logo-cover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.login-modal-container .content-logo-cover .logo-cover .logo-image {
+  width: 91px;
+  height: 91px;
+}
+.login-modal-container .content-logo-cover .login-text {
+  font-size: 50px;
+  color: #bd9255;
+  font-weight: 700;
+  text-align: center;
+}
+.login-modal-container .content-logo-cover .login-member-text {
+  font-size: 14px;
+  color: #bd9255;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 5px;
+}
+.login-modal-container .form-main-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: white;
+  margin-top: 15px;
 }
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper {
+.login-modal-container .form-main-cover .contact-label-cover {
+  margin-bottom: 20px;
+  font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 70%;
+  width: 20rem;
+  font-size: 16px;
+  color: #bd9255;
 }
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .company-logo {
-  max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: auto;
-  max-width: 141px;
-  height: 51px;
-  -ms-flex-item-align: center;
-      align-self: center;
+.login-modal-container .form-main-cover .contact-label-cover .contact-number-input {
+  all: unset;
+  border-bottom: 1px solid #bd9255;
+  height: 30px;
 }
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .login-header {
-  font-size: 14px;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  color: #667286;
-  text-align: center;
-  letter-spacing: 0px;
+.login-modal-container .form-main-cover .password-label-cover {
+  margin-bottom: 15px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20rem;
+  font-size: 16px;
+  color: #bd9255;
 }
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form {
-  width: 100%;
+.login-modal-container .form-main-cover .password-label-cover .password-input {
+  all: unset;
+  border-bottom: 1px solid #bd9255;
+  height: 30px;
 }
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .email-main-wrapper {
-  margin-bottom: 38px;
-}
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .email-main-wrapper .login-container-label {
-  font-size: 17px;
-  font-weight: 600;
-}
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .email-main-wrapper .input-mail-mail-icon {
-  position: relative;
-  margin: 0.4rem 0;
-  width: 100%;
-  height: 45px;
-  padding: 0.45rem 0.9rem;
-  border: 1px solid #d6d6d6;
-  border-radius: 0.4rem;
-  outline: none;
-  background-color: #fff;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  font-size: 0.8rem;
-  line-height: 1.5;
-  color: #000;
+.login-modal-container .form-main-cover .remember-me {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,187 +115,49 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .email-main-wrapper .input-mail-mail-icon .password-label {
-  position: absolute;
-  pointer-events: none;
-  left: 46px;
-  top: 12px;
-  -webkit-transition: 0.4s ease all;
-  transition: 0.4s ease all;
+.login-modal-container .form-main-cover .remember-me .remember-me-input {
+  margin-right: 8px;
+  border-color: #bd9255;
+}
+.login-modal-container .form-main-cover .remember-me .remember-me-input:checked {
+  background-color: #bd9255;
+}
+.login-modal-container .form-main-cover .remember-me .remember-me-text {
   font-size: 14px;
-  color: #a1a1a1;
-  background-color: white;
+  font-weight: 400;
+  color: #bd9255;
 }
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .email-main-wrapper .input-mail-mail-icon .password-label-data {
-  position: absolute;
-  top: -10px;
-  left: 46px;
-  font-size: 14px;
-  background-color: white;
-  color: #0e244a;
-  padding-inline: 1px;
-}
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .email-main-wrapper .input-mail-mail-icon .email-icon {
-  width: 25px;
-  height: 20px;
-  margin-right: 7px;
-}
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .email-main-wrapper .input-mail-mail-icon input:focus ~ .password-label {
-  top: -10px;
-  font-size: 14px;
-  background-color: white;
-  color: #0e244a;
-  padding-inline: 1px;
-}
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .email-main-wrapper .input-mail-mail-icon .input-email {
-  height: 100%;
-  outline: none;
+.login-modal-container .form-main-cover .login-btn {
+  background-color: #bd9255;
+  color: #2b2b2b;
   border: none;
-  font-weight: 400;
-  font-size: 0.8rem;
-  width: 85%;
-  color: #0c0c0c;
-}
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .email-main-wrapper .email-err-msg {
-  color: #ed4c66;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 315px;
+  height: 40px;
   font-size: 14px;
-  font-weight: 600;
-  margin-left: 10px;
+  font-weight: 500;
+  margin-top: 5px;
 }
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .password-main-wrapper {
-  margin-bottom: 20px;
-}
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .password-main-wrapper .login-container-label {
-  font-size: 17px;
-  font-weight: 600;
-}
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .password-main-wrapper .input-password-password-icon {
-  position: relative;
-  margin: 0.4rem 0;
-  width: 100%;
-  height: 45px;
-  padding: 0.45rem 0.9rem;
-  border: 1px solid #d6d6d6;
-  border-radius: 0.4rem;
-  outline: none;
-  background-color: #fff;
-  font-weight: 400;
-  font-size: 0.8rem;
-  line-height: 1.5;
-  color: #000;
+.login-modal-container .sign-up-cover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .password-main-wrapper .input-password-password-icon .password-label {
-  position: absolute;
-  pointer-events: none;
-  left: 46px;
-  top: 12px;
-  -webkit-transition: 0.4s ease all;
-  transition: 0.4s ease all;
-  font-size: 14px;
-  color: #a1a1a1;
-  background-color: white;
-}
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .password-main-wrapper .input-password-password-icon .password-label-data {
-  position: absolute;
-  left: 46px;
-  top: -10px;
-  font-size: 14px;
-  background-color: white;
-  color: #0e244a;
-  padding-inline: 1px;
-}
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .password-main-wrapper .input-password-password-icon .passWord-icon {
-  width: 25px;
-  height: 20px;
-  margin-right: 7px;
-}
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .password-main-wrapper .input-password-password-icon .input-password {
-  border: none;
-  outline: none;
-  width: calc(100% - 50px);
-  height: 100%;
-  font-weight: 400;
-  font-size: 0.8rem;
-  color: #0c0c0c;
-}
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .password-main-wrapper .input-password-password-icon input:focus ~ .password-label {
-  top: -10px;
-  font-size: 14px;
-  background-color: white;
-  color: #0e244a;
-  padding-inline: 1px;
-}
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .password-main-wrapper .input-password-password-icon .show-hide-password-icon {
-  width: 25px;
-  height: 20px;
-  margin-left: 7px;
-  cursor: pointer;
-}
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .password-main-wrapper .email-err-msg {
-  color: #ed4c66;
-  font-size: 14px;
-  font-weight: 600;
-  margin-left: 10px;
-}
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .login-container-remember-me {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 40px;
-}
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .login-container-remember-me .label-remember-me {
-  font-size: 14px;
-  color: #667286;
-  margin-right: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .login-container-remember-me .label-remember-me .check-box-remember-me {
-  zoom: 1.4;
-  margin-right: 5px;
-  cursor: pointer;
-}
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .login-container-remember-me .forgot-password {
-  font-size: 14px;
-  color: #667286;
-  cursor: pointer;
-}
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .input-submit-enabled {
-  color: #fff;
-  width: 100%;
-  outline: none;
-  height: 45px;
-  border-radius: 7px;
-  font-size: 18px;
   margin-top: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 14px;
+  color: #bd9255;
+}
+.login-modal-container .sign-up-cover .sign-up-btn {
+  all: unset;
+  color: #bd9255;
+  border: none;
   cursor: pointer;
-  position: relative;
-  display: block;
-  overflow: hidden;
-  background-color: #2863ff;
-  border: 1px solid #2863ff;
-}
-.login-page-wrapper .login-page-inner-wrapper .login-page-right-container .login-page-right-content-wrapper .sap-login-container-form .input-submit-enabled:hover {
-  background-color: #0009d6;
-  border: 1px solid #0009d6;
-}
-
-.or-text {
-  margin: 10px 0 10px 0;
+  font-size: 14px;
+  margin-left: 5px;
 }/*# sourceMappingURL=styles.css.map */
