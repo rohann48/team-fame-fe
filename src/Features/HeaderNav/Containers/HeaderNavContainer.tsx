@@ -1,24 +1,18 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import HeaderNav from "../Components/HeaderNav";
 import LoginComponent from "../../Login";
 import SignUpModal from "../../SignUpModal";
+import { LoginContext } from "../../context/LoginContext";
 
 function HeaderNavContainer() {
+  const {
+    loginInfo,
+    setLoginInfo,
+    handleLoginModalToggle,
+    handleSignUpModalToggle,
+  } = useContext(LoginContext);
   //state maintained for active tabs
   const [activeTab, setActiveTab] = useState("home");
-  //state maintained for toggling the login Modal
-  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
-  //handle toggle login modal
-  const handleLoginModalToggle = () => {
-    setIsLoginModalOpen(!isLoginModalOpen);
-  };
-  //state maintained for toggling the sign up Modal
-  const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
-  //handle toggle login modal
-  const handleSignUpModalToggle = () => {
-    setIsSignUpModalOpen(!isSignUpModalOpen);
-    setIsLoginModalOpen(false);
-  };
   return (
     <>
       <HeaderNav
@@ -27,16 +21,16 @@ function HeaderNavContainer() {
         handleLoginModalToggle={handleLoginModalToggle}
         handleSignUpModalToggle={handleSignUpModalToggle}
       />
-      {isLoginModalOpen && (
+      {loginInfo.isLoginModalOpen && (
         <LoginComponent
-          isLoginModalOpen={isLoginModalOpen}
+          isLoginModalOpen={loginInfo.isLoginModalOpen}
           handleLoginModalToggle={handleLoginModalToggle}
           handleSignUpModalToggle={handleSignUpModalToggle}
         />
       )}
-      {isSignUpModalOpen && (
+      {loginInfo.isSignUpModalOpen && (
         <SignUpModal
-          isSignUpModalOpen={isSignUpModalOpen}
+          isSignUpModalOpen={loginInfo.isSignUpModalOpen}
           handleSignUpModalToggle={handleSignUpModalToggle}
         />
       )}

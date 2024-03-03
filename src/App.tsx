@@ -7,7 +7,7 @@ import "react-confirm-alert/src/react-confirm-alert.css";
 import "react-notifications/lib/notifications.css";
 import "tippy.js/dist/tippy.css";
 import { useIdleTimer } from "react-idle-timer";
-import GlobalUserContextProvider from "./Features/context/globalUserContext";
+import LoginContextProvider from "./Features/context/LoginContext";
 import { ApiHandler } from "./Features/Constants/ApiHandler";
 import { confirmAlert } from "react-confirm-alert";
 import HeaderNav from "./Features/HeaderNav";
@@ -61,9 +61,10 @@ function App() {
     // timeout: 60000, //1 minute
     crossTab: true,
   });
+  console.log("app");
 
   return (
-    <GlobalUserContextProvider userData={userData}>
+    <LoginContextProvider>
       <div className="App">
         <div className="main-header-container">
           <HeaderNav />
@@ -74,7 +75,7 @@ function App() {
 
         <NotificationContainer />
       </div>
-    </GlobalUserContextProvider>
+    </LoginContextProvider>
   );
 }
 export default App;
