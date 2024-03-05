@@ -1,0 +1,91 @@
+.config-page-container {
+    width: 100%;
+    height: 100%;
+
+    .config-page-cover {
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #c1b8b8;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .config-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+
+            .config-container-left {
+                width: 18%;
+                height: 100%;
+                border: 1px solid #E4E6E9;
+
+                .config-links {
+                    padding: 2%;
+                    height: 82%;
+
+                    .config-links-height {
+                        height: 12%;
+
+                        .config-links-border {
+                            height: 100%;
+                            padding: 1%;
+                            border-bottom: 1px solid #E4E6E9;
+                            display: flex;
+                            width: 100%;
+
+                            .config-links-title {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                text-transform: capitalize;
+                                cursor: pointer;
+                                height: 100%;
+                                width: 100%;
+
+                                &:hover {
+                                    background-color: #85848429;
+                                }
+
+                                .config-links-img {
+                                    display: flex;
+                                    width: 15%;
+                                }
+
+                                .title {
+                                    width: 42%;
+                                }
+                            }
+                        }
+
+                        .config-links-title {}
+                    }
+                }
+            }
+
+            .config-container-right {
+                width: 82%;
+            }
+
+            .config-container-name {
+                font-size: 26px;
+                padding: 10%;
+                height: 18%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom: 1px solid #E4E6E9;
+                color: #444444;
+                font-weight: 500;
+            }
+        }
+    }
+}

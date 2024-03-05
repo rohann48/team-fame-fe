@@ -57,7 +57,7 @@
     }
   }
 
-  .loggin-register-container {
+  .login-register-container {
     width: 25%;
     display: flex;
     justify-content: end;
@@ -66,12 +66,20 @@
     font-size: 16px;
     font-weight: 600;
     gap: 5px;
+
     .nav-link-loggin-cover {
       all: unset;
       cursor: pointer;
     }
+
     .nav-link-register-cover {
       all: unset;
+      cursor: pointer;
+    }
+
+    .config-icon {
+      width: 75%;
+      margin-top: 18%;
       cursor: pointer;
     }
   }

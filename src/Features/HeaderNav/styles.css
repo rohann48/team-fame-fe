@@ -78,7 +78,7 @@
   width: 30%;
   height: 100%;
 }
-.headernav-container .loggin-register-container {
+.headernav-container .login-register-container {
   width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,11 +94,16 @@
   font-weight: 600;
   gap: 5px;
 }
-.headernav-container .loggin-register-container .nav-link-loggin-cover {
+.headernav-container .login-register-container .nav-link-loggin-cover {
   all: unset;
   cursor: pointer;
 }
-.headernav-container .loggin-register-container .nav-link-register-cover {
+.headernav-container .login-register-container .nav-link-register-cover {
   all: unset;
+  cursor: pointer;
+}
+.headernav-container .login-register-container .config-icon {
+  width: 75%;
+  margin-top: 18%;
   cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */

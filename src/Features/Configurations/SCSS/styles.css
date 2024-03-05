@@ -1,0 +1,77 @@
+.config-page-container {
+  width: 100%;
+  height: 100%;
+}
+.config-page-container .config-page-cover {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+.config-page-container .config-page-cover::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+.config-page-container .config-page-cover::-webkit-scrollbar-thumb {
+  background: #c1b8b8;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.config-page-container .config-page-cover .config-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.config-page-container .config-page-cover .config-container .config-container-left {
+  width: 18%;
+  height: 100%;
+  border: 1px solid #E4E6E9;
+}
+.config-page-container .config-page-cover .config-container .config-container-left .config-links {
+  padding: 2%;
+  height: 82%;
+}
+.config-page-container .config-page-cover .config-container .config-container-left .config-links .config-links-height {
+  height: 12%;
+}
+.config-page-container .config-page-cover .config-container .config-container-left .config-links .config-links-height .config-links-border {
+  height: 100%;
+  padding: 1%;
+  border-bottom: 1px solid #E4E6E9;
+}
+.config-page-container .config-page-cover .config-container .config-container-left .config-links .config-links-height .config-links-border .config-links-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: capitalize;
+  cursor: pointer;
+  height: 100%;
+}
+.config-page-container .config-page-cover .config-container .config-container-left .config-links .config-links-height .config-links-border .config-links-title:hover {
+  background-color: rgba(133, 132, 132, 0.1607843137);
+}
+.config-page-container .config-page-cover .config-container .config-container-right {
+  width: 82%;
+}
+.config-page-container .config-page-cover .config-container .config-container-name {
+  font-size: 26px;
+  padding: 10%;
+  height: 18%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #E4E6E9;
+}/*# sourceMappingURL=styles.css.map */

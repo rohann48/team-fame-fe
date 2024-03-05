@@ -56,5 +56,13 @@ const images = {
   videoThumbnail: require("./Assets/Images/videoThumbnail.png"),
   testimonial: require("./Assets/Images/testimonial.svg").default,
   cancelButton: require("./Assets/Images/cancelButton.svg").default,
+  settings: require("./Assets/Images/configuration.svg").default,
+
+  aboutusIcon: require("./Assets/Images/about-us.svg").default,
+  eventIcon: require("./Assets/Images/Events.svg").default,
+  videoIcon: require("./Assets/Images/Videos.svg").default,
+  testimonialIcon: require("./Assets/Images/testimonialsIcon.svg").default,
+  newsIcon: require("./Assets/Images/news.svg").default,
+  schemeIcon: require("./Assets/Images/Scheme.svg").default,
 };
 export default images;

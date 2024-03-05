@@ -97,7 +97,17 @@ const HeaderNav = ({
           SHOP{" "}
         </NavLink>
       </div>
-      <div className="loggin-register-container">
+      <div className="login-register-container">
+        <NavLink to="config">
+          <Tippy placement="bottom-start" content="Configuration">
+            <img
+              className="config-icon"
+              // style={{ marginRight: "2px" }}
+              src={images.settings}
+              alt="config"
+            />
+          </Tippy>
+        </NavLink>
         <button
           className="nav-link-loggin-cover"
           onClick={() => handleLoginModalToggle()}
