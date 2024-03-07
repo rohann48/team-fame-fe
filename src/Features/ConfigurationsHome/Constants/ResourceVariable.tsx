@@ -3,6 +3,7 @@ export const Resource = {
     // authenticateUser: `/suppliers/signIn`,
     getAboutUs: `/aboutus`,
     postAboutUs: `/aboutus`,
+    postEvents: `/event`,
     // forgotPassword: `/suppliers/forgot/password`,
   },
 };

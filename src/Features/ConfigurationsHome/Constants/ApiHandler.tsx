@@ -1,4 +1,5 @@
 import { apiAuth } from "../../AuthenticateApi";
+import { PostEventProps } from "./ApiHandlerTypes";
 // import { loginParams } from "./ApiHandlerTypes";
 import { Resource } from "./ResourceVariable";
 
@@ -44,4 +45,17 @@ export const ApiHandler = {
   //   );
   //   return response.data;
   // },
+
+  //post Events
+  postEvents: async (data: PostEventProps) => {
+    try {
+      const response = await apiAuth.postApiwithoutAuth(
+        Resource.url.postAboutUs,
+        data
+      );
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };

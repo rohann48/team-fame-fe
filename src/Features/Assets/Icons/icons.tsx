@@ -10,6 +10,7 @@ import {
   faClock,
   faUserNinja,
 } from "@fortawesome/free-solid-svg-icons";
+
 import { faMessage, faTrashCan } from "@fortawesome/free-regular-svg-icons";
 const icons = {
   location: <FontAwesomeIcon icon={faLocationDot} size="1x" color="#BD9255" />,

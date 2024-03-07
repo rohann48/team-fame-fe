@@ -2,7 +2,7 @@
   width: 100%;
   height: 100%;
   .add-event-cover {
-    // height: 50%;
+    height: 50%;
     .add-event-inner-cover {
       width: 100%;
       height: 100%;
@@ -97,6 +97,17 @@
           width: 75%;
           height: 100%;
           padding-top: 2rem;
+          overflow-y: scroll;
+          &::-webkit-scrollbar {
+            width: 6px;
+            background: transparent;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background: #bd9255;
+            border-radius: 5px;
+            overflow: hidden;
+          }
           .event-name-cover {
             display: flex;
             align-items: center;
@@ -109,6 +120,7 @@
               flex-direction: column;
               font-size: 16px;
               color: #bd9255;
+              gap: 5px;
               .event-name-input {
                 all: unset;
                 border: 1px solid #bd9255;
@@ -129,7 +141,7 @@
               font-size: 16px;
               color: #bd9255;
               margin-left: 2rem;
-
+              gap: 5px;
               .event-date-input {
                 all: unset;
                 border: 1px solid #bd9255;
@@ -154,6 +166,7 @@
               flex-direction: column;
               font-size: 16px;
               color: #bd9255;
+              gap: 5px;
               .event-title-input {
                 all: unset;
                 border: 1px solid #bd9255;
@@ -175,7 +188,7 @@
               font-size: 16px;
               color: #bd9255;
               margin-left: 2rem;
-
+              gap: 5px;
               .event-time-input {
                 all: unset;
                 border: 1px solid #bd9255;
@@ -196,7 +209,7 @@
             flex-direction: column;
             font-size: 16px;
             color: #bd9255;
-
+            gap: 5px;
             .event-location-text-area {
               all: unset;
               border: 1px solid #bd9255;
@@ -226,7 +239,7 @@
             flex-direction: column;
             font-size: 16px;
             color: #bd9255;
-
+            gap: 5px;
             .event-description-text-area {
               all: unset;
               border: 1px solid #bd9255;
@@ -253,6 +266,93 @@
     }
   }
   .events-cards-cover {
-    // height: 50%;
+    height: 50%;
+    padding: 20px 0 0 20px;
+    border-top: 1px solid #bd9255;
+    .cards-event-header {
+      width: 100%;
+      height: 2rem;
+      color: #bd9255;
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+    .cards {
+      width: 350px;
+      background-color: #000000;
+      height: 450px;
+      display: flex;
+      border-radius: 5px;
+      .card-left {
+        width: 7%;
+        background-image: url("../../../../Assets//Images/cardLabelSide.svg");
+      }
+      .card-right {
+        width: 93%;
+        .card-right-inner-cover {
+          width: 100%;
+          height: 100%;
+          padding: 3%;
+          .card-right-header {
+            height: 10%;
+            display: flex;
+            .header-text {
+              font-size: 14px;
+              font-weight: 500;
+              background-color: #bd9255;
+              padding: 10px;
+              border-top-left-radius: 5px;
+              border-top-right-radius: 5px;
+            }
+          }
+          .card-img-cover {
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            .card-event-img {
+              aspect-ratio: 3 / 2;
+              object-fit: contain;
+              // mix-blend-mode: darken;
+            }
+          }
+          .card-event-title {
+            height: 10%;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 500;
+            color: white;
+            text-transform: uppercase;
+          }
+          .card-event-date {
+            height: 10%;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 500;
+            color: white;
+            text-transform: uppercase;
+          }
+          .card-event-time {
+            height: 10%;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 500;
+            color: white;
+            text-transform: uppercase;
+          }
+          .card-event-location {
+            height: 10%;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 500;
+            color: white;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
   }
 }
