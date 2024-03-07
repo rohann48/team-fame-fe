@@ -12,6 +12,7 @@ import { ApiHandler } from "./Features/Constants/ApiHandler";
 import { confirmAlert } from "react-confirm-alert";
 import HeaderNav from "./Features/HeaderNav";
 import Footer from "./Features/Common/CommonComponent/Footer/Components/footer";
+import GlobalDataContextProvider from "./Features/context/GlobalDataContext";
 function App() {
   const renderRoutes = useRoutes(mainRoutes);
   const [userData, setUserData] = useState(null);
@@ -66,15 +67,17 @@ function App() {
 
   return (
     <LoginContextProvider>
-      <div className="App">
-        <div className="main-header-container">
-          <HeaderNav />
-          <div className="home-render-routes-cover">
-            <div className="rendering-routes-components">{renderRoutes}</div>
+      <GlobalDataContextProvider>
+        <div className="App">
+          <div className="main-header-container">
+            <HeaderNav />
+            <div className="home-render-routes-cover">
+              <div className="rendering-routes-components">{renderRoutes}</div>
+            </div>
           </div>
+          <NotificationContainer />
         </div>
-        <NotificationContainer />
-      </div>
+      </GlobalDataContextProvider>
     </LoginContextProvider>
   );
 }

@@ -98,7 +98,7 @@ const HeaderNav = ({
         </NavLink>
       </div>
       <div className="login-register-container">
-        <NavLink to="config">
+        <NavLink to="config/about-us">
           <Tippy placement="bottom-start" content="Configuration">
             <img
               className="config-icon"

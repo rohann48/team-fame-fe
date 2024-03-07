@@ -2,8 +2,9 @@ import icons from "../../Assets/Icons/icons";
 import Footer from "../../Common/CommonComponent/Footer";
 import images from "../../ImageVariables";
 import "../SCSS/styles.scss";
+import { homePageTypes } from "../homePageTyypes";
 
-const HomePage = () => {
+const HomePage = ({ aboutUsData }: homePageTypes) => {
   return (
     <div className="home-page-container">
       <div className="home-page-cover">
@@ -62,7 +63,8 @@ const HomePage = () => {
             <div className="us-text">US</div>
           </div>
           <div className="about-us-description">
-            Education is not the learning of facts, but the training of the mind
+            {aboutUsData?.content}
+            {/* Education is not the learning of facts, but the training of the mind
             to think. The right kind of education is not concerned with any
             ideology, however much it may promise a future utopia it is not
             based on any system. The highest function of education is to bring
@@ -73,7 +75,7 @@ const HomePage = () => {
             evolutionary changes and steering towards becoming a meaningful
             process and promoting lifelong learning. An education system that
             originated in the eastern world and continues to be a source of
-            inspiration is the ancient Indian Gurukul System of Education.
+            inspiration is the ancient Indian Gurukul System of Education. */}
           </div>
         </div>
         <div className="home-events-cover">

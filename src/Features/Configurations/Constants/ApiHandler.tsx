@@ -1,4 +1,4 @@
-import { apiAuth } from "../AuthenticateApi";
+import { apiAuth } from "../../AuthenticateApi";
 // import { loginParams } from "./ApiHandlerTypes";
 import { Resource } from "./ResourceVariable";
 
@@ -11,9 +11,21 @@ export const ApiHandler = {
   //   );
   //   return response.data;
   // },
-  getAboutUs: async () => {
+  getpostAboutUs: async () => {
     try {
       const response = await apiAuth.getApiwithoutAuth(Resource.url.getAboutUs);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
+  postAboutUs: async (data: any) => {
+    try {
+      const response = await apiAuth.postApiwithoutAuth(
+        Resource.url.postAboutUs,
+        data
+      );
       return response.data;
     } catch (error) {
       console.log(error);

@@ -20,7 +20,7 @@ export const mainRoutes = [
     element: <HomePage />,
   },
   {
-    path: "/config",
+    path: "/config/*",
     element: <Configuration />,
   },
 ];

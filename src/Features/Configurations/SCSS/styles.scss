@@ -27,6 +27,7 @@
                 width: 18%;
                 height: 100%;
                 border: 1px solid #E4E6E9;
+                background: #fafafa;
 
                 .config-links {
                     padding: 2%;
@@ -41,6 +42,8 @@
                             border-bottom: 1px solid #E4E6E9;
                             display: flex;
                             width: 100%;
+                            text-decoration: none;
+                            color: #444444;
 
                             .config-links-title {
                                 display: flex;
@@ -73,6 +76,7 @@
 
             .config-container-right {
                 width: 82%;
+                height: 100%;
             }
 
             .config-container-name {
