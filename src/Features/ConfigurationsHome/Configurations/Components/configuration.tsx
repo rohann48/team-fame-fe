@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import icons from "../../Assets/Icons/icons";
-import Footer from "../../Common/CommonComponent/Footer";
-import images from "../../ImageVariables";
+import icons from "../../../Assets/Icons/icons";
+import Footer from "../../../Common/CommonComponent/Footer";
+import images from "../../../ImageVariables";
 import "../SCSS/styles.scss";
 import { configurationType } from "../configurationTypes";
 
@@ -18,8 +18,8 @@ const Configuration = ({
               <span>Admin Setting</span>
             </div>
             <div className="config-links">
-              {sideNavLinks.map((link) => (
-                <div className="config-links-height">
+              {sideNavLinks.map((link, i) => (
+                <div key={i} className="config-links-height">
                   <NavLink to={link.path} className="config-links-border">
                     <div className="config-links-title">
                       <div className="config-links-img">

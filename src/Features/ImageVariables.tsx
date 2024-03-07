@@ -64,5 +64,8 @@ const images = {
   testimonialIcon: require("./Assets/Images/testimonialsIcon.svg").default,
   newsIcon: require("./Assets/Images/news.svg").default,
   schemeIcon: require("./Assets/Images/Scheme.svg").default,
+  AddProfilePhotoPlus: require("./Assets/Images/AddProfilePhotoPlus.svg")
+    .default,
+  guestUSer: require("./Assets/Images/guestUser.svg").default,
 };
 export default images;

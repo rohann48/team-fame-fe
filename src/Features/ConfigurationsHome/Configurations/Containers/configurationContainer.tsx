@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Configuration from "../Components/configuration";
-import images from "../../ImageVariables";
+import images from "../../../ImageVariables";
 import { useRoutes } from "react-router-dom";
-import { configRoutes } from "../routes";
+import { configRoutes } from "../../routes";
 
 function ConfigurationContainer() {
   const sideNavLinks = [
@@ -17,12 +17,10 @@ function ConfigurationContainer() {
   const configurationRoutes = useRoutes(configRoutes);
 
   return (
-    <>
-      <Configuration
-        configurationRoutes={configurationRoutes}
-        sideNavLinks={sideNavLinks}
-      />
-    </>
+    <Configuration
+      configurationRoutes={configurationRoutes}
+      sideNavLinks={sideNavLinks}
+    />
   );
 }
 export default ConfigurationContainer;

@@ -14,7 +14,7 @@ const AboutUs = ({
           <textarea
             cols={157}
             rows={12}
-            value={aboutUsData.content!}
+            value={aboutUsData?.content!}
             onChange={(e) => handleOnChange(e.target.value)}
           />
         </div>

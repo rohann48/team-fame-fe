@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import AboutUs from "../Components/aboutUs";
-import { GlobalDataContext } from "../../../context/GlobalDataContext";
-import { ApiHandler } from "../../Constants/ApiHandler";
+import { GlobalDataContext } from "../../../../context/GlobalDataContext";
+import { ApiHandler } from "../../../Constants/ApiHandler";
 
 function AboutUsContainer() {
   const { aboutUsData, setAboutUsData } = useContext(GlobalDataContext);
@@ -14,13 +14,11 @@ function AboutUsContainer() {
     setAboutUsData({ content: val });
   };
   return (
-    <>
-      <AboutUs
-        aboutUsData={aboutUsData}
-        postAboutData={postAboutData}
-        handleOnChange={handleOnChange}
-      />
-    </>
+    <AboutUs
+      aboutUsData={aboutUsData}
+      postAboutData={postAboutData}
+      handleOnChange={handleOnChange}
+    />
   );
 }
 export default AboutUsContainer;

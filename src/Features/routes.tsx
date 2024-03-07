@@ -1,7 +1,7 @@
 import PageNotFound from "./PageNotFound";
 import Login from "./Login";
 import HomePage from "./HomePgae";
-import Configuration from "./Configurations";
+import Configuration from "./ConfigurationsHome/Configurations";
 export const mainRoutes = [
   {
     path: "*",

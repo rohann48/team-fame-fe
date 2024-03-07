@@ -341,7 +341,7 @@ const HomePage = ({ aboutUsData }: homePageTypes) => {
           <div className="heading">Videos/News</div>
           <div className="cards-cover">
             {[1, 2, 3].map((i) => (
-              <div className="cards">
+              <div key={i} className="cards">
                 <div className="cards-img">
                   <img src={images.videoThumbnail} className="thumbnail" />
                 </div>
