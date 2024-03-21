@@ -1,5 +1,10 @@
 import { createContext, useEffect, useState, useMemo } from "react";
-import { GlobalDataContextTypes } from "./GlobalDataContextTypes";
+import {
+  GlobalDataContextTypes,
+  IAboutUs,
+  IEventData,
+  ITestimonialData,
+} from "./GlobalDataContextTypes";
 import { ApiHandler } from "../Constants/ApiHandler";
 
 export const GlobalDataContext = createContext<GlobalDataContextTypes>(
@@ -12,9 +17,11 @@ const GlobalDataContextProvider = ({
   children: React.ReactNode;
   // onNavigate: any;
 }) => {
-  const [aboutUsData, setAboutUsData] = useState<any>({
+  const [aboutUsData, setAboutUsData] = useState<IAboutUs>({
     content: "",
   });
+  const [eventData, setEventData] = useState<IEventData>([]);
+  const [testimonialData, setTestimonialData] = useState<ITestimonialData>([]);
 
   useEffect(() => {
     // const assignUserInfo = async () => {
@@ -35,7 +42,17 @@ const GlobalDataContextProvider = ({
       const response = await ApiHandler.getAboutUs();
       setAboutUsData(response?.results);
     };
+    const handleGetEvents = async () => {
+      const response = await ApiHandler.getEvents();
+      setEventData(response?.results);
+    };
+    const handleGetTestimonial = async () => {
+      const response = await ApiHandler.getTestimonials();
+      setTestimonialData(response?.results);
+    };
     handleGetAboutUs();
+    handleGetEvents();
+    handleGetTestimonial();
   }, []);
 
   // To optimize the rendering of the context value and avoid unnecessary re-renders
@@ -43,8 +60,19 @@ const GlobalDataContextProvider = ({
     () => ({
       aboutUsData,
       setAboutUsData,
+      eventData,
+      setEventData,
+      testimonialData,
+      setTestimonialData,
     }),
-    [aboutUsData, setAboutUsData]
+    [
+      aboutUsData,
+      setAboutUsData,
+      eventData,
+      setEventData,
+      testimonialData,
+      setTestimonialData,
+    ]
   );
   return (
     <GlobalDataContext.Provider value={contextValue}>

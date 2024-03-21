@@ -1,5 +1,5 @@
 import { apiAuth } from "../../AuthenticateApi";
-import { PostEventProps } from "./ApiHandlerTypes";
+import { PostEventProps, PostTestimonialProps } from "./ApiHandlerTypes";
 // import { loginParams } from "./ApiHandlerTypes";
 import { Resource } from "./ResourceVariable";
 
@@ -50,7 +50,19 @@ export const ApiHandler = {
   postEvents: async (data: PostEventProps) => {
     try {
       const response = await apiAuth.postApiwithoutAuth(
-        Resource.url.postAboutUs,
+        Resource.url.postEvents,
+        data
+      );
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
+  postTestimonial: async (data: PostTestimonialProps) => {
+    try {
+      const response = await apiAuth.postApiwithoutAuth(
+        Resource.url.postTestimonial,
         data
       );
       return response.data;

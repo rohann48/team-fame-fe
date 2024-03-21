@@ -1,10 +1,17 @@
 //interface for post events
 export interface PostEventProps {
-  eventName: string;
+  name: string;
   title: string;
   date: string;
   time: string;
   location: string;
   description: string;
-  image: string;
+  image?: string;
+}
+
+export interface PostTestimonialProps {
+  name: string;
+  about: string;
+  achievement: string;
+  image?: string;
 }

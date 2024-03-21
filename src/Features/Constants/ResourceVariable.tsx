@@ -2,7 +2,8 @@ export const Resource = {
   url: {
     // authenticateUser: `/suppliers/signIn`,
     getAboutUs: `/aboutus`,
-    // logout: `/suppliers/logout`,
+    getEvents: `/event`,
+    getTestimonials: "/testimonial",
     // forgotPassword: `/suppliers/forgot/password`,
   },
 };

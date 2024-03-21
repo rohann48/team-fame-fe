@@ -138,7 +138,7 @@
               .event-name-input {
                 all: unset;
                 border: 1px solid #bd9255;
-                width: 569px;
+                width: 360px;
                 height: 40px;
                 border-radius: 5px;
                 font-size: 14px;
@@ -147,7 +147,7 @@
               }
             }
 
-            .event-date-cover {
+            .event-achievement-cover {
               margin-bottom: 15px;
               font-weight: 500;
               display: flex;
@@ -158,16 +158,17 @@
               margin-left: 2rem;
               gap: 5px;
 
-              .event-date-input {
+              .event-title-input {
                 all: unset;
                 border: 1px solid #bd9255;
-                width: 160px;
+                width: 355px;
                 height: 40px;
                 border-radius: 5px;
                 font-size: 14px;
                 font-weight: 400;
                 padding: 5px;
               }
+
             }
           }
 
@@ -175,27 +176,27 @@
             display: flex;
             align-items: center;
 
-            .event-label-cover {
-              margin-bottom: 15px;
-              font-weight: 500;
-              display: flex;
-              justify-content: center;
-              flex-direction: column;
-              font-size: 16px;
-              color: #bd9255;
-              gap: 5px;
+            // .event-label-cover {
+            //   margin-bottom: 15px;
+            //   font-weight: 500;
+            //   display: flex;
+            //   justify-content: center;
+            //   flex-direction: column;
+            //   font-size: 16px;
+            //   color: #bd9255;
+            //   gap: 5px;
 
-              .event-title-input {
-                all: unset;
-                border: 1px solid #bd9255;
-                width: 569px;
-                height: 40px;
-                border-radius: 5px;
-                font-size: 14px;
-                font-weight: 400;
-                padding: 5px;
-              }
-            }
+            // .event-title-input {
+            //   all: unset;
+            //   border: 1px solid #bd9255;
+            //   width: 569px;
+            //   height: 40px;
+            //   border-radius: 5px;
+            //   font-size: 14px;
+            //   font-weight: 400;
+            //   padding: 5px;
+            // }
+            // }
 
             .event-time-cover {
               margin-bottom: 15px;

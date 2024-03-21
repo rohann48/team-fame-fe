@@ -6,7 +6,7 @@ export type EventContainerProps = {
     time: string;
     location: string;
     description: string;
-    image: string;
+    image?: string;
   };
 };
 export type EventComponentProps = {
@@ -19,4 +19,5 @@ export type EventComponentProps = {
 } & {
   eventForms: EventContainerProps["eventForms"];
   handleSave: () => void;
+  eventData: Array<object>;
 };

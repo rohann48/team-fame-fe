@@ -1,10 +1,18 @@
+import { format, parseISO } from "date-fns";
 import icons from "../../Assets/Icons/icons";
 import Footer from "../../Common/CommonComponent/Footer";
 import images from "../../ImageVariables";
 import "../SCSS/styles.scss";
 import { homePageTypes } from "../homePageTyypes";
+import { NavLink } from "react-router-dom";
 
-const HomePage = ({ aboutUsData }: homePageTypes) => {
+const HomePage = ({
+  aboutUsData,
+  eventData,
+  testimonialLoop,
+}: homePageTypes) => {
+  console.log(testimonialLoop);
+
   return (
     <div className="home-page-container">
       <div className="home-page-cover">
@@ -80,149 +88,107 @@ const HomePage = ({ aboutUsData }: homePageTypes) => {
         </div>
         <div className="home-events-cover">
           <div className="event-title">Upcoming Events</div>
-          {/* <div className="cards-cover">
-            {/* {card 1} */}
-          {/* <div className="cards">
-            <div className="card-left-cover">
-              <img
-                src={images.cardLabelSide}
-                alt="cardLabelSide"
-                className="card-label-side-img"
-              />
-            </div>
-            <div className="card-right-cover">
-              <div className="day">TOMORROW</div>
-              <div className="marathon-img-cover">
-                <img src={images.logoBackground} className="marathon-img" />
-              </div>
-              <div className="marathon-header">Marathon event 2023</div>
-              <div className="date-cover">
-                <span className="date-icon">{icons.date}</span>
-                <span className="date">DEC 20, 2023</span>
-              </div>
-              <div className="time-cover">
-                <span className="time-icon">{icons.clock}</span>
-                <span className="time">10:00 AM</span>
-              </div>
-              <div className="location-cover">
-                <span className="location-icon">{icons.location}</span>
-                <span className="location">
-                  MANGALA STADIUM LADYHILL, MANGALORE 575006
-                </span>
-              </div>{" "}
-              <div className="contact-us-cover">
-                <button className="contact-us-btn">Contact us</button>
-              </div>
-            </div>
-          </div> */}
-          {/* {card 2} */}
-          {/* <div className="cards">
-            <div className="card-left-cover">
-              <img
-                src={images.cardLabelSide}
-                alt="cardLabelSide"
-                className="card-label-side-img"
-              />
-            </div>
-            <div className="card-right-cover">
-              <div className="day">TOMORROW</div>
-              <div className="marathon-img-cover">
-                <img src={images.logoBackground} className="marathon-img" />
-              </div>
-              <div className="marathon-header">Marathon event 2023</div>
-              <div className="date-cover">
-                <span className="date-icon">{icons.date}</span>
-                <span className="date">DEC 20, 2023</span>
-              </div>
-              <div className="time-cover">
-                <span className="time-icon">{icons.clock}</span>
-                <span className="time">10:00 AM</span>
-              </div>
-              <div className="location-cover">
-                <span className="location-icon">{icons.location}</span>
-                <span className="location">
-                  MANGALA STADIUM LADYHILL, MANGALORE 575006
-                </span>
-              </div>{" "}
-              <div className="contact-us-cover">
-                <button className="contact-us-btn">Contact us</button>
-              </div>
-            </div>
-          </div> */}
-          {/* {card 3} */}
-          {/* <div className="cards">
-            <div className="card-left-cover">
-              <img
-                src={images.cardLabelSide}
-                alt="cardLabelSide"
-                className="card-label-side-img"
-              />
-            </div>
-            <div className="card-right-cover">
-              <div className="day">TOMORROW</div>
-              <div className="marathon-img-cover">
-                <img src={images.logoBackground} className="marathon-img" />
-              </div>
-              <div className="marathon-header">Marathon event 2023</div>
-              <div className="date-cover">
-                <span className="date-icon">{icons.date}</span>
-                <span className="date">DEC 20, 2023</span>
-              </div>
-              <div className="time-cover">
-                <span className="time-icon">{icons.clock}</span>
-                <span className="time">10:00 AM</span>
-              </div>
-              <div className="location-cover">
-                <span className="location-icon">{icons.location}</span>
-                <span className="location">
-                  MANGALA STADIUM LADYHILL, MANGALORE 575006
-                </span>
-              </div>{" "}
-              <div className="contact-us-cover">
-                <button className="contact-us-btn">Contact us</button>
-              </div>
-            </div>
-          </div> */}
-          {/* </div> */}
-          <div className="event-mom-logo-cover">
-            <img src={images.eventMom} alt="event" />
-          </div>
-        </div>
-        <div className="home-mission-cover">
-          <img
-            src={images.mission}
-            alt="missionHandImage"
-            className="mission-img"
-          />
-        </div>
-        <div className="home-vision-cover">
-          <div className="vission-header">Vission</div>
-          <p className="vission-description">तमसो मा ज्योतिर्गमय</p>
-        </div>
-        <div className="home-testimonial-cover">
-          <div className="testimonial-left">
-            <div className="clients-logo-wrapper">
-              <div className="clients-logo-wrapper-icon">
-                <div className="img" style={{ width: "74px" }}>
-                  <i>
-                    <img src={images.testimonial} alt="testimonial" />
-                  </i>
+          <div className="cards-cover">
+            {eventData?.map((event: any) => {
+              return (
+                <>
+                  <div className="cards">
+                    <div className="card-left-cover">
+                      <img
+                        src={images.cardLabelSide}
+                        alt="cardLabelSide"
+                        className="card-label-side-img"
+                      />
+                    </div>
+                    <div className="card-right-cover">
+                      <div className="day">TOMORROW</div>
+                      <div className="marathon-img-cover">
+                        <img
+                          src={images.logoBackground}
+                          className="marathon-img"
+                        />
+                      </div>
+                      <div className="marathon-header">{event.title}</div>
+                      <div className="date-cover">
+                        <span className="date-icon">{icons.date}</span>
+                        <span className="date">
+                          {event &&
+                            format(parseISO(event?.date), "dd-MMM-yyyy")}
+                        </span>
+                      </div>
+                      <div className="time-cover">
+                        <span className="time-icon">{icons.clock}</span>
+                        <span className="time">{event.time} AM</span>
+                      </div>
+                      <div className="location-cover">
+                        <span className="location-icon">{icons.location}</span>
+                        <span className="location">{event.location}</span>
+                      </div>{" "}
+                      <div className="contact-us-cover">
+                        <button className="contact-us-btn">Contact us</button>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              );
+            })}
+            {/* <div className="event-mom-logo-cover">
+              <img src={images.eventMom} alt="event" />
+            </div> */}
+            {eventData?.length === 3 ? (
+              <div className="view-all-card">
+                <div className="left-cover">
+                  <img
+                    src={images.cardLabelSide}
+                    alt="cardLabelSide"
+                    className="label-side-img"
+                  />
                 </div>
-                <div className="author-name">
-                  <span>{"Sanal Padmanabhan"}</span>
+                <div className="right-cover">
+                  <NavLink to="our-event">
+                    <div className="view-all-btn">View All</div>
+                  </NavLink>
                 </div>
               </div>
-              <div className="clients-logo-wrapper-author">
-                <p className="para">
-                  Congratulations and good luck brother. I believe in your work
-                  ethics. Feeling happy to see your growing. #ImWithTeamFame
-                </p>
-              </div>
-            </div>
+            ) : null}
           </div>
-          <div className="testimonial-right"></div>
-        </div>
-        {/* <div className="home-sponser-cover">
+          <div className="home-mission-cover">
+            <img
+              src={images.mission}
+              alt="missionHandImage"
+              className="mission-img"
+            />
+          </div>
+          <div className="home-vision-cover">
+            <div className="vission-header">Vission</div>
+            <p className="vission-description">तमसो मा ज्योतिर्गमय</p>
+          </div>
+          <div className="home-testimonial-cover">
+            <div></div>
+            {testimonialLoop?.map((testimonial: any) => {
+              return (
+                <div className="testimonial-left">
+                  <div className="clients-logo-wrapper">
+                    <div className="clients-logo-wrapper-icon">
+                      <div className="img" style={{ width: "74px" }}>
+                        <i>
+                          <img src={images.testimonial} alt="testimonial" />
+                        </i>
+                      </div>
+                      <div className="author-name">
+                        <span>{testimonial.name}</span>
+                      </div>
+                    </div>
+                    <div className="clients-logo-wrapper-author">
+                      <p className="para">{testimonial.about}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+            <div className="testimonial-right"></div>
+          </div>
+          {/* <div className="home-sponser-cover">
           <div className="slider">
             <div className="slide-track">
               <div className="slide">
@@ -337,44 +303,45 @@ const HomePage = ({ aboutUsData }: homePageTypes) => {
           </div>
         </div> */}
 
-        <div className="home-videos-and-news-cover">
-          <div className="heading">Videos/News</div>
-          <div className="cards-cover">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="cards">
-                <div className="cards-img">
-                  <img src={images.videoThumbnail} className="thumbnail" />
-                </div>
-                <div className="cards-content">
-                  <div className="title">
-                    Embracing the journey: Unraveling the life changing benefits
-                    of running
+          <div className="home-videos-and-news-cover">
+            <div className="heading">Videos/News</div>
+            <div className="cards-cover">
+              {[1, 2, 3].map((i) => (
+                <div key={i} className="cards">
+                  <div className="cards-img">
+                    <img src={images.videoThumbnail} className="thumbnail" />
                   </div>
-                  <div className="para">
-                    Explore the myriad health advantages that running offers,
-                    from enhancing cardiovascular fitness...
+                  <div className="cards-content">
+                    <div className="title">
+                      Embracing the journey: Unraveling the life changing
+                      benefits of running
+                    </div>
+                    <div className="para">
+                      Explore the myriad health advantages that running offers,
+                      from enhancing cardiovascular fitness...
+                    </div>
+                    <button className="btn">Play</button>
                   </div>
-                  <button className="btn">Play</button>
                 </div>
+              ))}
+            </div>
+          </div>
+          <div className="home-join-community-cover">
+            <div className="cover-line"></div>
+            <div className="join-now-cover">
+              <div className="join-now-title">
+                FA<span>R</span>ME<span>R</span>
               </div>
-            ))}
-          </div>
-        </div>
-        <div className="home-join-community-cover">
-          <div className="cover-line"></div>
-          <div className="join-now-cover">
-            <div className="join-now-title">
-              FA<span>R</span>ME<span>R</span>
+              <div className="join-now-para">
+                {/* <p>Farmer join our community</p> */}
+                <p>From the students ; for the students ; to the students</p>
+              </div>
+              <button className="join-now-btn">Join Now</button>
             </div>
-            <div className="join-now-para">
-              {/* <p>Farmer join our community</p> */}
-              <p>From the students ; for the students ; to the students</p>
-            </div>
-            <button className="join-now-btn">Join Now</button>
           </div>
-        </div>
-        <div>
-          <Footer />
+          <div>
+            <Footer />
+          </div>
         </div>
       </div>
     </div>

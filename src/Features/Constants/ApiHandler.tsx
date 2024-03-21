@@ -19,6 +19,24 @@ export const ApiHandler = {
       console.log(error);
     }
   },
+  getEvents: async () => {
+    try {
+      const response = await apiAuth.getApiwithoutAuth(Resource.url.getEvents);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
+  getTestimonials: async () => {
+    try {
+      const response = await apiAuth.getApiwithoutAuth(
+        Resource.url.getTestimonials
+      );
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
   // //logout
   // logoutUser: async () => {
   //   const response = await apiAuth.getApiwithoutAuth(Resource.url.logout);

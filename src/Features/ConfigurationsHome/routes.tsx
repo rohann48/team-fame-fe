@@ -1,5 +1,6 @@
 import AboutUs from "./RenderComponents/AboutUs";
 import Events from "./RenderComponents/Events";
+import Testimonial from "./RenderComponents/Testimonial";
 
 export const configRoutes = [
   {
@@ -9,5 +10,9 @@ export const configRoutes = [
   {
     path: "/events",
     element: <Events />,
+  },
+  {
+    path: "/testimonial",
+    element: <Testimonial />,
   },
 ];

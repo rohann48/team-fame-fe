@@ -1,24 +1,21 @@
 import React, { useContext, useState } from "react";
-import Events from "../Components/Events";
-import { EventContainerProps } from "../EventsTypes";
+import Testimonial from "../Components/Testimonial";
+import { TestimonialContainerProps } from "../TestimonialTypes";
 import { ApiHandler } from "../../../Constants/ApiHandler";
 import { NotificationManager } from "react-notifications";
 import { Notify } from "../../../../Common/Notify/NotificationMessages";
 import { GlobalDataContext } from "../../../../context/GlobalDataContext";
 
 let initialState = {
-  eventName: "",
-  title: "",
-  date: "",
-  time: "",
-  location: "",
-  description: "",
+  name: "",
+  about: "",
+  achievement: "",
   image: "",
 };
-function EventsContainer() {
+function TestimonialContainer() {
   const { eventData } = useContext(GlobalDataContext);
-  const [eventForms, setEventForms] = useState<
-    EventContainerProps["eventForms"]
+  const [testimonialForms, setTestimonialForms] = useState<
+    TestimonialContainerProps["testimonialForms"]
   >({ ...initialState });
 
   //handle change form inputs
@@ -29,7 +26,7 @@ function EventsContainer() {
     type: string
   ) => {
     const { value } = e.target;
-    setEventForms((prev) => {
+    setTestimonialForms((prev) => {
       return {
         ...prev,
         [type]: value,
@@ -40,17 +37,13 @@ function EventsContainer() {
   //save
   const handleSave = async () => {
     let modifiedData = {
-      name: eventForms.eventName,
-      title: eventForms.title,
-      date: eventForms.date,
-      time: eventForms.time,
-      location: eventForms.location,
-      description: eventForms.description,
-      status: "completed",
-      ...(eventForms.image && { image: eventForms.image }),
+      name: testimonialForms.name,
+      about: testimonialForms.about,
+      achievement: testimonialForms.achievement,
+      ...(testimonialForms.image && { image: testimonialForms.image }),
     };
     try {
-      const response = await ApiHandler.postEvents(modifiedData);
+      const response = await ApiHandler.postTestimonial(modifiedData);
       console.log(response.results);
       NotificationManager.success(Notify.ADD, "", 2000);
     } catch (err) {
@@ -59,13 +52,13 @@ function EventsContainer() {
   };
 
   return (
-    <Events
+    <Testimonial
       handleChangeInputs={handleChangeInputs}
-      eventForms={eventForms}
+      testimonialForms={testimonialForms}
       handleSave={handleSave}
       eventData={eventData}
     />
   );
 }
 
-export default EventsContainer;
+export default TestimonialContainer;

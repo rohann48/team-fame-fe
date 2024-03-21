@@ -4,6 +4,7 @@ export const Resource = {
     getAboutUs: `/aboutus`,
     postAboutUs: `/aboutus`,
     postEvents: `/event`,
+    postTestimonial: `/testimonial`,
     // forgotPassword: `/suppliers/forgot/password`,
   },
 };

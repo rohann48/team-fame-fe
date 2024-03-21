@@ -1,20 +1,20 @@
 import icons from "../../../../Assets/Icons/icons";
 import images from "../../../../ImageVariables";
-import { EventComponentProps } from "../EventsTypes";
+import { TestimonialComponentProps } from "../TestimonialTypes";
 import "../SCSS/styles.css";
 
-function Events({
+function Testimonial({
   handleChangeInputs,
-  eventForms,
+  testimonialForms,
   handleSave,
   eventData,
-}: EventComponentProps) {
+}: TestimonialComponentProps) {
   return (
     <div className="events-container">
       <div className="add-event-cover">
         <div className="add-event-inner-cover">
-          <div className="event-header">EVENTS</div>
-          <div className="add-event-header">Add Events</div>
+          <div className="event-header">TESTIMONIAL</div>
+          <div className="add-event-header">Add Testimonial</div>
           <div className="event-input-field-cover">
             <div className="event-input-field-img-cover">
               <div className="event-logo-upload-img">
@@ -33,15 +33,15 @@ function Events({
             <div className="events-input-filed-cover">
               <div className="event-name-cover">
                 <label className="event-label-cover">
-                  <div className="event-text">Event Name</div>
+                  <div className="event-text">Name</div>
                   <input
                     className="event-name-input"
                     type="text"
-                    onChange={(e) => handleChangeInputs(e, "eventName")}
-                    value={eventForms?.eventName}
+                    onChange={(e) => handleChangeInputs(e, "name")}
+                    value={testimonialForms?.name}
                   />
                 </label>
-                <label className="event-date-cover">
+                {/* <label className="event-date-cover">
                   <div className="event-date">Event Date</div>
                   <input
                     className="event-date-input"
@@ -49,45 +49,24 @@ function Events({
                     onChange={(e) => handleChangeInputs(e, "date")}
                     value={eventForms.date}
                   />
-                </label>
-              </div>
-              <div className="event-title-cover">
-                <label className="event-label-cover">
-                  <div className="event-title">Event Title</div>
+                </label> */}
+                <label className="event-achievement-cover">
+                  <div className="event-text">Person role/ achievement</div>
                   <input
                     className="event-title-input"
                     type="text"
-                    onChange={(e) => handleChangeInputs(e, "title")}
-                    value={eventForms.title}
-                  />
-                </label>
-                <label className="event-time-cover">
-                  <div className="event-time">Event Time</div>
-                  <input
-                    className="event-time-input"
-                    type="time"
-                    onChange={(e) => handleChangeInputs(e, "time")}
-                    value={eventForms.time}
-                  />
-                </label>
-              </div>
-              <div className="event-location-cover">
-                <label className="event-location-cover">
-                  <div className="event-location">Event Location</div>
-                  <textarea
-                    className="event-location-text-area"
-                    onChange={(e) => handleChangeInputs(e, "location")}
-                    value={eventForms.location}
+                    onChange={(e) => handleChangeInputs(e, "achievement")}
+                    value={testimonialForms.achievement}
                   />
                 </label>
               </div>
               <div className="event-description-cover">
                 <label className="event-description-cover">
-                  <div className="event-description">Event Description</div>
+                  <div className="event-description">About Fame</div>
                   <textarea
                     className="event-description-text-area"
-                    onChange={(e) => handleChangeInputs(e, "description")}
-                    value={eventForms.description}
+                    onChange={(e) => handleChangeInputs(e, "about")}
+                    value={testimonialForms.about}
                   />
                 </label>
               </div>
@@ -96,7 +75,7 @@ function Events({
         </div>
       </div>
       <div className="events-cards-cover">
-        <div className="cards-event-header">Upcoming Events</div>
+        <div className="cards-event-header">All Testimonials</div>
         <div className="cards-flex">
           {eventData.map((event: any) => {
             return (
@@ -135,4 +114,4 @@ function Events({
   );
 }
 
-export default Events;
+export default Testimonial;
