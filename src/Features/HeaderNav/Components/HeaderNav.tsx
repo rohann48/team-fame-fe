@@ -12,7 +12,7 @@ const HeaderNav = ({
   handleSignUpModalToggle,
 }: HeaderNavProps) => {
   return (
-    <div className="headernav-container">
+    <div className="header-nav-container">
       <div className="icon-cover">
         <img
           className="logo-image"
@@ -80,6 +80,21 @@ const HeaderNav = ({
           }}
         >
           LATEST NEWS{" "}
+        </NavLink>
+        <NavLink
+          to="scheme"
+          className={
+            // ({ isActive }) => {
+            // isActive && setActiveTab("configuration");
+            // return isActive ? "nav-options-selected" :
+            "nav-options"
+            // }
+          }
+          onClick={() => {
+            setActiveTab("scheme");
+          }}
+        >
+          SCHEME
         </NavLink>
         <NavLink
           to="shop"

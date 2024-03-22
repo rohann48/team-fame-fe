@@ -63,7 +63,6 @@ function App() {
     // timeout: 60000, //1 minute
     crossTab: true,
   });
-  console.log("app");
 
   return (
     <LoginContextProvider>

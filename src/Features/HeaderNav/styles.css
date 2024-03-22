@@ -1,4 +1,4 @@
-.headernav-container {
+.header-nav-container {
   background-color: #bd9255;
   width: 100%;
   height: 7%;
@@ -7,7 +7,7 @@
   display: -ms-flexbox;
   display: flex;
 }
-.headernav-container .icon-cover {
+.header-nav-container .icon-cover {
   width: 20%;
   height: 100%;
   display: -webkit-box;
@@ -21,11 +21,11 @@
           justify-content: center;
   background-color: #3e3c3c;
 }
-.headernav-container .icon-cover .logo-image {
+.header-nav-container .icon-cover .logo-image {
   width: 94%;
   height: 90%;
 }
-.headernav-container .tool-options-cover {
+.header-nav-container .tool-options-cover {
   width: 52%;
   height: 100%;
   display: -webkit-box;
@@ -35,7 +35,7 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.headernav-container .tool-options-cover .nav-options {
+.header-nav-container .tool-options-cover .nav-options {
   text-align: center;
   width: 30%;
   height: 100%;
@@ -56,7 +56,7 @@
   font-weight: 600;
   font-size: 16px;
 }
-.headernav-container .tool-options-cover .nav-options-selected {
+.header-nav-container .tool-options-cover .nav-options-selected {
   color: #2863ff;
   -webkit-box-shadow: 0 1px 1px rgba(50, 58, 70, 0.1019607843);
           box-shadow: 0 1px 1px rgba(50, 58, 70, 0.1019607843);
@@ -76,7 +76,7 @@
   width: 30%;
   height: 100%;
 }
-.headernav-container .login-register-container {
+.header-nav-container .login-register-container {
   width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,15 +92,15 @@
   font-weight: 600;
   gap: 5px;
 }
-.headernav-container .login-register-container .nav-link-loggin-cover {
+.header-nav-container .login-register-container .nav-link-loggin-cover {
   all: unset;
   cursor: pointer;
 }
-.headernav-container .login-register-container .nav-link-register-cover {
+.header-nav-container .login-register-container .nav-link-register-cover {
   all: unset;
   cursor: pointer;
 }
-.headernav-container .login-register-container .config-icon {
+.header-nav-container .login-register-container .config-icon {
   width: 75%;
   margin-top: 18%;
   cursor: pointer;

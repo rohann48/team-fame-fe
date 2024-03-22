@@ -67,5 +67,8 @@ const images = {
   AddProfilePhotoPlus: require("./Assets/Images/AddProfilePhotoPlus.svg")
     .default,
   guestUSer: require("./Assets/Images/guestUser.svg").default,
+  goldSchemeCovered: require("./Assets/Images/goldSchemeCovered.svg").default,
+  Rectangle: require("./Assets/Images/Rectangle.svg").default,
+  locket: require("./Assets/Images/locket.svg").default,
 };
 export default images;
