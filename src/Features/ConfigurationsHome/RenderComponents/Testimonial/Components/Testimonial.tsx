@@ -77,7 +77,7 @@ function Testimonial({
       <div className="events-cards-cover">
         <div className="cards-event-header">All Testimonials</div>
         <div className="cards-flex">
-          {eventData.map((event: any) => {
+          {eventData?.map((event: any) => {
             return (
               <div className="cards">
                 <div className="card-left"></div>
