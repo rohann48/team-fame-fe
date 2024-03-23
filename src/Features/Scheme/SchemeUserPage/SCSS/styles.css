@@ -344,7 +344,7 @@
 .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-period-label-cover .scheme-payee-period-select::placeholder {
   color: #aeaeae;
 }
-.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-btn-cover {
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .user-scheme-btn-cover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -354,7 +354,7 @@
   gap: 2%;
   margin-top: 20px;
 }
-.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-btn-cover .join-scheme-btn {
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .user-scheme-btn-cover .join-scheme-btn {
   all: unset;
   width: 92px;
   height: 40px;
@@ -364,12 +364,12 @@
   font-size: 14px;
   font-weight: 400;
 }
-.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-btn-cover .join-scheme-btn.cancel {
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .user-scheme-btn-cover .join-scheme-btn.cancel {
   border: 1px solid #444444;
   color: #444444;
   background-color: #ffffff;
 }
-.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-btn-cover .join-scheme-btn.pay {
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .user-scheme-btn-cover .join-scheme-btn.pay {
   color: #ffffff;
   border: 1px solid #000000;
   background-color: #000000;

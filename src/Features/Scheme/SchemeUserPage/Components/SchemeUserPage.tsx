@@ -135,7 +135,7 @@ function SchemeUserPage() {
               </label>
               <div className="payment-method-cover">
                 <div className="payment-text">Payment Type</div>
-                <div className="btn-covers">
+                <div className="btn-cover">
                   <label className="pay-label">
                     <input type="radio" />
                     <span className="pay-text"> Google Pay</span>
@@ -146,7 +146,7 @@ function SchemeUserPage() {
                   </label>
                 </div>
               </div>
-              <div className="scheme-btn-cover">
+              <div className="user-scheme-btn-cover">
                 <button className="join-scheme-btn cancel">Cancel</button>
                 <button className="join-scheme-btn pay">Pay</button>
               </div>
