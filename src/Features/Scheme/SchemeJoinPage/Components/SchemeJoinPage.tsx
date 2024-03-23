@@ -1,8 +1,8 @@
-import Footer from "../../Common/CommonComponent/Footer";
-import images from "../../ImageVariables";
+import Footer from "../../../Common/CommonComponent/Footer";
+import images from "../../../ImageVariables";
 import "../SCSS/styles.css";
 
-function Scheme() {
+function SchemeJoinPage() {
   return (
     <div className="scheme-container">
       <div className="gold-scheme-img-one-cover"></div>
@@ -128,4 +128,4 @@ function Scheme() {
   );
 }
 
-export default Scheme;
+export default SchemeJoinPage;

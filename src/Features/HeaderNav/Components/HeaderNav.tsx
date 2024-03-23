@@ -36,7 +36,7 @@ const HeaderNav = ({
         >
           HOME
         </NavLink>
-        <NavLink
+        {/* <NavLink
           to="about-us"
           className={
             // ({ isActive }) => {
@@ -50,7 +50,7 @@ const HeaderNav = ({
           }}
         >
           ABOUT US{" "}
-        </NavLink>
+        </NavLink> */}
         <NavLink
           to="our-event"
           className={

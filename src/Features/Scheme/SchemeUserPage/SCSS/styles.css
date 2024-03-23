@@ -1,0 +1,399 @@
+.user-scheme-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+.user-scheme-container::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+.user-scheme-container::-webkit-scrollbar-thumb {
+  background: #c1b8b8;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.user-scheme-container .user-gold-scheme-img-one-cover {
+  width: 100%;
+  height: 280px;
+  background-image: url("../../../Assets/Images/goldSchemeCovered.svg");
+  background-size: cover;
+  background-position: center;
+}
+.user-scheme-container .user-gold-scheme-img-two-cover {
+  width: 100%;
+  height: 511px;
+  background-image: url("../../../Assets/Images/Rectangle.svg");
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.user-scheme-container .user-gold-scheme-img-two-cover .user-gold-scheme-img-two-text-cover {
+  width: 50%;
+}
+.user-scheme-container .user-gold-scheme-img-two-cover .user-gold-scheme-img-two-text-cover .user-text-one-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  color: #bd9255;
+  font-size: 24px;
+  height: 10%;
+}
+.user-scheme-container .user-gold-scheme-img-two-cover .user-gold-scheme-img-two-text-cover .user-text-two-cover {
+  font-size: 55px;
+  color: #bd9255;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 2rem;
+  gap: 10%;
+}
+.user-scheme-container .user-gold-scheme-img-two-cover .user-gold-scheme-img-two-text-cover .user-text-two-cover .user-header-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.user-scheme-container .user-gold-scheme-img-two-cover .user-gold-scheme-img-two-text-cover .user-text-two-cover .user-header-three {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.user-scheme-container .user-gold-scheme-img-two-cover .user-gold-scheme-img-two-text-cover .user-text-two-cover .user-header-four {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.user-scheme-container .user-gold-scheme-img-two-cover .user-gold-scheme-user-details-cover {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.user-scheme-container .user-gold-scheme-img-two-cover .user-gold-scheme-user-details-cover .info {
+  color: #bd9255;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.user-scheme-container .user-gold-scheme-img-two-cover .user-gold-scheme-user-details-cover .info .info-data {
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: 8px;
+  text-transform: capitalize;
+}
+.user-scheme-container .user-gold-scheme-img-two-cover .user-gold-scheme-user-details-cover .info .edit-user-btn {
+  all: unset;
+  width: 122px;
+  height: 40px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+.user-scheme-container .user-scheme-plan-info-cover {
+  width: 100%;
+  height: 300px;
+  background-color: #ebeff3;
+  color: #bd9255;
+  padding: 2%;
+}
+.user-scheme-container .user-scheme-plan-info-cover .user-scheme-plan-info-wrapper {
+  border: 1px solid #bd9255;
+  font-size: 12px;
+  padding: 2%;
+  line-height: 20px;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+}
+.user-scheme-container .user-scheme-details-cover {
+  width: 100%;
+  height: 480px;
+  background-color: #ebeff3;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-header {
+  height: 10%;
+  font-size: 40px;
+  font-weight: 500;
+  color: #bd9255;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 90%;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper {
+  width: 50%;
+  height: 100%;
+  padding: 1% 2%;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper .table-header {
+  font-size: 14px;
+  font-weight: 500;
+  color: #bd9255;
+  margin-bottom: 6px;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #bd9255;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #ffffff;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper table thead tr {
+  color: #bd9255;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper table tbody tr {
+  color: #444444;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper table th,
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper table td {
+  padding: 8px;
+  text-align: left;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper table tbody tr:last-child {
+  font-weight: 500;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper table td:last-child {
+  white-space: nowrap;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form-cover {
+  width: 50%;
+  height: 100%;
+  padding: 1% 2%;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form {
+  height: 50%;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-label-cover {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+  color: #bd9255;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-label-cover .scheme-payee-input {
+  all: unset;
+  border: 1px solid #bd9255;
+  height: 30px;
+  border-radius: 3px;
+  width: 563px;
+  height: 40px;
+  padding: 3px 5px;
+  background-color: #ffffff;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-label-cover .scheme-payee-input::-webkit-input-placeholder {
+  color: #aeaeae;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-label-cover .scheme-payee-input::-moz-placeholder {
+  color: #aeaeae;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-label-cover .scheme-payee-input:-ms-input-placeholder {
+  color: #aeaeae;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-label-cover .scheme-payee-input::-ms-input-placeholder {
+  color: #aeaeae;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-label-cover .scheme-payee-input::placeholder {
+  color: #aeaeae;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-contact-label-cover {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+  color: #bd9255;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-contact-label-cover .scheme-payee-contact-number-input {
+  all: unset;
+  border: 1px solid #bd9255;
+  height: 30px;
+  border-radius: 3px;
+  width: 269px;
+  height: 40px;
+  padding: 3px 5px;
+  background-color: #ffffff;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-contact-label-cover .scheme-payee-contact-number-input::-webkit-input-placeholder {
+  color: #aeaeae;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-contact-label-cover .scheme-payee-contact-number-input::-moz-placeholder {
+  color: #aeaeae;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-contact-label-cover .scheme-payee-contact-number-input:-ms-input-placeholder {
+  color: #aeaeae;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-contact-label-cover .scheme-payee-contact-number-input::-ms-input-placeholder {
+  color: #aeaeae;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-contact-label-cover .scheme-payee-contact-number-input::placeholder {
+  color: #aeaeae;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-period-label-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+  color: #bd9255;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-period-label-cover .scheme-payee-period-select {
+  all: unset;
+  border: 1px solid #bd9255;
+  height: 40px;
+  border-radius: 3px;
+  width: 269px;
+  padding: 3px 5px;
+  background-color: #ffffff;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-period-label-cover .scheme-payee-period-select::-webkit-input-placeholder {
+  color: #aeaeae;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-period-label-cover .scheme-payee-period-select::-moz-placeholder {
+  color: #aeaeae;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-period-label-cover .scheme-payee-period-select:-ms-input-placeholder {
+  color: #aeaeae;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-period-label-cover .scheme-payee-period-select::-ms-input-placeholder {
+  color: #aeaeae;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-period-label-cover .scheme-payee-period-select::placeholder {
+  color: #aeaeae;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-btn-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2%;
+  margin-top: 20px;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-btn-cover .join-scheme-btn {
+  all: unset;
+  width: 92px;
+  height: 40px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-btn-cover .join-scheme-btn.cancel {
+  border: 1px solid #444444;
+  color: #444444;
+  background-color: #ffffff;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-btn-cover .join-scheme-btn.pay {
+  color: #ffffff;
+  border: 1px solid #000000;
+  background-color: #000000;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .payment-method-cover {
+  margin-top: 20px;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .payment-method-cover .payment-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #bd9255;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .payment-method-cover .btn-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2%;
+  margin-top: 5px;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .payment-method-cover .btn-cover .pay-label {
+  color: #444444;
+  font-size: 14px;
+  font-weight: 400;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .payment-method-cover .btn-cover .pay-label .pay-text {
+  padding-left: 3px;
+}/*# sourceMappingURL=styles.css.map */

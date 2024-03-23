@@ -2,7 +2,7 @@ import PageNotFound from "./PageNotFound";
 import Login from "./Login";
 import HomePage from "./HomePgae";
 import Configuration from "./ConfigurationsHome/Configurations";
-import Scheme from "./Scheme";
+import SchemeHomePage from "./Scheme/SchemeHomePage";
 export const mainRoutes = [
   {
     path: "*",
@@ -25,7 +25,7 @@ export const mainRoutes = [
     element: <Configuration />,
   },
   {
-    path: "/scheme",
-    element: <Scheme />,
+    path: "/scheme/*",
+    element: <SchemeHomePage />,
   },
 ];

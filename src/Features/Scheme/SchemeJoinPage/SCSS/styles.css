@@ -1,0 +1,668 @@
+.scheme-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+.scheme-container::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+.scheme-container::-webkit-scrollbar-thumb {
+  background: #c1b8b8;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.scheme-container .gold-scheme-img-one-cover {
+  width: 100%;
+  height: 280px;
+  background-image: url("../../../Assets/Images/goldSchemeCovered.svg");
+  background-size: cover;
+  background-position: center;
+}
+.scheme-container .gold-scheme-img-two-cover {
+  width: 100%;
+  height: 511px;
+  background-image: url("../../../Assets/Images/Rectangle.svg");
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.scheme-container .gold-scheme-img-two-cover .gold-scheme-img-two-text-cover {
+  width: 50%;
+}
+.scheme-container
+  .gold-scheme-img-two-cover
+  .gold-scheme-img-two-text-cover
+  .text-one-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+  color: #bd9255;
+  font-size: 24px;
+  height: 10%;
+}
+.scheme-container
+  .gold-scheme-img-two-cover
+  .gold-scheme-img-two-text-cover
+  .text-two-cover {
+  font-size: 55px;
+  color: #bd9255;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 2rem;
+  gap: 10%;
+}
+.scheme-container
+  .gold-scheme-img-two-cover
+  .gold-scheme-img-two-text-cover
+  .text-two-cover
+  .header-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.scheme-container
+  .gold-scheme-img-two-cover
+  .gold-scheme-img-two-text-cover
+  .text-two-cover
+  .header-three {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.scheme-container
+  .gold-scheme-img-two-cover
+  .gold-scheme-img-two-text-cover
+  .text-two-cover
+  .header-four {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.scheme-container .gold-scheme-img-two-cover .gold-scheme-img-two-locket-cover {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.scheme-container .scheme-details-cover {
+  width: 100%;
+  height: 610px;
+  background-color: #ebeff3;
+}
+.scheme-container .scheme-details-cover .scheme-welcome-header {
+  height: 10%;
+  font-size: 40px;
+  font-weight: 500;
+  color: #bd9255;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 25rem;
+}
+.scheme-container .scheme-details-cover .scheme-description-and-form-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 90%;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-description-cover {
+  width: 50%;
+  height: 100%;
+  line-height: 26px;
+  padding: 1% 2%;
+  border-right: 1px solid #bd9255;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-description-cover
+  .description {
+  font-size: 16px;
+  font-weight: 400;
+  color: #bd9255;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-description-cover
+  .description-header {
+  font-size: 20px;
+  font-weight: 500;
+  color: #bd9255;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form-cover {
+  width: 50%;
+  height: 100%;
+  padding: 1% 2%;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form-cover
+  .scheme-rate-header {
+  height: 7%;
+  font-size: 30px;
+  font-weight: 500;
+  color: #bd9255;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form-cover
+  .scheme-rate-cards-cover {
+  height: 20%;
+  font-size: 24px;
+  font-weight: 500;
+  color: #bd9255;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 20%;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form-cover
+  .scheme-rate-cards-cover
+  .scheme-rate-card
+  .scheme-rate-text {
+  text-align: center;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form-cover
+  .scheme-rate-cards-cover
+  .scheme-rate-card
+  .scheme-rate {
+  width: 202px;
+  height: 60px;
+  background-color: #727272;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 4px solid #bd9255;
+  border-radius: 5px;
+  color: white;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form-cover
+  .scheme-join-text {
+  height: 15%;
+  font-size: 30px;
+  font-weight: 500;
+  color: #bd9255;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form-cover
+  .scheme-join-text::-webkit-input-placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form-cover
+  .scheme-join-text::-moz-placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form-cover
+  .scheme-join-text:-ms-input-placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form-cover
+  .scheme-join-text::-ms-input-placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form-cover
+  .scheme-join-text::placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form {
+  height: 50%;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-payee-label-cover {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+  color: #bd9255;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-payee-label-cover
+  .scheme-payee-input {
+  all: unset;
+  border: 1px solid #bd9255;
+  height: 30px;
+  border-radius: 3px;
+  width: 563px;
+  height: 40px;
+  padding: 3px 5px;
+  background-color: #ffffff;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-payee-label-cover
+  .scheme-payee-input::-webkit-input-placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-payee-label-cover
+  .scheme-payee-input::-moz-placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-payee-label-cover
+  .scheme-payee-input:-ms-input-placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-payee-label-cover
+  .scheme-payee-input::-ms-input-placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-payee-label-cover
+  .scheme-payee-input::placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-email-contact-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2%;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-email-contact-cover
+  .scheme-payee-email-label-cover {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+  color: #bd9255;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-email-contact-cover
+  .scheme-payee-email-label-cover
+  .scheme-payee-email-input {
+  all: unset;
+  border: 1px solid #bd9255;
+  height: 30px;
+  border-radius: 3px;
+  width: 269px;
+  height: 40px;
+  padding: 3px 5px;
+  background-color: #ffffff;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-email-contact-cover
+  .scheme-payee-email-label-cover
+  .scheme-payee-email-input::-webkit-input-placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-email-contact-cover
+  .scheme-payee-email-label-cover
+  .scheme-payee-email-input::-moz-placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-email-contact-cover
+  .scheme-payee-email-label-cover
+  .scheme-payee-email-input:-ms-input-placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-email-contact-cover
+  .scheme-payee-email-label-cover
+  .scheme-payee-email-input::-ms-input-placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-email-contact-cover
+  .scheme-payee-email-label-cover
+  .scheme-payee-email-input::placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-email-contact-cover
+  .scheme-payee-contact-label-cover {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+  color: #bd9255;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-email-contact-cover
+  .scheme-payee-contact-label-cover
+  .scheme-payee-contact-number-input {
+  all: unset;
+  border: 1px solid #bd9255;
+  height: 30px;
+  border-radius: 3px;
+  width: 269px;
+  height: 40px;
+  padding: 3px 5px;
+  background-color: #ffffff;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-email-contact-cover
+  .scheme-payee-contact-label-cover
+  .scheme-payee-contact-number-input::-webkit-input-placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-email-contact-cover
+  .scheme-payee-contact-label-cover
+  .scheme-payee-contact-number-input::-moz-placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-email-contact-cover
+  .scheme-payee-contact-label-cover
+  .scheme-payee-contact-number-input:-ms-input-placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-email-contact-cover
+  .scheme-payee-contact-label-cover
+  .scheme-payee-contact-number-input::-ms-input-placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-email-contact-cover
+  .scheme-payee-contact-label-cover
+  .scheme-payee-contact-number-input::placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-payee-period-label-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+  color: #bd9255;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-payee-period-label-cover
+  .scheme-payee-period-select {
+  all: unset;
+  border: 1px solid #bd9255;
+  height: 30px;
+  border-radius: 3px;
+  width: 269px;
+  height: 40px;
+  padding: 3px 5px;
+  background-color: #ffffff;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-payee-period-label-cover
+  .scheme-payee-period-select::-webkit-input-placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-payee-period-label-cover
+  .scheme-payee-period-select::-moz-placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-payee-period-label-cover
+  .scheme-payee-period-select:-ms-input-placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-payee-period-label-cover
+  .scheme-payee-period-select::-ms-input-placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-form
+  .scheme-payee-period-label-cover
+  .scheme-payee-period-select::placeholder {
+  color: #aeaeae;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-btn-cover {
+  height: 8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.scheme-container
+  .scheme-details-cover
+  .scheme-description-and-form-cover
+  .scheme-btn-cover
+  .join-scheme-btn {
+  all: unset;
+  width: 202px;
+  height: 60px;
+  background-color: #bd9255;
+  text-transform: capitalize;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 400;
+  border: 1px solid #bd9255;
+  border-radius: 5px;
+  text-align: center;
+} /*# sourceMappingURL=styles.css.map */
