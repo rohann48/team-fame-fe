@@ -113,6 +113,10 @@ const HeaderNav = ({
         </NavLink>
       </div>
       <div className="login-register-container">
+        <button className="cart-img-btn">
+          <img className="cart-img" src={images.cart} alt="cart" />{" "}
+          <span className="cart-count">0</span>
+        </button>
         <NavLink to="config/about-us">
           <Tippy placement="bottom-start" content="Configuration">
             <img

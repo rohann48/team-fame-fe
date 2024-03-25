@@ -18,6 +18,7 @@ const HomePage = ({
       <div className="home-page-cover">
         <div className="home-revolution-logo-cover">
           <img
+            className="home-revolution-logo"
             src={images.logoBackground}
             alt="fameRevolutionBackground"
             height={"100%"}

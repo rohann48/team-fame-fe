@@ -92,6 +92,25 @@
   font-weight: 600;
   gap: 5px;
 }
+.header-nav-container .login-register-container .cart-img-btn {
+  all: unset !important;
+  position: relative;
+}
+.header-nav-container .login-register-container .cart-img-btn .cart-img {
+  margin-top: 18%;
+  cursor: pointer;
+}
+.header-nav-container .login-register-container .cart-img-btn .cart-count {
+  position: absolute;
+  background-color: #df4c4c;
+  border: 1px solid #df4c4c;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 4px;
+  font-size: 8px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
 .header-nav-container .login-register-container .nav-link-loggin-cover {
   all: unset;
   cursor: pointer;

@@ -3,6 +3,7 @@ import Login from "./Login";
 import HomePage from "./HomePgae";
 import Configuration from "./ConfigurationsHome/Configurations";
 import SchemeHomePage from "./Scheme/SchemeHomePage";
+import ShoppingCart from "./ShoppingCart";
 export const mainRoutes = [
   {
     path: "*",
@@ -19,6 +20,10 @@ export const mainRoutes = [
   {
     index: true,
     element: <HomePage />,
+  },
+  {
+    path: "/shop/*",
+    element: <ShoppingCart />,
   },
   {
     path: "/config/*",

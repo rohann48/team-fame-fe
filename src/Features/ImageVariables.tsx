@@ -70,5 +70,9 @@ const images = {
   goldSchemeCovered: require("./Assets/Images/goldSchemeCovered.svg").default,
   Rectangle: require("./Assets/Images/Rectangle.svg").default,
   locket: require("./Assets/Images/locket.svg").default,
+  cart: require("./Assets/Images/cart.svg").default,
+  storeImage: require("./Assets/Images/storeImage.svg").default,
+  chair: require("./Assets/Images/chair.svg").default,
+  viewMore: require("./Assets/Images/viewMore.svg").default,
 };
 export default images;

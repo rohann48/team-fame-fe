@@ -19,8 +19,12 @@
     }
 
     .home-revolution-logo-cover {
+      width: 100%;
       height: 68.25%;
       position: relative;
+      .home-revolution-logo {
+        width: 100%;
+      }
       // width: 100%;
       // background-image: url("../../Assets/Images/logoBackground.svg");
       // background-size: cover;

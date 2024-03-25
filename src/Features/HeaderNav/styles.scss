@@ -66,6 +66,24 @@
     font-size: 16px;
     font-weight: 600;
     gap: 5px;
+    .cart-img-btn {
+      all: unset !important;
+      position: relative;
+      .cart-img {
+        margin-top: 18%;
+        cursor: pointer;
+      }
+      .cart-count {
+        position: absolute;
+        background-color: #df4c4c;
+        border: 1px solid #df4c4c;
+        color: white;
+        border-radius: 50%;
+        padding: 4px 4px;
+        font-size: 8px;
+        transform: translate(-50%, -50%);
+      }
+    }
 
     .nav-link-loggin-cover {
       all: unset;
