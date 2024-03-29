@@ -11,8 +11,6 @@ const HomePage = ({
   eventData,
   testimonialLoop,
 }: homePageTypes) => {
-  console.log(testimonialLoop);
-
   return (
     <div className="home-page-container">
       <div className="home-page-cover">

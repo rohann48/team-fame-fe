@@ -13,6 +13,7 @@ import { confirmAlert } from "react-confirm-alert";
 import HeaderNav from "./Features/HeaderNav";
 import Footer from "./Features/Common/CommonComponent/Footer/Components/footer";
 import GlobalDataContextProvider from "./Features/context/GlobalDataContext";
+import ShopContextProvider from "./Features/context/ShopContext/ShopContext";
 function App() {
   const renderRoutes = useRoutes(mainRoutes);
   const [userData, setUserData] = useState(null);
@@ -69,7 +70,9 @@ function App() {
       <GlobalDataContextProvider>
         <div className="App">
           <div className="main-header-container">
-            <HeaderNav />
+            <ShopContextProvider>
+              <HeaderNav />
+            </ShopContextProvider>
             <div className="home-render-routes-cover">
               <div className="rendering-routes-components">{renderRoutes}</div>
             </div>

@@ -3,7 +3,8 @@ import Login from "./Login";
 import HomePage from "./HomePgae";
 import Configuration from "./ConfigurationsHome/Configurations";
 import SchemeHomePage from "./Scheme/SchemeHomePage";
-import ShoppingCart from "./ShoppingCart";
+import ShopHomePage from "./Shop/ShopHomePage";
+import ShopContextProvider from "./context/ShopContext/ShopContext";
 export const mainRoutes = [
   {
     path: "*",
@@ -23,7 +24,11 @@ export const mainRoutes = [
   },
   {
     path: "/shop/*",
-    element: <ShoppingCart />,
+    element: (
+      <ShopContextProvider>
+        <ShopHomePage />
+      </ShopContextProvider>
+    ),
   },
   {
     path: "/config/*",

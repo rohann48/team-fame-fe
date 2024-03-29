@@ -3,6 +3,7 @@ import HeaderNav from "../Components/HeaderNav";
 import LoginComponent from "../../Login";
 import SignUpModal from "../../SignUpModal";
 import { LoginContext } from "../../context/LoginContext";
+import { ShopContext } from "../../context/ShopContext/ShopContext";
 
 function HeaderNavContainer() {
   const {
@@ -11,6 +12,8 @@ function HeaderNavContainer() {
     handleLoginModalToggle,
     handleSignUpModalToggle,
   } = useContext(LoginContext);
+  const { productCount } = useContext(ShopContext);
+  console.log(productCount, "head");
   //state maintained for active tabs
   const [activeTab, setActiveTab] = useState("home");
   return (
@@ -20,6 +23,7 @@ function HeaderNavContainer() {
         setActiveTab={setActiveTab}
         handleLoginModalToggle={handleLoginModalToggle}
         handleSignUpModalToggle={handleSignUpModalToggle}
+        productCount={productCount}
       />
       {loginInfo.isLoginModalOpen && (
         <LoginComponent

@@ -10,7 +10,9 @@ const HeaderNav = ({
   setActiveTab,
   handleLoginModalToggle,
   handleSignUpModalToggle,
+  productCount,
 }: HeaderNavProps) => {
+  console.log(productCount.count, "count");
   return (
     <div className="header-nav-container">
       <div className="icon-cover">
@@ -115,7 +117,7 @@ const HeaderNav = ({
       <div className="login-register-container">
         <button className="cart-img-btn">
           <img className="cart-img" src={images.cart} alt="cart" />{" "}
-          <span className="cart-count">0</span>
+          <span className="cart-count">{productCount.count}</span>
         </button>
         <NavLink to="config/about-us">
           <Tippy placement="bottom-start" content="Configuration">

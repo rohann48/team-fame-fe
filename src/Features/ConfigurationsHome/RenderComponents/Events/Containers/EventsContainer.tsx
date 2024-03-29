@@ -51,7 +51,6 @@ function EventsContainer() {
     };
     try {
       const response = await ApiHandler.postEvents(modifiedData);
-      console.log(response.results);
       NotificationManager.success(Notify.ADD, "", 2000);
     } catch (err) {
       NotificationManager.warning(Notify.DEFAULT, "", 2000);

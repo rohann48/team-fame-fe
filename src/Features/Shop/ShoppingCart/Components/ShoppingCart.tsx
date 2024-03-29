@@ -1,8 +1,7 @@
-import { url } from "inspector";
 import "../SCSS/styles.css";
 import { ShoppingCartTypes } from "../ShoppingCartTypes";
-import images from "../../ImageVariables";
-import Footer from "../../Common/CommonComponent/Footer";
+import images from "../../../ImageVariables";
+import Footer from "../../../Common/CommonComponent/Footer";
 const products = [
   {
     id: 1,
@@ -68,7 +67,7 @@ const products = [
     price: 1099,
   },
 ];
-function ShoppingCart({}: ShoppingCartTypes) {
+function ShoppingCart({ handleIncrement }: ShoppingCartTypes) {
   return (
     <div className="shop-container">
       <div className="shop-img-cover">Store</div>
@@ -94,7 +93,12 @@ function ShoppingCart({}: ShoppingCartTypes) {
                 <p className="product-price">₹ {prod.price}</p>
               </div>
               <div className="product-actions">
-                <button className="add-to-cart">Add to Cart</button>
+                <button
+                  className="add-to-cart"
+                  onClick={() => handleIncrement()}
+                >
+                  Add to Cart
+                </button>
                 <button className="buy-now">Buy Now</button>
               </div>
             </div>
