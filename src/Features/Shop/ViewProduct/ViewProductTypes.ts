@@ -1,8 +1,9 @@
 import { CommonTypes } from "../../Common/CommonTypes";
 
 export type ViewProductTypes = {
-  productCount: CommonTypes["productCount"];
-  handleIncrement: CommonTypes["handleIncrement"];
-  handleDecrement: CommonTypes["handleIncrement"];
+  countInfo: CommonTypes["countInfo"];
+  handleIncrementProduct: CommonTypes["handleIncrementProduct"];
+  handleDecrementProduct: CommonTypes["handleDecrementProduct"];
   handleBackButton: CommonTypes["handleBackButton"];
+  handleAddToCart: () => void;
 };

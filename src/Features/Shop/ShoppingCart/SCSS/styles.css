@@ -116,6 +116,7 @@
   transition: -webkit-box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+  cursor: pointer;
 }
 .shop-container .shop-product-cover .product-card-cover .product-card:hover {
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -132,10 +133,7 @@
 .shop-container .shop-product-cover .product-card-cover .product-card .product-details {
   margin-bottom: 12px;
 }
-.shop-container .shop-product-cover .product-card-cover .product-card .nav-link-no-underline {
-  text-decoration: none;
-}
-.shop-container .shop-product-cover .product-card-cover .product-card .nav-link-no-underline .product-description {
+.shop-container .shop-product-cover .product-card-cover .product-card .product-description {
   font-size: 16px;
   margin-bottom: 8px;
 }

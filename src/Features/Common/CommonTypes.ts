@@ -1,8 +1,9 @@
 export type CommonTypes = {
-  productCount: {
-    count: number;
+  countInfo: {
+    productCount: number;
+    addToCartCount: number;
   };
-  handleIncrement: () => void;
-  handleDecrement: () => void;
+  handleIncrementProduct: () => void;
+  handleDecrementProduct: () => void;
   handleBackButton: () => void;
 };

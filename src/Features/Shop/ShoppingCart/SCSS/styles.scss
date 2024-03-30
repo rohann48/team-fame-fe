@@ -83,7 +83,6 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 20px;
       padding-inline: 2rem;
-
       .product-card {
         border: 1px solid #ddd;
         border-radius: 8px;
@@ -93,7 +92,7 @@
         width: 368px;
         background-color: #fff;
         transition: box-shadow 0.3s ease;
-
+        cursor: pointer;
         &:hover {
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
@@ -109,12 +108,10 @@
         .product-details {
           margin-bottom: 12px;
         }
-        .nav-link-no-underline {
-          text-decoration: none;
-          .product-description {
-            font-size: 16px;
-            margin-bottom: 8px;
-          }
+
+        .product-description {
+          font-size: 16px;
+          margin-bottom: 8px;
         }
 
         .product-price {

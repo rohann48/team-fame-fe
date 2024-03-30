@@ -4,30 +4,41 @@ import { ShopContext } from "../../../context/ShopContext/ShopContext";
 import { useNavigate } from "react-router";
 
 function ViewProductContainer() {
-  const { productCount, setProductCount } = useContext(ShopContext);
+  const { countInfo, setCountInfo } = useContext(ShopContext);
   const navigate = useNavigate();
-  const handleIncrement = () => {
-    setProductCount((prev) => ({
+  const handleIncrementProduct = () => {
+    setCountInfo((prev) => ({
       ...prev,
-      count: prev.count + 1,
+      productCount: prev.productCount + 1,
+      addToCartCount: prev.addToCartCount + 1,
     }));
   };
   //handle decrementing product count
-  const handleDecrement = () => {
-    setProductCount((prev) => ({
+  const handleDecrementProduct = () => {
+    setCountInfo((prev) => ({
       ...prev,
-      count: prev.count - 1,
+      productCount: prev.productCount - 1,
+      addToCartCount: prev.addToCartCount - 1,
     }));
   };
+  //navigate backward
   const handleBackButton = () => {
     navigate(-1);
   };
+  //handle add to cart
+  const handleAddToCart = () => {
+    setCountInfo((prev) => ({
+      ...prev,
+      addToCartCount: prev.addToCartCount + 1,
+    }));
+  };
   return (
     <ViewProduct
-      productCount={productCount}
-      handleIncrement={handleIncrement}
-      handleDecrement={handleDecrement}
+      countInfo={countInfo}
+      handleIncrementProduct={handleIncrementProduct}
+      handleDecrementProduct={handleDecrementProduct}
       handleBackButton={handleBackButton}
+      handleAddToCart={handleAddToCart}
     />
   );
 }

@@ -1,5 +1,6 @@
 export type ShoppingCartTypes = {
-  handleIncrement: (
+  handleAddToCartIncrement: (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => void;
+  handleNavigateProduct: () => void;
 };

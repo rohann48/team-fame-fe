@@ -68,7 +68,10 @@ const products = [
     price: 1099,
   },
 ];
-function ShoppingCart({ handleIncrement }: ShoppingCartTypes) {
+function ShoppingCart({
+  handleAddToCartIncrement,
+  handleNavigateProduct,
+}: ShoppingCartTypes) {
   return (
     <div className="shop-container">
       <div className="shop-img-cover">Store</div>
@@ -84,26 +87,40 @@ function ShoppingCart({ handleIncrement }: ShoppingCartTypes) {
 
         <div className="product-card-cover">
           {products.map((prod) => (
-            <div className="product-card" key={prod.id}>
+            <div
+              className="product-card"
+              key={prod.id}
+              onClick={() => handleNavigateProduct()}
+            >
               <img
                 className="product-image"
                 src={prod.imageUrl}
                 alt="Product"
               />
               <div className="product-details">
-                <NavLink to="product" className="nav-link-no-underline">
-                  <p className="product-description">{prod.description}</p>
-                </NavLink>
+                <p className="product-description">{prod.description}</p>
+
                 <p className="product-price">₹ {prod.price}</p>
               </div>
               <div className="product-actions">
                 <button
                   className="add-to-cart"
-                  onClick={(event) => handleIncrement(event)}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    handleAddToCartIncrement(event);
+                  }}
                 >
                   Add to Cart
                 </button>
-                <button className="buy-now">Buy Now</button>
+                <button
+                  className="buy-now"
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    handleNavigateProduct();
+                  }}
+                >
+                  Buy Now
+                </button>
               </div>
             </div>
           ))}

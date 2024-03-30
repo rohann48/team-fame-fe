@@ -5,10 +5,11 @@ import "../SCSS/styles.css";
 import { ViewProductTypes } from "../ViewProductTypes";
 
 function ViewProduct({
-  productCount,
-  handleIncrement,
-  handleDecrement,
+  countInfo,
+  handleIncrementProduct,
+  handleDecrementProduct,
   handleBackButton,
+  handleAddToCart,
 }: ViewProductTypes) {
   return (
     <div className="view-product-container">
@@ -38,21 +39,28 @@ function ViewProduct({
               <div className="action-btn-cover">
                 <div
                   className="decrement-btn"
-                  onClick={() => productCount.count > 0 && handleDecrement()}
+                  onClick={() =>
+                    countInfo.productCount > 0 && handleDecrementProduct()
+                  }
                 >
                   -
                 </div>
-                <div className="product-quantity">{productCount.count}</div>
+                <div className="product-quantity">{countInfo.productCount}</div>
                 <div
                   className="increment-btn"
-                  onClick={() => handleIncrement()}
+                  onClick={() => handleIncrementProduct()}
                 >
                   +
                 </div>
               </div>
             </div>
             <div className="view-product-btn-covers">
-              <button className="view-product cart-btn">ADD TO CART</button>
+              <button
+                className="view-product cart-btn"
+                onClick={() => handleAddToCart()}
+              >
+                ADD TO CART
+              </button>
               <button className="view-product buy-btn">BUY NOW</button>
             </div>
           </div>
