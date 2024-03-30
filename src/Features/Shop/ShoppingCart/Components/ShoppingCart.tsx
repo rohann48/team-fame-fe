@@ -2,6 +2,7 @@ import "../SCSS/styles.css";
 import { ShoppingCartTypes } from "../ShoppingCartTypes";
 import images from "../../../ImageVariables";
 import Footer from "../../../Common/CommonComponent/Footer";
+import { NavLink } from "react-router-dom";
 const products = [
   {
     id: 1,
@@ -80,6 +81,7 @@ function ShoppingCart({ handleIncrement }: ShoppingCartTypes) {
           </div>
           <div className="go-to-cart-btn">Go to Cart</div>
         </div>
+
         <div className="product-card-cover">
           {products.map((prod) => (
             <div className="product-card" key={prod.id}>
@@ -89,13 +91,15 @@ function ShoppingCart({ handleIncrement }: ShoppingCartTypes) {
                 alt="Product"
               />
               <div className="product-details">
-                <p className="product-description">{prod.description}</p>
+                <NavLink to="product" className="nav-link-no-underline">
+                  <p className="product-description">{prod.description}</p>
+                </NavLink>
                 <p className="product-price">₹ {prod.price}</p>
               </div>
               <div className="product-actions">
                 <button
                   className="add-to-cart"
-                  onClick={() => handleIncrement()}
+                  onClick={(event) => handleIncrement(event)}
                 >
                   Add to Cart
                 </button>

@@ -11,28 +11,13 @@ export const ShopContext = createContext<ShoppingContextInitialState>(
 );
 const ShopContextProvider = ({ children }: ShopContextTypes) => {
   const [productCount, setProductCount] = useState({ ...initialState });
-  //handle incrementing product count
-  const handleIncrement = () => {
-    setProductCount((prev) => ({
-      ...prev,
-      count: prev.count + 1,
-    }));
-  };
-  //handle decrementing product count
-  const handleDecrement = () => {
-    setProductCount((prev) => ({
-      ...prev,
-      count: prev.count - 1,
-    }));
-  };
-
+  console.log("count-context", productCount.count);
   const contextValue = useMemo(
     () => ({
       productCount,
-      handleIncrement,
-      handleDecrement,
+      setProductCount,
     }),
-    [productCount, handleIncrement, handleDecrement]
+    [productCount, setProductCount]
   );
   return (
     <ShopContext.Provider value={contextValue}>{children}</ShopContext.Provider>

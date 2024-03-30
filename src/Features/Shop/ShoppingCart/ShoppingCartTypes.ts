@@ -1,3 +1,5 @@
 export type ShoppingCartTypes = {
-  handleIncrement: () => void;
+  handleIncrement: (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => void;
 };

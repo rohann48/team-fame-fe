@@ -24,6 +24,9 @@
   gap: 1%;
   padding-left: 3rem;
 }
+.view-product-container .view-product-back-btn-cover .view-product-back-btn {
+  cursor: pointer;
+}
 .view-product-container .view-product-back-btn-cover .view-product-back-text {
   font-size: 16px;
   font-weight: 500;
@@ -120,6 +123,7 @@
   background-color: #ffffff;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  cursor: pointer;
 }
 .view-product-container .view-product-cover .view-product-description-cover .view-product-description-wrapper .view-product-action-btn-cover .action-btn-cover .product-quantity {
   width: 40px;
@@ -153,6 +157,7 @@
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   background-color: #ffffff;
+  cursor: pointer;
 }
 .view-product-container .view-product-cover .view-product-description-cover .view-product-description-wrapper .view-product-btn-covers {
   display: -webkit-box;

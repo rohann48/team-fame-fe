@@ -4,4 +4,5 @@ export type CommonTypes = {
   };
   handleIncrement: () => void;
   handleDecrement: () => void;
+  handleBackButton: () => void;
 };

@@ -8,11 +8,17 @@ function ViewProduct({
   productCount,
   handleIncrement,
   handleDecrement,
+  handleBackButton,
 }: ViewProductTypes) {
   return (
     <div className="view-product-container">
       <div className="view-product-back-btn-cover">
-        <div className="view-product-back-btn">{icons.backBtn}</div>
+        <div
+          className="view-product-back-btn"
+          onClick={() => handleBackButton()}
+        >
+          {icons.backBtn}
+        </div>
         <div className="view-product-back-text">Back</div>
       </div>
       <div className="view-product-cover">

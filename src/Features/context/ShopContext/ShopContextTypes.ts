@@ -6,6 +6,9 @@ export interface ShoppingContextInitialState {
   productCount: {
     count: number;
   };
-  handleIncrement: () => void;
-  handleDecrement: () => void;
+  setProductCount: React.Dispatch<
+    React.SetStateAction<{
+      count: number;
+    }>
+  >;
 }

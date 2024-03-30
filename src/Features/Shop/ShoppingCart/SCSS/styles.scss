@@ -77,11 +77,13 @@
         }
       }
     }
+
     .product-card-cover {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 20px;
       padding-inline: 2rem;
+
       .product-card {
         border: 1px solid #ddd;
         border-radius: 8px;
@@ -107,10 +109,12 @@
         .product-details {
           margin-bottom: 12px;
         }
-
-        .product-description {
-          font-size: 16px;
-          margin-bottom: 8px;
+        .nav-link-no-underline {
+          text-decoration: none;
+          .product-description {
+            font-size: 16px;
+            margin-bottom: 8px;
+          }
         }
 
         .product-price {
@@ -148,6 +152,7 @@
         }
       }
     }
+
     .shop-view-more-cover {
       height: 65px;
       display: flex;
