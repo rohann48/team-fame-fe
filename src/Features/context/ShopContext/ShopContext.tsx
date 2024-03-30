@@ -1,9 +1,10 @@
-import { createContext, useMemo } from "react";
+import { createContext, useEffect, useMemo } from "react";
 import {
   ShopContextTypes,
   ShoppingContextInitialState,
 } from "./ShopContextTypes";
 import { useImmer } from "use-immer";
+
 let initialState: ShoppingContextInitialState["productInfo"] = {
   productCount: 0,
   cartBasket: [],
@@ -15,8 +16,6 @@ export const ShopContext = createContext<ShoppingContextInitialState>(
 );
 const ShopContextProvider = ({ children }: ShopContextTypes) => {
   const [productInfo, setProductInfo] = useImmer({ ...initialState });
-  console.log("context", productInfo);
-
   const contextValue = useMemo(
     () => ({
       productInfo,

@@ -3,6 +3,8 @@ import ShoppingCart from "../Components/ShoppingCart";
 import { ShopContext } from "../../../context/ShopContext/ShopContext";
 import { useNavigate } from "react-router-dom";
 import { CommonTypes } from "../../../Common/CommonTypes";
+import { NotificationManager } from "react-notifications";
+
 function ShoppingCartContainer() {
   const { productInfo, setProductInfo } = useContext(ShopContext);
   const navigate = useNavigate();
@@ -13,7 +15,6 @@ function ShoppingCartContainer() {
     index: number,
     prod: CommonTypes["product"]
   ) => {
-    let tempData = structuredClone(productInfo);
     //increase quantityCount if the item is already exists
     setProductInfo((draft) => {
       if (draft.cartBasket[index]) {
@@ -27,9 +28,10 @@ function ShoppingCartContainer() {
           quantityCount: 1,
         });
       }
+      NotificationManager.success("Product added to cart", "", 2000);
     });
   };
-  console.log(productInfo);
+  console.log("shoppingCart", productInfo);
 
   //navigate to view product
   const handleNavigateProduct = () => {
