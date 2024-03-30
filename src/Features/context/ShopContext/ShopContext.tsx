@@ -3,23 +3,23 @@ import {
   ShopContextTypes,
   ShoppingContextInitialState,
 } from "./ShopContextTypes";
-let initialState = {
+let initialState: ShoppingContextInitialState["productInfo"] = {
   productCount: 0,
-  addToCartCount: 0,
+  cartBasket: [],
 };
 export const ShopContext = createContext<ShoppingContextInitialState>(
   {} as ShoppingContextInitialState
 );
 const ShopContextProvider = ({ children }: ShopContextTypes) => {
-  const [countInfo, setCountInfo] = useState({ ...initialState });
-  console.log("context", countInfo);
+  const [productInfo, setProductInfo] = useState({ ...initialState });
+  console.log("context", productInfo);
 
   const contextValue = useMemo(
     () => ({
-      countInfo,
-      setCountInfo,
+      productInfo,
+      setProductInfo,
     }),
-    [countInfo, setCountInfo]
+    [productInfo, setProductInfo]
   );
   return (
     <ShopContext.Provider value={contextValue}>{children}</ShopContext.Provider>

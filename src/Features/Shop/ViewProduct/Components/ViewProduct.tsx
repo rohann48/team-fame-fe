@@ -5,7 +5,7 @@ import "../SCSS/styles.css";
 import { ViewProductTypes } from "../ViewProductTypes";
 
 function ViewProduct({
-  countInfo,
+  productInfo,
   handleIncrementProduct,
   handleDecrementProduct,
   handleBackButton,
@@ -40,12 +40,14 @@ function ViewProduct({
                 <div
                   className="decrement-btn"
                   onClick={() =>
-                    countInfo.productCount > 0 && handleDecrementProduct()
+                    productInfo.productCount > 0 && handleDecrementProduct()
                   }
                 >
                   -
                 </div>
-                <div className="product-quantity">{countInfo.productCount}</div>
+                <div className="product-quantity">
+                  {productInfo.productCount}
+                </div>
                 <div
                   className="increment-btn"
                   onClick={() => handleIncrementProduct()}

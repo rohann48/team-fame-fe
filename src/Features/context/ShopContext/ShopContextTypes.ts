@@ -3,11 +3,16 @@ export interface ShopContextTypes {
 }
 
 export interface ShoppingContextInitialState {
-  countInfo: {
+  productInfo: {
     productCount: number;
-    addToCartCount: number;
+    cartBasket: {
+      id: number;
+      imageUrl: string;
+      description: string;
+      price: number;
+    }[];
   };
-  setCountInfo: React.Dispatch<
-    React.SetStateAction<ShoppingContextInitialState["countInfo"]>
+  setProductInfo: React.Dispatch<
+    React.SetStateAction<ShoppingContextInitialState["productInfo"]>
   >;
 }

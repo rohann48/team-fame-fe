@@ -10,7 +10,7 @@ const HeaderNav = ({
   setActiveTab,
   handleLoginModalToggle,
   handleSignUpModalToggle,
-  countInfo,
+  productInfo,
 }: HeaderNavProps) => {
   return (
     <div className="header-nav-container">
@@ -116,7 +116,7 @@ const HeaderNav = ({
       <div className="login-register-container">
         <button className="cart-img-btn">
           <img className="cart-img" src={images.cart} alt="cart" />{" "}
-          <span className="cart-count">{countInfo.productCount}</span>
+          <span className="cart-count">{productInfo.cartBasket.length}</span>
         </button>
         <NavLink to="config/about-us">
           <Tippy placement="bottom-start" content="Configuration">

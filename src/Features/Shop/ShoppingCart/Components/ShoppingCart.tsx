@@ -107,7 +107,7 @@ function ShoppingCart({
                   className="add-to-cart"
                   onClick={(event) => {
                     event.stopPropagation();
-                    handleAddToCartIncrement(event);
+                    handleAddToCartIncrement(event, prod);
                   }}
                 >
                   Add to Cart

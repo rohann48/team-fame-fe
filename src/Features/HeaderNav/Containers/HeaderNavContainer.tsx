@@ -12,8 +12,8 @@ function HeaderNavContainer() {
     handleLoginModalToggle,
     handleSignUpModalToggle,
   } = useContext(LoginContext);
-  const { countInfo } = useContext(ShopContext);
-  console.log("header", countInfo);
+  const { productInfo } = useContext(ShopContext);
+  console.log("header", productInfo);
   //state maintained for active tabs
   const [activeTab, setActiveTab] = useState("home");
   return (
@@ -23,7 +23,7 @@ function HeaderNavContainer() {
         setActiveTab={setActiveTab}
         handleLoginModalToggle={handleLoginModalToggle}
         handleSignUpModalToggle={handleSignUpModalToggle}
-        countInfo={countInfo}
+        productInfo={productInfo}
       />
       {loginInfo.isLoginModalOpen && (
         <LoginComponent

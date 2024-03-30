@@ -5,5 +5,5 @@ export type HeaderNavProps = {
   setActiveTab: React.Dispatch<React.SetStateAction<string>>;
   handleLoginModalToggle: () => void;
   handleSignUpModalToggle: () => void;
-  countInfo: CommonTypes["countInfo"];
+  productInfo: CommonTypes["productInfo"];
 };

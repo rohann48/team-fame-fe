@@ -1,8 +1,17 @@
+import {
+  ShopContextTypes,
+  ShoppingContextInitialState,
+} from "../context/ShopContext/ShopContextTypes";
+
 export type CommonTypes = {
-  countInfo: {
-    productCount: number;
-    addToCartCount: number;
+  product: {
+    id: number;
+    imageUrl: string;
+    description: string;
+    price: number;
   };
+  productInfo: ShoppingContextInitialState["productInfo"];
+  setProductInfo: ShoppingContextInitialState["setProductInfo"];
   handleIncrementProduct: () => void;
   handleDecrementProduct: () => void;
   handleBackButton: () => void;

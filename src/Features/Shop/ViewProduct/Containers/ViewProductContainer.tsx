@@ -4,21 +4,19 @@ import { ShopContext } from "../../../context/ShopContext/ShopContext";
 import { useNavigate } from "react-router";
 
 function ViewProductContainer() {
-  const { countInfo, setCountInfo } = useContext(ShopContext);
+  const { productInfo, setProductInfo } = useContext(ShopContext);
   const navigate = useNavigate();
   const handleIncrementProduct = () => {
-    setCountInfo((prev) => ({
+    setProductInfo((prev) => ({
       ...prev,
       productCount: prev.productCount + 1,
-      addToCartCount: prev.addToCartCount + 1,
     }));
   };
   //handle decrementing product count
   const handleDecrementProduct = () => {
-    setCountInfo((prev) => ({
+    setProductInfo((prev) => ({
       ...prev,
       productCount: prev.productCount - 1,
-      addToCartCount: prev.addToCartCount - 1,
     }));
   };
   //navigate backward
@@ -30,15 +28,15 @@ function ViewProductContainer() {
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     event.preventDefault();
-    setCountInfo((prev) => ({
+    //yet to add to cart
+    setProductInfo((prev) => ({
       ...prev,
-      addToCartCount: prev.addToCartCount + 1,
+      cartBasket: [],
     }));
   };
-  console.log("view", countInfo);
   return (
     <ViewProduct
-      countInfo={countInfo}
+      productInfo={productInfo}
       handleIncrementProduct={handleIncrementProduct}
       handleDecrementProduct={handleDecrementProduct}
       handleBackButton={handleBackButton}
