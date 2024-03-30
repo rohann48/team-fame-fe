@@ -1,3 +1,5 @@
+import { Updater } from "use-immer";
+
 export interface ShopContextTypes {
   children: React.ReactNode;
 }
@@ -10,9 +12,11 @@ export interface ShoppingContextInitialState {
       imageUrl: string;
       description: string;
       price: number;
+      quantityCount?: number;
     }[];
+    cartTotalQuantity: number;
+    catTotalAmount: number;
   };
-  setProductInfo: React.Dispatch<
-    React.SetStateAction<ShoppingContextInitialState["productInfo"]>
-  >;
+
+  setProductInfo: Updater<ShoppingContextInitialState["productInfo"]>;
 }

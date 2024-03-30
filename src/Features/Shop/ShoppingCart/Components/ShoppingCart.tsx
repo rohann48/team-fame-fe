@@ -86,7 +86,7 @@ function ShoppingCart({
         </div>
 
         <div className="product-card-cover">
-          {products.map((prod) => (
+          {products.map((prod, index) => (
             <div
               className="product-card"
               key={prod.id}
@@ -107,7 +107,7 @@ function ShoppingCart({
                   className="add-to-cart"
                   onClick={(event) => {
                     event.stopPropagation();
-                    handleAddToCartIncrement(event, prod);
+                    handleAddToCartIncrement(event, index, prod);
                   }}
                 >
                   Add to Cart

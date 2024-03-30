@@ -10,15 +10,27 @@ function ShoppingCartContainer() {
   //increment the product count
   const handleAddToCartIncrement = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    index: number,
     prod: CommonTypes["product"]
   ) => {
-    setProductInfo((prev) => ({
-      ...prev,
-      cartBasket: [...prev.cartBasket, prod],
-      productCount: prev.productCount + 1,
-    }));
+    let tempData = structuredClone(productInfo);
+    //increase quantityCount if the item is already exists
+    setProductInfo((draft) => {
+      if (draft.cartBasket[index]) {
+        draft.cartBasket[index].quantityCount!++;
+      } else {
+        draft.cartBasket.push({
+          id: prod.id,
+          description: prod.description,
+          imageUrl: prod.imageUrl,
+          price: prod.price,
+          quantityCount: 1,
+        });
+      }
+    });
   };
   console.log(productInfo);
+
   //navigate to view product
   const handleNavigateProduct = () => {
     navigate("/shop/product");
