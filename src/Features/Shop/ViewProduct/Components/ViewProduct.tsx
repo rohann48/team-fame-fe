@@ -10,7 +10,9 @@ function ViewProduct({
   handleDecrementProduct,
   handleBackButton,
   handleAddToCart,
+  viewedProduct,
 }: ViewProductTypes) {
+  console.log(viewedProduct);
   return (
     <div className="view-product-container">
       <div className="view-product-back-btn-cover">
@@ -24,16 +26,20 @@ function ViewProduct({
       </div>
       <div className="view-product-cover">
         <div className="view-product-img-cover">
-          <img className="view-product-img" src={images.chair} alt="product" />
+          <img
+            className="view-product-img"
+            src={viewedProduct.imageUrl}
+            alt="product"
+          />
         </div>
         <div className="view-product-description-cover">
           <div className="view-product-description-wrapper">
             <p className="view-product-description">
-              SATTVA Wooden Stools for Living Room Sitting Chair for Home
-              Handcrafted Antique Finish | Handmade Table for Office | Home
-              Furniture
+              {viewedProduct.description}
             </p>
-            <p className="view-product-rate">Rs: {500}</p>
+            <p className="view-product-rate">
+              Rs: {viewedProduct.price * viewedProduct.quantity}
+            </p>
             <div className="view-product-action-btn-cover">
               <span>Qty:</span>
               <div className="action-btn-cover">
@@ -45,9 +51,7 @@ function ViewProduct({
                 >
                   -
                 </div>
-                <div className="product-quantity">
-                  {productInfo.productCount}
-                </div>
+                <div className="product-quantity">{viewedProduct.quantity}</div>
                 <div
                   className="increment-btn"
                   onClick={() => handleIncrementProduct()}

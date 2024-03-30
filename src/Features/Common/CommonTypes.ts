@@ -9,6 +9,7 @@ export type CommonTypes = {
     imageUrl: string;
     description: string;
     price: number;
+    quantity: number;
   };
   productInfo: ShoppingContextInitialState["productInfo"];
   setProductInfo: ShoppingContextInitialState["setProductInfo"];

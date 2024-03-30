@@ -34,8 +34,8 @@ function ShoppingCartContainer() {
   console.log("shoppingCart", productInfo);
 
   //navigate to view product
-  const handleNavigateProduct = () => {
-    navigate("/shop/product");
+  const handleNavigateProduct = (prod: CommonTypes["product"]) => {
+    navigate("/shop/product", { state: { product: prod } });
   };
   return (
     <ShoppingCart

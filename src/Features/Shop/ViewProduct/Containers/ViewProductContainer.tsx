@@ -1,44 +1,24 @@
 import { useContext } from "react";
 import ViewProduct from "../Components/ViewProduct";
 import { ShopContext } from "../../../context/ShopContext/ShopContext";
-import { useNavigate } from "react-router";
+import { useNavigate, useLocation } from "react-router";
+import { CommonTypes } from "../../../Common/CommonTypes";
 
 function ViewProductContainer() {
   const { productInfo, setProductInfo } = useContext(ShopContext);
   const navigate = useNavigate();
-  const handleIncrementProduct = () => {
-    setProductInfo((prev) => ({
-      ...prev,
-      productCount: prev.productCount + 1,
-    }));
-  };
+  const location = useLocation();
+  const viewedProduct: CommonTypes["product"] = location.state.product;
+
+  const handleIncrementProduct = () => {};
   //handle decrementing product count
-  const handleDecrementProduct = () => {
-    setProductInfo((prev) => ({
-      ...prev,
-      productCount: prev.productCount - 1,
-    }));
-  };
+  const handleDecrementProduct = () => {};
   //navigate backward
   const handleBackButton = () => {
     navigate(-1);
   };
   //handle add to cart
-  const handleAddToCart = () => {
-    setProductInfo((prev) => ({
-      ...prev,
-      productCount: prev.productCount + 1,
-      cartBasket: [
-        ...prev.cartBasket,
-        {
-          id: Math.random(),
-          price: 123,
-          imageUrl: "test",
-          description: "test",
-        },
-      ],
-    }));
-  };
+  const handleAddToCart = () => {};
   return (
     <ViewProduct
       productInfo={productInfo}
@@ -46,6 +26,7 @@ function ViewProductContainer() {
       handleDecrementProduct={handleDecrementProduct}
       handleBackButton={handleBackButton}
       handleAddToCart={handleAddToCart}
+      viewedProduct={viewedProduct}
     />
   );
 }

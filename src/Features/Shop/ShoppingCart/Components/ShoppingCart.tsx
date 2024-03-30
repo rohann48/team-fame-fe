@@ -10,6 +10,7 @@ const products = [
     description:
       "Classmate Notebook - Single Line, 120 Pages, 240 mm x 180 mm (Pack of 10)",
     price: 499,
+    quantity: 1,
   },
   {
     id: 2,
@@ -17,6 +18,7 @@ const products = [
     description:
       "Classmate Notebook - Single Line, 120 Pages, 240 mm x 180 mm (Pack of 10)",
     price: 799,
+    quantity: 1,
   },
   {
     id: 3,
@@ -24,6 +26,7 @@ const products = [
     description:
       "Classmate Notebook - Single Line, 120 Pages, 240 mm x 180 mm (Pack of 10)",
     price: 1099,
+    quantity: 1,
   },
   {
     id: 4,
@@ -31,6 +34,7 @@ const products = [
     description:
       "Classmate Notebook - Single Line, 120 Pages, 240 mm x 180 mm (Pack of 10)",
     price: 499,
+    quantity: 1,
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ const products = [
     description:
       "Classmate Notebook - Single Line, 120 Pages, 240 mm x 180 mm (Pack of 10)",
     price: 799,
+    quantity: 1,
   },
   {
     id: 6,
@@ -45,6 +50,7 @@ const products = [
     description:
       "Classmate Notebook - Single Line, 120 Pages, 240 mm x 180 mm (Pack of 10)",
     price: 1099,
+    quantity: 1,
   },
   {
     id: 7,
@@ -52,6 +58,7 @@ const products = [
     description:
       "Classmate Notebook - Single Line, 120 Pages, 240 mm x 180 mm (Pack of 10)",
     price: 499,
+    quantity: 1,
   },
   {
     id: 8,
@@ -59,6 +66,7 @@ const products = [
     description:
       "Classmate Notebook - Single Line, 120 Pages, 240 mm x 180 mm (Pack of 10)",
     price: 799,
+    quantity: 1,
   },
   {
     id: 9,
@@ -66,8 +74,34 @@ const products = [
     description:
       "Classmate Notebook - Single Line, 120 Pages, 240 mm x 180 mm (Pack of 10)",
     price: 1099,
+    quantity: 1,
+  },
+  {
+    id: 10,
+    imageUrl: images.chair,
+    description:
+      "Classmate Notebook - Single Line, 120 Pages, 240 mm x 180 mm (Pack of 10)",
+    price: 499,
+    quantity: 1,
+  },
+  {
+    id: 11,
+    imageUrl: images.chair,
+    description:
+      "Classmate Notebook - Single Line, 120 Pages, 240 mm x 180 mm (Pack of 10)",
+    price: 799,
+    quantity: 1,
+  },
+  {
+    id: 12,
+    imageUrl: images.chair,
+    description:
+      "Classmate Notebook - Single Line, 120 Pages, 240 mm x 180 mm (Pack of 10)",
+    price: 1099,
+    quantity: 1,
   },
 ];
+
 function ShoppingCart({
   handleAddToCartIncrement,
   handleNavigateProduct,
@@ -90,7 +124,7 @@ function ShoppingCart({
             <div
               className="product-card"
               key={prod.id}
-              onClick={() => handleNavigateProduct()}
+              onClick={() => handleNavigateProduct(prod)}
             >
               <img
                 className="product-image"
@@ -116,7 +150,7 @@ function ShoppingCart({
                   className="buy-now"
                   onClick={(event) => {
                     event.stopPropagation();
-                    handleNavigateProduct();
+                    handleNavigateProduct(prod);
                   }}
                 >
                   Buy Now

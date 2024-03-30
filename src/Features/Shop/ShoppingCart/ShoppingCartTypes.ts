@@ -6,5 +6,5 @@ export type ShoppingCartTypes = {
     index: number,
     product: CommonTypes["product"]
   ) => void;
-  handleNavigateProduct: () => void;
+  handleNavigateProduct: (prod: CommonTypes["product"]) => void;
 };
