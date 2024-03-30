@@ -26,12 +26,16 @@ function ViewProductContainer() {
     navigate(-1);
   };
   //handle add to cart
-  const handleAddToCart = () => {
+  const handleAddToCart = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    event.preventDefault();
     setCountInfo((prev) => ({
       ...prev,
       addToCartCount: prev.addToCartCount + 1,
     }));
   };
+  console.log("view", countInfo);
   return (
     <ViewProduct
       countInfo={countInfo}

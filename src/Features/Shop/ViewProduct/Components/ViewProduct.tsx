@@ -57,7 +57,7 @@ function ViewProduct({
             <div className="view-product-btn-covers">
               <button
                 className="view-product cart-btn"
-                onClick={() => handleAddToCart()}
+                onClick={(event) => handleAddToCart(event)}
               >
                 ADD TO CART
               </button>

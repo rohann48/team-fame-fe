@@ -12,7 +12,6 @@ const HeaderNav = ({
   handleSignUpModalToggle,
   countInfo,
 }: HeaderNavProps) => {
-  console.log(countInfo.productCount, "count");
   return (
     <div className="header-nav-container">
       <div className="icon-cover">

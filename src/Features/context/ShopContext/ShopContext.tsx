@@ -1,4 +1,4 @@
-import { createContext, useState, useMemo, useCallback } from "react";
+import { createContext, useState, useMemo, useEffect } from "react";
 import {
   ShopContextTypes,
   ShoppingContextInitialState,
@@ -12,6 +12,8 @@ export const ShopContext = createContext<ShoppingContextInitialState>(
 );
 const ShopContextProvider = ({ children }: ShopContextTypes) => {
   const [countInfo, setCountInfo] = useState({ ...initialState });
+  console.log("context", countInfo);
+
   const contextValue = useMemo(
     () => ({
       countInfo,

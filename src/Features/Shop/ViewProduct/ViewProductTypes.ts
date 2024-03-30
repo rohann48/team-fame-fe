@@ -5,5 +5,7 @@ export type ViewProductTypes = {
   handleIncrementProduct: CommonTypes["handleIncrementProduct"];
   handleDecrementProduct: CommonTypes["handleDecrementProduct"];
   handleBackButton: CommonTypes["handleBackButton"];
-  handleAddToCart: () => void;
+  handleAddToCart: (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => void;
 };
