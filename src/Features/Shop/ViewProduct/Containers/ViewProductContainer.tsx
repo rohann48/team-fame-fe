@@ -24,14 +24,19 @@ function ViewProductContainer() {
     navigate(-1);
   };
   //handle add to cart
-  const handleAddToCart = (
-    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => {
-    event.preventDefault();
-    //yet to add to cart
+  const handleAddToCart = () => {
     setProductInfo((prev) => ({
       ...prev,
-      cartBasket: [],
+      productCount: prev.productCount + 1,
+      cartBasket: [
+        ...prev.cartBasket,
+        {
+          id: Math.random(),
+          price: 123,
+          imageUrl: "test",
+          description: "test",
+        },
+      ],
     }));
   };
   return (
