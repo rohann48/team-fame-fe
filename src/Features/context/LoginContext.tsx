@@ -1,4 +1,10 @@
-import { createContext, useState, useMemo, useCallback } from "react";
+import {
+  createContext,
+  useState,
+  useMemo,
+  useCallback,
+  useEffect,
+} from "react";
 import {
   LoginContextInitialState,
   LoginContextTypes,
@@ -6,12 +12,14 @@ import {
 let initialState = {
   isLoginModalOpen: false,
   isSignUpModalOpen: false,
+  isAuthenticated: false,
 };
 export const LoginContext = createContext<LoginContextInitialState>(
   {} as LoginContextInitialState
 );
 const LoginContextProvider = ({ children }: LoginContextTypes) => {
   const [loginInfo, setLoginInfo] = useState({ ...initialState });
+  const [userInfo, setUserInfo] = useState({});
   //login modal open
   const handleLoginModalToggle = useCallback(() => {
     setLoginInfo((prev) => {
@@ -40,6 +48,17 @@ const LoginContextProvider = ({ children }: LoginContextTypes) => {
     }),
     [loginInfo, setLoginInfo, handleLoginModalToggle, handleSignUpModalToggle]
   );
+
+  useEffect(() => {
+    let sessionUserInfo = sessionStorage.getItem("userInfo");
+
+    if (sessionUserInfo) {
+      const response = JSON.parse(sessionUserInfo);
+      setUserInfo(response);
+    }
+  }, [loginInfo.isAuthenticated]);
+  console.log(userInfo);
+
   return (
     <LoginContext.Provider value={contextValue}>
       {children}

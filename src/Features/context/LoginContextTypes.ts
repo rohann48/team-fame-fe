@@ -7,6 +7,7 @@ export interface LoginContextInitialState {
     React.SetStateAction<{
       isLoginModalOpen: boolean;
       isSignUpModalOpen: boolean;
+      isAuthenticated: boolean;
     }>
   >;
   handleLoginModalToggle: () => void;

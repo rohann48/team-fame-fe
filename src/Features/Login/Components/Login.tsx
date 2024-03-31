@@ -11,6 +11,8 @@ function LoginComponent({
   isLoginModalOpen,
   handleLoginModalToggle,
   handleSignUpModalToggle,
+  handleOnChange,
+  authenticateUser,
 }: LoginComponentTypes) {
   return (
     <Dialog
@@ -53,8 +55,9 @@ function LoginComponent({
             <input
               className="contact-number-input"
               type="text"
+              name="contactNo"
               // value={contactNumber}
-              // onChange={(e) => setContactNumber(e.target.value)}
+              onChange={(e) => handleOnChange(e)}
             />
           </label>
           <label className="password-label-cover">
@@ -62,8 +65,9 @@ function LoginComponent({
             <input
               className="password-input"
               type="password"
+              name="password"
               // value={password}
-              // onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => handleOnChange(e)}
             />
           </label>
           <label className="remember-me">
@@ -75,7 +79,11 @@ function LoginComponent({
             />
             <div className="remember-me-text">Remember me</div>
           </label>
-          <button className="login-btn" type="button">
+          <button
+            className="login-btn"
+            type="button"
+            onClick={() => authenticateUser()}
+          >
             Login
           </button>
         </form>

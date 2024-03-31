@@ -11,6 +11,8 @@ import { SignUpModalComponentTypes } from "../SignUpModalTypes";
 function SignUpModal({
   isSignUpModalOpen,
   handleSignUpModalToggle,
+  handleOnChange,
+  handleUserRegister,
 }: SignUpModalComponentTypes) {
   return (
     <Dialog
@@ -19,7 +21,7 @@ function SignUpModal({
       PaperProps={{
         style: {
           width: "529px",
-          height: "695px",
+          height: "745px",
           backgroundColor: " #444444",
         },
       }}
@@ -53,8 +55,9 @@ function SignUpModal({
             <input
               className="first-name-input"
               type="text"
+              name="name"
               // value={contactNumber}
-              // onChange={(e) => setContactNumber(e.target.value)}
+              onChange={(e) => handleOnChange(e)}
             />
           </label>
           <label className="last-name-label-cover">
@@ -62,17 +65,19 @@ function SignUpModal({
             <input
               className="last-name-input"
               type="text"
+              name="lastName"
               // value={contactNumber}
-              // onChange={(e) => setContactNumber(e.target.value)}
+              onChange={(e) => handleOnChange(e)}
             />
           </label>
           <label className="contact-label-cover">
             <div className="contact-number-text"> Contact Number</div>
             <input
               className="contact-number-input"
-              type="text"
+              type="number"
+              name="contactNo"
               // value={contactNumber}
-              // onChange={(e) => setContactNumber(e.target.value)}
+              onChange={(e) => handleOnChange(e)}
             />
           </label>
           <label className="email-label-cover">
@@ -80,8 +85,9 @@ function SignUpModal({
             <input
               className="email-input"
               type="email"
+              name="emailId"
               // value={contactNumber}
-              // onChange={(e) => setContactNumber(e.target.value)}
+              onChange={(e) => handleOnChange(e)}
             />
           </label>
           <label className="password-label-cover">
@@ -89,11 +95,26 @@ function SignUpModal({
             <input
               className="password-input"
               type="password"
+              name="password"
               // value={password}
-              // onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => handleOnChange(e)}
             />
           </label>
-          <button className="sign-up-btn" type="button">
+          <label className="password-label-cover">
+            <div className="password-text">Confirm Password:</div>
+            <input
+              className="password-input"
+              type="password"
+              name="confirmPassword"
+              // value={password}
+              onChange={(e) => handleOnChange(e)}
+            />
+          </label>
+          <button
+            className="sign-up-btn"
+            type="button"
+            onClick={() => handleUserRegister()}
+          >
             Sign Up
           </button>
         </form>

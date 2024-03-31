@@ -37,6 +37,29 @@ export const ApiHandler = {
       console.log(error);
     }
   },
+  registerUser: async (data: { [key: string]: string }) => {
+    try {
+      const response = await apiAuth.postApiwithoutAuth(
+        Resource.url.registerUser,
+        data
+      );
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  },
+
+  authenticateUser: async (data: { [key: string]: string }) => {
+    try {
+      const response = await apiAuth.postApiwithoutAuth(
+        Resource.url.authenticateUser,
+        data
+      );
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  },
   // //logout
   // logoutUser: async () => {
   //   const response = await apiAuth.getApiwithoutAuth(Resource.url.logout);
