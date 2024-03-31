@@ -25,9 +25,9 @@ export const mainRoutes = [
   {
     path: "/shop/*",
     element: (
-      <ShopContextProvider>
-        <ShopHomePage />
-      </ShopContextProvider>
+      // <ShopContextProvider>
+      <ShopHomePage />
+      // </ShopContextProvider>
     ),
   },
   {

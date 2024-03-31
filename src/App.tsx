@@ -72,10 +72,12 @@ function App() {
           <div className="main-header-container">
             <ShopContextProvider>
               <HeaderNav />
+              <div className="home-render-routes-cover">
+                <div className="rendering-routes-components">
+                  {renderRoutes}
+                </div>
+              </div>
             </ShopContextProvider>
-            <div className="home-render-routes-cover">
-              <div className="rendering-routes-components">{renderRoutes}</div>
-            </div>
           </div>
           <NotificationContainer />
         </div>
