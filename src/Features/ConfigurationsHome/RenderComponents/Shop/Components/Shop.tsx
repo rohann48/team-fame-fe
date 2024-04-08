@@ -92,19 +92,19 @@ function Shop({
       <div className="products-cards-cover">
         <div className="cards-product-header">All Products</div>
         <div className="">
-          {products?.map((product: any) => {
-            return (
-              <table width={"100%"}>
-                <thead>
-                  <tr>
-                    <th>Category</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                    <th>Actions</th>
-                  </tr>
-                </thead>
-                <tbody>
+          <table width={"100%"}>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {products?.map((product: any) => {
+                return (
                   <tr>
                     <td>{product.category}</td>
                     <td>{product.name}</td>
@@ -112,10 +112,10 @@ function Shop({
                     <td>{product.price}</td>
                     <td>{"delete/edit"}</td>
                   </tr>
-                </tbody>
-              </table>
-            );
-          })}
+                );
+              })}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
