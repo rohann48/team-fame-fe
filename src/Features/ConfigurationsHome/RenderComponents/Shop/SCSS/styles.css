@@ -439,14 +439,14 @@
   color: white;
   text-transform: uppercase;
 }
-.products-container table,
-.products-container th,
-.products-container td {
+.products-container .products-cards-cover table,
+.products-container .products-cards-cover th,
+.products-container .products-cards-cover td {
   border: 1px solid black;
 }
-.products-container table .description,
-.products-container th .description,
-.products-container td .description {
+.products-container .products-cards-cover table .description,
+.products-container .products-cards-cover th .description,
+.products-container .products-cards-cover td .description {
   width: 45%;
   word-break: break-word;
 }/*# sourceMappingURL=styles.css.map */

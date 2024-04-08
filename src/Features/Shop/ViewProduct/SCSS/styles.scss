@@ -45,8 +45,9 @@
       padding-left: 5rem;
 
       .view-product-img {
-        width: 419px;
-        height: 419px;
+        width: 85%;
+        height: 80%;
+        object-fit: contain;
       }
     }
 
