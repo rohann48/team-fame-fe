@@ -12,7 +12,17 @@ function ViewProduct({
   handleAddToCart,
   viewedProduct,
 }: ViewProductTypes) {
-  console.log(viewedProduct);
+  console.log(
+    viewedProduct,
+    productInfo.cartTotalQuantity,
+    viewedProduct.price,
+    viewedProduct.price * productInfo.cartTotalQuantity == 0
+      ? 1
+      : productInfo.cartTotalQuantity
+  );
+  let productTotal = viewedProduct.price * productInfo.cartBasket.length;
+  console.log("productTotal", productTotal);
+
   return (
     <div className="view-product-container">
       <div className="view-product-back-btn-cover">
@@ -28,18 +38,15 @@ function ViewProduct({
         <div className="view-product-img-cover">
           <img
             className="view-product-img"
-            src={viewedProduct.imageUrl}
+            src={viewedProduct?.imageInfo && viewedProduct.imageInfo[0]?.path}
             alt="product"
           />
         </div>
         <div className="view-product-description-cover">
           <div className="view-product-description-wrapper">
-            <p className="view-product-description">
-              {viewedProduct.description}
-            </p>
-            <p className="view-product-rate">
-              Rs: {viewedProduct.price * viewedProduct.quantity}
-            </p>
+            <p className="view-product-description">{viewedProduct.name}</p>
+            <p className="view-product-description">{viewedProduct.details}</p>
+            <p className="view-product-rate">Rs: {viewedProduct.price}</p>
             <div className="view-product-action-btn-cover">
               <span>Qty:</span>
               <div className="action-btn-cover">
@@ -51,7 +58,7 @@ function ViewProduct({
                 >
                   -
                 </div>
-                <div className="product-quantity">{viewedProduct.quantity}</div>
+                <div className="product-quantity">1</div>
                 <div
                   className="increment-btn"
                   onClick={() => handleIncrementProduct()}

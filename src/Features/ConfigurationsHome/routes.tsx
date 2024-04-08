@@ -1,6 +1,7 @@
 import AboutUs from "./RenderComponents/AboutUs";
 import Events from "./RenderComponents/Events";
 import Testimonial from "./RenderComponents/Testimonial";
+import Shop from "./RenderComponents/Shop";
 
 export const configRoutes = [
   {
@@ -14,5 +15,9 @@ export const configRoutes = [
   {
     path: "/testimonial",
     element: <Testimonial />,
+  },
+  {
+    path: "/shop",
+    element: <Shop />,
   },
 ];

@@ -8,5 +8,17 @@ export type ViewProductTypes = {
   handleAddToCart: (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => void;
-  viewedProduct: CommonTypes["product"];
+  viewedProduct: {
+    _id: string;
+    details: string;
+    price: number;
+    name: string;
+    imageInfo: {
+      _id: string;
+      name: string;
+      path: string;
+      Key: string;
+      date: Date;
+    }[];
+  };
 };

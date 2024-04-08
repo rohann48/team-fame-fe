@@ -12,4 +12,10 @@ export interface LoginContextInitialState {
   >;
   handleLoginModalToggle: () => void;
   handleSignUpModalToggle: () => void;
+  userInfo: {
+    _id: string;
+    name: string;
+    role: string;
+    lastName: string;
+  };
 }

@@ -1,16 +1,49 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import ViewProduct from "../Components/ViewProduct";
 import { ShopContext } from "../../../context/ShopContext/ShopContext";
-import { useNavigate, useLocation } from "react-router";
+import { useNavigate, useParams } from "react-router-dom";
 import { CommonTypes } from "../../../Common/CommonTypes";
+import { ApiHandler } from "../../Constants/ApiHandler";
+import { ViewProductTypes } from "../ViewProductTypes";
 
 function ViewProductContainer() {
   const { productInfo, setProductInfo } = useContext(ShopContext);
+  const { productId } = useParams() as { productId: string };
   const navigate = useNavigate();
-  const location = useLocation();
-  const viewedProduct: CommonTypes["product"] = location.state.product;
+  // const viewedProduct: CommonTypes["product"] = location.state.product;
+  const [viewedProduct, setViewedProduct] = useState<
+    ViewProductTypes["viewedProduct"]
+  >({} as ViewProductTypes["viewedProduct"]);
+  const getProductInfo = async () => {
+    const response = await ApiHandler.getProductDetails(productId);
+    console.log(response.results);
 
-  const handleIncrementProduct = () => {};
+    setViewedProduct({ ...response.results });
+  };
+
+  const handleIncrementProduct = () => {
+    // let viewProductClone = { ...viewedProduct };
+    // let i = 1;
+    // ++i;
+    // viewProductClone.price *= ++i;
+    // console.log("viewProductClone", viewProductClone);
+    // setViewedProduct({ ...viewProductClone });
+    // setProductInfo((draft) => {
+    //   draft.cartBasket.push({
+    //     id: viewedProduct._id,
+    //     name: viewedProduct.name,
+    //     description: viewedProduct.details,
+    //     imageInfo: viewedProduct.imageInfo,
+    //     price: viewedProduct.price,
+    //     quantityCount: i,
+    //   });
+    //   draft.cartTotalQuantity = i;
+    //   draft.productCount = i;
+    //   draft.catTotalAmount *= i;
+    // });
+  };
+  console.log("setProductInfo", productInfo);
+
   //handle decrementing product count
   const handleDecrementProduct = () => {};
   //navigate backward
@@ -19,6 +52,16 @@ function ViewProductContainer() {
   };
   //handle add to cart
   const handleAddToCart = () => {};
+
+  useEffect(() => {
+    console.log("productId", productId);
+
+    if (productId) {
+      getProductInfo();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [productId]);
+
   return (
     <ViewProduct
       productInfo={productInfo}

@@ -19,7 +19,7 @@ export const LoginContext = createContext<LoginContextInitialState>(
 );
 const LoginContextProvider = ({ children }: LoginContextTypes) => {
   const [loginInfo, setLoginInfo] = useState({ ...initialState });
-  const [userInfo, setUserInfo] = useState({});
+  const [userInfo, setUserInfo] = useState<any>({});
   //login modal open
   const handleLoginModalToggle = useCallback(() => {
     setLoginInfo((prev) => {
@@ -29,6 +29,16 @@ const LoginContextProvider = ({ children }: LoginContextTypes) => {
       };
     });
   }, []);
+
+  useEffect(() => {
+    let sessionUserInfo = sessionStorage.getItem("userInfo");
+
+    if (sessionUserInfo) {
+      const response = JSON.parse(sessionUserInfo);
+      setUserInfo(response);
+    }
+  }, [loginInfo.isAuthenticated]);
+
   //sign up modak open
   const handleSignUpModalToggle = useCallback(() => {
     setLoginInfo((prev) => {
@@ -39,24 +49,24 @@ const LoginContextProvider = ({ children }: LoginContextTypes) => {
       };
     });
   }, []);
+
   const contextValue = useMemo(
     () => ({
       loginInfo,
       setLoginInfo,
       handleLoginModalToggle,
       handleSignUpModalToggle,
+      userInfo,
     }),
-    [loginInfo, setLoginInfo, handleLoginModalToggle, handleSignUpModalToggle]
+    [
+      loginInfo,
+      setLoginInfo,
+      handleLoginModalToggle,
+      handleSignUpModalToggle,
+      userInfo,
+    ]
   );
 
-  useEffect(() => {
-    let sessionUserInfo = sessionStorage.getItem("userInfo");
-
-    if (sessionUserInfo) {
-      const response = JSON.parse(sessionUserInfo);
-      setUserInfo(response);
-    }
-  }, [loginInfo.isAuthenticated]);
   console.log(userInfo);
 
   return (

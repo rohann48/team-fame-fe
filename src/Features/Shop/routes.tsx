@@ -7,7 +7,7 @@ export const shopRoutes = [
     element: <ShoppingCart />,
   },
   {
-    path: "/product",
+    path: "/product/:productId",
     element: <ViewProduct />,
   },
 ];

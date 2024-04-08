@@ -70,4 +70,23 @@ export const ApiHandler = {
       console.log(error);
     }
   },
+
+  postProductDetails: async (formData: any) => {
+    const response = await apiAuth.postApiForFormDatawithoutEncryption(
+      Resource.url.postProductInfo,
+      formData
+    );
+    return response.data;
+  },
+
+  getProductDetails: async () => {
+    try {
+      const response = await apiAuth.getApiwithoutAuth(
+        Resource.url.getProductDetails
+      );
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };

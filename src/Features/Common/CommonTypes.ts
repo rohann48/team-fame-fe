@@ -5,11 +5,17 @@ import {
 
 export type CommonTypes = {
   product: {
-    id: number;
-    imageUrl: string;
-    description: string;
+    _id: string;
+    details: string;
     price: number;
-    quantity: number;
+    name: string;
+    imageInfo: Array<{
+      _id: string;
+      name: string;
+      path: string;
+      Key: string;
+      date: Date;
+    }>;
   };
   productInfo: ShoppingContextInitialState["productInfo"];
   setProductInfo: ShoppingContextInitialState["setProductInfo"];

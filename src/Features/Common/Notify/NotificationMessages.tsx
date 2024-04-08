@@ -4,4 +4,5 @@ export const Notify = {
   ADDED_ACTION_PLAN: "Action plan successfully Added",
   USER_REGISTER: "User registered successfully",
   EXISTING_USER: "User already registered",
+  IMG_FORMAT_ERROR: "The file is not in jpeg or png format",
 };

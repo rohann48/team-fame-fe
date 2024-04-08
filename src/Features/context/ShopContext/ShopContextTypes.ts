@@ -8,8 +8,9 @@ export interface ShoppingContextInitialState {
   productInfo: {
     productCount: number;
     cartBasket: {
-      id: number;
-      imageUrl: string;
+      id: string;
+      name: string;
+      imageInfo: Array<object>;
       description: string;
       price: number;
       quantityCount?: number;
@@ -17,6 +18,13 @@ export interface ShoppingContextInitialState {
     cartTotalQuantity: number;
     catTotalAmount: number;
   };
-
+  products: Array<{
+    _id: string;
+    name: string;
+    category: string;
+    details: string;
+    price: number;
+    imageInfo: Array<object>;
+  }>;
   setProductInfo: Updater<ShoppingContextInitialState["productInfo"]>;
 }

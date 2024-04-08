@@ -60,6 +60,17 @@ export const ApiHandler = {
       throw error;
     }
   },
+
+  getProductDetails: async () => {
+    try {
+      const response = await apiAuth.getApiwithoutAuth(
+        Resource.url.getProductDetails
+      );
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
   // //logout
   // logoutUser: async () => {
   //   const response = await apiAuth.getApiwithoutAuth(Resource.url.logout);

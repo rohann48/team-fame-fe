@@ -6,6 +6,7 @@ export const Resource = {
     getTestimonials: "/testimonial",
     registerUser: "/client/sign-up",
     authenticateUser: "/client/auth",
+    getProductDetails: `/shop/product/list`,
     // forgotPassword: `/suppliers/forgot/password`,
   },
 };
