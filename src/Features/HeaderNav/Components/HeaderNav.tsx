@@ -65,7 +65,7 @@ const HeaderNav = ({
             setActiveTab("events-and-news");
           }}
         >
-          OUR EVENTS/NEWS{" "}
+          EVENTS/NEWS{" "}
         </NavLink>
         <NavLink
           to="videos"
@@ -80,7 +80,7 @@ const HeaderNav = ({
             setActiveTab("videos");
           }}
         >
-          ViDEOS
+          VIDEOS
         </NavLink>
         <NavLink
           to="scheme"

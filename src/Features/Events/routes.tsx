@@ -7,7 +7,7 @@ export const eventRoutes = [
     element: <EventCardsHome />,
   },
   {
-    path: "/events-and-news/*",
+    path: "/details/:id",
     element: <EventDetails />,
   },
 ];

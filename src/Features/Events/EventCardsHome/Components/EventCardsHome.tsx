@@ -1,49 +1,33 @@
+import { format } from "date-fns";
 import icons from "../../../Assets/Icons/icons";
 import Footer from "../../../Common/CommonComponent/Footer";
 import images from "../../../ImageVariables";
 import { EventsCardsHomeTypes } from "../EventsCardsHomeTypes";
 import "../SCSS/styles.css";
-const eventDataDum = [
-  {
-    title: "hie",
-    date: "2 april 2022",
-    time: "10:00",
-    location: "mang",
-  },
-  {
-    title: "hie",
-    date: "2 april 2022",
-    time: "10:00",
-    location: "mang",
-  },
-  {
-    title: "hie",
-    date: "2 april 2022",
-    time: "10:00",
-    location: "mang",
-  },
-  {
-    title: "hie",
-    date: "2 april 2022",
-    time: "10:00",
-    location: "mang",
-  },
-];
-function EventCardsHome({ eventData }: Readonly<EventsCardsHomeTypes>) {
+
+function EventCardsHome({
+  eventData,
+  handleEvnetNavigate,
+}: Readonly<EventsCardsHomeTypes>) {
   return (
     <div className="events-cards-container">
       <div className="events-bg-img-cover"></div>
       <div className="events-cards-and-header-cover">
         <div className="events-cards-header-text">EVENTS</div>
         <div className="events-cards-render-cover">
-          {eventDataDum?.map((event: any, i) => {
+          {eventData?.map((event, i) => {
+            const eventDate = new Date(event.date);
+            const dayOfWeek = format(eventDate, "EEEE");
             return (
-              <div className="events-cards" key={i}>
+              <div className="events-cards" key={event._id}>
                 <div className="events-card-left"></div>
-                <div className="events-card-right">
+                <div
+                  className="events-card-right"
+                  onClick={() => handleEvnetNavigate()}
+                >
                   <div className="events-card-right-inner-cover">
                     <div className="events-card-right-header">
-                      <span className="events-header-text">Coming Soon</span>
+                      <span className="events-header-text">{dayOfWeek}</span>
                     </div>
                     <div className="events-card-img-cover">
                       <img

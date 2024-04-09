@@ -23,8 +23,8 @@ const ShopContextProvider = ({ children }: ShopContextTypes) => {
 
   const getProductData = async () => {
     const response = await ApiHandler.getProductDetails();
-    console.log("response", response.results);
-    setProducts([...response.results]);
+    console.log("response", response?.results);
+    setProducts([...response?.results]);
   };
   useEffect(() => {
     getProductData();

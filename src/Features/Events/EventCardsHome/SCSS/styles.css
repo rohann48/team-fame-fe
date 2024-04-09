@@ -79,6 +79,7 @@
 }
 .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right {
   width: 93%;
+  cursor: pointer;
 }
 .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover {
   width: 100%;
@@ -98,6 +99,7 @@
   padding: 10px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  text-transform: uppercase;
 }
 .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-img-cover {
   width: 100%;

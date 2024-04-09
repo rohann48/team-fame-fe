@@ -1,7 +1,19 @@
 export interface IAboutUs {
   content: string | null;
 }
-export type IEventData = Array<object>;
+export type IEventData = {
+  createdAt: string;
+  date: string;
+  description: string;
+  id: string;
+  location: string;
+  name: string;
+  status: string;
+  time: string;
+  title: string;
+  updatedAt: string;
+  _id: string;
+}[];
 export type ITestimonialData = Array<object>;
 
 type setAboutUsData = React.Dispatch<React.SetStateAction<IAboutUs>>;
