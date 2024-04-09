@@ -1,0 +1,239 @@
+.events-cards-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+.events-cards-container::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+.events-cards-container::-webkit-scrollbar-thumb {
+  background: #c1b8b8;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.events-cards-container .events-bg-img-cover {
+  width: 100%;
+  height: 421px;
+  background-image: url("../../../Assets/Images/eventsHeader.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.events-cards-container .events-cards-and-header-cover {
+  height: 560px;
+  width: 100%;
+}
+.events-cards-container .events-cards-and-header-cover .events-cards-header-text {
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: #444444;
+}
+.events-cards-container .events-cards-and-header-cover .events-cards-render-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2%;
+  padding-inline: 2rem;
+  height: auto;
+}
+.events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards-event-header {
+  width: 100%;
+  height: 2rem;
+  color: #bd9255;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards {
+  width: 350px;
+  background-color: #000000;
+  height: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 5px;
+}
+.events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-left {
+  width: 7%;
+  background-image: url("../../../Assets//Images/cardLabelSide.svg");
+}
+.events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right {
+  width: 93%;
+}
+.events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover {
+  width: 100%;
+  height: 100%;
+  padding: 3%;
+}
+.events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-right-header {
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-right-header .events-header-text {
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #bd9255;
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-img-cover {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+.events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-img-cover .events-card-event-img {
+  aspect-ratio: 3/2;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-event-title {
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+}
+.events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-event-date {
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+}
+.events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-event-time {
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+}
+.events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-event-location {
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+}
+.events-cards-container .events-former-text-main-cover {
+  width: 100%;
+  height: 250px;
+}
+.events-cards-container .events-former-text-main-cover .events-former-text-top-border {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.events-cards-container .events-former-text-main-cover .events-former-text-top-border .events-former-text-top-border-inner {
+  width: 63em;
+  border-top: 4px solid #bd9255;
+}
+.events-cards-container .events-former-text-main-cover .events-former-text-wrapper {
+  font-size: 86px;
+  font-weight: 500;
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+}
+.events-cards-container .events-former-text-main-cover .events-former-text-wrapper .text-r {
+  color: #eb3d3d;
+}
+.events-cards-container .events-former-text-main-cover .events-former-text-student-cover {
+  font-size: 18px;
+  font-weight: 500;
+  color: #bd9255;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5rem;
+}
+.events-cards-container .events-former-text-main-cover .events-former-text-join-btn-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 80px;
+}
+.events-cards-container .events-former-text-main-cover .events-former-text-join-btn-cover .events-former-text-join-btn {
+  all: unset;
+  width: 92px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #bd9255;
+  color: #ffffff;
+  text-align: center;
+  border: 1px solid #bd9255;
+  border-radius: 4px;
+}/*# sourceMappingURL=styles.css.map */

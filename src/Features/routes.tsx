@@ -5,6 +5,7 @@ import Configuration from "./ConfigurationsHome/Configurations";
 import SchemeHomePage from "./Scheme/SchemeHomePage";
 import ShopHomePage from "./Shop/ShopHomePage";
 import ShopContextProvider from "./context/ShopContext/ShopContext";
+import EventsHomePage from "./Events/EventsHomepage";
 export const mainRoutes = [
   {
     path: "*",
@@ -23,19 +24,19 @@ export const mainRoutes = [
     element: <HomePage />,
   },
   {
-    path: "/shop/*",
-    element: (
-      // <ShopContextProvider>
-      <ShopHomePage />
-      // </ShopContextProvider>
-    ),
+    path: "/events-and-news/*",
+    element: <EventsHomePage />,
   },
   {
-    path: "/config/*",
-    element: <Configuration />,
+    path: "/shop/*",
+    element: <ShopHomePage />,
   },
   {
     path: "/scheme/*",
     element: <SchemeHomePage />,
+  },
+  {
+    path: "/config/*",
+    element: <Configuration />,
   },
 ];

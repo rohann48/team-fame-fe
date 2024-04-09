@@ -53,7 +53,7 @@ const HeaderNav = ({
           ABOUT US{" "}
         </NavLink> */}
         <NavLink
-          to="our-event"
+          to="events-and-news"
           className={
             // ({ isActive }) => {
             // isActive && setActiveTab("configuration");
@@ -62,13 +62,13 @@ const HeaderNav = ({
             // }
           }
           onClick={() => {
-            setActiveTab("our-event");
+            setActiveTab("events-and-news");
           }}
         >
-          OUR EVENT{" "}
+          OUR EVENTS/NEWS{" "}
         </NavLink>
         <NavLink
-          to="latest-news"
+          to="videos"
           className={
             // ({ isActive }) => {
             // isActive && setActiveTab("configuration");
@@ -77,10 +77,10 @@ const HeaderNav = ({
             // }
           }
           onClick={() => {
-            setActiveTab("latest-news");
+            setActiveTab("videos");
           }}
         >
-          LATEST NEWS{" "}
+          ViDEOS
         </NavLink>
         <NavLink
           to="scheme"
