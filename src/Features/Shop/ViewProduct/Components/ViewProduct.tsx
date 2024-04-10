@@ -12,16 +12,7 @@ function ViewProduct({
   handleAddToCart,
   viewedProduct,
 }: ViewProductTypes) {
-  console.log(
-    viewedProduct,
-    productInfo.cartTotalQuantity,
-    viewedProduct.price,
-    viewedProduct.price * productInfo.cartTotalQuantity == 0
-      ? 1
-      : productInfo.cartTotalQuantity
-  );
   let productTotal = viewedProduct.price * productInfo.cartBasket.length;
-  console.log("productTotal", productTotal);
 
   return (
     <div className="view-product-container">

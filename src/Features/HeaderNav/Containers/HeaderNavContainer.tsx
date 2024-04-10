@@ -13,7 +13,6 @@ function HeaderNavContainer() {
     handleSignUpModalToggle,
   } = useContext(LoginContext);
   const { productInfo } = useContext(ShopContext);
-  console.log("header", productInfo);
   //state maintained for active tabs
   const [activeTab, setActiveTab] = useState("home");
   return (

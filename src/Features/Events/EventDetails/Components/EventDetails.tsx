@@ -1,9 +1,10 @@
 import icons from "../../../Assets/Icons/icons";
 import Footer from "../../../Common/CommonComponent/Footer";
 import images from "../../../ImageVariables";
+import { EventsDetailsTypes } from "../EventsDetailsTypes";
 import "../SCSS/styles.css";
 
-function EventDetails() {
+function EventDetails({ eventAndNewsDetails }: EventsDetailsTypes) {
   return (
     <div className="events-details-cards-container">
       <div className="events-details-bg-img-cover"></div>
@@ -13,7 +14,7 @@ function EventDetails() {
           <div className="events-details-cards-left-img-cover">
             <img
               className="events-details-cards-left-img"
-              src={images.storeImage}
+              src={images.videoThumbnail}
               alt="events"
             />
           </div>

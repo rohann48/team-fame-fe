@@ -33,7 +33,6 @@ function ShoppingCartContainer() {
     });
     NotificationManager.success("Product added to cart", "", 2000);
   };
-  console.log("shoppingCart", productInfo);
 
   //navigate to view product
   const handleNavigateProduct = (

@@ -1,10 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import HomePage from "../Components/homePage";
 import { GlobalDataContext } from "../../context/GlobalDataContext";
+import { useNavigate } from "react-router-dom";
 
 function HomePageContainer() {
   const { aboutUsData, eventData, testimonialData } =
     useContext(GlobalDataContext);
+  const navigate = useNavigate();
+
   const [testimonialLoop, setTestimonialLoop] = useState<any>([]);
 
   // useEffect(() => {
@@ -26,13 +29,17 @@ function HomePageContainer() {
   //   // Clean up the interval when the component unmounts
   //   return () => clearInterval(intervalId);
   // }, [testimonialData]);
-
+  //handle navigate cards to event details page
+  const handleNavigateEventCard = (_id: string) => {
+    navigate(`/events-and-news/details/${_id}`);
+  };
   return (
     <>
       <HomePage
         aboutUsData={aboutUsData}
         eventData={eventData}
         testimonialLoop={testimonialLoop}
+        handleNavigateEventCard={handleNavigateEventCard}
       />
     </>
   );

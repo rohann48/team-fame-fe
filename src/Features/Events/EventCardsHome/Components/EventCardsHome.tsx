@@ -7,7 +7,7 @@ import "../SCSS/styles.css";
 
 function EventCardsHome({
   eventData,
-  handleEvnetNavigate,
+  handleEventNavigate,
 }: Readonly<EventsCardsHomeTypes>) {
   return (
     <div className="events-cards-container">
@@ -23,7 +23,7 @@ function EventCardsHome({
                 <div className="events-card-left"></div>
                 <div
                   className="events-card-right"
-                  onClick={() => handleEvnetNavigate()}
+                  onClick={() => handleEventNavigate(event._id)}
                 >
                   <div className="events-card-right-inner-cover">
                     <div className="events-card-right-header">

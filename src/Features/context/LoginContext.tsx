@@ -67,8 +67,6 @@ const LoginContextProvider = ({ children }: LoginContextTypes) => {
     ]
   );
 
-  console.log(userInfo);
-
   return (
     <LoginContext.Provider value={contextValue}>
       {children}

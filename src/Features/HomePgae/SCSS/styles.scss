@@ -424,7 +424,7 @@
             width: 95%;
             height: 100%;
             padding: 1rem;
-
+            cursor: pointer;
             .day {
               font-size: 14px;
               font-weight: 400;
@@ -546,13 +546,15 @@
           width: 95%;
           height: 100%;
           padding: 1rem;
-
-          .view-all-btn {
-            height: 100%;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+          .events-and-news-nav-link {
+            text-decoration: none;
+            .view-all-btn {
+              height: 100%;
+              color: white;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
           }
         }
       }

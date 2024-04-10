@@ -23,7 +23,6 @@ const ShopContextProvider = ({ children }: ShopContextTypes) => {
 
   const getProductData = async () => {
     const response = await ApiHandler.getProductDetails();
-    console.log("response", response?.results);
     setProducts([...response?.results]);
   };
   useEffect(() => {
@@ -37,7 +36,6 @@ const ShopContextProvider = ({ children }: ShopContextTypes) => {
     }),
     [productInfo, setProductInfo, products]
   );
-  console.log("productInfo", productInfo);
 
   return (
     <ShopContext.Provider value={contextValue}>{children}</ShopContext.Provider>

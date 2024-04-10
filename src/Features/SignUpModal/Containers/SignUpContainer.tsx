@@ -34,12 +34,11 @@ function SignUpContainer({
       [name]: value,
     });
   };
-  console.log("reisterUser", registerUser);
 
   const handleUserRegister = async () => {
     try {
       if (registerUser.password !== registerUser.confirmPassword) {
-        NotificationManager.success("Password doesnt match!", "", 2000);
+        NotificationManager.success("Password does not match!", "", 2000);
       } else if (registerUser.password.length <= 7) {
         NotificationManager.success(
           "Password must have 8 or more characters!",

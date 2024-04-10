@@ -4,19 +4,17 @@ import { GlobalDataContext } from "../../../context/GlobalDataContext";
 import { useNavigate } from "react-router-dom";
 
 function EventCardsContainer() {
-  const { eventData } = useContext(GlobalDataContext);
+  const { eventData, setEventData } = useContext(GlobalDataContext);
   const navigate = useNavigate();
 
-  console.log("eventData", eventData);
-
   //navigate event cards into card
-  const handleEvnetNavigate = () => {
-    navigate(`/events-and-news/details/${1}`);
+  const handleEventNavigate = (_id: string) => {
+    navigate(`/events-and-news/details/${_id}`);
   };
   return (
     <EventCardsHome
       eventData={eventData}
-      handleEvnetNavigate={handleEvnetNavigate}
+      handleEventNavigate={handleEventNavigate}
     />
   );
 }

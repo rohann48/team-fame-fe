@@ -365,6 +365,7 @@
   width: 95%;
   height: 100%;
   padding: 1rem;
+  cursor: pointer;
 }
 .home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .day,
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .card-right-cover .day {
@@ -515,8 +516,12 @@
   height: 100%;
   padding: 1rem;
 }
-.home-page-container .home-page-cover .home-events-cover .view-all-card .right-cover .view-all-btn,
-.home-page-container .home-page-cover .home-videos-and-news-cover .view-all-card .right-cover .view-all-btn {
+.home-page-container .home-page-cover .home-events-cover .view-all-card .right-cover .events-and-news-nav-link,
+.home-page-container .home-page-cover .home-videos-and-news-cover .view-all-card .right-cover .events-and-news-nav-link {
+  text-decoration: none;
+}
+.home-page-container .home-page-cover .home-events-cover .view-all-card .right-cover .events-and-news-nav-link .view-all-btn,
+.home-page-container .home-page-cover .home-videos-and-news-cover .view-all-card .right-cover .events-and-news-nav-link .view-all-btn {
   height: 100%;
   color: white;
   display: -webkit-box;

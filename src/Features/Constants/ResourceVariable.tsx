@@ -8,5 +8,6 @@ export const Resource = {
     authenticateUser: "/client/auth",
     getProductDetails: `/shop/product/list`,
     // forgotPassword: `/suppliers/forgot/password`,
+    getEventAndNewsDetails: (id: string | null) => `/event?eventId=${id}`,
   },
 };

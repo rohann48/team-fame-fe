@@ -30,11 +30,9 @@ function ShopContainer() {
       setProductDetails({ ...productDetails, [type]: value });
     }
   };
-  console.log("userInfo", userInfo);
 
   const getProductData = async () => {
     const response = await ApiHandler.getProductDetails();
-    console.log("response", response.results);
     setProducts([...response.results]);
   };
   useEffect(() => {
@@ -52,19 +50,16 @@ function ShopContainer() {
       form.append("clientId", userInfo._id);
       // for (let i = 0; i < uploadedFiles.length; i++) {
       form.append("fileToUpload", uploadedFiles[0]);
-      console.log("uploadedFiles", uploadedFiles[0]);
       // }
       let response = await ApiHandler.postProductDetails(form);
       setUploadedFiles([]);
       // const response = await ApiHandler.postProductDetails(modifiedData);
-      console.log(response.results);
       setProducts([...products, ...response.results]);
       NotificationManager.success(Notify.ADD, "", 2000);
     } catch (err) {
       NotificationManager.warning(Notify.DEFAULT, "", 2000);
     }
   };
-  console.log("products", products);
 
   return (
     <Shop

@@ -106,13 +106,11 @@ function SchemeJoinPage() {
               </div>
               <label className="scheme-payee-period-label-cover">
                 <div className="scheme-payee-period-text"> Period:</div>
-                <select
+                <input
                   className="scheme-payee-period-select"
                   placeholder="Please select period"
-                >
-                  <option>hi</option>
-                  <option>hi</option>
-                </select>
+                  type="number"
+                />
               </label>
             </div>
             <div className="scheme-btn-cover">

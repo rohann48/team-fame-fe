@@ -16,8 +16,6 @@ function ViewProductContainer() {
   >({} as ViewProductTypes["viewedProduct"]);
   const getProductInfo = async () => {
     const response = await ApiHandler.getProductDetails(productId);
-    console.log(response.results);
-
     setViewedProduct({ ...response.results });
   };
 
@@ -42,7 +40,6 @@ function ViewProductContainer() {
     //   draft.catTotalAmount *= i;
     // });
   };
-  console.log("setProductInfo", productInfo);
 
   //handle decrementing product count
   const handleDecrementProduct = () => {};
@@ -54,8 +51,6 @@ function ViewProductContainer() {
   const handleAddToCart = () => {};
 
   useEffect(() => {
-    console.log("productId", productId);
-
     if (productId) {
       getProductInfo();
     }

@@ -84,4 +84,14 @@ export const ApiHandler = {
   //   );
   //   return response.data;
   // },
+  getEventAndNewsDetails: async (id: string | null) => {
+    try {
+      const response = await apiAuth.getApiwithoutAuth(
+        Resource.url.getEventAndNewsDetails(id)
+      );
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };

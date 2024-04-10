@@ -10,6 +10,7 @@ const HomePage = ({
   aboutUsData,
   eventData,
   testimonialLoop,
+  handleNavigateEventCard,
 }: homePageTypes) => {
   return (
     <div className="home-page-container">
@@ -88,47 +89,47 @@ const HomePage = ({
         <div className="home-events-cover">
           <div className="event-title">Upcoming Events</div>
           <div className="cards-cover">
-            {eventData?.map((event: any) => {
+            {eventData?.map((event) => {
               return (
-                <>
-                  <div className="cards">
-                    <div className="card-left-cover">
+                <div className="cards" key={event._id}>
+                  <div className="card-left-cover">
+                    <img
+                      src={images.cardLabelSide}
+                      alt="cardLabelSide"
+                      className="card-label-side-img"
+                    />
+                  </div>
+                  <div
+                    className="card-right-cover"
+                    onClick={() => handleNavigateEventCard(event._id)}
+                  >
+                    <div className="day">TOMORROW</div>
+                    <div className="marathon-img-cover">
                       <img
-                        src={images.cardLabelSide}
-                        alt="cardLabelSide"
-                        className="card-label-side-img"
+                        src={images.logoBackground}
+                        className="marathon-img"
                       />
                     </div>
-                    <div className="card-right-cover">
-                      <div className="day">TOMORROW</div>
-                      <div className="marathon-img-cover">
-                        <img
-                          src={images.logoBackground}
-                          className="marathon-img"
-                        />
-                      </div>
-                      <div className="marathon-header">{event.title}</div>
-                      <div className="date-cover">
-                        <span className="date-icon">{icons.date}</span>
-                        <span className="date">
-                          {event &&
-                            format(parseISO(event?.date), "dd-MMM-yyyy")}
-                        </span>
-                      </div>
-                      <div className="time-cover">
-                        <span className="time-icon">{icons.clock}</span>
-                        <span className="time">{event.time} AM</span>
-                      </div>
-                      <div className="location-cover">
-                        <span className="location-icon">{icons.location}</span>
-                        <span className="location">{event.location}</span>
-                      </div>{" "}
-                      <div className="contact-us-cover">
-                        <button className="contact-us-btn">Contact us</button>
-                      </div>
+                    <div className="marathon-header">{event.title}</div>
+                    <div className="date-cover">
+                      <span className="date-icon">{icons.date}</span>
+                      <span className="date">
+                        {event && format(parseISO(event?.date), "dd-MMM-yyyy")}
+                      </span>
+                    </div>
+                    <div className="time-cover">
+                      <span className="time-icon">{icons.clock}</span>
+                      <span className="time">{event.time} AM</span>
+                    </div>
+                    <div className="location-cover">
+                      <span className="location-icon">{icons.location}</span>
+                      <span className="location">{event.location}</span>
+                    </div>{" "}
+                    <div className="contact-us-cover">
+                      <button className="contact-us-btn">Contact us</button>
                     </div>
                   </div>
-                </>
+                </div>
               );
             })}
             {/* <div className="event-mom-logo-cover">
@@ -144,7 +145,10 @@ const HomePage = ({
                   />
                 </div>
                 <div className="right-cover">
-                  <NavLink to="our-event">
+                  <NavLink
+                    to="events-and-news"
+                    className="events-and-news-nav-link"
+                  >
                     <div className="view-all-btn">View All</div>
                   </NavLink>
                 </div>
