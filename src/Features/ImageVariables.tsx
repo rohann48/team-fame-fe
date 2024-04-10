@@ -77,5 +77,6 @@ const images = {
   eventsHeader: require("./Assets/Images/eventsHeader.svg").default,
   eventCard: require("./Assets/Images/eventCard.svg").default,
   videoBackGround: require("./Assets/Images/videoBackGround.svg").default,
+  videoAdd: require("./Assets/Images/videoAdd.svg").default,
 };
 export default images;

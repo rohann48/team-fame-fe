@@ -8,5 +8,6 @@ export const Resource = {
     postProductInfo: `/shop/product`,
     getProductDetails: `/shop/product/list`,
     // forgotPassword: `/suppliers/forgot/password`,
+    postVideoInfo: `/video`,
   },
 };

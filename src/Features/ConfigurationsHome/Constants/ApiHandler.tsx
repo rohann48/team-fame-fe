@@ -89,4 +89,11 @@ export const ApiHandler = {
       console.log(error);
     }
   },
+  postVideoInfo: async (formData: any) => {
+    const response = await apiAuth.postApiForFormDatawithoutEncryption(
+      Resource.url.postVideoInfo,
+      formData
+    );
+    return response.data;
+  },
 };

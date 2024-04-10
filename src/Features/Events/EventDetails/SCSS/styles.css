@@ -89,6 +89,7 @@
   padding-right: 5rem;
 }
 .events-details-cards-container .events-details-cards-and-header-cover .events-details-cards-render-cover .events-details-cards-right-cover .events-details-cards-header {
+  width: 100%;
   font-size: 24px;
   font-weight: 500;
   color: #444444;
@@ -99,6 +100,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-transform: capitalize;
 }
 .events-details-cards-container .events-details-cards-and-header-cover .events-details-cards-render-cover .events-details-cards-right-cover .events-details-cards-description {
   font-size: 14px;
@@ -141,6 +143,7 @@
   font-size: 14px;
   font-weight: 400;
   color: #444444;
+  text-transform: capitalize;
 }
 .events-details-cards-container .events-details-cards-and-header-cover .events-details-cards-render-cover .events-details-cards-right-cover .events-details-cards-register-btn-cover {
   width: 100%;

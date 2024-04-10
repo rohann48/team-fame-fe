@@ -15,8 +15,7 @@ function EventDetailsContainer() {
   useEffect(() => {
     const fetchEventsAndNews = async () => {
       const response = await ApiHandler.getEventAndNewsDetails(id);
-      console.log(response);
-      // setEventsAndNewsDetails({ ...response.results });
+      setEventsAndNewsDetails({ ...response.results });
     };
     if (id) {
       fetchEventsAndNews();
