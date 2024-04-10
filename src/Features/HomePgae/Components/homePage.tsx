@@ -11,6 +11,7 @@ const HomePage = ({
   eventData,
   testimonialLoop,
   handleNavigateEventCard,
+  handleNavigateVideoCard,
 }: homePageTypes) => {
   return (
     <div className="home-page-container">
@@ -307,10 +308,14 @@ const HomePage = ({
         </div> */}
 
           <div className="home-videos-and-news-cover">
-            <div className="heading">Videos/News</div>
+            <div className="heading">Videos</div>
             <div className="cards-cover">
               {[1, 2, 3].map((i) => (
-                <div key={i} className="cards">
+                <div
+                  key={i}
+                  className="cards"
+                  onClick={() => handleNavigateVideoCard()}
+                >
                   <div className="cards-img">
                     <img src={images.videoThumbnail} className="thumbnail" />
                   </div>

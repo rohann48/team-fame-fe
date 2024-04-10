@@ -33,6 +33,10 @@ function HomePageContainer() {
   const handleNavigateEventCard = (_id: string) => {
     navigate(`/events-and-news/details/${_id}`);
   };
+  //handle navigate cards to video cards page
+  const handleNavigateVideoCard = () => {
+    navigate(`/videos`);
+  };
   return (
     <>
       <HomePage
@@ -40,6 +44,7 @@ function HomePageContainer() {
         eventData={eventData}
         testimonialLoop={testimonialLoop}
         handleNavigateEventCard={handleNavigateEventCard}
+        handleNavigateVideoCard={handleNavigateVideoCard}
       />
     </>
   );

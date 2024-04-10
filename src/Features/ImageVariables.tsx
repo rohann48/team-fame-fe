@@ -75,5 +75,7 @@ const images = {
   chair: require("./Assets/Images/chair.svg").default,
   viewMore: require("./Assets/Images/viewMore.svg").default,
   eventsHeader: require("./Assets/Images/eventsHeader.svg").default,
+  eventCard: require("./Assets/Images/eventCard.svg").default,
+  videoBackGround: require("./Assets/Images/videoBackGround.svg").default,
 };
 export default images;

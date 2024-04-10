@@ -32,7 +32,7 @@ function EventCardsHome({
                     <div className="events-card-img-cover">
                       <img
                         className="events-card-event-img"
-                        src={images.videoThumbnail}
+                        src={images.eventCard}
                         alt="events"
                       />
                     </div>

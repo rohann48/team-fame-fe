@@ -6,6 +6,7 @@ import SchemeHomePage from "./Scheme/SchemeHomePage";
 import ShopHomePage from "./Shop/ShopHomePage";
 import ShopContextProvider from "./context/ShopContext/ShopContext";
 import EventsHomePage from "./Events/EventsHomepage";
+import VideoHomePage from "./Videos/VideosHomePage";
 export const mainRoutes = [
   {
     path: "*",
@@ -26,6 +27,10 @@ export const mainRoutes = [
   {
     path: "/events-and-news/*",
     element: <EventsHomePage />,
+  },
+  {
+    path: "/videos/*",
+    element: <VideoHomePage />,
   },
   {
     path: "/shop/*",

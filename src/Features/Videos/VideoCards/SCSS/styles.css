@@ -1,0 +1,213 @@
+.video-cards-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+.video-cards-container::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+.video-cards-container::-webkit-scrollbar-thumb {
+  background: #c1b8b8;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.video-cards-container .video-bg-img-cover {
+  width: 100%;
+  height: 421px;
+  background-image: url("../../../Assets/Images/videoBackGround.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.video-cards-container .video-cards-and-header-cover {
+  height: 560px;
+  width: 100%;
+}
+.video-cards-container .video-cards-and-header-cover .video-cards-header-text {
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: #444444;
+}
+.video-cards-container .video-cards-and-header-cover .video-cards-render-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2%;
+  padding-inline: 2rem;
+  height: auto;
+}
+.video-cards-container .video-cards-and-header-cover .video-cards-render-cover .video-cards-event-header {
+  width: 100%;
+  height: 2rem;
+  color: #bd9255;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.video-cards-container .video-cards-and-header-cover .video-cards-render-cover .video-cards-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0% 6%;
+}
+.video-cards-container .video-cards-and-header-cover .video-cards-render-cover .video-cards-cover .video-cards {
+  background-color: white;
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 414px;
+}
+.video-cards-container .video-cards-and-header-cover .video-cards-render-cover .video-cards-cover .video-cards .video-cards-img {
+  height: 70%;
+  overflow: hidden;
+}
+.video-cards-container .video-cards-and-header-cover .video-cards-render-cover .video-cards-cover .video-cards .video-cards-img .video-thumbnail {
+  height: 100%;
+  width: 100%;
+}
+.video-cards-container .video-cards-and-header-cover .video-cards-render-cover .video-cards-cover .video-cards .video-cards-content {
+  height: 30%;
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  padding: 1% 1%;
+  border-top: none;
+}
+.video-cards-container .video-cards-and-header-cover .video-cards-render-cover .video-cards-cover .video-cards .video-cards-content .video-title {
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 2%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.video-cards-container .video-cards-and-header-cover .video-cards-render-cover .video-cards-cover .video-cards .video-cards-content .video-para {
+  font-size: 14px;
+  color: #84868b;
+  padding-bottom: 3%;
+}
+.video-cards-container .video-cards-and-header-cover .video-cards-render-cover .video-cards-cover .video-cards .video-cards-content .video-btn {
+  background: black;
+  color: white;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  width: 92px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.video-cards-container .video-former-text-main-cover {
+  width: 100%;
+  height: 250px;
+}
+.video-cards-container .video-former-text-main-cover .video-former-text-top-border {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.video-cards-container .video-former-text-main-cover .video-former-text-top-border .video-former-text-top-border-inner {
+  width: 63em;
+  border-top: 4px solid #bd9255;
+}
+.video-cards-container .video-former-text-main-cover .video-former-text-wrapper {
+  font-size: 86px;
+  font-weight: 500;
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+}
+.video-cards-container .video-former-text-main-cover .video-former-text-wrapper .text-r {
+  color: #eb3d3d;
+}
+.video-cards-container .video-former-text-main-cover .video-former-text-student-cover {
+  font-size: 18px;
+  font-weight: 500;
+  color: #bd9255;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5rem;
+}
+.video-cards-container .video-former-text-main-cover .video-former-text-join-btn-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 80px;
+}
+.video-cards-container .video-former-text-main-cover .video-former-text-join-btn-cover .video-former-text-join-btn {
+  all: unset;
+  width: 92px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #bd9255;
+  color: #ffffff;
+  text-align: center;
+  border: 1px solid #bd9255;
+  border-radius: 4px;
+}/*# sourceMappingURL=styles.css.map */

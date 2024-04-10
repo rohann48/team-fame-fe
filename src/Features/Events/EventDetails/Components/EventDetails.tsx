@@ -14,7 +14,7 @@ function EventDetails({ eventAndNewsDetails }: EventsDetailsTypes) {
           <div className="events-details-cards-left-img-cover">
             <img
               className="events-details-cards-left-img"
-              src={images.videoThumbnail}
+              src={images.eventCard}
               alt="events"
             />
           </div>
