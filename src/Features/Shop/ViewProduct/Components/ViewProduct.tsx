@@ -12,8 +12,6 @@ function ViewProduct({
   handleAddToCart,
   viewedProduct,
 }: ViewProductTypes) {
-  let productTotal = viewedProduct.price * productInfo.cartBasket.length;
-
   return (
     <div className="view-product-container">
       <div className="view-product-back-btn-cover">

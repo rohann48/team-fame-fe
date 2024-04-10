@@ -11,6 +11,7 @@ const HeaderNav = ({
   handleLoginModalToggle,
   handleSignUpModalToggle,
   productInfo,
+  handleNavigateCart,
 }: HeaderNavProps) => {
   return (
     <div className="header-nav-container">
@@ -114,8 +115,8 @@ const HeaderNav = ({
         </NavLink>
       </div>
       <div className="login-register-container">
-        <button className="cart-img-btn">
-          <img className="cart-img" src={images.cart} alt="cart" />{" "}
+        <button className="cart-img-btn" onClick={() => handleNavigateCart()}>
+          <img className="cart-img" src={images.cart} alt="cart" />
           <span className="cart-count">{productInfo.cartTotalQuantity}</span>
         </button>
         <NavLink to="config/about-us">
