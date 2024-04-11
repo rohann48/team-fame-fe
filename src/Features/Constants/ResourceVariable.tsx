@@ -9,5 +9,6 @@ export const Resource = {
     getProductDetails: `/shop/product/list`,
     // forgotPassword: `/suppliers/forgot/password`,
     getEventAndNewsDetails: (id: string | null) => `/event/${id}`,
+    getVideoById: (videoId: string | null) => `/video/${videoId}`,
   },
 };
