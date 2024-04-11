@@ -5,6 +5,7 @@ import { LoginContext } from "../../../../context/LoginContext";
 import { ApiHandler } from "../../../Constants/ApiHandler";
 import { NotificationManager } from "react-notifications";
 import { Notify } from "../../../../Common/Notify/NotificationMessages";
+import { GlobalDataContext } from "../../../../context/GlobalDataContext";
 
 let initialState: {
   [key: string]: any;
@@ -15,6 +16,7 @@ let initialState: {
 };
 function AdminVideosContainer() {
   const { userInfo } = useContext(LoginContext);
+  const { allVideos } = useContext(GlobalDataContext);
 
   //state maintained by AdminVideos
   const [uploadedVideoData, setUploadedData] = useImmer({ ...initialState });
@@ -52,6 +54,7 @@ function AdminVideosContainer() {
     <AdminVideos
       handleChangeInput={handleChangeInput}
       handleSave={handleSave}
+      allVideos={allVideos}
     />
   );
 }

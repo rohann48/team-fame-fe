@@ -76,7 +76,7 @@
 }
 .video-cards-container .video-cards-and-header-cover .video-cards-render-cover .video-cards-cover .video-cards {
   background-color: white;
-  width: 30%;
+  width: 275px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,6 +89,7 @@
 }
 .video-cards-container .video-cards-and-header-cover .video-cards-render-cover .video-cards-cover .video-cards .video-cards-img {
   height: 70%;
+  width: 100%;
   overflow: hidden;
 }
 .video-cards-container .video-cards-and-header-cover .video-cards-render-cover .video-cards-cover .video-cards .video-cards-img .video-thumbnail {
@@ -110,11 +111,13 @@
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
+  height: 25%;
 }
 .video-cards-container .video-cards-and-header-cover .video-cards-render-cover .video-cards-cover .video-cards .video-cards-content .video-para {
   font-size: 14px;
   color: #84868b;
   padding-bottom: 3%;
+  height: 40%;
 }
 .video-cards-container .video-cards-and-header-cover .video-cards-render-cover .video-cards-cover .video-cards .video-cards-content .video-btn {
   background: black;

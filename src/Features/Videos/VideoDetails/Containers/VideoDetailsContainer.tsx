@@ -10,16 +10,13 @@ function VideoDetailsContainer() {
   //get events and news
   useEffect(() => {
     const fetchVideoById = async () => {
-      const response = await ApiHandler.getVideoById(
-        "6616c637592961c0c89a319d"
-      );
-      setVideoInfo({ ...response.results });
+      const response = await ApiHandler.getVideoById(id);
+      setVideoInfo({ ...response?.results });
     };
     if (id) {
       fetchVideoById();
     }
   }, [id]);
-  console.log("videoInfo", videoInfo);
 
   return <VideoDetails videoInfo={videoInfo} />;
 }

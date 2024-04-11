@@ -87,6 +87,20 @@
       -ms-flex-align: center;
           align-items: center;
 }
+.videos-details-cards-container .videos-details-cards-and-header-cover .videos-details-cards-render-cover .videos-details-cards-right-cover .videos-details-cards-date-and-time-cover {
+  gap: 4%;
+  width: 100%;
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #444444;
+}
 .videos-details-cards-container .videos-details-cards-and-header-cover .videos-details-cards-render-cover .videos-details-cards-right-cover .videos-details-cards-description {
   font-size: 14px;
   font-weight: 400;
@@ -101,20 +115,6 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: justify;
-}
-.videos-details-cards-container .videos-details-cards-and-header-cover .videos-details-cards-render-cover .videos-details-cards-right-cover .videos-details-cards-date-and-time-cover {
-  gap: 4%;
-  width: 100%;
-  height: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 14px;
-  font-weight: 400;
-  color: #444444;
 }
 .videos-details-cards-container .videos-details-cards-and-header-cover .videos-details-cards-render-cover .videos-details-cards-right-cover .videos-details-cards-location {
   width: 100%;

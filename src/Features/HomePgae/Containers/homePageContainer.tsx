@@ -4,7 +4,7 @@ import { GlobalDataContext } from "../../context/GlobalDataContext";
 import { useNavigate } from "react-router-dom";
 
 function HomePageContainer() {
-  const { aboutUsData, eventData, testimonialData } =
+  const { aboutUsData, eventData, testimonialData, allVideos } =
     useContext(GlobalDataContext);
   const navigate = useNavigate();
 
@@ -38,15 +38,14 @@ function HomePageContainer() {
     navigate(`/videos`);
   };
   return (
-    <>
-      <HomePage
-        aboutUsData={aboutUsData}
-        eventData={eventData}
-        testimonialLoop={testimonialLoop}
-        handleNavigateEventCard={handleNavigateEventCard}
-        handleNavigateVideoCard={handleNavigateVideoCard}
-      />
-    </>
+    <HomePage
+      aboutUsData={aboutUsData}
+      eventData={eventData}
+      testimonialLoop={testimonialLoop}
+      handleNavigateEventCard={handleNavigateEventCard}
+      handleNavigateVideoCard={handleNavigateVideoCard}
+      allVideos={allVideos}
+    />
   );
 }
 export default HomePageContainer;

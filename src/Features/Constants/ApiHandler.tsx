@@ -104,4 +104,14 @@ export const ApiHandler = {
       console.log(error);
     }
   },
+  getAllVideos: async () => {
+    try {
+      const response = await apiAuth.getApiwithoutAuth(
+        Resource.url.getAllVideos
+      );
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };

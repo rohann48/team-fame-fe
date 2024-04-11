@@ -10,6 +10,7 @@ import {
   faClock,
   faUserNinja,
   faArrowLeft,
+  faFilm,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { faMessage, faTrashCan } from "@fortawesome/free-regular-svg-icons";
@@ -28,6 +29,7 @@ const icons = {
   clock: <FontAwesomeIcon icon={faClock} size="1x" color="#bd9255" />,
   userIcon: <FontAwesomeIcon icon={faUserNinja} size="4x" color="red" />,
   backBtn: <FontAwesomeIcon icon={faArrowLeft} size="1x" color="#444444" />,
+  videoLength: <FontAwesomeIcon icon={faFilm} size="1x" color="#BD9255" />,
 
   // facebook: <FontAwesomeIcon icon={faSquareFacebook} />
 };
