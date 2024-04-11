@@ -97,6 +97,8 @@
         display: flex;
         gap: 20px;
         flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
         .product-card {
           border: 1px solid #ddd;
           border-radius: 8px;
