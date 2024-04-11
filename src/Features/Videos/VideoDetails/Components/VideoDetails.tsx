@@ -2,8 +2,9 @@ import icons from "../../../Assets/Icons/icons";
 import Footer from "../../../Common/CommonComponent/Footer";
 import images from "../../../ImageVariables";
 import "../SCSS/styles.css";
+import { VideoTypes } from "../VideoDetailsTypes";
 
-function VideoDetails() {
+function VideoDetails({ videoInfo }: VideoTypes) {
   return (
     <div className="videos-details-cards-container">
       <div className="videos-details-bg-img-cover"></div>
@@ -11,11 +12,10 @@ function VideoDetails() {
         <div className="videos-details-cards-header-text">VIDEOS</div>
         <div className="videos-details-cards-render-cover">
           <div className="videos-details-cards-left-img-cover">
-            <img
-              className="videos-details-cards-left-img"
-              src={images.videoThumbnail}
-              alt="videos"
-            />
+            <video width="auto" height="auto" autoPlay>
+              <source src={videoInfo?.videoInfo?.[0].path} type="video/ogg" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div className="videos-details-cards-right-cover">
             <div className="videos-details-cards-header">

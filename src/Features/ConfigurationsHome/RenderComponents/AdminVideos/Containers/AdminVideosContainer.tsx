@@ -32,15 +32,14 @@ function AdminVideosContainer() {
       });
     }
   };
-  console.log(uploadedVideoData.videoFiles[0], "sds");
   //save videos
   const handleSave = () => {
     try {
       let form = new FormData();
       form.append("title", uploadedVideoData.title);
       form.append("description", uploadedVideoData.description);
-      form.append("clientId", userInfo._id);
-      form.append("videoInfo", uploadedVideoData.videoFiles[0]);
+      form.append("clientId", userInfo._id ?? "6612f564b411558c46de02fa");
+      form.append("fileToUpload", uploadedVideoData.videoFiles[0]);
       let response = ApiHandler.postVideoInfo(form);
       NotificationManager.success(Notify.ADD, "", 2000);
 

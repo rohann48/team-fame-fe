@@ -71,6 +71,16 @@ export const ApiHandler = {
       console.log(error);
     }
   },
+  getVideoById: async (videoId: string | null) => {
+    try {
+      const response = await apiAuth.getApiwithoutAuth(
+        Resource.url.getVideoById(videoId)
+      );
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
   // //logout
   // logoutUser: async () => {
   //   const response = await apiAuth.getApiwithoutAuth(Resource.url.logout);
