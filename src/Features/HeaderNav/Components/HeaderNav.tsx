@@ -117,7 +117,7 @@ const HeaderNav = ({
       <div className="login-register-container">
         <button className="cart-img-btn" onClick={() => handleNavigateCart()}>
           <img className="cart-img" src={images.cart} alt="cart" />
-          <span className="cart-count">{productInfo.cartTotalQuantity}</span>
+          <span className="cart-count">{productInfo.cartBasket.length}</span>
         </button>
         <NavLink to="config/about-us">
           <Tippy placement="bottom-start" content="Configuration">

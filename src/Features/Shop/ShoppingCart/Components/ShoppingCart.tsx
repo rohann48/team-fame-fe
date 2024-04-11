@@ -119,48 +119,49 @@ function ShoppingCart({
           </div>
           <div className="go-to-cart-btn">Go to Cart</div>
         </div>
+        <div className="product-card-outer-cover">
+          <div className="product-card-cover">
+            {products.map((prod: any, index) => {
+              return (
+                <div
+                  className="product-card"
+                  key={prod._id}
+                  onClick={() => handleNavigateProduct(prod)}
+                >
+                  <img
+                    className="product-image"
+                    src={prod.imageInfo[0]?.path}
+                    alt="Product"
+                  />
+                  <div className="product-details">
+                    <p className="product-description">{prod.details}</p>
 
-        <div className="product-card-cover">
-          {products.map((prod: any, index) => {
-            return (
-              <div
-                className="product-card"
-                key={prod._id}
-                onClick={() => handleNavigateProduct(prod, index)}
-              >
-                <img
-                  className="product-image"
-                  src={prod.imageInfo[0].path}
-                  alt="Product"
-                />
-                <div className="product-details">
-                  <p className="product-description">{prod.details}</p>
-
-                  <p className="product-price">₹ {prod.price}</p>
+                    <p className="product-price">₹ {prod.price}</p>
+                  </div>
+                  <div className="product-actions">
+                    <button
+                      className="add-to-cart"
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        handleAddToCartIncrement(index, prod);
+                      }}
+                    >
+                      Add to Cart
+                    </button>
+                    <button
+                      className="buy-now"
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        handleNavigateProduct(prod);
+                      }}
+                    >
+                      Buy Now
+                    </button>
+                  </div>
                 </div>
-                <div className="product-actions">
-                  <button
-                    className="add-to-cart"
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      handleAddToCartIncrement(event, index, prod);
-                    }}
-                  >
-                    Add to Cart
-                  </button>
-                  <button
-                    className="buy-now"
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      handleNavigateProduct(prod, index);
-                    }}
-                  >
-                    Buy Now
-                  </button>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
         <div className="shop-view-more-cover">
           <img className="view-more-img" src={images.viewMore} alt="viewMore" />

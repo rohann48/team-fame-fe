@@ -6,7 +6,6 @@ export interface ShopContextTypes {
 
 export interface ShoppingContextInitialState {
   productInfo: {
-    productCount: number;
     cartBasket: {
       id: string;
       name: string;
@@ -15,7 +14,6 @@ export interface ShoppingContextInitialState {
       price: number;
       quantityCount?: number;
     }[];
-    cartTotalQuantity: number;
     catTotalAmount: number;
   };
   products: Array<{

@@ -9,7 +9,7 @@ function ViewProduct({
   handleIncrementProduct,
   handleDecrementProduct,
   handleBackButton,
-  handleAddToCart,
+  handleNavigateToCart,
   viewedProduct,
 }: ViewProductTypes) {
   return (
@@ -36,7 +36,7 @@ function ViewProduct({
             <p className="view-product-description">{viewedProduct.name}</p>
             <p className="view-product-description">{viewedProduct.details}</p>
             <p className="view-product-rate">Rs: {viewedProduct.price}</p>
-            <div className="view-product-action-btn-cover">
+            {/* <div className="view-product-action-btn-cover">
               <span>Qty:</span>
               <div className="action-btn-cover">
                 <div
@@ -55,13 +55,13 @@ function ViewProduct({
                   +
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="view-product-btn-covers">
               <button
                 className="view-product cart-btn"
-                onClick={(event) => handleAddToCart(event)}
+                onClick={() => handleNavigateToCart()}
               >
-                ADD TO CART
+                GO TO CART
               </button>
               <button className="view-product buy-btn">BUY NOW</button>
             </div>

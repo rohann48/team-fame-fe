@@ -30,17 +30,17 @@
     width: 100%;
     height: 1110px;
     .shop-product-header {
+      height: 6%;
       font-size: 18px;
       font-weight: 500;
       color: #444444;
       background-color: #ebeff3;
-      height: 60px;
       display: flex;
       align-items: center;
       padding-inline: 2rem;
     }
     .shop-product-filter-and-cart-cover {
-      height: 70px;
+      height: 8%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -77,81 +77,95 @@
         }
       }
     }
-
-    .product-card-cover {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 20px;
+    .product-card-outer-cover {
+      height: 76%;
+      width: 100%;
       padding-inline: 2rem;
-      .product-card {
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 16px;
-        // width: 250px;
-        width: 368px;
-        background-color: #fff;
-        transition: box-shadow 0.3s ease;
-        cursor: pointer;
-        &:hover {
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        width: 6px;
+        background: transparent;
+      }
 
-        .product-image {
-          width: 100%;
-          height: 310px;
-          object-fit: contain;
+      &::-webkit-scrollbar-thumb {
+        background: #c1b8b8;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      .product-card-cover {
+        height: auto;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        .product-card {
+          border: 1px solid #ddd;
           border-radius: 8px;
-          margin-bottom: 12px;
-        }
-
-        .product-details {
-          margin-bottom: 12px;
-        }
-
-        .product-description {
-          font-size: 16px;
-          margin-bottom: 8px;
-        }
-
-        .product-price {
-          font-size: 18px;
-          font-weight: bold;
-          color: #333;
-          margin-bottom: 12px;
-        }
-
-        .product-actions {
-          display: flex;
-          justify-content: space-between;
-          .add-to-cart {
-            all: unset;
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            background-color: #ffffff;
-            color: #444444;
-            border: 1px solid #444444;
-            font-size: 14px;
-            transition: background-color 0.3s ease;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          padding: 16px;
+          width: 368px;
+          background-color: #fff;
+          transition: box-shadow 0.3s ease;
+          cursor: pointer;
+          &:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
           }
-          .buy-now {
-            all: unset;
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            background-color: #eaa837;
-            color: #ffffff;
-            border: 1px solid #eaa837;
-            font-size: 14px;
-            transition: background-color 0.3s ease;
+
+          .product-image {
+            width: 100%;
+            height: 310px;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-bottom: 12px;
+          }
+
+          .product-details {
+            margin-bottom: 12px;
+          }
+
+          .product-description {
+            font-size: 16px;
+            margin-bottom: 8px;
+          }
+
+          .product-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 12px;
+          }
+
+          .product-actions {
+            display: flex;
+            justify-content: space-between;
+            .add-to-cart {
+              all: unset;
+              padding: 8px 16px;
+              border-radius: 4px;
+              cursor: pointer;
+              background-color: #ffffff;
+              color: #444444;
+              border: 1px solid #444444;
+              font-size: 14px;
+              transition: background-color 0.3s ease;
+            }
+            .buy-now {
+              all: unset;
+              padding: 8px 16px;
+              border-radius: 4px;
+              cursor: pointer;
+              background-color: #eaa837;
+              color: #ffffff;
+              border: 1px solid #eaa837;
+              font-size: 14px;
+              transition: background-color 0.3s ease;
+            }
           }
         }
       }
     }
 
     .shop-view-more-cover {
-      height: 65px;
+      height: 8%;
       display: flex;
       align-items: center;
       justify-content: center;

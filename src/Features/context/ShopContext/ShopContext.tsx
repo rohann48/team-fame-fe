@@ -7,9 +7,7 @@ import { useImmer } from "use-immer";
 import { ApiHandler } from "../../Constants/ApiHandler";
 
 let initialState: ShoppingContextInitialState["productInfo"] = {
-  productCount: 0,
   cartBasket: [],
-  cartTotalQuantity: 0,
   catTotalAmount: 0,
 };
 export const ShopContext = createContext<ShoppingContextInitialState>(

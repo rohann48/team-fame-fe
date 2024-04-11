@@ -76,7 +76,7 @@
 }
 .video-cards-container .video-cards-and-header-cover .video-cards-render-cover .video-cards-cover .video-cards {
   background-color: white;
-  width: 25%;
+  width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,7 +85,7 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  height: 414px;
+  height: 470px;
 }
 .video-cards-container .video-cards-and-header-cover .video-cards-render-cover .video-cards-cover .video-cards .video-cards-img {
   height: 70%;
