@@ -50,10 +50,14 @@
       }
 
       .video-cards-cover {
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
         padding: 0% 6%;
+        align-items: center;
+        gap: 5%;
+        align-items: center;
+        justify-content: center;
         .video-cards {
           background-color: white;
           width: 275px;

@@ -65,14 +65,21 @@
   text-transform: capitalize;
 }
 .video-cards-container .video-cards-and-header-cover .video-cards-render-cover .video-cards-cover {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   padding: 0% 6%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5%;
+  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .video-cards-container .video-cards-and-header-cover .video-cards-render-cover .video-cards-cover .video-cards {
   background-color: white;

@@ -10,7 +10,7 @@ function Testimonial({
   eventData,
 }: TestimonialComponentProps) {
   return (
-    <div className="events-container">
+    <div className="testimonial-container">
       <div className="add-event-cover">
         <div className="add-event-inner-cover">
           <div className="event-header">TESTIMONIAL</div>
@@ -23,14 +23,14 @@ function Testimonial({
                   <img src={images.AddProfilePhotoPlus} alt="add profile" />
                 </div>
               </div>
-              <div className="events-btn-cover">
+              <div className="testimonial-btn-cover">
                 <button className="cancel">Cancel</button>
                 <button className="save" onClick={() => handleSave()}>
                   SAVE
                 </button>
               </div>
             </div>
-            <div className="events-input-filed-cover">
+            <div className="testimonial-input-filed-cover">
               <div className="event-name-cover">
                 <label className="event-label-cover">
                   <div className="event-text">Name</div>
@@ -74,7 +74,7 @@ function Testimonial({
           </div>
         </div>
       </div>
-      <div className="events-cards-cover">
+      <div className="testimonial-cards-cover">
         <div className="cards-event-header">All Testimonials</div>
         <div className="cards-flex">
           {eventData?.map((event: any) => {
@@ -90,7 +90,7 @@ function Testimonial({
                       <img
                         className="card-event-img"
                         src={images.videoThumbnail}
-                        alt="events"
+                        alt="testimonial"
                       />
                     </div>
                     <div className="card-event-title">{event.title}</div>
