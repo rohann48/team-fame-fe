@@ -56,7 +56,7 @@ function Cart({
                             <button
                               className="cart-product-qty-btn-minus"
                               onClick={() =>
-                                basket.quantityCount! > 0 &&
+                                basket.quantityCount! > 1 &&
                                 handleDecrementProduct(index)
                               }
                             >
