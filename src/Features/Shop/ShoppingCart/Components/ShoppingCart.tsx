@@ -130,7 +130,7 @@ function ShoppingCart({
               >
                 <img
                   className="product-image"
-                  src={prod.imageInfo[0].path}
+                  src={prod.imageInfo && prod.imageInfo?.[0]?.path}
                   alt="Product"
                 />
                 <div className="product-details">
