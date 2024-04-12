@@ -1,4 +1,4 @@
-import { IEventData } from "../context/GlobalDataContextTypes";
+import { IEventData, allVideos } from "../context/GlobalDataContextTypes";
 
 export interface homePageTypes {
   aboutUsData: {
@@ -8,4 +8,5 @@ export interface homePageTypes {
   testimonialLoop: Array<object>;
   handleNavigateEventCard: (_id: string) => void;
   handleNavigateVideoCard: () => void;
+  allVideos: allVideos;
 }

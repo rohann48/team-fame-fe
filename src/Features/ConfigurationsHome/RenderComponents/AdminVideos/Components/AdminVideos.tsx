@@ -4,7 +4,11 @@ import images from "../../../../ImageVariables";
 import icons from "../../../../Assets/Icons/icons";
 import "../SCSS/styles.css";
 
-function AdminVideos({ handleChangeInput, handleSave }: AdminVideosTypes) {
+function AdminVideos({
+  handleChangeInput,
+  handleSave,
+  allVideos,
+}: AdminVideosTypes) {
   return (
     <div className="admin-video-container">
       <div className="add-video-cover">
@@ -21,6 +25,7 @@ function AdminVideos({ handleChangeInput, handleSave }: AdminVideosTypes) {
                   onChange={(e) => handleChangeInput(e, "videoInfo")}
                 />
               </div>
+
               <div className="admin-video-btn-cover">
                 <button className="cancel">Cancel</button>
                 <button className="save" onClick={() => handleSave()}>
@@ -55,21 +60,15 @@ function AdminVideos({ handleChangeInput, handleSave }: AdminVideosTypes) {
       <div className="admin-video-cards-cover">
         <div className="cards-video-header">Library</div>
         <div className="cards-cover">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="cards">
+          {allVideos?.map((videos, index) => (
+            <div key={videos.id} className="cards">
               <div className="cards-img">
                 <img src={images.videoThumbnail} className="thumbnail" />
               </div>
               <div className="cards-content">
-                <div className="title">
-                  Embracing the journey: Unraveling the life changing benefits
-                  of running
-                </div>
-                <div className="para">
-                  Explore the myriad health advantages that running offers, from
-                  enhancing cardiovascular fitness...
-                </div>
-                <button className="btn">Play</button>
+                <div className="title">{videos.id}</div>
+                <div className="para">{videos.description}</div>
+                <button className="btn">Read more</button>
               </div>
             </div>
           ))}

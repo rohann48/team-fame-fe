@@ -3,7 +3,10 @@ import Footer from "../../../Common/CommonComponent/Footer";
 import "../SCSS/styles.css";
 import { VideoCardsTypes } from "../VideoCardsTypes";
 
-function VideoCards({ handleNavigateToVidDetails }: VideoCardsTypes) {
+function VideoCards({
+  handleNavigateToVidDetails,
+  allVideos,
+}: VideoCardsTypes) {
   return (
     <div className="video-cards-container">
       <div className="video-bg-img-cover"></div>
@@ -11,11 +14,11 @@ function VideoCards({ handleNavigateToVidDetails }: VideoCardsTypes) {
         <div className="video-cards-header-text">VIDEOS</div>
         <div className="video-cards-render-cover">
           <div className="video-cards-cover">
-            {[1, 2, 3].map((i) => (
+            {allVideos.map((videos, i) => (
               <div
-                key={i}
+                key={videos.id}
                 className="video-cards"
-                onClick={() => handleNavigateToVidDetails("123")}
+                onClick={() => handleNavigateToVidDetails(videos.id)}
               >
                 <div className="video-cards-img">
                   <img
@@ -24,14 +27,8 @@ function VideoCards({ handleNavigateToVidDetails }: VideoCardsTypes) {
                   />
                 </div>
                 <div className="video-cards-content">
-                  <div className="video-title">
-                    Embracing the journey: Unraveling the life changing benefits
-                    of running
-                  </div>
-                  <div className="video-para">
-                    Explore the myriad health advantages that running offers,
-                    from enhancing cardiovascular fitness...
-                  </div>
+                  <div className="video-title">{videos.title}</div>
+                  <div className="video-para">{videos.description}</div>
                   <button className="video-btn">Read more</button>
                 </div>
               </div>

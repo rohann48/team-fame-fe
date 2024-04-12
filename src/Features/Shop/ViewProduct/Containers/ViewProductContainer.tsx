@@ -48,7 +48,9 @@ function ViewProductContainer() {
     navigate(-1);
   };
   //handle add to cart
-  const handleAddToCart = () => {};
+  const handleNavigateToCart = () => {
+    navigate("/cart");
+  };
 
   useEffect(() => {
     if (productId) {
@@ -63,7 +65,7 @@ function ViewProductContainer() {
       handleIncrementProduct={handleIncrementProduct}
       handleDecrementProduct={handleDecrementProduct}
       handleBackButton={handleBackButton}
-      handleAddToCart={handleAddToCart}
+      handleNavigateToCart={handleNavigateToCart}
       viewedProduct={viewedProduct}
     />
   );

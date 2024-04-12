@@ -29,7 +29,8 @@ function EventDetails({ eventAndNewsDetails }: EventsDetailsTypes) {
             <div className="events-details-cards-date-and-time-cover">
               <div className="events-details-cards-date">
                 {icons.date}&nbsp;{" "}
-                {format(parseISO(eventAndNewsDetails.date), "MMMM dd, yyyy")}
+                {eventAndNewsDetails.date &&
+                  format(parseISO(eventAndNewsDetails.date), "MMMM dd, yyyy")}
               </div>
               <div className="events-details-cards-time">
                 {icons.clock}&nbsp; {eventAndNewsDetails.time}

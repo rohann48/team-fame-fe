@@ -6,6 +6,7 @@ import {
   ITestimonialData,
 } from "./GlobalDataContextTypes";
 import { ApiHandler } from "../Constants/ApiHandler";
+import { useImmer } from "use-immer";
 
 export const GlobalDataContext = createContext<GlobalDataContextTypes>(
   {} as GlobalDataContextTypes
@@ -22,6 +23,9 @@ const GlobalDataContextProvider = ({
   });
   const [eventData, setEventData] = useState<IEventData>([]);
   const [testimonialData, setTestimonialData] = useState<ITestimonialData>([]);
+  const [allVideos, setAllVideos] = useImmer<
+    GlobalDataContextTypes["allVideos"]
+  >([]);
 
   useEffect(() => {
     // const assignUserInfo = async () => {
@@ -50,10 +54,16 @@ const GlobalDataContextProvider = ({
       const response = await ApiHandler.getTestimonials();
       setTestimonialData(response?.results);
     };
+    const fetchVideos = async () => {
+      const response = await ApiHandler.getAllVideos();
+      setAllVideos(response?.results);
+    };
     handleGetAboutUs();
     handleGetEvents();
     handleGetTestimonial();
+    fetchVideos();
   }, []);
+  console.log("response", allVideos);
 
   // To optimize the rendering of the context value and avoid unnecessary re-renders
   const contextValue = useMemo(
@@ -64,6 +74,8 @@ const GlobalDataContextProvider = ({
       setEventData,
       testimonialData,
       setTestimonialData,
+      allVideos,
+      setAllVideos,
     }),
     [
       aboutUsData,
@@ -72,6 +84,8 @@ const GlobalDataContextProvider = ({
       setEventData,
       testimonialData,
       setTestimonialData,
+      allVideos,
+      setAllVideos,
     ]
   );
   return (

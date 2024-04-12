@@ -7,6 +7,7 @@ import ShopHomePage from "./Shop/ShopHomePage";
 import ShopContextProvider from "./context/ShopContext/ShopContext";
 import EventsHomePage from "./Events/EventsHomepage";
 import VideoHomePage from "./Videos/VideosHomePage";
+import Cart from "./Cart";
 export const mainRoutes = [
   {
     path: "*",
@@ -39,6 +40,10 @@ export const mainRoutes = [
   {
     path: "/scheme/*",
     element: <SchemeHomePage />,
+  },
+  {
+    path: "/cart/*",
+    element: <Cart />,
   },
   {
     path: "/config/*",

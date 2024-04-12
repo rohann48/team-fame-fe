@@ -1,39 +1,39 @@
-.events-container {
+.testimonial-container {
   width: 100%;
   height: 100%;
 }
-.events-container .add-event-cover {
-  height: 50%;
+.testimonial-container .add-testimonial-cover {
+  height: 40%;
 }
-.events-container .add-event-cover .add-event-inner-cover {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover {
   width: 100%;
   height: 100%;
-  padding: 20px 0 0 20px;
+  padding-inline: 1rem;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-header {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-header {
   width: 100%;
-  height: 10%;
+  height: 8;
   color: #bd9255;
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
 }
-.events-container .add-event-cover .add-event-inner-cover .add-event-header {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .add-testimonial-header {
   width: 100%;
-  height: 10%;
+  height: 8%;
   color: #bd9255;
   font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover {
   width: 100%;
-  height: 80%;
+  height: 76%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .event-input-field-img-cover {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-field-img-cover {
   width: 25%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -46,9 +46,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1rem;
-  padding-top: 2rem;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .event-input-field-img-cover .event-logo-upload-img {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-field-img-cover .testimonial-logo-upload-img {
   width: 9rem;
   height: 8rem;
   border-radius: 50%;
@@ -58,7 +57,7 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .event-input-field-img-cover .event-logo-upload-img .file {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-field-img-cover .testimonial-logo-upload-img .file {
   position: absolute;
   top: 0;
   left: 0;
@@ -67,13 +66,13 @@
   opacity: 0;
   cursor: pointer;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .event-input-field-img-cover .event-logo-upload-img .plus-img-cover {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-field-img-cover .testimonial-logo-upload-img .plus-img-cover {
   position: absolute;
   top: 36%;
   right: 0;
   z-index: 1;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .event-input-field-img-cover .events-btn-cover {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-field-img-cover .testimonial-btn-cover {
   height: 8%;
   margin-top: 1%;
   display: -webkit-box;
@@ -84,7 +83,7 @@
           align-items: center;
   gap: 3%;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .event-input-field-img-cover .events-btn-cover .cancel {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-field-img-cover .testimonial-btn-cover .cancel {
   all: unset;
   text-align: center;
   cursor: pointer;
@@ -96,7 +95,7 @@
   border: 1px solid #2b2b2b;
   font-size: 14px;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .event-input-field-img-cover .events-btn-cover .save {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-field-img-cover .testimonial-btn-cover .save {
   all: unset;
   text-align: center;
   cursor: pointer;
@@ -108,22 +107,22 @@
   border: 1px solid #2b2b2b;
   font-size: 14px;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover {
   width: 75%;
   height: 100%;
   padding-top: 2rem;
   overflow-y: scroll;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover::-webkit-scrollbar {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover::-webkit-scrollbar {
   width: 6px;
   background: transparent;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover::-webkit-scrollbar-thumb {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover::-webkit-scrollbar-thumb {
   background: #bd9255;
   border-radius: 5px;
   overflow: hidden;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-name-cover {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-name-cover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,7 +130,7 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-name-cover .event-label-cover {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-name-cover .testimonial-label-cover {
   margin-bottom: 15px;
   font-weight: 500;
   display: -webkit-box;
@@ -148,7 +147,7 @@
   color: #bd9255;
   gap: 5px;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-name-cover .event-label-cover .event-name-input {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-name-cover .testimonial-label-cover .testimonial-name-input {
   all: unset;
   border: 1px solid #bd9255;
   width: 360px;
@@ -158,7 +157,7 @@
   font-weight: 400;
   padding: 5px;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-name-cover .event-achievement-cover {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-name-cover .testimonial-achievement-cover {
   margin-bottom: 15px;
   font-weight: 500;
   display: -webkit-box;
@@ -176,7 +175,7 @@
   margin-left: 2rem;
   gap: 5px;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-name-cover .event-achievement-cover .event-title-input {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-name-cover .testimonial-achievement-cover .testimonial-title-input {
   all: unset;
   border: 1px solid #bd9255;
   width: 355px;
@@ -186,7 +185,7 @@
   font-weight: 400;
   padding: 5px;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-title-cover {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-title-cover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -194,7 +193,7 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-title-cover .event-time-cover {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-title-cover .testimonial-time-cover {
   margin-bottom: 15px;
   font-weight: 500;
   display: -webkit-box;
@@ -213,7 +212,7 @@
   margin-left: 2rem;
   gap: 5px;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-title-cover .event-time-cover .event-time-input {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-title-cover .testimonial-time-cover .testimonial-time-input {
   all: unset;
   border: 1px solid #bd9255;
   width: 160px;
@@ -223,7 +222,7 @@
   font-weight: 400;
   padding: 5px;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-location-cover {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-location-cover {
   margin-bottom: 15px;
   font-weight: 500;
   display: -webkit-box;
@@ -240,7 +239,7 @@
   color: #bd9255;
   gap: 5px;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-location-cover .event-location-text-area {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-location-cover .testimonial-location-text-area {
   all: unset;
   border: 1px solid #bd9255;
   width: 571px;
@@ -250,17 +249,16 @@
   font-weight: 400;
   padding: 5px;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-location-cover .event-location-text-area::-webkit-scrollbar {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-location-cover .testimonial-location-text-area::-webkit-scrollbar {
   width: 6px;
   background: transparent;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-location-cover .event-location-text-area::-webkit-scrollbar-thumb {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-location-cover .testimonial-location-text-area::-webkit-scrollbar-thumb {
   background: #bd9255;
   border-radius: 5px;
   overflow: hidden;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-description-cover {
-  margin-bottom: 15px;
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-description-cover {
   font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -276,38 +274,40 @@
   color: #bd9255;
   gap: 5px;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-description-cover .event-description-text-area {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-description-cover .testimonial-description-text-area {
   all: unset;
   border: 1px solid #bd9255;
   width: 760px;
-  height: 98px;
+  height: 70px;
   border-radius: 5px;
   font-size: 14px;
   font-weight: 400;
   padding: 5px;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-description-cover .event-description-text-area::-webkit-scrollbar {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-description-cover .testimonial-description-text-area::-webkit-scrollbar {
   width: 6px;
   background: transparent;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-description-cover .event-description-text-area::-webkit-scrollbar-thumb {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-description-cover .testimonial-description-text-area::-webkit-scrollbar-thumb {
   background: #bd9255;
   border-radius: 5px;
   overflow: hidden;
 }
-.events-container .events-cards-cover {
-  height: 50%;
-  padding: 20px 0 0 20px;
+.testimonial-container .testimonial-cards-cover {
+  height: 60%;
   border-top: 1px solid #bd9255;
+  padding-inline: 1rem;
 }
-.events-container .events-cards-cover .cards-flex {
+.testimonial-container .testimonial-cards-cover .cards-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  gap: 5px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-.events-container .events-cards-cover .cards-event-header {
+.testimonial-container .testimonial-cards-cover .cards-testimonial-header {
   width: 100%;
   height: 2rem;
   color: #bd9255;
@@ -315,34 +315,34 @@
   font-weight: 500;
   text-transform: capitalize;
 }
-.events-container .events-cards-cover .cards {
+.testimonial-container .testimonial-cards-cover .cards {
   width: 350px;
   background-color: #000000;
-  height: 450px;
+  height: 360px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border-radius: 5px;
 }
-.events-container .events-cards-cover .cards .card-left {
+.testimonial-container .testimonial-cards-cover .cards .card-left {
   width: 7%;
   background-image: url("../../../../Assets//Images/cardLabelSide.svg");
 }
-.events-container .events-cards-cover .cards .card-right {
+.testimonial-container .testimonial-cards-cover .cards .card-right {
   width: 93%;
 }
-.events-container .events-cards-cover .cards .card-right .card-right-inner-cover {
+.testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover {
   width: 100%;
   height: 100%;
   padding: 3%;
 }
-.events-container .events-cards-cover .cards .card-right .card-right-inner-cover .card-right-header {
+.testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover .card-right-header {
   height: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.events-container .events-cards-cover .cards .card-right .card-right-inner-cover .card-right-header .header-text {
+.testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover .card-right-header .header-text {
   font-size: 14px;
   font-weight: 500;
   background-color: #bd9255;
@@ -350,17 +350,17 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-.events-container .events-cards-cover .cards .card-right .card-right-inner-cover .card-img-cover {
+.testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover .card-img-cover {
   width: 100%;
   height: 50%;
   overflow: hidden;
 }
-.events-container .events-cards-cover .cards .card-right .card-right-inner-cover .card-img-cover .card-event-img {
+.testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover .card-img-cover .card-testimonial-img {
   aspect-ratio: 3/2;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.events-container .events-cards-cover .cards .card-right .card-right-inner-cover .card-event-title {
+.testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover .card-testimonial-title {
   height: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -373,7 +373,7 @@
   color: white;
   text-transform: uppercase;
 }
-.events-container .events-cards-cover .cards .card-right .card-right-inner-cover .card-event-date {
+.testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover .card-testimonial-date {
   height: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -386,7 +386,7 @@
   color: white;
   text-transform: uppercase;
 }
-.events-container .events-cards-cover .cards .card-right .card-right-inner-cover .card-event-time {
+.testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover .card-testimonial-time {
   height: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -399,7 +399,7 @@
   color: white;
   text-transform: uppercase;
 }
-.events-container .events-cards-cover .cards .card-right .card-right-inner-cover .card-event-location {
+.testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover .card-testimonial-location {
   height: 10%;
   display: -webkit-box;
   display: -ms-flexbox;

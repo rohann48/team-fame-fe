@@ -37,11 +37,11 @@
   height: 1110px;
 }
 .shop-container .shop-product-cover .shop-product-header {
+  height: 6%;
   font-size: 18px;
   font-weight: 500;
   color: #444444;
   background-color: #ebeff3;
-  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,7 +51,7 @@
   padding-inline: 2rem;
 }
 .shop-container .shop-product-cover .shop-product-filter-and-cart-cover {
-  height: 70px;
+  height: 8%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,13 +98,37 @@
   border-radius: 4px;
   color: #2b2b2b;
 }
-.shop-container .shop-product-cover .product-card-cover {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
+.shop-container .shop-product-cover .product-card-outer-cover {
+  height: 76%;
+  width: 100%;
   padding-inline: 2rem;
+  overflow-y: scroll;
 }
-.shop-container .shop-product-cover .product-card-cover .product-card {
+.shop-container .shop-product-cover .product-card-outer-cover::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+.shop-container .shop-product-cover .product-card-outer-cover::-webkit-scrollbar-thumb {
+  background: #c1b8b8;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.shop-container .shop-product-cover .product-card-outer-cover .product-card-cover {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.shop-container .shop-product-cover .product-card-outer-cover .product-card-cover .product-card {
   border: 1px solid #ddd;
   border-radius: 8px;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -118,11 +142,11 @@
   transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
   cursor: pointer;
 }
-.shop-container .shop-product-cover .product-card-cover .product-card:hover {
+.shop-container .shop-product-cover .product-card-outer-cover .product-card-cover .product-card:hover {
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.shop-container .shop-product-cover .product-card-cover .product-card .product-image {
+.shop-container .shop-product-cover .product-card-outer-cover .product-card-cover .product-card .product-image {
   width: 100%;
   height: 310px;
   -o-object-fit: contain;
@@ -130,20 +154,20 @@
   border-radius: 8px;
   margin-bottom: 12px;
 }
-.shop-container .shop-product-cover .product-card-cover .product-card .product-details {
+.shop-container .shop-product-cover .product-card-outer-cover .product-card-cover .product-card .product-details {
   margin-bottom: 12px;
 }
-.shop-container .shop-product-cover .product-card-cover .product-card .product-description {
+.shop-container .shop-product-cover .product-card-outer-cover .product-card-cover .product-card .product-description {
   font-size: 16px;
   margin-bottom: 8px;
 }
-.shop-container .shop-product-cover .product-card-cover .product-card .product-price {
+.shop-container .shop-product-cover .product-card-outer-cover .product-card-cover .product-card .product-price {
   font-size: 18px;
   font-weight: bold;
   color: #333;
   margin-bottom: 12px;
 }
-.shop-container .shop-product-cover .product-card-cover .product-card .product-actions {
+.shop-container .shop-product-cover .product-card-outer-cover .product-card-cover .product-card .product-actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,7 +175,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.shop-container .shop-product-cover .product-card-cover .product-card .product-actions .add-to-cart {
+.shop-container .shop-product-cover .product-card-outer-cover .product-card-cover .product-card .product-actions .add-to-cart {
   all: unset;
   padding: 8px 16px;
   border-radius: 4px;
@@ -163,7 +187,7 @@
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
-.shop-container .shop-product-cover .product-card-cover .product-card .product-actions .buy-now {
+.shop-container .shop-product-cover .product-card-outer-cover .product-card-cover .product-card .product-actions .buy-now {
   all: unset;
   padding: 8px 16px;
   border-radius: 4px;
@@ -176,7 +200,7 @@
   transition: background-color 0.3s ease;
 }
 .shop-container .shop-product-cover .shop-view-more-cover {
-  height: 65px;
+  height: 8%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

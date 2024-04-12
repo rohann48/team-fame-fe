@@ -6,4 +6,5 @@ export type HeaderNavProps = {
   handleLoginModalToggle: () => void;
   handleSignUpModalToggle: () => void;
   productInfo: CommonTypes["productInfo"];
+  handleNavigateCart: () => void;
 };

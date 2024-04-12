@@ -1,5 +1,5 @@
-import { CommonTypes } from "../../Common/CommonTypes";
+import { IVideo } from "../../context/GlobalDataContextTypes";
 
 export type VideoTypes = {
-  videoInfo: any;
+  videoInfo: IVideo;
 };

@@ -11,16 +11,18 @@ function ShoppingCartContainer() {
 
   //increment the product count
   const handleAddToCartIncrement = (
-    event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
     index: number,
     prod: CommonTypes["product"]
   ) => {
-    //increase quantityCount if the item is already exists
-    setProductInfo((draft) => {
-      if (draft.cartBasket[index]) {
-        draft.cartBasket[index].quantityCount!++;
-        draft.cartTotalQuantity++;
-      } else {
+    let isPresent = false;
+    // if the item is already exists give error
+    if (productInfo.cartBasket[index]?.id === prod._id) {
+      isPresent = true;
+    }
+    if (isPresent) {
+      NotificationManager.warning("Product already in cart", "", 2000);
+    } else {
+      setProductInfo((draft) => {
         draft.cartBasket.push({
           id: prod._id,
           name: prod.name,
@@ -29,30 +31,14 @@ function ShoppingCartContainer() {
           price: prod.price,
           quantityCount: 1,
         });
-      }
-    });
-    NotificationManager.success("Product added to cart", "", 2000);
-  };
-
-  //navigate to view product
-  const handleNavigateProduct = (
-    prod: CommonTypes["product"],
-    index: number
-  ) => {
-    navigate(`/shop/product/${prod._id}`);
-    setProductInfo((draft) => {
-      draft.cartBasket.push({
-        id: prod._id,
-        name: prod.name,
-        description: prod.details,
-        imageInfo: prod.imageInfo,
-        price: prod.price,
-        quantityCount: 1,
       });
-      draft.cartTotalQuantity = 1;
-      draft.productCount = 1;
-      draft.catTotalAmount = prod.price;
-    });
+      NotificationManager.success("Product added to cart", "", 2000);
+    }
+  };
+  console.log("Product added to cart", productInfo.cartBasket);
+  //navigate to view product
+  const handleNavigateProduct = (prod: CommonTypes["product"]) => {
+    navigate(`/shop/product/${prod._id}`);
   };
   return (
     <ShoppingCart

@@ -12,6 +12,7 @@ const HomePage = ({
   testimonialLoop,
   handleNavigateEventCard,
   handleNavigateVideoCard,
+  allVideos,
 }: homePageTypes) => {
   return (
     <div className="home-page-container">
@@ -310,9 +311,9 @@ const HomePage = ({
           <div className="home-videos-and-news-cover">
             <div className="heading">Videos</div>
             <div className="cards-cover">
-              {[1, 2, 3].map((i) => (
+              {allVideos.map((videos, index) => (
                 <div
-                  key={i}
+                  key={videos.id}
                   className="cards"
                   onClick={() => handleNavigateVideoCard()}
                 >
@@ -320,15 +321,9 @@ const HomePage = ({
                     <img src={images.videoThumbnail} className="thumbnail" />
                   </div>
                   <div className="cards-content">
-                    <div className="title">
-                      Embracing the journey: Unraveling the life changing
-                      benefits of running
-                    </div>
-                    <div className="para">
-                      Explore the myriad health advantages that running offers,
-                      from enhancing cardiovascular fitness...
-                    </div>
-                    <button className="btn">Play</button>
+                    <div className="title">{videos.title}</div>
+                    <div className="para">{videos.description}</div>
+                    <button className="btn">Read more</button>
                   </div>
                 </div>
               ))}
