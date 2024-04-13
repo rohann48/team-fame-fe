@@ -28,7 +28,7 @@ const ShopContextProvider = ({ children }: ShopContextTypes) => {
   const getCartDataByClientId = async () => {
     const response = await ApiHandler.getCartDataByClientId(userInfo._id);
     setProductInfo((draft) => {
-      response.results.products.forEach((product: any) => {
+      response?.results?.products?.forEach((product: any) => {
         draft.cartBasket.push({
           id: product.productId._id,
           name: product.productId.name,

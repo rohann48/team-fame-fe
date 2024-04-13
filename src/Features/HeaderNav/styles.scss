@@ -84,6 +84,88 @@
         transform: translate(-50%, -50%);
       }
     }
+    .user-profile-cover {
+      all: unset;
+      background-color: #bd9255;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      .user-icon {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+      .user-profile-view-cover {
+        width: 277px;
+        position: absolute;
+        top: 30px;
+        border: 1px solid #bd9255;
+        background-color: #444444;
+        color: #aeaeae;
+        border-radius: 4px;
+        right: 20%;
+        z-index: 1;
+        .user-profile-view-inner-cover {
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          font-size: 14px;
+          .user-name-cover {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 10px 0 10px;
+          }
+          .user-id-cover {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            padding-inline: 10px;
+          }
+          .user-email-cover {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            padding-inline: 10px;
+          }
+          .user-prof {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            border: 1px solid #bd9255;
+            border-left: none;
+            border-right: none;
+            padding: 10px;
+            &:hover {
+              background-color: #bd9255;
+            }
+          }
+          .user-logout-btn-cover {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            padding: 10px;
+            .logout-btn {
+              all: unset;
+              width: 85px;
+              height: 30px;
+              border: 1px solid #bd9255;
+              border-radius: 4px;
+              text-align: center;
+              &:hover {
+                background-color: #bd9255;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
 
     .nav-link-loggin-cover {
       all: unset;

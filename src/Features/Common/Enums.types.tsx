@@ -27,3 +27,8 @@ export enum progressBarStatus {
   OVERDUE = "overdue",
   COMPLETE = "completed",
 }
+export enum RoleType {
+  ADMIN = "admin",
+  MEMBER = "member",
+  GUEST = "guest",
+}

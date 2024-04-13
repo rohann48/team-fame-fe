@@ -8,7 +8,7 @@ import {
   faCircle,
   faCalendar,
   faClock,
-  faUserNinja,
+  faUser,
   faArrowLeft,
   faFilm,
 } from "@fortawesome/free-solid-svg-icons";
@@ -27,7 +27,7 @@ const icons = {
   info: <FontAwesomeIcon icon={faCircle} size="1x" color="red" />,
   date: <FontAwesomeIcon icon={faCalendar} size="1x" color="#bd9255" />,
   clock: <FontAwesomeIcon icon={faClock} size="1x" color="#bd9255" />,
-  userIcon: <FontAwesomeIcon icon={faUserNinja} size="4x" color="red" />,
+  userIcon: <FontAwesomeIcon icon={faUser} size="4x" color="#000000" />,
   backBtn: <FontAwesomeIcon icon={faArrowLeft} size="1x" color="#444444" />,
   videoLength: <FontAwesomeIcon icon={faFilm} size="1x" color="#BD9255" />,
 

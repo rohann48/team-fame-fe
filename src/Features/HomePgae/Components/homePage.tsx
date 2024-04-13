@@ -91,7 +91,7 @@ const HomePage = ({
         <div className="home-events-cover">
           <div className="event-title">Upcoming Events</div>
           <div className="cards-cover">
-            {eventData?.map((event) => {
+            {eventData?.slice(0, 3)?.map((event) => {
               return (
                 <div className="cards" key={event._id}>
                   <div className="card-left-cover">
@@ -137,7 +137,7 @@ const HomePage = ({
             {/* <div className="event-mom-logo-cover">
               <img src={images.eventMom} alt="event" />
             </div> */}
-            {eventData?.length === 3 ? (
+            {eventData?.length > 3 ? (
               <div className="view-all-card">
                 <div className="left-cover">
                   <img
@@ -169,7 +169,6 @@ const HomePage = ({
             <p className="vission-description">तमसो मा ज्योतिर्गमय</p>
           </div>
           <div className="home-testimonial-cover">
-            <div></div>
             {testimonialLoop?.map((testimonial: any) => {
               return (
                 <div className="testimonial-left">
@@ -311,11 +310,11 @@ const HomePage = ({
           <div className="home-videos-and-news-cover">
             <div className="heading">Videos</div>
             <div className="cards-cover">
-              {allVideos.map((videos, index) => (
+              {allVideos.slice(0, 3).map((videos, index) => (
                 <div
                   key={videos.id}
                   className="cards"
-                  onClick={() => handleNavigateVideoCard()}
+                  onClick={() => handleNavigateVideoCard(videos.id)}
                 >
                   <div className="cards-img">
                     <img src={images.videoThumbnail} className="thumbnail" />
@@ -327,6 +326,13 @@ const HomePage = ({
                   </div>
                 </div>
               ))}
+              {allVideos?.length > 3 && (
+                <div className="view-all-video-card">
+                  <NavLink to="videos" className="view-all-video-nav-link">
+                    <div className="view-all-video-btn">View All</div>
+                  </NavLink>
+                </div>
+              )}
             </div>
           </div>
           <div className="home-join-community-cover">

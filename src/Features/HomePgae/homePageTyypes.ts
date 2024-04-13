@@ -7,6 +7,6 @@ export interface homePageTypes {
   eventData: IEventData;
   testimonialLoop: Array<object>;
   handleNavigateEventCard: (_id: string) => void;
-  handleNavigateVideoCard: () => void;
+  handleNavigateVideoCard: (_id: string) => void;
   allVideos: allVideos;
 }

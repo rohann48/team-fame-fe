@@ -3,6 +3,7 @@ import { ShoppingCartTypes } from "../ShoppingCartTypes";
 import images from "../../../ImageVariables";
 import Footer from "../../../Common/CommonComponent/Footer";
 import { NavLink } from "react-router-dom";
+import { truncateString } from "../../../Common/CommonFunctions/TruncateString";
 // const products = [
 //   {
 //     id: 1,
@@ -137,7 +138,9 @@ function ShoppingCart({
                     alt="Product"
                   />
                   <div className="product-details">
-                    <p className="product-description">{prod.details}</p>
+                    <p className="product-description">
+                      {truncateString(prod.details, 45)}
+                    </p>
 
                     <p className="product-price">₹ {prod.price}</p>
                   </div>
@@ -152,13 +155,13 @@ function ShoppingCart({
                       Add to Cart
                     </button>
                     <button
-                      className="buy-now"
+                      className="view-now"
                       onClick={(event) => {
                         event.stopPropagation();
                         handleNavigateProduct(prod);
                       }}
                     >
-                      Buy Now
+                      View
                     </button>
                   </div>
                 </div>
@@ -170,7 +173,6 @@ function ShoppingCart({
           <img className="view-more-img" src={images.viewMore} alt="viewMore" />
           View More products
         </div>
-        <div></div>
       </div>
       <Footer />
     </div>

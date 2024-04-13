@@ -34,8 +34,8 @@ function HomePageContainer() {
     navigate(`/events-and-news/details/${_id}`);
   };
   //handle navigate cards to video cards page
-  const handleNavigateVideoCard = () => {
-    navigate(`/videos`);
+  const handleNavigateVideoCard = (_id: string) => {
+    navigate(`/videos/details/${_id}`);
   };
   return (
     <HomePage

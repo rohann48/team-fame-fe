@@ -23,7 +23,7 @@
     justify-content: center;
   }
   .events-details-cards-and-header-cover {
-    height: 580px;
+    height: auto;
     width: 100%;
 
     .events-details-cards-header-text {
@@ -36,37 +36,38 @@
       color: #444444;
     }
     .events-details-cards-render-cover {
-      height: 100%;
+      height: auto;
       display: flex;
       width: 100%;
       .events-details-cards-left-img-cover {
         width: 50%;
         display: flex;
-        align-items: start;
         padding-left: 5rem;
 
         .events-details-cards-left-img {
-          width: 85%;
-          height: 80%;
+          width: 100%;
+          height: 100%;
           object-fit: contain;
         }
       }
       .events-details-cards-right-cover {
         width: 50%;
         display: flex;
-        align-items: center;
         flex-direction: column;
-        justify-content: start;
         padding-right: 5rem;
+        gap: 30px;
+        padding: 20px;
         .events-details-cards-header {
           width: 100%;
           font-size: 24px;
           font-weight: 500;
           color: #444444;
-          height: 12%;
           display: flex;
           align-items: center;
           text-transform: capitalize;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
         .events-details-cards-description {
           font-size: 14px;
@@ -78,11 +79,13 @@
           display: flex;
           align-items: start;
           text-align: justify;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
         .events-details-cards-date-and-time-cover {
           gap: 4%;
           width: 100%;
-          height: 7%;
           display: flex;
           align-items: center;
           font-size: 14px;
@@ -95,13 +98,15 @@
         }
         .events-details-cards-location {
           width: 100%;
-          height: 6%;
           display: flex;
           align-items: start;
           font-size: 14px;
           font-weight: 400;
           color: #444444;
           text-transform: capitalize;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
         .events-details-cards-register-btn-cover {
           width: 100%;
@@ -124,6 +129,7 @@
   .events-details-former-text-main-cover {
     width: 100%;
     height: 250px;
+    padding-top: 10px;
     .events-details-former-text-top-border {
       display: flex;
       align-items: center;

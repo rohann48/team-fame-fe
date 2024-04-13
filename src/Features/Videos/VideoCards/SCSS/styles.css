@@ -30,7 +30,7 @@
           justify-content: center;
 }
 .video-cards-container .video-cards-and-header-cover {
-  height: 560px;
+  height: auto;
   width: 100%;
 }
 .video-cards-container .video-cards-and-header-cover .video-cards-header-text {
@@ -71,11 +71,10 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 0% 6%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 5%;
+  gap: 10px;
   align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -93,6 +92,7 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   height: 470px;
+  margin: 6px;
 }
 .video-cards-container .video-cards-and-header-cover .video-cards-render-cover .video-cards-cover .video-cards .video-cards-img {
   height: 70%;
@@ -125,6 +125,9 @@
   color: #84868b;
   padding-bottom: 3%;
   height: 40%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .video-cards-container .video-cards-and-header-cover .video-cards-render-cover .video-cards-cover .video-cards .video-cards-content .video-btn {
   background: black;

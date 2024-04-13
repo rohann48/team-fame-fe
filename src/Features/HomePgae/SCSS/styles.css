@@ -305,12 +305,12 @@
 .home-page-container .home-page-cover .home-events-cover,
 .home-page-container .home-page-cover .home-videos-and-news-cover {
   width: 100%;
-  height: 49%;
+  height: auto;
 }
 .home-page-container .home-page-cover .home-events-cover .event-title,
 .home-page-container .home-page-cover .home-videos-and-news-cover .event-title {
   width: 100%;
-  height: 18%;
+  height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -328,7 +328,7 @@
 .home-page-container .home-page-cover .home-events-cover .cards-cover,
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover {
   width: 100%;
-  height: 90%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -337,12 +337,13 @@
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding-bottom: 10px;
 }
 .home-page-container .home-page-cover .home-events-cover .cards-cover .cards,
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards {
   background-color: #000000;
   width: 350px;
-  height: 90%;
+  height: 414px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -399,6 +400,7 @@
 .home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .marathon-img-cover .marathon-img,
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .card-right-cover .marathon-img-cover .marathon-img {
   width: 100%;
+  height: 100%;
 }
 .home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .marathon-header,
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .card-right-cover .marathon-header {
@@ -406,6 +408,9 @@
   color: #ffffff;
   font-weight: 400;
   height: 10%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .date-cover,
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .card-right-cover .date-cover {
@@ -453,6 +458,9 @@
           align-items: center;
   gap: 10px;
   height: 16%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .location-cover .location,
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .card-right-cover .location-cover .location {
@@ -476,6 +484,32 @@
   font-size: 14px;
   font-weight: 400;
 }
+.home-page-container .home-page-cover .home-events-cover .cards-cover .view-all-video-card,
+.home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .view-all-video-card {
+  background-color: #000000;
+  height: 350px;
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #e0e0e0;
+  padding: 5px;
+  opacity: 0.9;
+  cursor: pointer;
+}
+.home-page-container .home-page-cover .home-events-cover .cards-cover .view-all-video-card .view-all-video-nav-link,
+.home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .view-all-video-card .view-all-video-nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
 .home-page-container .home-page-cover .home-events-cover .event-mom-logo-cover,
 .home-page-container .home-page-cover .home-videos-and-news-cover .event-mom-logo-cover {
   display: -webkit-box;
@@ -492,7 +526,7 @@
 .home-page-container .home-page-cover .home-videos-and-news-cover .view-all-card {
   background-color: #000000;
   width: 200px;
-  height: 90%;
+  height: 414px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -671,11 +705,11 @@
 }
 .home-page-container .home-page-cover .home-videos-and-news-cover {
   width: 100%;
-  height: 582px;
+  height: auto;
 }
 .home-page-container .home-page-cover .home-videos-and-news-cover .heading {
   width: 100%;
-  height: 10%;
+  height: 70px;
   font-size: 20px;
   font-weight: 600;
   color: black;
@@ -690,7 +724,6 @@
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 0% 6%;
 }
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards {
   background-color: white;
@@ -702,12 +735,14 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  height: 414px;
+  height: 450px;
+  height: 350px;
+  margin: 5px;
   cursor: pointer;
 }
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .cards-img {
   height: 70%;
-  width: 96%;
+  width: 100;
 }
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .cards-img .thumbnail {
   width: 100%;
@@ -718,7 +753,7 @@
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .cards-content {
   height: 30%;
   border: 1px solid #e0e0e0;
-  width: 96%;
+  width: 100%;
   padding: 4% 2%;
 }
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .cards-content .title {
@@ -729,11 +764,15 @@
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
+  height: 25%;
 }
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .cards-content .para {
   font-size: 12px;
   color: #84868b;
-  height: 46%;
+  height: 45%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .cards-content .btn {
   width: 22%;

@@ -1,4 +1,5 @@
 import { CommonTypes } from "../Common/CommonTypes";
+import { LoginContextInitialState } from "../context/LoginContextTypes";
 
 export type HeaderNavProps = {
   activeTab: string;
@@ -7,4 +8,8 @@ export type HeaderNavProps = {
   handleSignUpModalToggle: () => void;
   productInfo: CommonTypes["productInfo"];
   handleNavigateCart: () => void;
+  userInfo: LoginContextInitialState["userInfo"];
+  handleToggleUserProfile: () => void;
+  isUserProf: boolean;
+  outsideClickUserProf: any;
 };
