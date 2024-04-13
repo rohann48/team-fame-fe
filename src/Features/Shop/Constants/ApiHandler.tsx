@@ -13,4 +13,16 @@ export const ApiHandler = {
       console.log(error);
     }
   },
+
+  addToCart: async (modifiedData: { [key: string]: any }) => {
+    try {
+      const response = await apiAuth.postApiwithoutAuth(
+        Resource.url.addToCart,
+        modifiedData
+      );
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };

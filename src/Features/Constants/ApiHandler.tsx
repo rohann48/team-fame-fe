@@ -71,6 +71,47 @@ export const ApiHandler = {
       console.log(error);
     }
   },
+
+  getCartDataByClientId: async (clientId: string | null) => {
+    try {
+      const response = await apiAuth.getApiwithoutAuth(
+        Resource.url.getCartDataByClientId(clientId)
+      );
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
+  updateProdQuantity: async (
+    clientId: string | null,
+    data: { [key: string]: object }
+  ) => {
+    try {
+      const response = await apiAuth.putApiwithoutAuth(
+        Resource.url.updateProdQuantity(clientId),
+        data
+      );
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
+  removeProductFromCart: async (
+    clientId: string | null,
+    productId: string | null
+  ) => {
+    try {
+      const response = await apiAuth.putApiwithoutAuth(
+        Resource.url.removeProdFromCart(clientId, productId)
+      );
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
   getVideoById: async (videoId: string | null) => {
     try {
       const response = await apiAuth.getApiwithoutAuth(

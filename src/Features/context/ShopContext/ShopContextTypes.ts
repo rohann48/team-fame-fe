@@ -9,7 +9,7 @@ export interface ShoppingContextInitialState {
     cartBasket: {
       id: string;
       name: string;
-      imageInfo: Array<object>;
+      imageInfo: Array<{ name: String; Key: String; path: any; date: Date }>;
       description: string;
       price: number;
       quantityCount?: number;
@@ -22,7 +22,7 @@ export interface ShoppingContextInitialState {
     category: string;
     details: string;
     price: number;
-    imageInfo: Array<object>;
+    imageInfo: Array<{ name: String; Key: String; path: String; date: Date }>;
   }>;
   setProductInfo: Updater<ShoppingContextInitialState["productInfo"]>;
 }

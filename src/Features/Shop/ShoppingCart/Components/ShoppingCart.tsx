@@ -109,6 +109,9 @@ function ShoppingCart({
 }: ShoppingCartTypes) {
   return (
     <div className="shop-container">
+      <div className="offer-banner">
+        OFFER: Buy any 5 products and get free lifetime membership!!!
+      </div>
       <div className="shop-img-cover">Store</div>
       <div className="shop-product-cover">
         <div className="shop-product-header">Product</div>

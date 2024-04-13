@@ -12,6 +12,13 @@
   border-radius: 5px;
   overflow: hidden;
 }
+.shop-container .offer-banner {
+  position: absolute;
+  background: red;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
 .shop-container .shop-img-cover {
   width: 100%;
   height: 421px;

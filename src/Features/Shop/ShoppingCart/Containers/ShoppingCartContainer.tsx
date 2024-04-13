@@ -4,9 +4,13 @@ import { ShopContext } from "../../../context/ShopContext/ShopContext";
 import { useNavigate } from "react-router-dom";
 import { CommonTypes } from "../../../Common/CommonTypes";
 import { NotificationManager } from "react-notifications";
+import { ApiHandler } from "../../Constants/ApiHandler";
+import { LoginContext } from "../../../context/LoginContext";
 
 function ShoppingCartContainer() {
   const { productInfo, setProductInfo, products } = useContext(ShopContext);
+  const { userInfo } = useContext(LoginContext);
+
   const navigate = useNavigate();
 
   //increment the product count
@@ -32,6 +36,7 @@ function ShoppingCartContainer() {
           quantityCount: 1,
         });
       });
+      addToCart(prod._id);
       NotificationManager.success("Product added to cart", "", 2000);
     }
   };
@@ -39,6 +44,15 @@ function ShoppingCartContainer() {
   //navigate to view product
   const handleNavigateProduct = (prod: CommonTypes["product"]) => {
     navigate(`/shop/product/${prod._id}`);
+  };
+
+  const addToCart = async (prodId: string) => {
+    const data = {
+      clientId: userInfo._id,
+      products: { productId: prodId, quantity: 1 },
+      isInCart: true,
+    };
+    await ApiHandler.addToCart(data);
   };
   return (
     <ShoppingCart

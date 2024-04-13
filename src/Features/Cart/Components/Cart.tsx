@@ -36,7 +36,11 @@ function Cart({
                 >
                   <div className="cart-product-render-inner-cover">
                     <div className="cart-products-img-cover">
-                      <img className="cart-products-img" src={images.chair} />
+                      <img
+                        className="cart-products-img"
+                        src={basket.imageInfo[0]?.path}
+                        alt="productImg"
+                      />
                     </div>
                     <div className="cart-products-details-cover">
                       <div className="cart-product-title">{basket.name}</div>
@@ -45,22 +49,24 @@ function Cart({
                           <div className="qty-text">Qty:</div>
                           <div className="cart-product-qty-btn">
                             <button
-                              className="cart-product-qty-btn-add"
-                              onClick={() => handleIncrementProduct(index)}
+                              className="cart-product-qty-btn-minus"
+                              onClick={() =>
+                                basket.quantityCount! > 1 &&
+                                handleDecrementProduct(index, basket)
+                              }
                             >
-                              +
+                              -
                             </button>
                             <div className="cart-product-qty-num">
                               {basket.quantityCount}
                             </div>
                             <button
-                              className="cart-product-qty-btn-minus"
+                              className="cart-product-qty-btn-add"
                               onClick={() =>
-                                basket.quantityCount! > 1 &&
-                                handleDecrementProduct(index)
+                                handleIncrementProduct(index, basket)
                               }
                             >
-                              -
+                              +
                             </button>
                           </div>
                         </div>
@@ -73,7 +79,7 @@ function Cart({
                           <div className="remove-from-cart-cover">
                             <button
                               className="remove-from-cart"
-                              onClick={() => handleRemoveCart(index)}
+                              onClick={() => handleRemoveCart(index, basket.id)}
                             >
                               Remove from cart
                             </button>

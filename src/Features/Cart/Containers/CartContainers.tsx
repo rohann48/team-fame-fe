@@ -3,11 +3,15 @@ import Cart from "../Components/Cart";
 import { useNavigate } from "react-router-dom";
 import { ShopContext } from "../../context/ShopContext/ShopContext";
 import { NotificationManager } from "react-notifications";
-import { CartTypes } from "../CartTypes";
+import { CartTypes, basketType } from "../CartTypes";
+import { LoginContext } from "../../context/LoginContext";
+import { ApiHandler } from "../../Constants/ApiHandler";
 
 function CartContainers() {
   const navigate = useNavigate();
   const { productInfo, setProductInfo } = useContext(ShopContext);
+  const { userInfo } = useContext(LoginContext);
+
   //navigate backward
   const handleBackButton = () => {
     navigate(-1);
@@ -26,25 +30,30 @@ function CartContainers() {
 
   //increment quantity
   const handleIncrementProduct: CartTypes["handleIncrementProduct"] = (
-    index
+    index,
+    basket
   ) => {
     setProductInfo((draft) => {
       draft.cartBasket[index].quantityCount &&
         draft.cartBasket[index].quantityCount!++;
     });
+    updateToCartInfo(basket, "++");
   };
   //decrement quantity
   const handleDecrementProduct: CartTypes["handleDecrementProduct"] = (
-    index
+    index,
+    basket
   ) => {
     setProductInfo((draft) => {
       draft.cartBasket[index].quantityCount &&
         draft.cartBasket[index].quantityCount!--;
     });
+    updateToCartInfo(basket, "--");
   };
 
   //remove the product from cart
-  const handleRemoveCart = (index: number) => {
+  const handleRemoveCart = async (index: number, prodId: string) => {
+    await ApiHandler.removeProductFromCart(userInfo._id, prodId);
     setProductInfo((draft) => {
       draft.cartBasket.splice(index, 1);
     });
@@ -53,6 +62,17 @@ function CartContainers() {
       "",
       2000
     );
+  };
+
+  const updateToCartInfo = async (basket: basketType, type: string) => {
+    let count = basket.quantityCount!;
+    const data = {
+      products: {
+        productId: basket.id,
+        quantity: type === "++" ? ++count : --count,
+      },
+    };
+    await ApiHandler.updateProdQuantity(userInfo._id, data);
   };
   return (
     <Cart
