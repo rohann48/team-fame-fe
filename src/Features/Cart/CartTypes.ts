@@ -14,4 +14,5 @@ export type CartTypes = {
   handleRemoveCart: (index: number, prodId: string) => void;
   handleIncrementProduct: (index: number, basket: basketType) => void;
   handleDecrementProduct: (index: number, basket: basketType) => void;
+  handleNavigateAddressPage: () => void;
 };

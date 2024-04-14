@@ -74,6 +74,11 @@ function CartContainers() {
     };
     await ApiHandler.updateProdQuantity(userInfo._id, data);
   };
+  //handle navigate to address page
+  const handleNavigateAddressPage = () => {
+    navigate("/cart/address");
+  };
+
   return (
     <Cart
       handleBackButton={handleBackButton}
@@ -82,6 +87,7 @@ function CartContainers() {
       handleIncrementProduct={handleIncrementProduct}
       handleDecrementProduct={handleDecrementProduct}
       handleRemoveCart={handleRemoveCart}
+      handleNavigateAddressPage={handleNavigateAddressPage}
     />
   );
 }

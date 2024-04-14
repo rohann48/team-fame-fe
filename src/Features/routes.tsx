@@ -8,6 +8,8 @@ import ShopContextProvider from "./context/ShopContext/ShopContext";
 import EventsHomePage from "./Events/EventsHomepage";
 import VideoHomePage from "./Videos/VideosHomePage";
 import Cart from "./Cart";
+import Address from "./Address";
+import OrderedSuccessfully from "./OrderedSuccessfully";
 export const mainRoutes = [
   {
     path: "*",
@@ -44,6 +46,11 @@ export const mainRoutes = [
   {
     path: "/cart/*",
     element: <Cart />,
+  },
+  { path: "cart/address/*", element: <Address /> },
+  {
+    path: "/thankyou",
+    element: <OrderedSuccessfully />,
   },
   {
     path: "/config/*",

@@ -1,0 +1,222 @@
+.address-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #c1b8b8;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .address-back-btn-cover {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 1%;
+    padding-left: 3rem;
+
+    .address-back-btn {
+      cursor: pointer;
+    }
+
+    .address-back-text {
+      font-size: 16px;
+      font-weight: 500;
+      color: #444444;
+    }
+  }
+  .payment-text {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #444444;
+  }
+  .address-card-cover {
+    width: 100%;
+    height: auto;
+    display: flex;
+    .address-left-cover {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      padding-inline: 7rem;
+      gap: 20px;
+      .address-left-text-cover {
+        display: flex;
+        gap: 5px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #444444;
+      }
+
+      .address-name-cover {
+        font-size: 14px;
+        font-weight: 500;
+        color: #444444;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .address-name-input-cover {
+          .address-input-name {
+            all: unset;
+            width: 500px;
+            height: 50px;
+            border: 1px solid #d5d5d5;
+            border-radius: 4px;
+            padding: 0 5px;
+            &::placeholder {
+              color: #aeaeae;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+      .address-mob-number-cover {
+        font-size: 14px;
+        font-weight: 500;
+        color: #444444;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .address-mob-number-input-cover {
+          .address-input-mob-number {
+            all: unset;
+            width: 500px;
+            height: 50px;
+            border: 1px solid #d5d5d5;
+            border-radius: 4px;
+            padding: 0 5px;
+            &::placeholder {
+              color: #aeaeae;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+      .address-pin-code-cover {
+        font-size: 14px;
+        font-weight: 500;
+        color: #444444;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .address-pin-code-input-cover {
+          .address-input-pin-code {
+            all: unset;
+            width: 500px;
+            height: 50px;
+            border: 1px solid #d5d5d5;
+            border-radius: 4px;
+            padding: 0 5px;
+            &::placeholder {
+              color: #aeaeae;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+      .address-delivery-cover {
+        font-size: 14px;
+        font-weight: 500;
+        color: #444444;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .address-delivery-input-cover {
+          .address-input-delivery {
+            all: unset;
+            width: 500px;
+            height: 100px;
+            border: 1px solid #d5d5d5;
+            border-radius: 4px;
+            padding: 0 5px;
+            &::placeholder {
+              color: #aeaeae;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+      .address-payment-method-cover {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .address-payment-method-text-cover {
+          display: flex;
+          gap: 6px;
+          font-size: 18px;
+          font-weight: 500;
+          color: #444444;
+        }
+        .payment-mode-cover {
+          display: flex;
+          gap: 6px;
+          align-items: center;
+          font-size: 14px;
+          color: #444444;
+        }
+      }
+    }
+    .address-right-cover {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .address-right-summery-cover {
+        width: 357px;
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #fcf5ee;
+        padding: 1rem;
+        border-radius: 5px;
+        .summery-text {
+          font-size: 16px;
+          font-weight: 500;
+          color: #444444;
+        }
+        .sub-total-text,
+        .shipping-text,
+        .order-text {
+          font-weight: 400;
+          font-size: 16px;
+          gap: 4rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+      .place-order-btn-cover {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10px;
+        .place-order-btn {
+          all: unset;
+          width: 279px;
+          height: 50px;
+          background-color: #eaa837;
+          border-radius: 4px;
+          color: #ffffff;
+          font-size: 14px;
+          font-weight: 500;
+          cursor: pointer;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

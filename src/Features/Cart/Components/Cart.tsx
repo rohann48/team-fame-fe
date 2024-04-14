@@ -12,6 +12,7 @@ function Cart({
   handleDecrementProduct,
   handleIncrementProduct,
   handleRemoveCart,
+  handleNavigateAddressPage,
 }: CartTypes) {
   return (
     <div className="cart-product-container">
@@ -104,7 +105,12 @@ function Cart({
               </div>
             </div>
             <div className="cart-buy-now-cover">
-              <button className="cart-buy-btn">Buy Now</button>
+              <button
+                className="cart-buy-btn"
+                onClick={() => handleNavigateAddressPage()}
+              >
+                Buy Now
+              </button>
             </div>
           </div>
         ) : (
