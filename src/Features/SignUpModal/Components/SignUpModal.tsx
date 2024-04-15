@@ -95,25 +95,29 @@ function SignUpModal({
               onChange={(e) => handleOnChange(e)}
             />
           </label>
-          <label className="password-label-cover">
-            <div className="password-text">Password:</div>
-            <input
-              className="password-input"
-              type="password"
-              name="password"
-              onChange={(e) => handleOnChange(e)}
-            />
-          </label>
-          <label className="password-label-cover">
-            <div className="password-text">Confirm Password:</div>
-            <input
-              className="password-input"
-              type="password"
-              name="confirmPassword"
-              // value={password}
-              onChange={(e) => handleOnChange(e)}
-            />
-          </label>
+          {!isEdit && (
+            <label className="password-label-cover">
+              <div className="password-text">Password:</div>
+              <input
+                className="password-input"
+                type="password"
+                name="password"
+                onChange={(e) => handleOnChange(e)}
+              />
+            </label>
+          )}
+          {!isEdit && (
+            <label className="password-label-cover">
+              <div className="password-text">Confirm Password:</div>
+              <input
+                className="password-input"
+                type="password"
+                name="confirmPassword"
+                // value={password}
+                onChange={(e) => handleOnChange(e)}
+              />
+            </label>
+          )}
           <button
             className="sign-up-btn"
             type="button"
