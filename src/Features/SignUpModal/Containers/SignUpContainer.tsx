@@ -23,7 +23,8 @@ function SignUpContainer({
   isSignUpModalOpen,
   handleSignUpModalToggle,
 }: SignUpModalCommonTypes) {
-  const { setLoginInfo, loginInfo } = useContext(LoginContext);
+  const { setLoginInfo, loginInfo, isEdit, setIsEdit, userInfo, setUserInfo } =
+    useContext(LoginContext);
   const [registerUser, setRegisterUser] = useState<
     SignUpModalContainerTypes["registerUser"]
   >({ ...intialUserState });
@@ -78,6 +79,25 @@ function SignUpContainer({
       NotificationManager.warning(error["response"].data.message, "", 2000);
     }
   };
+  //edit user profile
+  const handleUserEdit = async () => {
+    const data = {
+      modifiedData: {
+        name: registerUser.name,
+        lastName: registerUser.lastName,
+        contactNo: registerUser.contactNo,
+        emailId: registerUser.emailId,
+      },
+    };
+    try {
+      const response = await ApiHandler.updateUserInfo(userInfo._id, data);
+      console.log(response);
+      // setUserInfo({});
+      NotificationManager.success("User Updated Successfully", "", 2000);
+    } catch (error) {
+      NotificationManager.warning(Notify.DEFAULT, "", 2000);
+    }
+  };
 
   return (
     <SignUpModal
@@ -85,6 +105,10 @@ function SignUpContainer({
       handleSignUpModalToggle={handleSignUpModalToggle}
       handleOnChange={handleOnChange}
       handleUserRegister={handleUserRegister}
+      registerUser={registerUser}
+      isEdit={isEdit}
+      userInfo={userInfo}
+      handleUserEdit={handleUserEdit}
     />
   );
 }

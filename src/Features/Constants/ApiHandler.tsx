@@ -155,4 +155,11 @@ export const ApiHandler = {
       console.log(error);
     }
   },
+  updateUserInfo: async (clientId: string, modifiedData: Object) => {
+    const response = await apiAuth.putApiwithoutAuth(
+      Resource.url.EditUsers(clientId),
+      modifiedData
+    );
+    return response.data;
+  },
 };

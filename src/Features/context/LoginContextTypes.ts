@@ -17,5 +17,12 @@ export interface LoginContextInitialState {
     name: string;
     role: string;
     lastName: string;
+    email: string;
+    contactNo: string;
   };
+  isEdit: boolean;
+  setIsEdit: React.Dispatch<React.SetStateAction<boolean>>;
+  setUserInfo: React.Dispatch<
+    React.SetStateAction<LoginContextInitialState["userInfo"]>
+  >;
 }

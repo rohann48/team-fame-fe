@@ -13,6 +13,10 @@ function SignUpModal({
   handleSignUpModalToggle,
   handleOnChange,
   handleUserRegister,
+  registerUser,
+  isEdit,
+  userInfo,
+  handleUserEdit,
 }: SignUpModalComponentTypes) {
   return (
     <Dialog
@@ -44,7 +48,7 @@ function SignUpModal({
               alt="fame logo"
             />
           </div>
-          <div className="sign-up-text">Sign UP</div>
+          <div className="sign-up-text">{isEdit ? "Edit User" : "Sign UP"}</div>
           <div className="sign-up-member-text">
             Become the member of our community
           </div>
@@ -58,6 +62,7 @@ function SignUpModal({
               name="name"
               // value={contactNumber}
               onChange={(e) => handleOnChange(e)}
+              value={isEdit ? userInfo?.name : registerUser?.name}
             />
           </label>
           <label className="last-name-label-cover">
@@ -66,7 +71,7 @@ function SignUpModal({
               className="last-name-input"
               type="text"
               name="lastName"
-              // value={contactNumber}
+              value={isEdit ? userInfo?.lastName : registerUser?.lastName}
               onChange={(e) => handleOnChange(e)}
             />
           </label>
@@ -76,7 +81,7 @@ function SignUpModal({
               className="contact-number-input"
               type="number"
               name="contactNo"
-              // value={contactNumber}
+              // value={registerUser?.contactNo}
               onChange={(e) => handleOnChange(e)}
             />
           </label>
@@ -86,7 +91,7 @@ function SignUpModal({
               className="email-input"
               type="email"
               name="emailId"
-              // value={contactNumber}
+              // value={registerUser?.emailId}
               onChange={(e) => handleOnChange(e)}
             />
           </label>
@@ -96,7 +101,6 @@ function SignUpModal({
               className="password-input"
               type="password"
               name="password"
-              // value={password}
               onChange={(e) => handleOnChange(e)}
             />
           </label>
@@ -113,9 +117,11 @@ function SignUpModal({
           <button
             className="sign-up-btn"
             type="button"
-            onClick={() => handleUserRegister()}
+            onClick={() => {
+              isEdit ? handleUserEdit() : handleUserRegister();
+            }}
           >
-            Sign Up
+            {isEdit ? "Update" : "Sign Up"}
           </button>
         </form>
       </DialogContent>

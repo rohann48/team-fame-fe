@@ -199,6 +199,7 @@
   border-left: none;
   border-right: none;
   padding: 10px;
+  cursor: pointer;
 }
 .header-nav-container .login-register-container .user-profile-cover .user-profile-view-cover .user-profile-view-inner-cover .user-prof:hover {
   background-color: #bd9255;

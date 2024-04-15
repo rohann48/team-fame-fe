@@ -17,5 +17,6 @@ export const Resource = {
       `/cart/product/quantity?clientId=${clientId}`,
     removeProdFromCart: (clientId: string | null, productId: string | null) =>
       `/cart/product/cart?clientId=${clientId}&productId=${productId}`,
+    EditUsers: (clientId: string) => `/client/${clientId}`,
   },
 };

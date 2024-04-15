@@ -13,6 +13,8 @@ function HeaderNavContainer() {
     handleLoginModalToggle,
     handleSignUpModalToggle,
     userInfo,
+    isEdit,
+    setIsEdit,
   } = useContext(LoginContext);
   const { productInfo } = useContext(ShopContext);
   //state maintained for active tabs
@@ -44,6 +46,18 @@ function HeaderNavContainer() {
     document.addEventListener("click", handleOutsideClick);
     return () => document.removeEventListener("click", handleOutsideClick);
   }, []);
+  //handle edit user profile
+  const handleEditUserProfile = () => {
+    setIsEdit(true);
+    setLoginInfo((prev) => {
+      return {
+        ...prev,
+        isLoginModalOpen: false,
+        isSignUpModalOpen: !prev.isSignUpModalOpen,
+      };
+    });
+  };
+
   return (
     <>
       <HeaderNav
@@ -57,6 +71,7 @@ function HeaderNavContainer() {
         handleToggleUserProfile={handleToggleUserProfile}
         isUserProf={isUserProf}
         outsideClickUserProf={outsideClickUserProf}
+        handleEditUserProfile={handleEditUserProfile}
       />
       {loginInfo.isLoginModalOpen && (
         <LoginComponent

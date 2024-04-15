@@ -89,6 +89,10 @@
         border-bottom: 1px solid #bd9255;
         height: 30px;
       }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        appearance: none;
+      }
     }
     .email-label-cover {
       margin-bottom: 20px;

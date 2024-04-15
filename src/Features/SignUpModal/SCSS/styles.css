@@ -129,6 +129,11 @@
   border-bottom: 1px solid #bd9255;
   height: 30px;
 }
+.sign-up-modal-container .form-main-cover .contact-label-cover input::-webkit-outer-spin-button,
+.sign-up-modal-container .form-main-cover .contact-label-cover input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
 .sign-up-modal-container .form-main-cover .email-label-cover {
   margin-bottom: 20px;
   font-weight: bold;

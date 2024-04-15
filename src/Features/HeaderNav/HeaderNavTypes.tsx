@@ -12,4 +12,5 @@ export type HeaderNavProps = {
   handleToggleUserProfile: () => void;
   isUserProf: boolean;
   outsideClickUserProf: any;
+  handleEditUserProfile: () => void;
 };

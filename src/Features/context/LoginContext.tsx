@@ -19,7 +19,11 @@ export const LoginContext = createContext<LoginContextInitialState>(
 );
 const LoginContextProvider = ({ children }: LoginContextTypes) => {
   const [loginInfo, setLoginInfo] = useState({ ...initialState });
-  const [userInfo, setUserInfo] = useState<any>({});
+  const [userInfo, setUserInfo] = useState<
+    LoginContextInitialState["userInfo"]
+  >({} as LoginContextInitialState["userInfo"]);
+  //state maintained for editing users
+  const [isEdit, setIsEdit] = useState(false);
   //login modal open
   const handleLoginModalToggle = useCallback(() => {
     setLoginInfo((prev) => {
@@ -48,6 +52,7 @@ const LoginContextProvider = ({ children }: LoginContextTypes) => {
         isSignUpModalOpen: !prev.isSignUpModalOpen,
       };
     });
+    setIsEdit(false);
   }, []);
 
   const contextValue = useMemo(
@@ -57,6 +62,9 @@ const LoginContextProvider = ({ children }: LoginContextTypes) => {
       handleLoginModalToggle,
       handleSignUpModalToggle,
       userInfo,
+      isEdit,
+      setIsEdit,
+      setUserInfo,
     }),
     [
       loginInfo,
@@ -64,6 +72,9 @@ const LoginContextProvider = ({ children }: LoginContextTypes) => {
       handleLoginModalToggle,
       handleSignUpModalToggle,
       userInfo,
+      isEdit,
+      setIsEdit,
+      setUserInfo,
     ]
   );
 
