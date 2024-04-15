@@ -82,12 +82,10 @@ function SignUpContainer({
   //edit user profile
   const handleUserEdit = async () => {
     const data = {
-      modifiedData: {
-        name: registerUser.name,
-        lastName: registerUser.lastName,
-        contactNo: registerUser.contactNo,
-        emailId: registerUser.emailId,
-      },
+      name: registerUser.name,
+      lastName: registerUser.lastName,
+      contactNo: registerUser.contactNo,
+      emailId: registerUser.emailId,
     };
     try {
       const response = await ApiHandler.updateUserInfo(userInfo._id, data);
