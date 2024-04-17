@@ -17,6 +17,7 @@ function SignUpModal({
   isEdit,
   userInfo,
   handleUserEdit,
+  singleUserInfo,
 }: SignUpModalComponentTypes) {
   return (
     <Dialog
@@ -62,7 +63,7 @@ function SignUpModal({
               name="name"
               // value={contactNumber}
               onChange={(e) => handleOnChange(e)}
-              value={isEdit ? userInfo?.name : registerUser?.name}
+              value={registerUser?.name}
             />
           </label>
           <label className="last-name-label-cover">
@@ -71,7 +72,7 @@ function SignUpModal({
               className="last-name-input"
               type="text"
               name="lastName"
-              value={isEdit ? userInfo?.lastName : registerUser?.lastName}
+              value={registerUser?.lastName}
               onChange={(e) => handleOnChange(e)}
             />
           </label>
@@ -81,7 +82,7 @@ function SignUpModal({
               className="contact-number-input"
               type="number"
               name="contactNo"
-              // value={registerUser?.contactNo}
+              value={registerUser?.contactNo}
               onChange={(e) => handleOnChange(e)}
             />
           </label>
@@ -91,7 +92,7 @@ function SignUpModal({
               className="email-input"
               type="email"
               name="emailId"
-              // value={registerUser?.emailId}
+              value={registerUser?.emailId}
               onChange={(e) => handleOnChange(e)}
             />
           </label>

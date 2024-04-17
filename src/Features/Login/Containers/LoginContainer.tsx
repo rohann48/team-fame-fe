@@ -29,22 +29,31 @@ function LoginContainer({
     });
   };
   const authenticateUser = async () => {
-    try {
-      // const saltRounds = 10; // Number of salt rounds for bcrypt
-      // const hashedPassword = bcrypt.hashSync(loginData.password, saltRounds);
-      const data = {
-        contactNo: loginData.contactNo,
-        password: loginData.password,
-      };
-      const res = await ApiHandler.authenticateUser(data);
-      setLoginInfo({
-        ...loginInfo,
-        isLoginModalOpen: false,
-        isAuthenticated: true,
-      });
-      sessionStorage.setItem("userInfo", JSON.stringify(res.results));
-    } catch (error) {
-      NotificationManager.warning("Error Login", "", 2000);
+    debugger;
+    if (!loginData.contactNo || !loginData.password) {
+      return NotificationManager.warning(
+        "Please fill all the fields",
+        "",
+        2000
+      );
+    } else {
+      try {
+        // const saltRounds = 10; // Number of salt rounds for bcrypt
+        // const hashedPassword = bcrypt.hashSync(loginData.password, saltRounds);
+        const data = {
+          contactNo: loginData.contactNo,
+          password: loginData.password,
+        };
+        const res = await ApiHandler.authenticateUser(data);
+        setLoginInfo({
+          ...loginInfo,
+          isLoginModalOpen: false,
+          isAuthenticated: true,
+        });
+        sessionStorage.setItem("userInfo", JSON.stringify(res.results));
+      } catch (error) {
+        NotificationManager.warning("Error Login", "", 2000);
+      }
     }
   };
   return (

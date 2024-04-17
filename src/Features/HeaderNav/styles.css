@@ -161,6 +161,9 @@
           justify-content: space-between;
   padding: 10px 10px 0 10px;
 }
+.header-nav-container .login-register-container .user-profile-cover .user-profile-view-cover .user-profile-view-inner-cover .user-name-cover .name {
+  text-transform: capitalize;
+}
 .header-nav-container .login-register-container .user-profile-cover .user-profile-view-cover .user-profile-view-inner-cover .user-id-cover {
   display: -webkit-box;
   display: -ms-flexbox;

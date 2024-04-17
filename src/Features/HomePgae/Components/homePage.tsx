@@ -310,7 +310,7 @@ const HomePage = ({
           <div className="home-videos-and-news-cover">
             <div className="heading">Videos</div>
             <div className="cards-cover">
-              {allVideos.slice(0, 3).map((videos, index) => (
+              {allVideos?.slice(0, 3)?.map((videos, index) => (
                 <div
                   key={videos.id}
                   className="cards"

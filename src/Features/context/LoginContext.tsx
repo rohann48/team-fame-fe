@@ -4,11 +4,14 @@ import {
   useMemo,
   useCallback,
   useEffect,
+  useContext,
 } from "react";
 import {
   LoginContextInitialState,
   LoginContextTypes,
 } from "./LoginContextTypes";
+import { ApiHandler } from "../Constants/ApiHandler";
+import { GlobalDataContext } from "./GlobalDataContext";
 let initialState = {
   isLoginModalOpen: false,
   isSignUpModalOpen: false,
@@ -24,6 +27,7 @@ const LoginContextProvider = ({ children }: LoginContextTypes) => {
   >({} as LoginContextInitialState["userInfo"]);
   //state maintained for editing users
   const [isEdit, setIsEdit] = useState(false);
+
   //login modal open
   const handleLoginModalToggle = useCallback(() => {
     setLoginInfo((prev) => {
@@ -35,13 +39,19 @@ const LoginContextProvider = ({ children }: LoginContextTypes) => {
   }, []);
 
   useEffect(() => {
-    let sessionUserInfo = sessionStorage.getItem("userInfo");
+    const fetchUserInfo = async () => {
+      const response = await ApiHandler.getUserInfo("661deee70047f0876ac2a73d");
+      console.log(response);
+    };
+    // let sessionUserInfo = sessionStorage.getItem("userInfo");
 
-    if (sessionUserInfo) {
-      const response = JSON.parse(sessionUserInfo);
-      setUserInfo(response);
-    }
-  }, [loginInfo.isAuthenticated]);
+    // if (sessionUserInfo) {
+    //   const response = JSON.parse(sessionUserInfo);
+    //   console.log(response);
+    //   setUserInfo(response);
+    // }
+    // fetchUserInfo();
+  }, []);
 
   //sign up modak open
   const handleSignUpModalToggle = useCallback(() => {

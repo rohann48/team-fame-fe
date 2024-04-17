@@ -1,3 +1,6 @@
+import { HeaderNavProps } from "../HeaderNav/HeaderNavTypes";
+import { LoginContextInitialState } from "../context/LoginContextTypes";
+
 export interface SignUpModalCommonTypes {
   isSignUpModalOpen: boolean;
   handleSignUpModalToggle: () => void;
@@ -10,17 +13,13 @@ export interface SignUpModalCommonTypes {
     password: string;
     confirmPassword: string;
   };
+  singleUserInfo: HeaderNavProps["singleUserInfo"];
 }
 export interface SignUpModalComponentTypes extends SignUpModalCommonTypes {
   handleOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleUserRegister: () => void;
   isEdit: boolean;
-  userInfo: {
-    _id: string;
-    name: string;
-    role: string;
-    lastName: string;
-  };
+  userInfo: LoginContextInitialState["userInfo"];
   handleUserEdit: () => void;
 }
 export interface SignUpModalContainerTypes extends SignUpModalCommonTypes {

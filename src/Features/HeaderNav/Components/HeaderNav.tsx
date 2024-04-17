@@ -19,6 +19,7 @@ const HeaderNav = ({
   isUserProf,
   outsideClickUserProf,
   handleEditUserProfile,
+  singleUserInfo,
 }: HeaderNavProps) => {
   return (
     <div className="header-nav-container">
@@ -126,42 +127,44 @@ const HeaderNav = ({
           <img className="cart-img" src={images.cart} alt="cart" />
           <span className="cart-count">{productInfo.cartBasket.length}</span>
         </button>
-        <button className="user-profile-cover" ref={outsideClickUserProf}>
-          <img
-            className="user-icon"
-            src={images.bellIcon}
-            onClick={() => handleToggleUserProfile()}
-          />
-          {isUserProf && (
-            <div className="user-profile-view-cover">
-              <div className="user-profile-view-inner-cover">
-                <div className="user-name-cover">
-                  <div>User Name</div>
-                  <div>{userInfo.name}</div>
-                </div>
-                <div className="user-id-cover">
-                  <div>User ID</div>
-                  <div>FAME01</div>
-                </div>
-                <div className="user-email-cover">
-                  <div>Email ID</div>
-                  <div>sathvik@gmail.com</div>
-                </div>
-                <div
-                  className="user-prof"
-                  onClick={() => handleEditUserProfile()}
-                >
-                  Profile
-                </div>
-                <div className="user-logout-btn-cover">
-                  <button className="logout-btn">Log out</button>
+        {
+          <button className="user-profile-cover" ref={outsideClickUserProf}>
+            <img
+              className="user-icon"
+              src={images.bellIcon}
+              onClick={() => handleToggleUserProfile()}
+            />
+            {isUserProf && (
+              <div className="user-profile-view-cover">
+                <div className="user-profile-view-inner-cover">
+                  <div className="user-name-cover">
+                    <div>User Name</div>
+                    <div className="name">{singleUserInfo.name}</div>
+                  </div>
+                  <div className="user-id-cover">
+                    <div>User ID</div>
+                    <div>{singleUserInfo.referralCode}</div>
+                  </div>
+                  <div className="user-email-cover">
+                    <div>Email ID</div>
+                    <div>{singleUserInfo.emailId}</div>
+                  </div>
+                  <div
+                    className="user-prof"
+                    onClick={() => handleEditUserProfile()}
+                  >
+                    Profile
+                  </div>
+                  <div className="user-logout-btn-cover">
+                    <button className="logout-btn">Log out</button>
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
-        </button>
+            )}
+          </button>
+        }
 
-        {userInfo.role === RoleType.ADMIN && (
+        {
           <NavLink to="config/about-us">
             <Tippy placement="bottom-start" content="Configuration">
               <img
@@ -172,20 +175,24 @@ const HeaderNav = ({
               />
             </Tippy>
           </NavLink>
+        }
+        {!singleUserInfo.id && (
+          <button
+            className="nav-link-loggin-cover"
+            onClick={() => handleLoginModalToggle()}
+          >
+            LOGIN
+          </button>
         )}
-        <button
-          className="nav-link-loggin-cover"
-          onClick={() => handleLoginModalToggle()}
-        >
-          LOGIN
-        </button>
-        <div>|</div>
-        <button
-          className="nav-link-register-cover"
-          onClick={() => handleSignUpModalToggle()}
-        >
-          REGISTER
-        </button>
+        {/* <div>|</div> */}
+        {
+          <button
+            className="nav-link-register-cover"
+            onClick={() => handleSignUpModalToggle()}
+          >
+            REGISTER
+          </button>
+        }
       </div>
     </div>
   );

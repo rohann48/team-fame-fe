@@ -22,12 +22,13 @@ const intialUserState = {
 function SignUpContainer({
   isSignUpModalOpen,
   handleSignUpModalToggle,
+  singleUserInfo,
 }: SignUpModalCommonTypes) {
   const { setLoginInfo, loginInfo, isEdit, setIsEdit, userInfo, setUserInfo } =
     useContext(LoginContext);
   const [registerUser, setRegisterUser] = useState<
     SignUpModalContainerTypes["registerUser"]
-  >({ ...intialUserState });
+  >(!isEdit ? { ...intialUserState } : structuredClone(singleUserInfo));
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setRegisterUser({
@@ -66,6 +67,13 @@ function SignUpContainer({
           confirmPassword: hashedConfirmedPassword,
         };
         const res = await ApiHandler.registerUser(userDetails);
+        setRegisterUser((prev) => ({
+          ...prev,
+          name: res.results.name,
+          lastName: res.results.lastName,
+          contactNo: res.results.contactNo,
+          emailId: res.results.emailId,
+        }));
         if (res.results._id) {
           NotificationManager.success(Notify.USER_REGISTER, "", 2000);
           setLoginInfo({
@@ -81,14 +89,17 @@ function SignUpContainer({
   };
   //edit user profile
   const handleUserEdit = async () => {
-    const data = {
-      name: registerUser.name,
-      lastName: registerUser.lastName,
-      contactNo: registerUser.contactNo,
-      emailId: registerUser.emailId,
-    };
     try {
-      const response = await ApiHandler.updateUserInfo(userInfo._id, data);
+      const modifiedData = {
+        name: registerUser.name,
+        lastName: registerUser.lastName,
+        contactNo: registerUser.contactNo,
+        emailId: registerUser.emailId,
+      };
+      const response = await ApiHandler.updateUserInfo(
+        "661deee70047f0876ac2a73d",
+        modifiedData
+      );
       console.log(response);
       // setUserInfo({});
       NotificationManager.success("User Updated Successfully", "", 2000);
@@ -96,7 +107,7 @@ function SignUpContainer({
       NotificationManager.warning(Notify.DEFAULT, "", 2000);
     }
   };
-
+  console.log("es", registerUser);
   return (
     <SignUpModal
       isSignUpModalOpen={isSignUpModalOpen}
@@ -107,6 +118,7 @@ function SignUpContainer({
       isEdit={isEdit}
       userInfo={userInfo}
       handleUserEdit={handleUserEdit}
+      singleUserInfo={singleUserInfo}
     />
   );
 }

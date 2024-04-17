@@ -15,10 +15,12 @@ export interface LoginContextInitialState {
   userInfo: {
     _id: string;
     name: string;
-    role: string;
+    role?: string;
     lastName: string;
-    email: string;
+    emailId: string;
     contactNo: string;
+    password: "";
+    confirmPassword: "";
   };
   isEdit: boolean;
   setIsEdit: React.Dispatch<React.SetStateAction<boolean>>;

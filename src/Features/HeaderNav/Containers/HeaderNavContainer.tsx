@@ -5,6 +5,8 @@ import SignUpModal from "../../SignUpModal";
 import { LoginContext } from "../../context/LoginContext";
 import { ShopContext } from "../../context/ShopContext/ShopContext";
 import { useNavigate } from "react-router-dom";
+import { ApiHandler } from "../../Constants/ApiHandler";
+import { HeaderNavProps } from "../HeaderNavTypes";
 
 function HeaderNavContainer() {
   const {
@@ -21,10 +23,13 @@ function HeaderNavContainer() {
   const [activeTab, setActiveTab] = useState("home");
   //state maintained for toggling users profile
   const [isUserProf, setIsUserProf] = useState(false);
+  //state maintained for store user data
+  const [singleUserInfo, setSingleUserInfo] = useState(
+    {} as HeaderNavProps["singleUserInfo"]
+  );
   //ref for showUserProf n logout outsideClick
   const outsideClickUserProf = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
-
   //handle navigate to cart page
   const handleNavigateCart = () => {
     navigate("/cart");
@@ -57,7 +62,16 @@ function HeaderNavContainer() {
       };
     });
   };
-
+  //get user info
+  useEffect(() => {
+    const fetchUserInfo = async () => {
+      const response = await ApiHandler.getUserInfo("661deee70047f0876ac2a73d");
+      setSingleUserInfo({ ...response.results });
+    };
+    if ("661deee70047f0876ac2a73d") {
+      fetchUserInfo();
+    }
+  }, []);
   return (
     <>
       <HeaderNav
@@ -72,6 +86,7 @@ function HeaderNavContainer() {
         isUserProf={isUserProf}
         outsideClickUserProf={outsideClickUserProf}
         handleEditUserProfile={handleEditUserProfile}
+        singleUserInfo={singleUserInfo}
       />
       {loginInfo.isLoginModalOpen && (
         <LoginComponent
@@ -80,10 +95,11 @@ function HeaderNavContainer() {
           handleSignUpModalToggle={handleSignUpModalToggle}
         />
       )}
-      {loginInfo.isSignUpModalOpen && (
+      {(loginInfo.isSignUpModalOpen || isEdit) && (
         <SignUpModal
           isSignUpModalOpen={loginInfo.isSignUpModalOpen}
           handleSignUpModalToggle={handleSignUpModalToggle}
+          singleUserInfo={singleUserInfo}
         />
       )}
     </>
