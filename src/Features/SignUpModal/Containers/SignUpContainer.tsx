@@ -23,6 +23,7 @@ function SignUpContainer({
   isSignUpModalOpen,
   handleSignUpModalToggle,
   singleUserInfo,
+  setSingleUserInfo,
 }: SignUpModalCommonTypes) {
   const { setLoginInfo, loginInfo, isEdit, setIsEdit, userInfo, setUserInfo } =
     useContext(LoginContext);
@@ -97,17 +98,26 @@ function SignUpContainer({
         emailId: registerUser.emailId,
       };
       const response = await ApiHandler.updateUserInfo(
-        "661deee70047f0876ac2a73d",
+        "66207ae88e9fc4d0c4c5aa15",
         modifiedData
       );
       console.log(response);
-      // setUserInfo({});
+      setSingleUserInfo!((prev) => ({
+        ...prev,
+        name: response.results.name,
+        lastName: response.results.lastName,
+        contactNo: response.results.contactNo,
+        emailId: response.results.emailId,
+      }));
       NotificationManager.success("User Updated Successfully", "", 2000);
+      setLoginInfo((prev) => ({
+        ...prev,
+        isSignUpModalOpen: false,
+      }));
     } catch (error) {
       NotificationManager.warning(Notify.DEFAULT, "", 2000);
     }
   };
-  console.log("es", registerUser);
   return (
     <SignUpModal
       isSignUpModalOpen={isSignUpModalOpen}

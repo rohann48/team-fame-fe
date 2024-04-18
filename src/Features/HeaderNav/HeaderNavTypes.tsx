@@ -1,6 +1,6 @@
 import { CommonTypes } from "../Common/CommonTypes";
 import { LoginContextInitialState } from "../context/LoginContextTypes";
-interface User {
+export interface User {
   contactNo: string;
   emailId: string;
   id: string;

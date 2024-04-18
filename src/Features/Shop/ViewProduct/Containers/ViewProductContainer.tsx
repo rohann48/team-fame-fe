@@ -58,7 +58,10 @@ function ViewProductContainer() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [productId]);
-
+  //handle navigate to address page
+  const handleBuyNow = (productId: string) => {
+    navigate(`/address/${productId}`);
+  };
   return (
     <ViewProduct
       productInfo={productInfo}
@@ -67,6 +70,7 @@ function ViewProductContainer() {
       handleBackButton={handleBackButton}
       handleNavigateToCart={handleNavigateToCart}
       viewedProduct={viewedProduct}
+      handleBuyNow={handleBuyNow}
     />
   );
 }

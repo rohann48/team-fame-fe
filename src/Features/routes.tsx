@@ -48,6 +48,7 @@ export const mainRoutes = [
     element: <Cart />,
   },
   { path: "cart/address/*", element: <Address /> },
+  { path: "/address/:id", element: <Address /> },
   {
     path: "/thankyou",
     element: <OrderedSuccessfully />,

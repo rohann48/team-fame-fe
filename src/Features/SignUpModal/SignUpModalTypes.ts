@@ -1,4 +1,4 @@
-import { HeaderNavProps } from "../HeaderNav/HeaderNavTypes";
+import { HeaderNavProps, User } from "../HeaderNav/HeaderNavTypes";
 import { LoginContextInitialState } from "../context/LoginContextTypes";
 
 export interface SignUpModalCommonTypes {
@@ -14,6 +14,7 @@ export interface SignUpModalCommonTypes {
     confirmPassword: string;
   };
   singleUserInfo: HeaderNavProps["singleUserInfo"];
+  setSingleUserInfo?: React.Dispatch<React.SetStateAction<User>>;
 }
 export interface SignUpModalComponentTypes extends SignUpModalCommonTypes {
   handleOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void;

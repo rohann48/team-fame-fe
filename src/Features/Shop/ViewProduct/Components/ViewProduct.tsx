@@ -11,6 +11,7 @@ function ViewProduct({
   handleBackButton,
   handleNavigateToCart,
   viewedProduct,
+  handleBuyNow,
 }: ViewProductTypes) {
   return (
     <div className="view-product-container">
@@ -63,7 +64,12 @@ function ViewProduct({
               >
                 GO TO CART
               </button>
-              <button className="view-product buy-btn">BUY NOW</button>
+              <button
+                className="view-product buy-btn"
+                onClick={() => handleBuyNow(viewedProduct._id)}
+              >
+                BUY NOW
+              </button>
             </div>
           </div>
         </div>

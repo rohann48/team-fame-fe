@@ -142,7 +142,7 @@ const HeaderNav = ({
                     <div className="name">{singleUserInfo.name}</div>
                   </div>
                   <div className="user-id-cover">
-                    <div>User ID</div>
+                    <div>Referral ID</div>
                     <div>{singleUserInfo.referralCode}</div>
                   </div>
                   <div className="user-email-cover">
@@ -176,14 +176,15 @@ const HeaderNav = ({
             </Tippy>
           </NavLink>
         }
-        {!singleUserInfo.id && (
-          <button
-            className="nav-link-loggin-cover"
-            onClick={() => handleLoginModalToggle()}
-          >
-            LOGIN
-          </button>
-        )}
+        {/* {!singleUserInfo.id && ( */}
+
+        <button
+          className="nav-link-loggin-cover"
+          onClick={() => handleLoginModalToggle()}
+        >
+          LOGIN
+        </button>
+        {/* )} */}
         {/* <div>|</div> */}
         {
           <button

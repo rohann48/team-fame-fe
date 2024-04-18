@@ -19,4 +19,5 @@ export type ViewProductTypes = {
       date: Date;
     }[];
   };
+  handleBuyNow: (productId: string) => void;
 };
