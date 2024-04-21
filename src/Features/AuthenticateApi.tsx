@@ -14,7 +14,7 @@ export const apiAuth = {
     if (!process.env.REACT_APP_ISDEVENV)
       options = { headers: { endpoint: cryptoEncryption(url) } };
     return axios.get(
-      `${process.env.REACT_APP_BASE_URL}/tf${
+      `${process.env.REACT_APP_BASE_URL}tf${
         !process.env.REACT_APP_ISDEVENV ? "" : url
       }`,
       options
