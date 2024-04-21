@@ -26,7 +26,7 @@ export const apiAuth = {
       options = { headers: { endpoint: cryptoEncryption(url) } };
 
     return axios.post(
-      `${process.env.REACT_APP_BASE_URL}${
+      `${process.env.REACT_APP_BASE_URL}tf${
         !process.env.REACT_APP_ISDEVENV ? "" : url
       }`,
       !process.env.REACT_APP_ISDEVENV
