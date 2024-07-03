@@ -118,6 +118,8 @@ function SignUpContainer({
       NotificationManager.warning(Notify.DEFAULT, "", 2000);
     }
   };
+  console.log(userInfo, "hdsds");
+
   return (
     <SignUpModal
       isSignUpModalOpen={isSignUpModalOpen}

@@ -7,7 +7,7 @@ export const schemeRoutes = [
     element: <SchemeJoinPage />,
   },
   {
-    path: "/users",
+    path: "/users/:userId",
     element: <SchemeUserPage />,
   },
 ];

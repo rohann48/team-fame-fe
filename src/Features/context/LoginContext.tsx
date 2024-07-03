@@ -40,17 +40,16 @@ const LoginContextProvider = ({ children }: LoginContextTypes) => {
 
   useEffect(() => {
     const fetchUserInfo = async () => {
-      const response = await ApiHandler.getUserInfo("66207ae88e9fc4d0c4c5aa15");
+      const response = await ApiHandler.getUserInfo("66844995bfa39222f11006c7");
       console.log(response);
     };
-    // let sessionUserInfo = sessionStorage.getItem("userInfo");
-
-    // if (sessionUserInfo) {
-    //   const response = JSON.parse(sessionUserInfo);
-    //   console.log(response);
-    //   setUserInfo(response);
-    // }
-    // fetchUserInfo();
+    let sessionUserInfo = sessionStorage.getItem("userInfo");
+    if (sessionUserInfo) {
+      const response = JSON.parse(sessionUserInfo);
+      console.log(response);
+      setUserInfo(response);
+    }
+    fetchUserInfo();
   }, []);
 
   //sign up modak open

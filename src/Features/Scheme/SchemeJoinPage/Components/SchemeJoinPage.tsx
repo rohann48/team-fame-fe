@@ -1,8 +1,14 @@
 import Footer from "../../../Common/CommonComponent/Footer";
 import images from "../../../ImageVariables";
 import "../SCSS/styles.css";
+import { SchemeJoinPageTypes } from "../SchemeJoinPageTypes";
 
-function SchemeJoinPage() {
+function SchemeJoinPage({
+  handleSignUpModalToggle,
+  userInfo,
+  handleSelectPeriod,
+  handleJoinScheme,
+}: Readonly<SchemeJoinPageTypes>) {
   return (
     <div className="scheme-container">
       <div className="gold-scheme-img-one-cover"></div>
@@ -76,15 +82,15 @@ function SchemeJoinPage() {
             </div>
             <div className="scheme-join-text">Join Our Scheme Now.</div>
             <div className="scheme-form">
-              <label className="scheme-payee-label-cover">
+              {/* <label className="scheme-payee-label-cover">
                 <div className="scheme-payee-text">Payee Name:</div>
                 <input
                   className="scheme-payee-input"
                   type="text"
                   placeholder="Enter name"
                 />
-              </label>
-              <div className="scheme-email-contact-cover">
+              </label> */}
+              {/* <div className="scheme-email-contact-cover">
                 <label className="scheme-payee-email-label-cover">
                   <div className="scheme-payee-email-text">Email:</div>
                   <input
@@ -103,18 +109,38 @@ function SchemeJoinPage() {
                     placeholder="Enter mobile number"
                   />
                 </label>
-              </div>
+              </div> */}
               <label className="scheme-payee-period-label-cover">
                 <div className="scheme-payee-period-text"> Period:</div>
-                <input
+                <select
                   className="scheme-payee-period-select"
-                  placeholder="Please select period"
-                  type="number"
-                />
+                  placeholder="Please select period in months"
+                  onChange={(e) => handleSelectPeriod(e)}
+                >
+                  <option value={12} defaultValue={12}>
+                    12 months
+                  </option>
+                  <option value={24}>24 months</option>
+                  <option value={36}>36 months</option>
+                </select>
               </label>
             </div>
             <div className="scheme-btn-cover">
-              <button className="join-scheme-btn">Join Now</button>
+              {!userInfo._id ? (
+                <button
+                  className="join-scheme-btn"
+                  onClick={() => handleSignUpModalToggle()}
+                >
+                  Join Now
+                </button>
+              ) : (
+                <button
+                  className="join-scheme-btn"
+                  onClick={() => handleJoinScheme(userInfo._id)}
+                >
+                  View
+                </button>
+              )}
             </div>
           </div>
         </div>

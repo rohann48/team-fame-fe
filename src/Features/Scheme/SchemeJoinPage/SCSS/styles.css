@@ -231,6 +231,15 @@
 }
 .scheme-container .scheme-details-cover .scheme-description-and-form-cover .scheme-form {
   height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .scheme-container .scheme-details-cover .scheme-description-and-form-cover .scheme-form .scheme-payee-label-cover {
   margin-bottom: 20px;
@@ -251,12 +260,17 @@
 .scheme-container .scheme-details-cover .scheme-description-and-form-cover .scheme-form .scheme-payee-label-cover .scheme-payee-input {
   all: unset;
   border: 1px solid #bd9255;
-  height: 30px;
   border-radius: 3px;
   width: 563px;
   height: 40px;
   padding: 3px 5px;
   background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .scheme-container .scheme-details-cover .scheme-description-and-form-cover .scheme-form .scheme-payee-label-cover .scheme-payee-input::-webkit-input-placeholder {
   color: #aeaeae;
@@ -379,12 +393,20 @@
 .scheme-container .scheme-details-cover .scheme-description-and-form-cover .scheme-form .scheme-payee-period-label-cover .scheme-payee-period-select {
   all: unset;
   border: 1px solid #bd9255;
-  height: 30px;
   border-radius: 3px;
   width: 269px;
   height: 40px;
   padding: 3px 5px;
   background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .scheme-container .scheme-details-cover .scheme-description-and-form-cover .scheme-form .scheme-payee-period-label-cover .scheme-payee-period-select::-webkit-input-placeholder {
   color: #aeaeae;
@@ -425,4 +447,5 @@
   border: 1px solid #bd9255;
   border-radius: 5px;
   text-align: center;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */

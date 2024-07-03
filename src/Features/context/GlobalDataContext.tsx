@@ -42,6 +42,7 @@ const GlobalDataContextProvider = ({
     //   }
     // };
     // assignUserInfo();
+
     const handleGetAboutUs = async () => {
       const response = await ApiHandler.getAboutUs();
       setAboutUsData(response?.results);

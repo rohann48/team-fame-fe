@@ -156,6 +156,9 @@
       }
       .scheme-form {
         height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         .scheme-payee-label-cover {
           margin-bottom: 20px;
           display: flex;
@@ -167,12 +170,13 @@
           .scheme-payee-input {
             all: unset;
             border: 1px solid #bd9255;
-            height: 30px;
             border-radius: 3px;
             width: 563px;
             height: 40px;
             padding: 3px 5px;
             background-color: #ffffff;
+            display: flex;
+            align-items: center;
             &::placeholder {
               color: #aeaeae;
             }
@@ -238,13 +242,14 @@
           .scheme-payee-period-select {
             all: unset;
             border: 1px solid #bd9255;
-            height: 30px;
             border-radius: 3px;
             width: 269px;
             height: 40px;
             padding: 3px 5px;
             background-color: #ffffff;
-
+            display: flex;
+            align-items: center;
+            justify-content: center;
             &::placeholder {
               color: #aeaeae;
             }
@@ -268,6 +273,7 @@
           border: 1px solid #bd9255;
           border-radius: 5px;
           text-align: center;
+          cursor: pointer;
         }
       }
     }
