@@ -1,11 +1,14 @@
 import "../SCSS/styles.css";
 import Footer from "../../../Common/CommonComponent/Footer/Components/footer";
+import { SchemeUserPageTypes } from "../SchemeUserPageTypes";
+import { format, parseISO } from "date-fns";
+
 const data = [
   { name: "20 Jan 2023", quantity: 5000 },
   { name: "23 Jan 2025", quantity: 3000 },
   { name: "20 Jan 2025", quantity: 2000 },
 ];
-function SchemeUserPage() {
+function SchemeUserPage({ schemeUserData, userInfo }: SchemeUserPageTypes) {
   // Calculate total
   const total = data.reduce((acc, item) => acc + item.quantity, 0);
   return (
@@ -25,27 +28,42 @@ function SchemeUserPage() {
         <div className="user-gold-scheme-user-details-cover">
           <div className="info">
             <div>Payee Name:</div>
-            <div className="info-data">satvik</div>
+            <div className="info-data">
+              {userInfo.name}&nbsp;
+              {userInfo.lastName}
+            </div>
           </div>
-          <div className="info">
+          {/* <div className="info">
             <div>User Id:</div>
             <div className="info-data">satvik</div>
-          </div>
+          </div> */}
           <div className="info">
             <div>Mobile Number:</div>
-            <div className="info-data">satvik</div>
+            <div className="info-data">{userInfo.contactNo}</div>
           </div>
           <div className="info">
             <div>Start Date:</div>
-            <div className="info-data">satvik</div>
+            <div className="info-data">
+              {schemeUserData.startDate &&
+                format(
+                  parseISO(schemeUserData.startDate?.toString()),
+                  "dd-MMM-yyyy"
+                )}
+            </div>
           </div>
           <div className="info">
             <div>End Date:</div>
-            <div className="info-data">satvik</div>
+            <div className="info-data">
+              {schemeUserData.endDate &&
+                format(
+                  parseISO(schemeUserData.endDate?.toString()),
+                  "dd-MMM-yyyy"
+                )}{" "}
+            </div>
           </div>
-          <div className="info">
+          {/* <div className="info">
             <button className="edit-user-btn">Edit User Details</button>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="user-scheme-plan-info-cover">
@@ -82,31 +100,48 @@ function SchemeUserPage() {
         <div className="user-scheme-header">Scheme</div>
         <div className="user-scheme-table-cover">
           <div className="user-scheme-table-wrapper">
-            <h4 className="table-header">Payment History</h4>
-            <table>
-              <thead>
-                <tr>
-                  <th>Payment Date</th>
-                  <th>Amount</th>
-                </tr>
-              </thead>
-              <tbody>
-                {data.map((item, index) => (
-                  <tr key={index}>
-                    <td>{item.name}</td>
-                    <td>{item.quantity}</td>
+            <h4 className="table-header">
+              Payment History{" "}
+              <span className="header-period">
+                Period :{schemeUserData.period}
+              </span>
+            </h4>
+            {schemeUserData.investments?.length > 0 ? (
+              <table>
+                <thead>
+                  <tr>
+                    <th>Payment Date</th>
+                    <th>Amount</th>
                   </tr>
-                ))}
-                <tr>
-                  <td>Total</td>
-                  <td>{total}</td>
-                </tr>
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {schemeUserData.investments.map((item, index) => (
+                    <tr key={item._id}>
+                      <td>
+                        {item.date &&
+                          format(
+                            parseISO(item.date?.toString()),
+                            "dd-MMM-yyyy"
+                          )}
+                      </td>
+                      <td>{item.amount}</td>
+                    </tr>
+                  ))}
+                  <tr>
+                    <td>Total</td>
+                    <td>{1000}</td>
+                  </tr>
+                </tbody>
+              </table>
+            ) : (
+              <table className="table-no-data">
+                <tbody>No investment found</tbody>
+              </table>
+            )}
           </div>
           <div className="user-scheme-form-cover">
             <div className="user-scheme-form">
-              <label className="scheme-payee-label-cover">
+              {/* <label className="scheme-payee-label-cover">
                 <div className="scheme-payee-text">Payee Name:</div>
                 <input
                   className="scheme-payee-input"
@@ -123,14 +158,15 @@ function SchemeUserPage() {
                   type="contact"
                   placeholder="Enter mobile number"
                 />
-              </label>
+              </label> */}
 
               <label className="scheme-payee-period-label-cover">
-                <div className="scheme-payee-period-text"> Period:</div>
+                <div className="scheme-payee-period-text"> Amount:</div>
                 <input
                   className="scheme-payee-period-select"
                   placeholder="Please select period"
                   type="number"
+                  onWheel={(e: any) => e.target.blur()}
                 />
               </label>
               <div className="payment-method-cover">

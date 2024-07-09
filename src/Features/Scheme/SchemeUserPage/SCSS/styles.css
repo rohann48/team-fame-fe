@@ -188,7 +188,17 @@
   font-size: 14px;
   font-weight: 500;
   color: #bd9255;
-  margin-bottom: 6px;
+  margin-bottom: 1rem;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper .table-header .header-period {
+  color: #bd9255;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #444444;
+  border-radius: 5px;
 }
 .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper table {
   width: 100%;
@@ -215,10 +225,32 @@
 .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper table td:last-child {
   white-space: nowrap;
 }
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper .table-no-data {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #bd9255;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #ffffff;
+  min-height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form-cover {
   width: 50%;
   height: 100%;
   padding: 1% 2%;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form {
   height: 50%;
@@ -328,6 +360,11 @@
   width: 269px;
   padding: 3px 5px;
   background-color: #ffffff;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-period-label-cover .scheme-payee-period-select input::-webkit-outer-spin-button,
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-period-label-cover .scheme-payee-period-select input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
 }
 .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-period-label-cover .scheme-payee-period-select::-webkit-input-placeholder {
   color: #aeaeae;

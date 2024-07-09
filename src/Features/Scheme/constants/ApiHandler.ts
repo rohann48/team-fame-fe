@@ -22,10 +22,10 @@ export const ApiHandler = {
       console.log(error);
     }
   },
-  fetchUserInfo: async (userId: string | null) => {
+  fetchGoldSchemeUserInfo: async (userId: string | null) => {
     try {
       const response = await apiAuth.getApiwithoutAuth(
-        Resource.url.fetchUserInfo(userId)
+        Resource.url.fetchGoldSchemeUserInfo(userId)
       );
       return response.data;
     } catch (error) {

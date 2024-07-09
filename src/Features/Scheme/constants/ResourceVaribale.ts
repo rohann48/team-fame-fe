@@ -1,7 +1,8 @@
 export const Resource = {
   url: {
-    getGoldRate: () => `/s`,
-    joinScheme: `/s`,
-    fetchUserInfo: (userId: string | null) => `/clientId=${userId}`,
+    getGoldRate: () => `/get-gold-rate`,
+    joinScheme: `/gold-scheme`,
+    fetchGoldSchemeUserInfo: (userId: string | null) =>
+      `/gold-scheme/scheme/${userId}`,
   },
 };
