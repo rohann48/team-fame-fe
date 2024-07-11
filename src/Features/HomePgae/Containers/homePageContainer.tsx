@@ -7,8 +7,19 @@ function HomePageContainer() {
   const { aboutUsData, eventData, testimonialData, allVideos } =
     useContext(GlobalDataContext);
   const navigate = useNavigate();
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const [testimonialLoop, setTestimonialLoop] = useState<any>([]);
+  const goToPreviousTestimonial = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? testimonialData.length - 1 : prevIndex - 1
+    );
+  };
+  const goToNextTestimonial = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === testimonialData.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   // useEffect(() => {
   //   // Function to update testimonialLoop state with the current testimonialData item
@@ -41,10 +52,13 @@ function HomePageContainer() {
     <HomePage
       aboutUsData={aboutUsData}
       eventData={eventData}
-      testimonialLoop={testimonialLoop}
+      testimonialData={testimonialData}
       handleNavigateEventCard={handleNavigateEventCard}
       handleNavigateVideoCard={handleNavigateVideoCard}
       allVideos={allVideos}
+      goToPreviousTestimonial={goToPreviousTestimonial}
+      goToNextTestimonial={goToNextTestimonial}
+      currentIndex={currentIndex}
     />
   );
 }

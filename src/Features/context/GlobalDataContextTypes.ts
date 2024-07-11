@@ -43,7 +43,13 @@ export type allVideos = {
   __v: number;
 }[];
 
-export type ITestimonialData = Array<object>;
+export type ITestimonialData = {
+  about: string;
+  achievement: string;
+  name: string;
+  updatedAt: string;
+  _id: string;
+}[];
 type setAboutUsData = React.Dispatch<React.SetStateAction<IAboutUs>>;
 type setEventData = React.Dispatch<React.SetStateAction<IEventData>>;
 type setTestimonialData = React.Dispatch<
