@@ -23,8 +23,21 @@ function SchemeUserPageContainer() {
       fetchUserInfo();
     }
   }, [userId]);
+  console.log(userInfo, "sdsds");
+  const postInvestment = async () => {
+    try {
+      const modifiedData = {};
+      // const response = await ApiHandler.postInvestment(modifiedData);
+    } catch (err) {}
+  };
 
-  return <SchemeUserPage schemeUserData={schemeUserData} userInfo={userInfo} />;
+  return (
+    <SchemeUserPage
+      schemeUserData={schemeUserData}
+      userInfo={userInfo}
+      postInvestment={postInvestment}
+    />
+  );
 }
 
 export default SchemeUserPageContainer;

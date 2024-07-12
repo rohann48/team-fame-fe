@@ -15,4 +15,5 @@ export type SchemeUserPageTypes = {
     period: number;
   };
   userInfo: LoginContextInitialState["userInfo"];
+  postInvestment: () => void;
 };

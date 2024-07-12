@@ -8,7 +8,11 @@ const data = [
   { name: "23 Jan 2025", quantity: 3000 },
   { name: "20 Jan 2025", quantity: 2000 },
 ];
-function SchemeUserPage({ schemeUserData, userInfo }: SchemeUserPageTypes) {
+function SchemeUserPage({
+  schemeUserData,
+  userInfo,
+  postInvestment,
+}: SchemeUserPageTypes) {
   // Calculate total
   const total = data.reduce((acc, item) => acc + item.quantity, 0);
   return (
@@ -184,7 +188,12 @@ function SchemeUserPage({ schemeUserData, userInfo }: SchemeUserPageTypes) {
               </div>
               <div className="user-scheme-btn-cover">
                 <button className="join-scheme-btn cancel">Cancel</button>
-                <button className="join-scheme-btn pay">Pay</button>
+                <button
+                  className="join-scheme-btn pay"
+                  onClick={() => postInvestment()}
+                >
+                  Pay
+                </button>
               </div>
             </div>
           </div>

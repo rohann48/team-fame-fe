@@ -40,7 +40,7 @@ const LoginContextProvider = ({ children }: LoginContextTypes) => {
 
   useEffect(() => {
     const fetchUserInfo = async () => {
-      const response = await ApiHandler.getUserInfo("66844995bfa39222f11006c7");
+      const response = await ApiHandler.getUserInfo("66916299255e4f1e8cd54b6a");
       console.log(response);
     };
     let sessionUserInfo = sessionStorage.getItem("userInfo");

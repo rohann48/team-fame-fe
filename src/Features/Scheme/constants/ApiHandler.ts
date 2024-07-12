@@ -32,4 +32,18 @@ export const ApiHandler = {
       console.log(error);
     }
   },
+  postInvestment: async (
+    schemeId: string | null,
+    modifiedData: { [key: string]: any }
+  ) => {
+    try {
+      const response = await apiAuth.postApiwithoutAuth(
+        Resource.url.postInvestment(schemeId),
+        modifiedData
+      );
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };
