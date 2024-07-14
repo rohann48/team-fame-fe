@@ -3,7 +3,7 @@ import { LoginContextInitialState } from "../context/LoginContextTypes";
 export interface User {
   contactNo: string;
   emailId: string;
-  id: string;
+  _id: string;
   lastName: string;
   membership?: boolean;
   name: string;
@@ -11,6 +11,7 @@ export interface User {
   confirmPassword: string;
   referralCode?: string;
   role?: string;
+  goldSchemeId: string | null;
 }
 export type HeaderNavProps = {
   activeTab: string;
@@ -25,4 +26,5 @@ export type HeaderNavProps = {
   outsideClickUserProf: any;
   handleEditUserProfile: () => void;
   singleUserInfo: User;
+  logoutUser: (userId: string) => void;
 };

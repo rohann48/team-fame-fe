@@ -18,6 +18,7 @@ function LoginContainer({
   isLoginModalOpen,
   handleLoginModalToggle,
   handleSignUpModalToggle,
+  setUserInfo,
 }: LoginContainerTypes) {
   const [loginData, setLoginData] = useState({ ...initialData });
   const { setLoginInfo, loginInfo } = useContext(LoginContext);
@@ -50,6 +51,7 @@ function LoginContainer({
           isLoginModalOpen: false,
           isAuthenticated: true,
         });
+        setUserInfo(res.results);
         sessionStorage.setItem("userInfo", JSON.stringify(res.results));
       } catch (error) {
         NotificationManager.warning("Error Login", "", 2000);

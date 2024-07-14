@@ -17,6 +17,7 @@ function HeaderNavContainer() {
     userInfo,
     isEdit,
     setIsEdit,
+    setUserInfo,
   } = useContext(LoginContext);
   const { productInfo } = useContext(ShopContext);
   //state maintained for active tabs
@@ -65,13 +66,40 @@ function HeaderNavContainer() {
   //get user info
   useEffect(() => {
     const fetchUserInfo = async () => {
-      const response = await ApiHandler.getUserInfo("66207ae88e9fc4d0c4c5aa15");
+      const response = await ApiHandler.getUserInfo(userInfo._id);
       setSingleUserInfo({ ...response.results });
     };
-    if ("66207ae88e9fc4d0c4c5aa15") {
+
+    if (userInfo._id) {
       fetchUserInfo();
     }
-  }, []);
+  }, [userInfo._id]);
+
+  const logoutUser = async (userId: string) => {
+    try {
+      if (userId) {
+        const logoutResult = await ApiHandler.logoutUser();
+        if (logoutResult?.status) {
+          let href;
+          if (logoutResult?.redirect) href = logoutResult.redirect;
+          else href = "/";
+          sessionStorage.clear();
+          window.location.href = href;
+        }
+      } else {
+        setLoginInfo((prev) => {
+          return {
+            ...prev,
+            isLoginModalOpen: !prev.isLoginModalOpen,
+            isSignUpModalOpen: false,
+          };
+        });
+      }
+    } catch (error) {
+      // NotificationManager.warning(error.message, "", 2000);
+    }
+  };
+
   return (
     <>
       <HeaderNav
@@ -87,12 +115,14 @@ function HeaderNavContainer() {
         outsideClickUserProf={outsideClickUserProf}
         handleEditUserProfile={handleEditUserProfile}
         singleUserInfo={singleUserInfo}
+        logoutUser={logoutUser}
       />
       {loginInfo.isLoginModalOpen && (
         <LoginComponent
           isLoginModalOpen={loginInfo.isLoginModalOpen}
           handleLoginModalToggle={handleLoginModalToggle}
           handleSignUpModalToggle={handleSignUpModalToggle}
+          setUserInfo={setUserInfo}
         />
       )}
       {(loginInfo.isSignUpModalOpen || isEdit) && (

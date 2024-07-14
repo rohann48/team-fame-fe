@@ -44,6 +44,17 @@ function App() {
   //   }
   // };
 
+  useEffect(() => {
+    const checkUserInfo = async () => {
+      const data = await ApiHandler.userCheck();
+      if (data?.results?.userInfo) {
+        setUserData(data.results.userInfo);
+      }
+    };
+
+    checkUserInfo();
+  }, []);
+
   const onIdle = () => {
     // Close Modal Prompt
     // Do some idle action like log out your user
@@ -66,7 +77,7 @@ function App() {
   });
 
   return (
-    <LoginContextProvider>
+    <LoginContextProvider userData={userData}>
       <GlobalDataContextProvider>
         <div className="App">
           <div className="main-header-container">

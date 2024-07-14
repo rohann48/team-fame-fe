@@ -7,6 +7,8 @@ export const Resource = {
     registerUser: "/client/sign-up",
     authenticateUser: "/client/auth",
     getProductDetails: `/shop/product/list`,
+    logoutUser: "/client/auth/logout",
+    userCheck: "/client/auth/check",
     // forgotPassword: `/suppliers/forgot/password`,
     getEventAndNewsDetails: (id: string | null) => `/event/${id}`,
     getVideoById: (videoId: string | null) => `/video/${videoId}`,

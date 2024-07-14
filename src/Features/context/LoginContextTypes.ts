@@ -1,5 +1,6 @@
 export interface LoginContextTypes {
   children: React.ReactNode;
+  userData: any;
 }
 export interface LoginContextInitialState {
   loginInfo: { isLoginModalOpen: boolean; isSignUpModalOpen: boolean };

@@ -20,7 +20,7 @@ let initialState = {
 export const LoginContext = createContext<LoginContextInitialState>(
   {} as LoginContextInitialState
 );
-const LoginContextProvider = ({ children }: LoginContextTypes) => {
+const LoginContextProvider = ({ children, userData }: LoginContextTypes) => {
   const [loginInfo, setLoginInfo] = useState({ ...initialState });
   const [userInfo, setUserInfo] = useState<
     LoginContextInitialState["userInfo"]
@@ -39,17 +39,20 @@ const LoginContextProvider = ({ children }: LoginContextTypes) => {
   }, []);
 
   useEffect(() => {
-    const fetchUserInfo = async () => {
-      const response = await ApiHandler.getUserInfo("66916299255e4f1e8cd54b6a");
-      console.log(response);
-    };
-    let sessionUserInfo = sessionStorage.getItem("userInfo");
-    if (sessionUserInfo) {
-      const response = JSON.parse(sessionUserInfo);
-      console.log(response);
-      setUserInfo(response);
+    // const fetchUserInfo = async () => {
+    //   const response = await ApiHandler.getUserInfo("66916299255e4f1e8cd54b6a");
+    //   console.log(response);
+    // };
+    if (userData && userData._id) {
+      setUserInfo(userData);
+    } else {
+      let sessionUserInfo = sessionStorage.getItem("userInfo");
+      if (sessionUserInfo) {
+        const response = JSON.parse(sessionUserInfo);
+        setUserInfo(response);
+      }
     }
-    fetchUserInfo();
+    // fetchUserInfo();
   }, []);
 
   //sign up modak open

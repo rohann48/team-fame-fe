@@ -20,6 +20,7 @@ const HeaderNav = ({
   outsideClickUserProf,
   handleEditUserProfile,
   singleUserInfo,
+  logoutUser,
 }: HeaderNavProps) => {
   return (
     <div className="header-nav-container">
@@ -156,7 +157,12 @@ const HeaderNav = ({
                     Profile
                   </div>
                   <div className="user-logout-btn-cover">
-                    <button className="logout-btn">Log out</button>
+                    <button
+                      className="logout-btn"
+                      onClick={() => logoutUser(userInfo?._id)}
+                    >
+                      {userInfo?._id ? "Logout" : "Login"}
+                    </button>
                   </div>
                 </div>
               </div>

@@ -11,6 +11,14 @@ export const ApiHandler = {
   //   );
   //   return response.data;
   // },
+  userCheck: async () => {
+    try {
+      const response = await apiAuth.getApiwithoutAuth(Resource.url.userCheck);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
   getAboutUs: async () => {
     try {
       const response = await apiAuth.getApiwithoutAuth(Resource.url.getAboutUs);
@@ -122,11 +130,11 @@ export const ApiHandler = {
       console.log(error);
     }
   },
-  // //logout
-  // logoutUser: async () => {
-  //   const response = await apiAuth.getApiwithoutAuth(Resource.url.logout);
-  //   return response.data;
-  // },
+  //logout
+  logoutUser: async () => {
+    const response = await apiAuth.getApiwithoutAuth(Resource.url.logoutUser);
+    return response.data;
+  },
   // //forgot password
   // forgotPassword: async (modifiedData: { email: string }) => {
   //   const response = await apiAuth.postApiwithoutAuth(
