@@ -37,7 +37,7 @@ export const ApiHandler = {
     modifiedData: { [key: string]: any }
   ) => {
     try {
-      const response = await apiAuth.postApiwithoutAuth(
+      const response = await apiAuth.putApiwithoutAuth(
         Resource.url.postInvestment(schemeId),
         modifiedData
       );

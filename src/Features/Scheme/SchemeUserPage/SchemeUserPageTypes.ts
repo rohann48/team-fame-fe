@@ -16,4 +16,7 @@ export type SchemeUserPageTypes = {
   };
   userInfo: LoginContextInitialState["userInfo"];
   postInvestment: () => void;
+  handleInvestments: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleSelectMonth: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+  selectedMonth: string | undefined;
 };

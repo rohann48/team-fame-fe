@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="284" height="115" viewBox="0 0 284 115">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1.447" y1="3.07" x2="1.412" y2="0.129" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff0a5"/>
+      <stop offset="1" stop-color="#bfa062"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_9955" data-name="Group 9955" transform="translate(-9148 -1864)">
+    <rect id="Rectangle_5487" data-name="Rectangle 5487" width="284" height="115" transform="translate(9148 1864)" fill="#1c5d59"/>
+    <g id="XMLID_35_" transform="translate(9108.34 1719.65)">
+      <path id="XMLID_437_" d="M78.768,175.1l-2.845,9.766H63l6.433-9.766Z" transform="translate(0)" fill="url(#linear-gradient)"/>
+      <path id="XMLID_430_" d="M83.347,399.1l8.1,22.376L70.8,399.1Z" transform="translate(-7.386 -212.112)" fill="url(#linear-gradient)"/>
+      <path id="XMLID_402_" d="M573.61,399.1h12.472L565.5,421.455Z" transform="translate(-475.83 -212.112)" fill="url(#linear-gradient)"/>
+      <path id="XMLID_403_" d="M668.345,184.866,665.5,175.1h9.251l6.433,9.766Z" transform="translate(-570.523)" fill="url(#linear-gradient)"/>
+      <path id="XMLID_378_" d="M367.1,399.1l-7.7,21.2-.966,2.67-.971-2.675L349.8,399.1Z" transform="translate(-271.578 -212.112)" fill="url(#linear-gradient)"/>
+      <path id="XMLID_377_" d="M365.577,184.866H348.1l2.845-9.766h11.788Z" transform="translate(-269.969)" fill="url(#linear-gradient)"/>
+    </g>
+    <text id="SHREE_RAKSHA_JEWELLERS" data-name="SHREE RAKSHA 
+JEWELLERS" transform="translate(9253 1917)" fill="#fff" font-size="20" font-family="PalatinoLinotype-Roman, Palatino Linotype"><tspan x="0" y="0">SHREE RAKSHA </tspan><tspan x="0" y="24">JEWELLERS</tspan></text>
+    <text id="SINCE_1988" data-name="SINCE 1988" transform="translate(9195 1945.25)" fill="#fff" font-size="11" font-family="PalatinoLinotype-Roman, Palatino Linotype"><tspan x="-28.945" y="0">SINCE 1988</tspan></text>
+    <path id="Path_7663" data-name="Path 7663" d="M9211,1867v57.335" transform="translate(30 25.832)" fill="none" stroke="#cdb271" stroke-width="2"/>
+  </g>
+</svg>

@@ -211,55 +211,18 @@ const HomePage = ({
           <div className="home-sponser-cover">
             <div className="slider">
               <div className="slide-track">
-                <div className="slide">
-                  <img
-                    src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png"
-                    alt=""
-                  />
-                </div>
-                <div className="slide">
-                  <img
-                    src="https://cdn.freebiesupply.com/images/large/2x/starbucks-logo-black-and-white.png"
-                    alt=""
-                  />
-                </div>
-                <div className="slide">
-                  <img
-                    src="https://cdn.freebiesupply.com/logos/large/2x/general-electric-black-logo-png-transparent.png"
-                    alt=""
-                  />
-                </div>
-                <div className="slide">
-                  <img
-                    src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png"
-                    alt=""
-                  />
-                </div>
-                <div className="slide">
-                  <img
-                    src="https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-6-logo-png-transparent.png"
-                    alt=""
-                  />
-                </div>
-                <div className="slide">
-                  <img
-                    src="https://cdn.freebiesupply.com/logos/large/2x/hogwarts-logo-png-transparent.png"
-                    alt=""
-                  />
-                </div>
-                <div className="slide">
-                  <img
-                    src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png"
-                    alt=""
-                  />
-                </div>
-                <div className="slide">
-                  <img
-                    src="https://cdn.freebiesupply.com/images/large/2x/starbucks-logo-black-and-white.png"
-                    alt=""
-                  />
-                </div>
-                <div className="slide">
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map(
+                  (_, i) => (
+                    <div className="slide">
+                      <img
+                        src={i % 2 === 0 ? images.birlaLogo : images.jewLogo}
+                        alt=""
+                      />
+                    </div>
+                  )
+                )}
+
+                {/* <div className="slide">
                   <img
                     src="https://cdn.freebiesupply.com/logos/large/2x/general-electric-black-logo-png-transparent.png"
                     alt=""
@@ -319,11 +282,47 @@ const HomePage = ({
                     alt=""
                   />
                 </div>
+                <div className="slide">
+                  <img
+                    src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png"
+                    alt=""
+                  />
+                </div>
+                <div className="slide">
+                  <img
+                    src="https://cdn.freebiesupply.com/images/large/2x/starbucks-logo-black-and-white.png"
+                    alt=""
+                  />
+                </div>
+                <div className="slide">
+                  <img
+                    src="https://cdn.freebiesupply.com/logos/large/2x/general-electric-black-logo-png-transparent.png"
+                    alt=""
+                  />
+                </div>
+                <div className="slide">
+                  <img
+                    src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png"
+                    alt=""
+                  />
+                </div>
+                <div className="slide">
+                  <img
+                    src="https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-6-logo-png-transparent.png"
+                    alt=""
+                  />
+                </div>
+                <div className="slide">
+                  <img
+                    src="https://cdn.freebiesupply.com/logos/large/2x/hogwarts-logo-png-transparent.png"
+                    alt=""
+                  />
+                </div> */}
               </div>
             </div>
           </div>
 
-          <div className="home-videos-and-news-cover">
+          {/* <div className="home-videos-and-news-cover">
             <div className="heading">Videos</div>
             <div className="cards-cover">
               {allVideos?.slice(0, 3)?.map((videos, index) => (
@@ -350,7 +349,7 @@ const HomePage = ({
                 </div>
               )}
             </div>
-          </div>
+          </div> */}
           <div className="home-join-community-cover">
             <div className="cover-line"></div>
             <div className="join-now-cover">

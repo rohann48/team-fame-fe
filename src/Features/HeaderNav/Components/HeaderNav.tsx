@@ -77,7 +77,7 @@ const HeaderNav = ({
         >
           EVENTS/NEWS{" "}
         </NavLink>
-        <NavLink
+        {/* <NavLink
           to="videos"
           className={
             // ({ isActive }) => {
@@ -91,7 +91,7 @@ const HeaderNav = ({
           }}
         >
           VIDEOS
-        </NavLink>
+        </NavLink> */}
         <NavLink
           to="scheme"
           className={
@@ -170,7 +170,7 @@ const HeaderNav = ({
           </button>
         }
 
-        {
+        {userInfo.role === "admin" && (
           <NavLink to="config/about-us">
             <Tippy placement="bottom-start" content="Configuration">
               <img
@@ -181,7 +181,7 @@ const HeaderNav = ({
               />
             </Tippy>
           </NavLink>
-        }
+        )}
         {/* {!singleUserInfo.id && ( */}
 
         <button

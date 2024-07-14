@@ -5,6 +5,8 @@ import { ApiHandler } from "../../constants/ApiHandler";
 import { GlobalDataContext } from "../../../context/GlobalDataContext";
 import { useNavigate } from "react-router-dom";
 import { format } from "date-fns";
+import { NotificationManager } from "react-notifications";
+import { Notify } from "../../../Common/Notify/NotificationMessages";
 
 function SchemeJoinPageContainer() {
   const { handleSignUpModalToggle, userInfo } = useContext(LoginContext);
@@ -40,15 +42,23 @@ function SchemeJoinPageContainer() {
   const handleJoinScheme = async (id: string) => {
     const endDate = addMonthsToDate(new Date(), period);
     const formattedEndDate = format(endDate, "yyyy-MM-dd");
-    console.log(endDate);
-    let modifiedData = {
-      clientId: id,
-      period: period,
-      startDate: format(new Date(), "yyyy-MM-dd"),
-      endDate: formattedEndDate,
-    };
-    await ApiHandler.JoinScheme(modifiedData);
-    navigate(`users/${id}`);
+    if (userInfo.goldSchemeId) {
+      navigate(`users/${id}`);
+      return;
+    }
+    try {
+      let modifiedData = {
+        clientId: id,
+        period: period,
+        startDate: format(new Date(), "yyyy-MM-dd"),
+        endDate: formattedEndDate,
+      };
+      await ApiHandler.JoinScheme(modifiedData);
+      navigate(`users/${id}`);
+      NotificationManager.success(Notify.ADD, "", 2000);
+    } catch (err) {
+      NotificationManager.warning(err, "", 2000);
+    }
   };
   return (
     <SchemeJoinPage

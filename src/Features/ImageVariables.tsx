@@ -78,5 +78,7 @@ const images = {
   eventCard: require("./Assets/Images/eventCard.svg").default,
   videoBackGround: require("./Assets/Images/videoBackGround.svg").default,
   videoAdd: require("./Assets/Images/videoAdd.svg").default,
+  birlaLogo: require("./Assets/Images/birlaLogo.svg").default,
+  jewLogo: require("./Assets/Images/jewLogo.svg").default,
 };
 export default images;

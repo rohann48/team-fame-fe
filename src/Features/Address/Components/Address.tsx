@@ -86,6 +86,19 @@ function Address({ handleNavigateToOrderSuccess }: AddressTypes) {
               <span>0</span>
             </div>
           </div>
+          <div className="product-offer-cover ">
+            <div className="product-offer-text">
+              <div className="offer-text">
+                <span>Product offer info</span>
+              </div>
+              <input
+                type="text"
+                placeholder="Enter offer code here"
+                className="offer-input"
+              />
+            </div>
+            <button className="offer-btn">Apply Now</button>
+          </div>
           <div className="place-order-btn-cover">
             <button
               className="place-order-btn"

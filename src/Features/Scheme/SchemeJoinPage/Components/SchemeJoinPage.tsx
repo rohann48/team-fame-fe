@@ -126,7 +126,7 @@ function SchemeJoinPage({
               </label>
             </div>
             <div className="scheme-btn-cover">
-              {!userInfo._id ? (
+              {!userInfo.goldSchemeId ? (
                 <button
                   className="join-scheme-btn"
                   onClick={() => handleSignUpModalToggle()}

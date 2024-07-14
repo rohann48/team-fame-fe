@@ -12,9 +12,16 @@ function SchemeUserPage({
   schemeUserData,
   userInfo,
   postInvestment,
+  handleInvestments,
+  handleSelectMonth,
+  selectedMonth,
 }: SchemeUserPageTypes) {
   // Calculate total
-  const total = data.reduce((acc, item) => acc + item.quantity, 0);
+  const total = schemeUserData?.investments?.reduce(
+    (acc, item) => acc + item.amount,
+    0
+  );
+
   return (
     <div className="user-scheme-container">
       <div className="user-gold-scheme-img-one-cover"></div>
@@ -133,7 +140,7 @@ function SchemeUserPage({
                   ))}
                   <tr>
                     <td>Total</td>
-                    <td>{1000}</td>
+                    <td>{total}</td>
                   </tr>
                 </tbody>
               </table>
@@ -152,17 +159,28 @@ function SchemeUserPage({
                   type="text"
                   placeholder="Enter name"
                 />
-              </label>
-              <label className="scheme-payee-contact-label-cover">
-                <div className="scheme-payee-contact-number-text">
-                  Mobile Number:
-                </div>
-                <input
-                  className="scheme-payee-contact-number-input"
-                  type="contact"
-                  placeholder="Enter mobile number"
-                />
               </label> */}
+              <label className="scheme-payee-contact-label-cover">
+                <div className="scheme-payee-contact-number-text">Month:</div>
+                <select
+                  className="scheme-payee-contact-number-input"
+                  onChange={(e) => handleSelectMonth(e)}
+                  defaultValue={1}
+                  value={selectedMonth}
+                >
+                  <option value="" disabled>
+                    select month
+                  </option>
+                  {Array.from(
+                    { length: schemeUserData.period },
+                    (_, i) => i + 1
+                  ).map((month) => (
+                    <>
+                      <option key={month}>{month}</option>
+                    </>
+                  ))}
+                </select>
+              </label>
 
               <label className="scheme-payee-period-label-cover">
                 <div className="scheme-payee-period-text"> Amount:</div>
@@ -171,6 +189,7 @@ function SchemeUserPage({
                   placeholder="Please select period"
                   type="number"
                   onWheel={(e: any) => e.target.blur()}
+                  onChange={(e) => handleInvestments(e)}
                 />
               </label>
               <div className="payment-method-cover">

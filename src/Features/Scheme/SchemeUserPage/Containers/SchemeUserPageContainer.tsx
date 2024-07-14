@@ -4,12 +4,17 @@ import { useParams } from "react-router-dom";
 import { ApiHandler } from "../../constants/ApiHandler";
 import { SchemeUserPageTypes } from "../SchemeUserPageTypes";
 import { LoginContext } from "../../../context/LoginContext";
+import { useImmer } from "use-immer";
+import { Notify } from "../../../Common/Notify/NotificationMessages";
+import { NotificationManager } from "react-notifications";
 
 function SchemeUserPageContainer() {
   const { userId } = useParams() as { userId: string | null };
   const { userInfo } = useContext(LoginContext);
+  const [investmentAmount, setInvestmentAmount] = useState<null | number>(null);
+  const [selectedMonth, setSelectedMonth] = useState("");
 
-  const [schemeUserData, setSchemeUserData] = useState(
+  const [schemeUserData, setSchemeUserData] = useImmer(
     {} as SchemeUserPageTypes["schemeUserData"]
   );
   useEffect(() => {
@@ -17,18 +22,40 @@ function SchemeUserPageContainer() {
       // Fetch user info from API using userId
       const response = await ApiHandler.fetchGoldSchemeUserInfo(userId);
       console.log(response);
-      setSchemeUserData(response.results);
+      setSchemeUserData(response?.results);
     };
     if (userId) {
       fetchUserInfo();
     }
   }, [userId]);
-  console.log(userInfo, "sdsds");
+  console.log(schemeUserData, "sdsds");
+  const handleInvestments = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { valueAsNumber } = e.target;
+    setInvestmentAmount(valueAsNumber);
+  };
   const postInvestment = async () => {
-    try {
-      const modifiedData = {};
-      // const response = await ApiHandler.postInvestment(modifiedData);
-    } catch (err) {}
+    if (Number(selectedMonth) !== 0 && investmentAmount !== null) {
+      try {
+        const modifiedData = {
+          clientId: userInfo._id,
+          year: schemeUserData.period,
+          month: Number(selectedMonth),
+          date: new Date(),
+          amount: investmentAmount,
+        };
+        const response = await ApiHandler.postInvestment(
+          userInfo.goldSchemeId,
+          modifiedData
+        );
+        setSchemeUserData(response.results);
+        NotificationManager.success(Notify.ADD, "", 2000);
+      } catch (err) {}
+    } else {
+      NotificationManager.warning("Please fill all the fields", "", 2000);
+    }
+  };
+  const handleSelectMonth = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedMonth(e.target.value);
   };
 
   return (
@@ -36,6 +63,9 @@ function SchemeUserPageContainer() {
       schemeUserData={schemeUserData}
       userInfo={userInfo}
       postInvestment={postInvestment}
+      handleInvestments={handleInvestments}
+      handleSelectMonth={handleSelectMonth}
+      selectedMonth={selectedMonth}
     />
   );
 }
