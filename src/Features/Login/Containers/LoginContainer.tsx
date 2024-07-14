@@ -30,7 +30,6 @@ function LoginContainer({
     });
   };
   const authenticateUser = async () => {
-    debugger;
     if (!loginData.contactNo || !loginData.password) {
       return NotificationManager.warning(
         "Please fill all the fields",
