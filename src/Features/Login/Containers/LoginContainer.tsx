@@ -5,6 +5,7 @@ import { NotificationManager } from "react-notifications";
 import { ApiHandler } from "../../Constants/ApiHandler";
 import bcrypt from "bcryptjs";
 import { LoginContext } from "../../context/LoginContext";
+import { useNavigate } from "react-router-dom";
 
 const initialData = {
   contactNo: "",
@@ -22,6 +23,7 @@ function LoginContainer({
 }: LoginContainerTypes) {
   const [loginData, setLoginData] = useState({ ...initialData });
   const { setLoginInfo, loginInfo } = useContext(LoginContext);
+  const navigate = useNavigate();
   const handleOnChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setLoginData({
@@ -52,6 +54,9 @@ function LoginContainer({
         });
         setUserInfo(res.results);
         sessionStorage.setItem("userInfo", JSON.stringify(res.results));
+        if (!res.results.membership) {
+          navigate("/shop");
+        }
       } catch (error) {
         NotificationManager.warning("Error Login", "", 2000);
       }

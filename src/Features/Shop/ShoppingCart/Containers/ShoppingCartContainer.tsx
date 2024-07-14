@@ -1,18 +1,26 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import ShoppingCart from "../Components/ShoppingCart";
 import { ShopContext } from "../../../context/ShopContext/ShopContext";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { CommonTypes } from "../../../Common/CommonTypes";
 import { NotificationManager } from "react-notifications";
 import { ApiHandler } from "../../Constants/ApiHandler";
 import { LoginContext } from "../../../context/LoginContext";
 
 function ShoppingCartContainer() {
-  const { productInfo, setProductInfo, products } = useContext(ShopContext);
+  const {
+    productInfo,
+    setProductInfo,
+    products,
+    categoryData,
+    setProducts,
+    tempProducts,
+    setTempProducts,
+  } = useContext(ShopContext);
   const { userInfo } = useContext(LoginContext);
-
+  console.log("prod", products, tempProducts);
+  const [selectedCategory, setSelectedCategory] = useState("all");
   const navigate = useNavigate();
-
   //increment the product count
   const handleAddToCartIncrement = (
     index: number,
@@ -46,6 +54,16 @@ function ShoppingCartContainer() {
     navigate(`/shop/product/${prod._id}`);
   };
 
+  useEffect(() => {
+    if (userInfo?._id && !userInfo.membership) {
+      onSelectChange("books");
+      setSelectedCategory("books");
+    } else {
+      onSelectChange("all");
+      setSelectedCategory("all");
+    }
+  }, [userInfo]);
+
   const addToCart = async (prodId: string) => {
     const data = {
       clientId: userInfo._id,
@@ -54,11 +72,27 @@ function ShoppingCartContainer() {
     };
     await ApiHandler.addToCart(data);
   };
+
+  const onSelectChange = (category: string) => {
+    setSelectedCategory(category);
+    if (category !== "all") {
+      const newProduct = products.filter((ele) => ele.category === category);
+      setTempProducts([...newProduct]);
+    } else {
+      setProducts([...products]);
+      setTempProducts([...products]);
+    }
+  };
   return (
     <ShoppingCart
       handleAddToCartIncrement={handleAddToCartIncrement}
       handleNavigateProduct={handleNavigateProduct}
-      products={products}
+      products={tempProducts}
+      categoryData={categoryData}
+      onSelectChange={onSelectChange}
+      userInfo={userInfo}
+      selectedCategory={selectedCategory}
+      // filterVal={state?.filter || ""}
     />
   );
 }

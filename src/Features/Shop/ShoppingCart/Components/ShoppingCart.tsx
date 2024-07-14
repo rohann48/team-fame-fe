@@ -107,11 +107,17 @@ function ShoppingCart({
   handleAddToCartIncrement,
   handleNavigateProduct,
   products,
+  categoryData,
+  onSelectChange,
+  userInfo,
+  selectedCategory,
 }: ShoppingCartTypes) {
   return (
     <div className="shop-container">
       <div className="offer-banner">
-        OFFER: Buy any 5 products and get free lifetime membership!!!
+        {!userInfo?.membership
+          ? "OFFER: Register and buy a product and get lifetime membership!!!"
+          : null}
       </div>
       <div className="shop-img-cover">Store</div>
       <div className="shop-product-cover">
@@ -119,7 +125,25 @@ function ShoppingCart({
         <div className="shop-product-filter-and-cart-cover">
           <div className="filter-cover">
             <div className="sort-text">Sort By:</div>
-            <div className="sort-drop-down">Feat</div>
+            <div className="sort-drop-down">
+              {userInfo?.membership ? (
+                <select
+                  onChange={(e) => onSelectChange(e.target.value)}
+                  value={selectedCategory}
+                >
+                  <option value={"all"} key={"all"} selected>
+                    {"all"}
+                  </option>
+                  {categoryData.map((category) => (
+                    <option value={category} key={category}>
+                      {category}
+                    </option>
+                  ))}
+                </select>
+              ) : (
+                selectedCategory
+              )}
+            </div>
           </div>
           <div className="go-to-cart-btn">Go to Cart</div>
         </div>

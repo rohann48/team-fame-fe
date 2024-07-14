@@ -23,6 +23,7 @@ export interface LoginContextInitialState {
     password: "";
     confirmPassword: "";
     goldSchemeId: string;
+    membership: boolean;
   };
   isEdit: boolean;
   setIsEdit: React.Dispatch<React.SetStateAction<boolean>>;

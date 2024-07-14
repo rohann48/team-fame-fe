@@ -4,6 +4,17 @@ export interface ShopContextTypes {
   children: React.ReactNode;
 }
 
+interface productInfo {
+  product: Array<{
+    _id: string;
+    name: string;
+    category: string;
+    details: string;
+    price: number;
+    imageInfo: Array<{ name: String; Key: String; path: String; date: Date }>;
+  }>;
+}
+
 export interface ShoppingContextInitialState {
   productInfo: {
     cartBasket: {
@@ -16,13 +27,11 @@ export interface ShoppingContextInitialState {
     }[];
     catTotalAmount: number;
   };
-  products: Array<{
-    _id: string;
-    name: string;
-    category: string;
-    details: string;
-    price: number;
-    imageInfo: Array<{ name: String; Key: String; path: String; date: Date }>;
-  }>;
+  products: productInfo["product"];
   setProductInfo: Updater<ShoppingContextInitialState["productInfo"]>;
+  categoryData: Array<string>;
+  setProducts: any;
+  tempProducts: productInfo["product"];
+  setTempProducts: any;
+  setCategoryData: React.Dispatch<React.SetStateAction<Array<string>>>;
 }

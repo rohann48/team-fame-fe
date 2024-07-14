@@ -49,14 +49,17 @@ function ShopContainer() {
       form.append("price", productDetails.price);
       form.append("clientId", userInfo._id);
       // for (let i = 0; i < uploadedFiles.length; i++) {
-      form.append("fileToUpload", uploadedFiles[0]);
+      if (uploadedFiles.length) {
+        form.append("fileToUpload", uploadedFiles[0]);
+      }
       // }
       let response = await ApiHandler.postProductDetails(form);
       setUploadedFiles([]);
       // const response = await ApiHandler.postProductDetails(modifiedData);
-      setProducts([...products, ...response.results]);
+      setProducts([...products, response.results]);
       NotificationManager.success(Notify.ADD, "", 2000);
     } catch (err) {
+      console.log(err);
       NotificationManager.warning(Notify.DEFAULT, "", 2000);
     }
   };

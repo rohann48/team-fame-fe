@@ -43,16 +43,18 @@ const LoginContextProvider = ({ children, userData }: LoginContextTypes) => {
     //   const response = await ApiHandler.getUserInfo("66916299255e4f1e8cd54b6a");
     //   console.log(response);
     // };
-    let sessionUserInfo = sessionStorage.getItem("userInfo");
-    if (sessionUserInfo) {
-      console.log("sessionsss");
-      const response = JSON.parse(sessionUserInfo);
-      setUserInfo(response);
-    } else if (userData && userData._id) {
+    console.log("called");
+    if (userData && userData._id) {
       console.log("checkk");
       setUserInfo(userData);
+    } else {
+      let sessionUserInfo = sessionStorage.getItem("userInfo");
+      if (sessionUserInfo) {
+        console.log("sessionsss");
+        const response = JSON.parse(sessionUserInfo);
+        setUserInfo(response);
+      }
     }
-
     // fetchUserInfo();
   }, []);
 

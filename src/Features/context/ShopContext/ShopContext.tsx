@@ -19,10 +19,24 @@ const ShopContextProvider = ({ children }: ShopContextTypes) => {
   const [products, setProducts] = useState<
     ShoppingContextInitialState["products"]
   >([]);
+  const [tempProducts, setTempProducts] = useState<
+    ShoppingContextInitialState["products"]
+  >([]);
   const { userInfo } = useContext(LoginContext);
+  const [categoryData, setCategoryData] = useState<
+    ShoppingContextInitialState["categoryData"]
+  >([]);
+
   const getProductData = async () => {
     const response = await ApiHandler.getProductDetails();
     setProducts([...response?.results]);
+    setTempProducts([...response?.results]);
+    let catSet: Set<string> = new Set();
+    response.results.forEach((data: any) => {
+      catSet.add(data.category);
+    });
+    let categoryArr: Array<string> = Array.from(catSet);
+    setCategoryData(categoryArr);
   };
 
   const getCartDataByClientId = async () => {
@@ -57,8 +71,22 @@ const ShopContextProvider = ({ children }: ShopContextTypes) => {
       productInfo,
       setProductInfo,
       products,
+      categoryData,
+      setProducts,
+      tempProducts,
+      setTempProducts,
+      setCategoryData,
     }),
-    [productInfo, setProductInfo, products]
+    [
+      productInfo,
+      setProductInfo,
+      products,
+      categoryData,
+      setProducts,
+      tempProducts,
+      setTempProducts,
+      setCategoryData,
+    ]
   );
 
   return (
