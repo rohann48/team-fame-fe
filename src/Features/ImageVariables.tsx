@@ -80,5 +80,6 @@ const images = {
   videoAdd: require("./Assets/Images/videoAdd.svg").default,
   birlaLogo: require("./Assets/Images/birlaLogo.svg").default,
   jewLogo: require("./Assets/Images/jewLogo.svg").default,
+  userProfile: require("./Assets/Images/userprofile.svg").default,
 };
 export default images;

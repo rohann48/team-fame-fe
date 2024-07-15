@@ -90,7 +90,7 @@
   color: #000000;
   font-size: 16px;
   font-weight: 600;
-  gap: 5px;
+  gap: 8px;
 }
 .header-nav-container .login-register-container .cart-img-btn {
   all: unset !important;
@@ -115,8 +115,8 @@
 .header-nav-container .login-register-container .user-profile-cover {
   all: unset;
   background-color: #bd9255;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 22px;
   position: relative;
 }
 .header-nav-container .login-register-container .user-profile-cover .user-icon {

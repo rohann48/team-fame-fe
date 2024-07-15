@@ -125,16 +125,21 @@ const HeaderNav = ({
       </div>
       <div className="login-register-container">
         <button className="cart-img-btn" onClick={() => handleNavigateCart()}>
-          <img className="cart-img" src={images.cart} alt="cart" />
+          <Tippy placement="bottom-start" content="cart">
+            <img className="cart-img" src={images.cart} alt="cart" />
+          </Tippy>
           <span className="cart-count">{productInfo.cartBasket.length}</span>
         </button>
         {
           <button className="user-profile-cover" ref={outsideClickUserProf}>
-            <img
-              className="user-icon"
-              src={images.bellIcon}
-              onClick={() => handleToggleUserProfile()}
-            />
+            <Tippy placement="bottom-start" content="profile">
+              <img
+                className="user-icon"
+                src={images.userProfile}
+                alt="user-profile"
+                onClick={() => handleToggleUserProfile()}
+              />
+            </Tippy>
             {isUserProf && (
               <div className="user-profile-view-cover">
                 <div className="user-profile-view-inner-cover">
@@ -172,7 +177,7 @@ const HeaderNav = ({
 
         {userInfo.role === "admin" && (
           <NavLink to="config/about-us">
-            <Tippy placement="bottom-start" content="Configuration">
+            <Tippy placement="bottom-start" content="configuration">
               <img
                 className="config-icon"
                 // style={{ marginRight: "2px" }}
@@ -183,23 +188,31 @@ const HeaderNav = ({
           </NavLink>
         )}
         {/* {!singleUserInfo.id && ( */}
+        {!userInfo?._id ? (
+          <>
+            <button
+              className="nav-link-loggin-cover"
+              onClick={() => handleLoginModalToggle()}
+            >
+              LOGIN
+            </button>
+            <div>|</div>
 
-        <button
-          className="nav-link-loggin-cover"
-          onClick={() => handleLoginModalToggle()}
-        >
-          LOGIN
-        </button>
-        {/* )} */}
-        {/* <div>|</div> */}
-        {
+            <button
+              className="nav-link-register-cover"
+              onClick={() => handleSignUpModalToggle()}
+            >
+              REGISTER
+            </button>
+          </>
+        ) : (
           <button
-            className="nav-link-register-cover"
-            onClick={() => handleSignUpModalToggle()}
+            className="nav-link-loggin-cover"
+            onClick={() => logoutUser(userInfo?._id)}
           >
-            REGISTER
+            LOGOUT
           </button>
-        }
+        )}
       </div>
     </div>
   );
