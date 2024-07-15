@@ -23,5 +23,6 @@ export const Resource = {
       `/cart/product/cart?clientId=${clientId}&productId=${productId}`,
     EditUsers: (clientId: string) => `/client/${clientId}`,
     getUserInfo: (clientId: string) => `/client/clientId?clientId=${clientId}`,
+    postOrderDetails: `/order-details`,
   },
 };

@@ -1,7 +1,8 @@
 import images from "../../ImageVariables";
+import { OrderSuccessFullyTypes } from "../OrderSuccessFullyTypes";
 import "../SCSS/styles.css";
 
-function OrderedSuccessfully() {
+function OrderedSuccessfully({ handleNavigate }: OrderSuccessFullyTypes) {
   return (
     <div className="order-page-main-container">
       <div className="order-page-main-wrapper">
@@ -26,7 +27,9 @@ function OrderedSuccessfully() {
             </div>
           </div>
           <div className="back-store-cover">
-            <button className="back-store-btn">Back to Store</button>
+            <button className="back-store-btn" onClick={() => handleNavigate()}>
+              Back to Store
+            </button>
           </div>
         </div>
       </div>

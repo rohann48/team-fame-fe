@@ -205,4 +205,15 @@ export const ApiHandler = {
     //   console.log(error);
     // }
   },
+  postOrderDetails: async (modifiedData: {}) => {
+    try {
+      const response = await apiAuth.postApiwithoutAuth(
+        Resource.url.postOrderDetails,
+        modifiedData
+      );
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };

@@ -128,7 +128,7 @@ const HeaderNav = ({
           <Tippy placement="bottom-start" content="cart">
             <img className="cart-img" src={images.cart} alt="cart" />
           </Tippy>
-          <span className="cart-count">{productInfo.cartBasket.length}</span>
+          <span className="cart-count">{productInfo.cartBasket?.length}</span>
         </button>
         {
           <button className="user-profile-cover" ref={outsideClickUserProf}>

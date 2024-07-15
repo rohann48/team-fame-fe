@@ -4,10 +4,12 @@ import icons from "../../Assets/Icons/icons";
 import "../SCSS/styles.css";
 
 function Address({
-  handleNavigateToOrderSuccess,
   refferalCodeCheck,
   handleChange,
-}: AddressTypes) {
+  handleFormDataChange,
+  handleSubmitForm,
+  productInfo,
+}: Readonly<AddressTypes>) {
   return (
     <div className="address-container">
       <div className="address-back-btn-cover">
@@ -30,6 +32,8 @@ function Address({
                 type="text"
                 className="address-input-name"
                 placeholder="Enter your full name"
+                name="name"
+                onChange={(e) => handleFormDataChange(e)}
               />
             </div>
           </div>
@@ -40,6 +44,8 @@ function Address({
                 type="text"
                 className="address-input-mob-number"
                 placeholder="Enter your mobile number"
+                name="mobile"
+                onChange={(e) => handleFormDataChange(e)}
               />
             </div>
           </div>
@@ -50,17 +56,53 @@ function Address({
                 type="text"
                 className="address-input-pin-code"
                 placeholder="Enter your mobile number"
+                name="pincode"
+                onChange={(e) => handleFormDataChange(e)}
               />
             </div>
           </div>
           <div className="address-delivery-cover">
             <div className="address-delivery-text">Delivery address</div>
             <div className="address-delivery-input-cover">
-              <textarea
+              <input
                 className="address-input-delivery"
-                placeholder="Enter your mobile number"
+                placeholder="Enter your Address line 1"
+                name="addressLine1"
+                onChange={(e) => handleFormDataChange(e)}
               />
             </div>
+            <div className="address-delivery-input-cover">
+              <input
+                className="address-input-delivery"
+                placeholder="Enter your Address line 2"
+                name="addressLine2"
+                onChange={(e) => handleFormDataChange(e)}
+              />
+            </div>
+            <div className="address-delivery-input-cover">
+              <input
+                className="address-input-delivery"
+                placeholder="Enter your Address line 3"
+                name="addressLine3"
+                onChange={(e) => handleFormDataChange(e)}
+              />
+            </div>
+            {/* <div className="address-delivery-input-cover">
+              <input
+                className="address-input-delivery"
+                placeholder="Enter your Address landmark"
+                name="landmark"
+                onChange={(e) => handleFormDataChange(e)}
+              />
+            </div>
+            <div className="address-delivery-input-cover">
+              <input
+                className="address-input-delivery"
+                placeholder="Enter your state"
+                name="state"
+                onChange={(e) => handleFormDataChange(e)}
+              />
+            </div> */}
           </div>
           <div className="address-payment-method-cover">
             <div className="address-payment-method-text-cover">
@@ -69,7 +111,11 @@ function Address({
             </div>
             <div className="payment-mode-cover">
               <label>Cash on delivery</label>
-              <input type="radio" />
+              <input
+                type="radio"
+                name="paymentMode"
+                onChange={(e) => handleFormDataChange(e)}
+              />
             </div>
             <div></div>
           </div>
@@ -79,7 +125,7 @@ function Address({
             <div className="summery-text">YOUR ORDER SUMMARY</div>
             <div className="sub-total-text">
               <span>Subtotal (inclusive of all taxes)</span>
-              <span>2000</span>
+              <span>{productInfo.catTotalAmount}</span>
             </div>
             <div className="shipping-text">
               <span>Shipping</span>
@@ -109,7 +155,7 @@ function Address({
           <div className="place-order-btn-cover">
             <button
               className="place-order-btn"
-              onClick={() => handleNavigateToOrderSuccess()}
+              onClick={() => handleSubmitForm()}
             >
               PLACE ORDER
             </button>
