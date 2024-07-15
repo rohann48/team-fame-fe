@@ -3,7 +3,11 @@ import { AddressTypes } from "../AddressTypes";
 import icons from "../../Assets/Icons/icons";
 import "../SCSS/styles.css";
 
-function Address({ handleNavigateToOrderSuccess }: AddressTypes) {
+function Address({
+  handleNavigateToOrderSuccess,
+  refferalCodeCheck,
+  handleChange,
+}: AddressTypes) {
   return (
     <div className="address-container">
       <div className="address-back-btn-cover">
@@ -93,11 +97,14 @@ function Address({ handleNavigateToOrderSuccess }: AddressTypes) {
               </div>
               <input
                 type="text"
-                placeholder="Enter offer code here"
+                placeholder="Enter refferal code here"
                 className="offer-input"
+                onChange={(e) => handleChange(e.target.value)}
               />
             </div>
-            <button className="offer-btn">Apply Now</button>
+            <button className="offer-btn" onClick={() => refferalCodeCheck()}>
+              Apply Now
+            </button>
           </div>
           <div className="place-order-btn-cover">
             <button

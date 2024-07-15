@@ -9,6 +9,8 @@ export const Resource = {
     getProductDetails: `/shop/product/list`,
     logoutUser: "/client/auth/logout",
     userCheck: "/client/auth/check",
+    getRefferalCodeList: "/shop/offer-code/list",
+    validateRefferalCode: "/shop/offer-code/validate/code",
     // forgotPassword: `/suppliers/forgot/password`,
     getEventAndNewsDetails: (id: string | null) => `/event/${id}`,
     getVideoById: (videoId: string | null) => `/video/${videoId}`,

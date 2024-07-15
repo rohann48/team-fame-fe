@@ -182,4 +182,27 @@ export const ApiHandler = {
       console.log(error);
     }
   },
+
+  getRefferalCodeList: async () => {
+    try {
+      const response = await apiAuth.getApiwithoutAuth(
+        Resource.url.getRefferalCodeList
+      );
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
+  validateRefferalCode: async (data: any) => {
+    // try {
+    const response = await apiAuth.postApiwithoutAuth(
+      Resource.url.validateRefferalCode,
+      data
+    );
+    return response.data;
+    // } catch (error) {
+    //   console.log(error);
+    // }
+  },
 };

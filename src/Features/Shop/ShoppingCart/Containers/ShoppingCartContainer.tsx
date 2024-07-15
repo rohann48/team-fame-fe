@@ -55,14 +55,12 @@ function ShoppingCartContainer() {
   };
 
   useEffect(() => {
-    if (userInfo?._id && !userInfo.membership) {
+    if (userInfo?._id && userInfo.membership === false) {
       onSelectChange("books");
-      setSelectedCategory("books");
     } else {
-      onSelectChange("all");
       setSelectedCategory("all");
     }
-  }, [userInfo]);
+  }, [products]);
 
   const addToCart = async (prodId: string) => {
     const data = {
@@ -92,7 +90,6 @@ function ShoppingCartContainer() {
       onSelectChange={onSelectChange}
       userInfo={userInfo}
       selectedCategory={selectedCategory}
-      // filterVal={state?.filter || ""}
     />
   );
 }
