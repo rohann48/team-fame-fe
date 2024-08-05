@@ -94,49 +94,51 @@ const HomePage = ({
         <div className="home-events-cover">
           <div className="event-title">Upcoming Events</div>
           <div className="cards-cover">
-            {eventData?.slice(0, 3)?.map((event) => {
-              return (
-                <div className="cards" key={event._id}>
-                  <div className="card-left-cover">
-                    <img
-                      src={images.cardLabelSide}
-                      alt="cardLabelSide"
-                      className="card-label-side-img"
-                    />
-                  </div>
-                  <div
-                    className="card-right-cover"
-                    onClick={() => handleNavigateEventCard(event._id)}
-                  >
-                    <div className="day">TOMORROW</div>
-                    <div className="marathon-img-cover">
+            {eventData?.length > 0 &&
+              eventData?.slice(0, 3)?.map((event) => {
+                return (
+                  <div className="cards" key={event._id}>
+                    <div className="card-left-cover">
                       <img
-                        src={images.logoBackground}
-                        className="marathon-img"
+                        src={images.cardLabelSide}
+                        alt="cardLabelSide"
+                        className="card-label-side-img"
                       />
                     </div>
-                    <div className="marathon-header">{event.title}</div>
-                    <div className="date-cover">
-                      <span className="date-icon">{icons.date}</span>
-                      <span className="date">
-                        {event && format(parseISO(event?.date), "dd-MMM-yyyy")}
-                      </span>
-                    </div>
-                    <div className="time-cover">
-                      <span className="time-icon">{icons.clock}</span>
-                      <span className="time">{event.time} AM</span>
-                    </div>
-                    <div className="location-cover">
-                      <span className="location-icon">{icons.location}</span>
-                      <span className="location">{event.location}</span>
-                    </div>{" "}
-                    <div className="contact-us-cover">
-                      <button className="contact-us-btn">Contact us</button>
+                    <div
+                      className="card-right-cover"
+                      onClick={() => handleNavigateEventCard(event._id)}
+                    >
+                      <div className="day">TOMORROW</div>
+                      <div className="marathon-img-cover">
+                        <img
+                          src={images.logoBackground}
+                          className="marathon-img"
+                        />
+                      </div>
+                      <div className="marathon-header">{event.title}</div>
+                      <div className="date-cover">
+                        <span className="date-icon">{icons.date}</span>
+                        <span className="date">
+                          {event &&
+                            format(parseISO(event?.date), "dd-MMM-yyyy")}
+                        </span>
+                      </div>
+                      <div className="time-cover">
+                        <span className="time-icon">{icons.clock}</span>
+                        <span className="time">{event.time} AM</span>
+                      </div>
+                      <div className="location-cover">
+                        <span className="location-icon">{icons.location}</span>
+                        <span className="location">{event.location}</span>
+                      </div>{" "}
+                      <div className="contact-us-cover">
+                        <button className="contact-us-btn">Contact us</button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
             {/* <div className="event-mom-logo-cover">
               <img src={images.eventMom} alt="event" />
             </div> */}
@@ -171,43 +173,45 @@ const HomePage = ({
             <div className="vission-header">Vission</div>
             <p className="vission-description">तमसो मा ज्योतिर्गमय</p>
           </div>
-          <div className="home-testimonial-cover">
-            <div
-              className="testimonial-container"
-              key={testimonialData[currentIndex]?._id}
-            >
-              <div className="testimonial-content">
-                <img
-                  src={images.testimonial}
-                  alt={"testimonial"}
-                  className="testimonial-image"
-                />
-                <div className="testimonial-text">
-                  <p>{testimonialData[currentIndex]?.name}</p>
+          {testimonialData?.length > 0 && (
+            <div className="home-testimonial-cover">
+              <div
+                className="testimonial-container"
+                key={testimonialData[currentIndex]?._id}
+              >
+                <div className="testimonial-content">
+                  <img
+                    src={images.testimonial}
+                    alt={"testimonial"}
+                    className="testimonial-image"
+                  />
+                  <div className="testimonial-text">
+                    <p>{testimonialData[currentIndex]?.name}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="testimonial-navigation">
-                <div className="testimonial-author">
-                  <h3>{testimonialData[currentIndex]?.about}</h3>
-                  <p>{testimonialData[currentIndex]?.achievement}</p>
-                </div>
-                <div className="action-btn-cover">
-                  <button
-                    className="nav-button"
-                    onClick={() => goToPreviousTestimonial()}
-                  >
-                    {"<"}
-                  </button>
-                  <button
-                    className="nav-button"
-                    onClick={() => goToNextTestimonial()}
-                  >
-                    {">"}
-                  </button>
+                <div className="testimonial-navigation">
+                  <div className="testimonial-author">
+                    <h3>{testimonialData[currentIndex]?.about}</h3>
+                    <p>{testimonialData[currentIndex]?.achievement}</p>
+                  </div>
+                  <div className="action-btn-cover">
+                    <button
+                      className="nav-button"
+                      onClick={() => goToPreviousTestimonial()}
+                    >
+                      {"<"}
+                    </button>
+                    <button
+                      className="nav-button"
+                      onClick={() => goToNextTestimonial()}
+                    >
+                      {">"}
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          )}
           <div className="home-sponser-cover">
             <div className="slider">
               <div className="slide-track">
