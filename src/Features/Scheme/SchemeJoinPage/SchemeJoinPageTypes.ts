@@ -5,4 +5,5 @@ export type SchemeJoinPageTypes = {
   userInfo: LoginContextInitialState["userInfo"];
   handleJoinScheme: (id: string) => void;
   handleSelectPeriod: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+  handleLoginModalToggle: () => void;
 };

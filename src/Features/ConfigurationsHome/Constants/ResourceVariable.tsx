@@ -11,5 +11,7 @@ export const Resource = {
     postVideoInfo: `/video`,
     deleteProductDetails: (docId: string, fileKey: string) =>
       `/shop/product/delete?docId=${docId}&fileKey=${fileKey}`,
+    getSchemeDetails: (clientId: string) =>
+      `/gold-scheme/all-scheme?clientId=${clientId}`,
   },
 };
