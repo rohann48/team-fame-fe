@@ -8,6 +8,7 @@ function SchemeJoinPage({
   userInfo,
   handleSelectPeriod,
   handleJoinScheme,
+  handleLoginModalToggle,
 }: Readonly<SchemeJoinPageTypes>) {
   return (
     <div className="scheme-container">
@@ -129,7 +130,11 @@ function SchemeJoinPage({
               {!userInfo.goldSchemeId ? (
                 <button
                   className="join-scheme-btn"
-                  onClick={() => handleSignUpModalToggle()}
+                  onClick={() =>
+                    userInfo._id
+                      ? handleLoginModalToggle()
+                      : handleSignUpModalToggle()
+                  }
                 >
                   Join Now
                 </button>

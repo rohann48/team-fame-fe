@@ -102,4 +102,10 @@ export const ApiHandler = {
     );
     return response.data;
   },
+  getSchemeDetails: async (clientId: string) => {
+    const response = await apiAuth.getApiwithoutAuth(
+      Resource.url.getSchemeDetails(clientId)
+    );
+    return response.data;
+  },
 };
