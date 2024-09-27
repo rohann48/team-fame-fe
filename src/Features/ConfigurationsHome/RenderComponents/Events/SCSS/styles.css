@@ -3,41 +3,27 @@
   height: 100%;
 }
 .events-container .add-event-cover {
-  height: 50%;
+  height: 55%;
+  padding: 20px;
 }
-.events-container .add-event-cover .add-event-inner-cover {
-  width: 100%;
-  height: 100%;
-  padding: 20px 0 0 20px;
+.events-container .add-event-cover .add-event-inner-cover .event-header,
+.events-container .add-event-cover .add-event-inner-cover .add-event-header {
+  color: #bd9255;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 .events-container .add-event-cover .add-event-inner-cover .event-header {
-  width: 100%;
-  height: 10%;
-  color: #bd9255;
-  font-size: 16px;
-  font-weight: 500;
   text-transform: uppercase;
 }
-.events-container .add-event-cover .add-event-inner-cover .add-event-header {
-  width: 100%;
-  height: 10%;
-  color: #bd9255;
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: capitalize;
-}
 .events-container .add-event-cover .add-event-inner-cover .event-input-field-cover {
-  width: 100%;
-  height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: calc(100% - 60px);
 }
 .events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .event-input-field-img-cover {
   width: 25%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,6 +31,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1rem;
   padding-top: 2rem;
 }
@@ -54,9 +43,7 @@
   border-radius: 50%;
   overflow: hidden;
   position: relative;
-  background-image: url("../../../../Assets/Images/guestUser.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("../../../../Assets/Images/guestUser.svg") center no-repeat;
 }
 .events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .event-input-field-img-cover .event-logo-upload-img .file {
   position: absolute;
@@ -74,45 +61,33 @@
   z-index: 1;
 }
 .events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .event-input-field-img-cover .events-btn-cover {
-  height: 8%;
-  margin-top: 1%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 3%;
+  gap: 10px;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .event-input-field-img-cover .events-btn-cover .cancel {
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .event-input-field-img-cover .events-btn-cover button {
   all: unset;
   text-align: center;
   cursor: pointer;
-  background: none;
   border-radius: 4px;
   width: 92px;
   height: 40px;
+  font-size: 14px;
+}
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .event-input-field-img-cover .events-btn-cover button.cancel {
   color: #2b2b2b;
   border: 1px solid #2b2b2b;
-  font-size: 14px;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .event-input-field-img-cover .events-btn-cover .save {
-  all: unset;
-  text-align: center;
-  cursor: pointer;
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .event-input-field-img-cover .events-btn-cover button.save {
   background-color: #2b2b2b;
-  border-radius: 4px;
-  width: 92px;
-  height: 40px;
   color: #ffffff;
   border: 1px solid #2b2b2b;
-  font-size: 14px;
 }
 .events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover {
   width: 75%;
   height: 100%;
-  padding-top: 2rem;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover::-webkit-scrollbar {
   width: 6px;
@@ -121,211 +96,113 @@
 .events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover::-webkit-scrollbar-thumb {
   background: #bd9255;
   border-radius: 5px;
-  overflow: hidden;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-name-cover {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-name-cover .event-label-cover {
-  margin-bottom: 15px;
-  font-weight: 500;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 16px;
-  color: #bd9255;
-  gap: 5px;
-}
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-name-cover .event-label-cover .event-name-input {
-  all: unset;
-  border: 1px solid #bd9255;
-  width: 569px;
-  height: 40px;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: 400;
-  padding: 5px;
-}
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-name-cover .event-date-cover {
-  margin-bottom: 15px;
-  font-weight: 500;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 16px;
-  color: #bd9255;
-  margin-left: 2rem;
-  gap: 5px;
-}
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-name-cover .event-date-cover .event-date-input {
-  all: unset;
-  border: 1px solid #bd9255;
-  width: 160px;
-  height: 40px;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: 400;
-  padding: 5px;
-}
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-name-cover,
 .events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-title-cover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-title-cover .event-label-cover {
+  gap: 2rem;
   margin-bottom: 15px;
-  font-weight: 500;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 16px;
-  color: #bd9255;
-  gap: 5px;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-title-cover .event-label-cover .event-title-input {
-  all: unset;
-  border: 1px solid #bd9255;
-  width: 569px;
-  height: 40px;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: 400;
-  padding: 5px;
-}
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-name-cover .event-label-cover,
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-name-cover .event-date-cover,
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-name-cover .event-time-cover,
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-title-cover .event-label-cover,
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-title-cover .event-date-cover,
 .events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-title-cover .event-time-cover {
-  margin-bottom: 15px;
-  font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 20rem;
-  font-size: 16px;
-  color: #bd9255;
-  margin-left: 2rem;
   gap: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #bd9255;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-title-cover .event-time-cover .event-time-input {
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-name-cover .event-label-cover input,
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-name-cover .event-date-cover input,
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-name-cover .event-time-cover input,
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-title-cover .event-label-cover input,
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-title-cover .event-date-cover input,
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-title-cover .event-time-cover input {
   all: unset;
   border: 1px solid #bd9255;
-  width: 160px;
   height: 40px;
   border-radius: 5px;
   font-size: 14px;
   font-weight: 400;
   padding: 5px;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-location-cover {
-  margin-bottom: 15px;
-  font-weight: 500;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 16px;
-  color: #bd9255;
-  gap: 5px;
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-name-cover .event-label-cover input,
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-title-cover .event-label-cover input {
+  width: 569px;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-location-cover .event-location-text-area {
-  all: unset;
-  border: 1px solid #bd9255;
-  width: 571px;
-  height: 75px;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: 400;
-  padding: 5px;
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-name-cover .event-date-cover input,
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-name-cover .event-time-cover input,
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-title-cover .event-date-cover input,
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-title-cover .event-time-cover input {
+  width: 160px;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-location-cover .event-location-text-area::-webkit-scrollbar {
-  width: 6px;
-  background: transparent;
-}
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-location-cover .event-location-text-area::-webkit-scrollbar-thumb {
-  background: #bd9255;
-  border-radius: 5px;
-  overflow: hidden;
-}
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-location-cover,
 .events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-description-cover {
   margin-bottom: 15px;
-  font-weight: 500;
+}
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-location-cover label,
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-description-cover label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 16px;
-  color: #bd9255;
   gap: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #bd9255;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-description-cover .event-description-text-area {
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-location-cover label textarea,
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-description-cover label textarea {
   all: unset;
   border: 1px solid #bd9255;
-  width: 760px;
-  height: 98px;
   border-radius: 5px;
   font-size: 14px;
   font-weight: 400;
   padding: 5px;
+  resize: vertical;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-description-cover .event-description-text-area::-webkit-scrollbar {
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-location-cover label textarea::-webkit-scrollbar,
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-description-cover label textarea::-webkit-scrollbar {
   width: 6px;
   background: transparent;
 }
-.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-description-cover .event-description-text-area::-webkit-scrollbar-thumb {
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-location-cover label textarea::-webkit-scrollbar-thumb,
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-description-cover label textarea::-webkit-scrollbar-thumb {
   background: #bd9255;
   border-radius: 5px;
-  overflow: hidden;
+}
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-location-cover textarea {
+  width: 571px;
+  height: 75px;
+}
+.events-container .add-event-cover .add-event-inner-cover .event-input-field-cover .events-input-filed-cover .event-description-cover textarea {
+  width: 760px;
+  height: 98px;
 }
 .events-container .events-cards-cover {
-  height: 50%;
-  padding: 20px 0 0 20px;
+  height: 25%;
+  padding: 20px;
   border-top: 1px solid #bd9255;
+}
+.events-container .events-cards-cover .cards-event-header {
+  color: #bd9255;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 .events-container .events-cards-cover .cards-flex {
   display: -webkit-box;
@@ -333,43 +210,33 @@
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-}
-.events-container .events-cards-cover .cards-event-header {
-  width: 100%;
-  height: 2rem;
-  color: #bd9255;
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: capitalize;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
 }
 .events-container .events-cards-cover .cards {
   width: 350px;
-  background-color: #000000;
   height: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border-radius: 5px;
+  overflow: hidden;
+  background-color: #000000;
 }
 .events-container .events-cards-cover .cards .card-left {
   width: 7%;
-  background-image: url("../../../../Assets//Images/cardLabelSide.svg");
+  background-image: url("../../../../Assets/Images/cardLabelSide.svg");
 }
 .events-container .events-cards-cover .cards .card-right {
   width: 93%;
-}
-.events-container .events-cards-cover .cards .card-right .card-right-inner-cover {
-  width: 100%;
-  height: 100%;
   padding: 3%;
 }
 .events-container .events-cards-cover .cards .card-right .card-right-inner-cover .card-right-header {
-  height: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-bottom: 10px;
 }
 .events-container .events-cards-cover .cards .card-right .card-right-inner-cover .card-right-header .header-text {
+  display: inline-block;
   font-size: 14px;
   font-weight: 500;
   background-color: #bd9255;
@@ -381,61 +248,62 @@
   width: 100%;
   height: 50%;
   overflow: hidden;
+  margin-bottom: 10px;
 }
 .events-container .events-cards-cover .cards .card-right .card-right-inner-cover .card-img-cover .card-event-img {
-  aspect-ratio: 3/2;
-  -o-object-fit: contain;
-     object-fit: contain;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.events-container .events-cards-cover .cards .card-right .card-right-inner-cover .card-event-title {
-  height: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 14px;
-  font-weight: 500;
-  color: white;
-  text-transform: uppercase;
-}
-.events-container .events-cards-cover .cards .card-right .card-right-inner-cover .card-event-date {
-  height: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 14px;
-  font-weight: 500;
-  color: white;
-  text-transform: uppercase;
-}
-.events-container .events-cards-cover .cards .card-right .card-right-inner-cover .card-event-time {
-  height: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 14px;
-  font-weight: 500;
-  color: white;
-  text-transform: uppercase;
-}
+.events-container .events-cards-cover .cards .card-right .card-right-inner-cover .card-event-title,
+.events-container .events-cards-cover .cards .card-right .card-right-inner-cover .card-event-date,
+.events-container .events-cards-cover .cards .card-right .card-right-inner-cover .card-event-time,
 .events-container .events-cards-cover .cards .card-right .card-right-inner-cover .card-event-location {
-  height: 10%;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 14px;
-  font-weight: 500;
+}
+.events-container .events-cards-cover .cards .card-right .card-right-inner-cover .card-event-title svg,
+.events-container .events-cards-cover .cards .card-right .card-right-inner-cover .card-event-date svg,
+.events-container .events-cards-cover .cards .card-right .card-right-inner-cover .card-event-time svg,
+.events-container .events-cards-cover .cards .card-right .card-right-inner-cover .card-event-location svg {
+  margin-right: 5px;
+}
+.events-container .pagination-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+.events-container .pagination-controls .pagination-button {
+  all: unset;
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: #bd9255;
   color: white;
-  text-transform: uppercase;
+  border-radius: 4px;
+  margin: 0 10px;
+}
+.events-container .pagination-controls .pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.events-container .pagination-controls .page-indicator {
+  font-size: 14px;
+  color: #bd9255;
 }/*# sourceMappingURL=styles.css.map */

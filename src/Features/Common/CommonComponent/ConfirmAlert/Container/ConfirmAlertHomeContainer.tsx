@@ -1,9 +1,9 @@
 import ConfirmAlertHome from "../Component/ConfirmAlertHome";
-import { ConfirmAlerHometTypes } from "../ConfirmAlerHometTypes";
+import { ConfirmAlertHomeTypes } from "../ConfirmAlerHometTypes";
 
 function ConfirmAlertHomeContainer({
   confirmParameters,
-}: ConfirmAlerHometTypes) {
+}: ConfirmAlertHomeTypes) {
   return <>{ConfirmAlertHome({ confirmParameters })}</>;
 }
 

@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import icons from "../../../../Assets/Icons/icons";
 import images from "../../../../ImageVariables";
 import { TestimonialComponentProps } from "../TestimonialTypes";
@@ -9,6 +10,24 @@ function Testimonial({
   handleSave,
   eventData,
 }: TestimonialComponentProps) {
+  const [currentPage, setCurrentPage] = useState(0);
+  const testimonialsPerPage = 3;
+
+  const pageCount = Math.ceil(eventData.length / testimonialsPerPage);
+
+  const displayedTestimonials = eventData.slice(
+    currentPage * testimonialsPerPage,
+    (currentPage + 1) * testimonialsPerPage
+  );
+
+  const handleNext = () => {
+    setCurrentPage((prevPage) => Math.min(prevPage + 1, pageCount - 1));
+  };
+
+  const handlePrevious = () => {
+    setCurrentPage((prevPage) => Math.max(prevPage - 1, 0));
+  };
+
   return (
     <div className="testimonial-container">
       <div className="add-testimonial-cover">
@@ -41,15 +60,6 @@ function Testimonial({
                     value={testimonialForms?.name}
                   />
                 </label>
-                {/* <label className="testimonial-date-cover">
-                  <div className="testimonial-date">testimonial Date</div>
-                  <input
-                    className="testimonial-date-input"
-                    type="date"
-                    onChange={(e) => handleChangeInputs(e, "date")}
-                    value={testimonialForms.date}
-                  />
-                </label> */}
                 <label className="testimonial-achievement-cover">
                   <div className="testimonial-text">
                     Person role/ achievement
@@ -79,9 +89,9 @@ function Testimonial({
       <div className="testimonial-cards-cover">
         <div className="cards-testimonial-header">All Testimonials</div>
         <div className="cards-flex">
-          {eventData?.map((testimonial: any) => {
+          {displayedTestimonials.map((testimonial: any, index: number) => {
             return (
-              <div className="cards">
+              <div className="cards" key={index}>
                 <div className="card-left"></div>
                 <div className="card-right">
                   <div className="card-right-inner-cover">
@@ -112,6 +122,25 @@ function Testimonial({
               </div>
             );
           })}
+        </div>
+        <div className="pagination-controls">
+          <button
+            className="pagination-button"
+            onClick={handlePrevious}
+            disabled={currentPage === 0}
+          >
+            Previous
+          </button>
+          <span className="page-indicator">
+            Page {currentPage + 1} of {pageCount}
+          </span>
+          <button
+            className="pagination-button"
+            onClick={handleNext}
+            disabled={currentPage === pageCount - 1}
+          >
+            Next
+          </button>
         </div>
       </div>
     </div>

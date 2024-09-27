@@ -1,14 +1,16 @@
+import React from "react";
 import icons from "../../../../Assets/Icons/icons";
 import images from "../../../../ImageVariables";
-import { ShopComponentProps } from "../shopTypes";
 import "../SCSS/styles.css";
+import { ShopComponentProps } from "../shopTypes";
 
-function Shop({
+const Shop = ({
   handleChangeInputs,
   productDetails,
   handleSave,
   products,
-}: ShopComponentProps) {
+  confirmDeleteThreadFile,
+}: ShopComponentProps) => {
   return (
     <div className="products-container">
       <div className="add-product-cover">
@@ -29,7 +31,7 @@ function Shop({
               </div>
               <div className="products-btn-cover">
                 <button className="cancel">Cancel</button>
-                <button className="save" onClick={() => handleSave()}>
+                <button className="save" onClick={handleSave}>
                   SAVE
                 </button>
               </div>
@@ -42,25 +44,16 @@ function Shop({
                     className="product-name-input"
                     type="text"
                     onChange={(e) => handleChangeInputs(e, "name")}
-                    value={productDetails?.name}
+                    value={productDetails?.name || ""}
                   />
                 </label>
-                {/* <label className="product-date-cover">
-                  <div className="product-date">product Date</div>
-                  <input
-                    className="product-date-input"
-                    type="date"
-                    onChange={(e) => handleChangeInputs(e, "date")}
-                    value={productForms.date}
-                  />
-                </label> */}
                 <label className="product-achievement-cover">
                   <div className="product-text">Category</div>
                   <input
                     className="product-title-input"
                     type="text"
                     onChange={(e) => handleChangeInputs(e, "category")}
-                    value={productDetails.category}
+                    value={productDetails?.category || ""}
                   />
                 </label>
               </div>
@@ -71,17 +64,17 @@ function Shop({
                     className="product-amount-input"
                     type="text"
                     onChange={(e) => handleChangeInputs(e, "price")}
-                    value={productDetails.price}
+                    value={productDetails?.price || ""}
                   />
                 </label>
               </div>
               <div className="product-description-cover">
-                <label className="product-description-cover">
+                <label>
                   <div className="product-description">Description</div>
                   <textarea
                     className="product-description-text-area"
                     onChange={(e) => handleChangeInputs(e, "details")}
-                    value={productDetails.details}
+                    value={productDetails?.details || ""}
                   />
                 </label>
               </div>
@@ -91,35 +84,67 @@ function Shop({
       </div>
       <div className="products-cards-cover">
         <div className="cards-product-header">All Products</div>
-        <div className="">
-          <table width={"100%"}>
+        <div className="table-container">
+          <table>
             <thead>
               <tr>
                 <th>Category</th>
                 <th>Name</th>
                 <th>Description</th>
                 <th>Price</th>
+                <th>Images</th>
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody>
-              {products?.map((product: any) => {
-                return (
-                  <tr>
-                    <td>{product.category}</td>
-                    <td>{product.name}</td>
-                    <td className="description">{product.details}</td>
-                    <td>{product.price}</td>
-                    <td>{"delete/edit"}</td>
-                  </tr>
-                );
-              })}
+              {products?.map((product, index) => (
+                <tr key={index}>
+                  <td>{product.category}</td>
+                  <td>{product.name}</td>
+                  <td className="description">{product.details}</td>
+                  <td>{product.price}</td>
+                  <td>
+                    {product.imageInfo.length > 0 ? (
+                      <details>
+                        <summary>{product.imageInfo.length} image(s)</summary>
+                        <ul>
+                          {product.imageInfo.map((img, imgIndex) => (
+                            <li key={imgIndex}>
+                              <img src={images.pdfDownload} alt="img" />
+                              <div>{img.name}</div>
+                            </li>
+                          ))}
+                        </ul>
+                      </details>
+                    ) : (
+                      "No images"
+                    )}
+                  </td>
+                  <td>
+                    <button className="edit-btn" disabled>
+                      Edit
+                    </button>
+                    <button
+                      className="delete-btn"
+                      onClick={() =>
+                        confirmDeleteThreadFile(
+                          product._id,
+                          product.imageInfo[0]?.Key || "",
+                          index
+                        )
+                      }
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Shop;

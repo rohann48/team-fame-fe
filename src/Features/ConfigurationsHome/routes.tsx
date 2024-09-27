@@ -5,10 +5,10 @@ import Shop from "./RenderComponents/Shop";
 import AdminVideos from "./RenderComponents/AdminVideos";
 
 export const configRoutes = [
-  {
-    path: "/about-us",
-    element: <AboutUs />,
-  },
+  // {
+  //   path: "/about-us",
+  //   element: <AboutUs />,
+  // },
   {
     path: "/events",
     element: <Events />,
@@ -17,10 +17,10 @@ export const configRoutes = [
     path: "/testimonial",
     element: <Testimonial />,
   },
-  {
-    path: "/videos",
-    element: <AdminVideos />,
-  },
+  // {
+  //   path: "/videos",
+  //   element: <AdminVideos />,
+  // },
   {
     path: "/shop",
     element: <Shop />,

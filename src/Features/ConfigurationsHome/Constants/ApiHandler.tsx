@@ -96,4 +96,10 @@ export const ApiHandler = {
     );
     return response.data;
   },
+  deleteProductDetails: async (docId: string, fileKey: string) => {
+    const response = await apiAuth.deleteApiwithoutAuth(
+      Resource.url.deleteProductDetails(docId, fileKey)
+    );
+    return response.data;
+  },
 };

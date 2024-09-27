@@ -1,16 +1,28 @@
+/** @format */
+
 .react-confirm-alert {
   .custom-ui {
     background-color: white;
-    width: 500px;
-    height: 250px;
     border: 1px solid #2c28281c;
     border-radius: 5px;
+    &.notify {
+      width: 582px !important;
+      height: 250px !important;
+    }
+    &.without-notify {
+      width: 500px !important;
+      height: 250px !important;
+    }
+    &.review {
+      width: 477px !important;
+      height: 200px !important;
+    }
     .delete-title {
       height: 30%;
       display: flex;
       align-items: center;
       padding-left: 8%;
-      gap: 5%;
+      gap: 3%;
 
       .delete-img-cover {
         height: 30px;
@@ -23,26 +35,63 @@
         display: flex;
         padding-right: 5%;
         .delete-text-header {
-          font-size: 31px;
-          font-weight: 600;
           text-transform: capitalize;
+          &.without-notify {
+            font-size: 20px;
+            font-weight: 600;
+          }
+          &.notify {
+            font-size: 20px;
+            font-weight: 600;
+          }
+          &.review {
+            font-size: 14px;
+            font-weight: 600;
+          }
         }
       }
     }
     .delete-description {
-      height: 47%;
-      padding: 1% 9% 1% 9%;
+      &.without-notify {
+        height: 47%;
+        padding: 1% 9% 1% 9%;
+      }
+      &.notify {
+        height: 42%;
+        padding: 1% 6% 1% 8%;
+      }
+      &.review {
+        height: 47%;
+        padding: 1% 9% 1% 9%;
+      }
       .delete-description-text-one {
-        font-size: 18px;
         font-weight: 400;
-        padding-bottom: 3%;
-        color: gray;
+        padding-bottom: 2%;
+        line-height: 1.5;
+
+        &.without-notify {
+          font-size: 16px;
+          color: #667286;
+        }
+        &.notify {
+          font-size: 16px;
+          color: #f47267;
+        }
+        &.review {
+          font-size: 14px;
+          color: #667286;
+        }
       }
       .delete-description-text-two {
-        font-size: 18px;
         font-weight: 400;
         padding-bottom: 3%;
-        color: gray;
+        color: #667286;
+        &.without-notify {
+          font-size: 16px;
+        }
+        &.notify {
+          font-size: 16px;
+        }
       }
     }
     .note {
@@ -57,40 +106,72 @@
       height: 20%;
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding-left: 40%;
-      gap: 5%;
+      justify-content: flex-end;
+      padding-right: 6%;
+      gap: 2%;
       .button-delete-no {
         width: 90px;
-        height: 30px;
-        border: 1px solid #2863ff;
+        height: 40px;
+        color: #5b677b;
+        border: 1px solid #5b677b;
         border-radius: 5px;
-        color: #2863ff;
         background-color: white;
         cursor: pointer;
       }
 
       .button-delete-yes {
         width: 90px;
-        height: 30px;
-        border: 1px solid #2863ff;
+        height: 40px;
+        color: white;
+        border: 1px solid #f07373;
         border-radius: 5px;
+        background-color: #f07373;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .button-yes {
+        width: 90px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #0009d6;
         color: #ffff;
-        background-color: #2863ff;
+        background-color: #0009d6;
+        font-size: 13px;
+        font-weight: 500;
         cursor: pointer;
       }
       .button-confirm-cancel {
         width: 90px;
         height: 40px;
-        color: #2863ff;
-        border: 1px solid #2863ff;
         border-radius: 5px;
-        background-color: white;
+        color: #5b677b;
+        border: 1px solid #5b677b;
+        background-color: #ffffff;
+        cursor: pointer;
+        font-size: 13px;
+      }
+      .medium-size-button-confirm-cancel {
+        width: 158px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #0009d6;
+        color: #0009d6;
+        background-color: #ffffff;
         cursor: pointer;
       }
 
       .button-confirm-ok {
         width: 90px;
+        height: 40px;
+        color: white;
+        border: 1px solid #2863ff;
+        background-color: #2863ff;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .button-confirm-process-ok {
+        width: 107px;
         height: 40px;
         color: white;
         border: 1px solid #2863ff;
@@ -134,6 +215,19 @@
         .delete-text-header {
           font-size: 20px;
           font-weight: 600;
+
+          &.without-notify {
+            font-size: 20px;
+            font-weight: 600;
+          }
+          &.notify {
+            font-size: 20px;
+            font-weight: 600;
+          }
+          &.review {
+            font-size: 14px;
+            font-weight: 600;
+          }
         }
       }
       .close-button {
@@ -191,12 +285,12 @@
       }
 
       .button-delete-yes {
-        width: 90px;
-        height: 30px;
+        width: 100px;
+        height: 50px;
         color: white;
-        border: 1px solid #2863ff;
+        border: 1px solid #f47267;
         border-radius: 5px;
-        background-color: #2863ff;
+        background-color: #f47267;
         font-size: 15px;
         font-weight: 500;
         cursor: pointer;
@@ -209,6 +303,7 @@
         border-radius: 5px;
         background-color: white;
         cursor: pointer;
+        font-size: 13px;
       }
       .button-submit-ok {
         width: 90px;

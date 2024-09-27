@@ -9,5 +9,7 @@ export const Resource = {
     getProductDetails: `/shop/product/list`,
     // forgotPassword: `/suppliers/forgot/password`,
     postVideoInfo: `/video`,
+    deleteProductDetails: (docId: string, fileKey: string) =>
+      `/shop/product/delete?docId=${docId}&fileKey=${fileKey}`,
   },
 };

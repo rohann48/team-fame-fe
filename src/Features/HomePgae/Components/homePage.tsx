@@ -174,7 +174,7 @@ const HomePage = ({
           <div className="home-testimonial-cover">
             <div
               className="testimonial-container"
-              key={testimonialData[currentIndex]?._id}
+              key={testimonialData?.[currentIndex]?._id}
             >
               <div className="testimonial-content">
                 <img
@@ -183,13 +183,13 @@ const HomePage = ({
                   className="testimonial-image"
                 />
                 <div className="testimonial-text">
-                  <p>{testimonialData[currentIndex]?.name}</p>
+                  <p>{testimonialData?.[currentIndex]?.name}</p>
                 </div>
               </div>
               <div className="testimonial-navigation">
                 <div className="testimonial-author">
-                  <h3>{testimonialData[currentIndex]?.about}</h3>
-                  <p>{testimonialData[currentIndex]?.achievement}</p>
+                  <h3>{testimonialData?.[currentIndex]?.about}</h3>
+                  <p>{testimonialData?.[currentIndex]?.achievement}</p>
                 </div>
                 <div className="action-btn-cover">
                   <button
@@ -213,7 +213,7 @@ const HomePage = ({
               <div className="slide-track">
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map(
                   (_, i) => (
-                    <div className="slide">
+                    <div className="slide" key={i}>
                       <img
                         src={i % 2 === 0 ? images.birlaLogo : images.jewLogo}
                         alt=""

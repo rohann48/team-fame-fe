@@ -130,7 +130,7 @@ const HeaderNav = ({
           </Tippy>
           <span className="cart-count">{productInfo.cartBasket?.length}</span>
         </button>
-        {
+        {userInfo._id && (
           <button className="user-profile-cover" ref={outsideClickUserProf}>
             <Tippy placement="bottom-start" content="profile">
               <img
@@ -173,8 +173,8 @@ const HeaderNav = ({
               </div>
             )}
           </button>
-        }
-
+        )}
+        {<>{console.log("userInfo", userInfo)}</>}
         {userInfo.role === "admin" && (
           <NavLink to="config/about-us">
             <Tippy placement="bottom-start" content="configuration">

@@ -6,7 +6,20 @@ export type ShopContainerProps = {
     imageURI?: string;
     price: string;
   };
-  products: Array<object>;
+  products: Array<{
+    _id: string;
+    category: string;
+    name: string;
+    details: string;
+    price: number;
+    imageInfo: Array<{
+      name: string;
+      Key: string;
+      path: string;
+      date: string;
+      _id: string;
+    }>;
+  }>;
 };
 export type ShopComponentProps = {
   handleChangeInputs: (
@@ -19,5 +32,23 @@ export type ShopComponentProps = {
   productDetails: ShopContainerProps["productDetails"];
   handleSave: () => void;
   eventData: Array<object>;
-  products: Array<object>;
+  products: Array<{
+    _id: string;
+    category: string;
+    name: string;
+    details: string;
+    price: number;
+    imageInfo: Array<{
+      name: string;
+      Key: string;
+      path: string;
+      date: string;
+      _id: string;
+    }>;
+  }>;
+  confirmDeleteThreadFile: (
+    docId: string,
+    fileKey: string,
+    index: number
+  ) => void;
 };

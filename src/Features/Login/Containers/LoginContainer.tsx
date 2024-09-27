@@ -6,6 +6,8 @@ import { ApiHandler } from "../../Constants/ApiHandler";
 import bcrypt from "bcryptjs";
 import { LoginContext } from "../../context/LoginContext";
 import { useNavigate } from "react-router-dom";
+import { handleErrorResponse } from "../../Common/CommonFunctions/CommonErrorHandler";
+import { Notify } from "../../Common/Notify/NotificationMessages";
 
 const initialData = {
   contactNo: "",
@@ -58,7 +60,15 @@ function LoginContainer({
           navigate("/shop");
         }
       } catch (error) {
-        NotificationManager.warning("Error Login", "", 2000);
+        try {
+          handleErrorResponse(error, navigate);
+        } catch (error: any) {
+          NotificationManager.warning(
+            error?.response?.data?.message ||
+              error?.response?.data?.error?.message ||
+              Notify.DEFAULT
+          );
+        }
       }
     }
   };

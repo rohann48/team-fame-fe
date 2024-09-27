@@ -6,11 +6,11 @@ import { configRoutes } from "../../routes";
 
 function ConfigurationContainer() {
   const sideNavLinks = [
-    { title: "about us", img: images.aboutusIcon, path: "about-us" },
+    // { title: "about us", img: images.aboutusIcon, path: "about-us" },
     { title: "events", img: images.eventIcon, path: "events" },
     { title: "testimonial", img: images.testimonialIcon, path: "testimonial" },
-    { title: "videos", img: images.videoIcon, path: "videos" },
-    { title: "news", img: images.newsIcon, path: "about-us" },
+    // { title: "videos", img: images.videoIcon, path: "videos" },
+    // { title: "news", img: images.newsIcon, path: "about-us" },
     { title: "gold scheme", img: images.schemeIcon, path: "scheme" },
     { title: "shop", img: images.schemeIcon, path: "shop" },
   ];

@@ -32,3 +32,7 @@ export enum RoleType {
   MEMBER = "member",
   GUEST = "guest",
 }
+export enum ErrorMessageEnum {
+  UNAUTHORIZED_USER = "unauthorized user",
+  SESSION_END = "session end",
+}

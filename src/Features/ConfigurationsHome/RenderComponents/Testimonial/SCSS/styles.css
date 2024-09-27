@@ -3,41 +3,27 @@
   height: 100%;
 }
 .testimonial-container .add-testimonial-cover {
-  height: 40%;
+  height: 50%;
+  padding: 20px;
 }
-.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover {
-  width: 100%;
-  height: 100%;
-  padding-inline: 1rem;
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-header,
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .add-testimonial-header {
+  color: #bd9255;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 .testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-header {
-  width: 100%;
-  height: 8;
-  color: #bd9255;
-  font-size: 16px;
-  font-weight: 500;
   text-transform: uppercase;
 }
-.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .add-testimonial-header {
-  width: 100%;
-  height: 8%;
-  color: #bd9255;
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: capitalize;
-}
 .testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover {
-  width: 100%;
-  height: 76%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: calc(100% - 60px);
 }
 .testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-field-img-cover {
   width: 25%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,7 +31,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1rem;
+  padding-top: 2rem;
 }
 .testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-field-img-cover .testimonial-logo-upload-img {
   width: 9rem;
@@ -53,9 +43,7 @@
   border-radius: 50%;
   overflow: hidden;
   position: relative;
-  background-image: url("../../../../Assets/Images/guestUser.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("../../../../Assets/Images/guestUser.svg") center no-repeat;
 }
 .testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-field-img-cover .testimonial-logo-upload-img .file {
   position: absolute;
@@ -73,45 +61,34 @@
   z-index: 1;
 }
 .testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-field-img-cover .testimonial-btn-cover {
-  height: 8%;
-  margin-top: 1%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 3%;
+  gap: 10px;
 }
-.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-field-img-cover .testimonial-btn-cover .cancel {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-field-img-cover .testimonial-btn-cover button {
   all: unset;
   text-align: center;
   cursor: pointer;
-  background: none;
   border-radius: 4px;
   width: 92px;
   height: 40px;
+  font-size: 14px;
+}
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-field-img-cover .testimonial-btn-cover button.cancel {
   color: #2b2b2b;
   border: 1px solid #2b2b2b;
-  font-size: 14px;
 }
-.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-field-img-cover .testimonial-btn-cover .save {
-  all: unset;
-  text-align: center;
-  cursor: pointer;
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-field-img-cover .testimonial-btn-cover button.save {
   background-color: #2b2b2b;
-  border-radius: 4px;
-  width: 92px;
-  height: 40px;
   color: #ffffff;
   border: 1px solid #2b2b2b;
-  font-size: 14px;
 }
 .testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover {
   width: 75%;
   height: 100%;
   padding-top: 2rem;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover::-webkit-scrollbar {
   width: 6px;
@@ -120,229 +97,123 @@
 .testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover::-webkit-scrollbar-thumb {
   background: #bd9255;
   border-radius: 5px;
-  overflow: hidden;
 }
 .testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-name-cover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-name-cover .testimonial-label-cover {
+  gap: 2rem;
   margin-bottom: 15px;
-  font-weight: 500;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 16px;
-  color: #bd9255;
-  gap: 5px;
 }
-.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-name-cover .testimonial-label-cover .testimonial-name-input {
-  all: unset;
-  border: 1px solid #bd9255;
-  width: 360px;
-  height: 40px;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: 400;
-  padding: 5px;
-}
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-name-cover .testimonial-label-cover,
 .testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-name-cover .testimonial-achievement-cover {
-  margin-bottom: 15px;
-  font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 16px;
-  color: #bd9255;
-  margin-left: 2rem;
   gap: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #bd9255;
 }
-.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-name-cover .testimonial-achievement-cover .testimonial-title-input {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-name-cover .testimonial-label-cover input,
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-name-cover .testimonial-achievement-cover input {
   all: unset;
   border: 1px solid #bd9255;
-  width: 355px;
   height: 40px;
   border-radius: 5px;
   font-size: 14px;
   font-weight: 400;
   padding: 5px;
 }
-.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-title-cover {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-name-cover .testimonial-label-cover input {
+  width: 300px;
 }
-.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-title-cover .testimonial-time-cover {
-  margin-bottom: 15px;
-  font-weight: 500;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 20rem;
-  font-size: 16px;
-  color: #bd9255;
-  margin-left: 2rem;
-  gap: 5px;
-}
-.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-title-cover .testimonial-time-cover .testimonial-time-input {
-  all: unset;
-  border: 1px solid #bd9255;
-  width: 160px;
-  height: 40px;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: 400;
-  padding: 5px;
-}
-.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-location-cover {
-  margin-bottom: 15px;
-  font-weight: 500;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 16px;
-  color: #bd9255;
-  gap: 5px;
-}
-.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-location-cover .testimonial-location-text-area {
-  all: unset;
-  border: 1px solid #bd9255;
-  width: 571px;
-  height: 75px;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: 400;
-  padding: 5px;
-}
-.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-location-cover .testimonial-location-text-area::-webkit-scrollbar {
-  width: 6px;
-  background: transparent;
-}
-.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-location-cover .testimonial-location-text-area::-webkit-scrollbar-thumb {
-  background: #bd9255;
-  border-radius: 5px;
-  overflow: hidden;
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-name-cover .testimonial-achievement-cover input {
+  width: 429px;
 }
 .testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-description-cover {
-  font-weight: 500;
+  margin-bottom: 15px;
+}
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-description-cover label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 16px;
-  color: #bd9255;
   gap: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #bd9255;
 }
-.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-description-cover .testimonial-description-text-area {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-description-cover label textarea {
   all: unset;
   border: 1px solid #bd9255;
-  width: 760px;
-  height: 70px;
   border-radius: 5px;
   font-size: 14px;
   font-weight: 400;
   padding: 5px;
+  resize: vertical;
+  width: 760px;
+  height: 98px;
 }
-.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-description-cover .testimonial-description-text-area::-webkit-scrollbar {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-description-cover label textarea::-webkit-scrollbar {
   width: 6px;
   background: transparent;
 }
-.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-description-cover .testimonial-description-text-area::-webkit-scrollbar-thumb {
+.testimonial-container .add-testimonial-cover .add-testimonial-inner-cover .testimonial-input-field-cover .testimonial-input-filed-cover .testimonial-description-cover label textarea::-webkit-scrollbar-thumb {
   background: #bd9255;
   border-radius: 5px;
-  overflow: hidden;
 }
 .testimonial-container .testimonial-cards-cover {
-  height: 60%;
+  height: 50%;
+  padding: 20px;
   border-top: 1px solid #bd9255;
-  padding-inline: 1rem;
+}
+.testimonial-container .testimonial-cards-cover .cards-testimonial-header {
+  color: #bd9255;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 .testimonial-container .testimonial-cards-cover .cards-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 5px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.testimonial-container .testimonial-cards-cover .cards-testimonial-header {
-  width: 100%;
-  height: 2rem;
-  color: #bd9255;
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: capitalize;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
 }
 .testimonial-container .testimonial-cards-cover .cards {
   width: 350px;
-  background-color: #000000;
-  height: 360px;
+  height: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border-radius: 5px;
+  overflow: hidden;
+  background-color: #000000;
 }
 .testimonial-container .testimonial-cards-cover .cards .card-left {
   width: 7%;
-  background-image: url("../../../../Assets//Images/cardLabelSide.svg");
+  background-image: url("../../../../Assets/Images/cardLabelSide.svg");
 }
 .testimonial-container .testimonial-cards-cover .cards .card-right {
   width: 93%;
-}
-.testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover {
-  width: 100%;
-  height: 100%;
   padding: 3%;
 }
 .testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover .card-right-header {
-  height: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-bottom: 10px;
 }
 .testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover .card-right-header .header-text {
+  display: inline-block;
   font-size: 14px;
   font-weight: 500;
   background-color: #bd9255;
@@ -354,61 +225,62 @@
   width: 100%;
   height: 50%;
   overflow: hidden;
+  margin-bottom: 10px;
 }
 .testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover .card-img-cover .card-testimonial-img {
-  aspect-ratio: 3/2;
-  -o-object-fit: contain;
-     object-fit: contain;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover .card-testimonial-title {
-  height: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 14px;
-  font-weight: 500;
-  color: white;
-  text-transform: uppercase;
-}
-.testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover .card-testimonial-date {
-  height: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 14px;
-  font-weight: 500;
-  color: white;
-  text-transform: uppercase;
-}
-.testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover .card-testimonial-time {
-  height: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 14px;
-  font-weight: 500;
-  color: white;
-  text-transform: uppercase;
-}
+.testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover .card-testimonial-title,
+.testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover .card-testimonial-date,
+.testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover .card-testimonial-time,
 .testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover .card-testimonial-location {
-  height: 10%;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 14px;
-  font-weight: 500;
+}
+.testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover .card-testimonial-title svg,
+.testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover .card-testimonial-date svg,
+.testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover .card-testimonial-time svg,
+.testimonial-container .testimonial-cards-cover .cards .card-right .card-right-inner-cover .card-testimonial-location svg {
+  margin-right: 5px;
+}
+.testimonial-container .testimonial-cards-cover .pagination-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+.testimonial-container .testimonial-cards-cover .pagination-controls .pagination-button {
+  all: unset;
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: #bd9255;
   color: white;
-  text-transform: uppercase;
+  border-radius: 4px;
+  margin: 0 10px;
+}
+.testimonial-container .testimonial-cards-cover .pagination-controls .pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.testimonial-container .testimonial-cards-cover .pagination-controls .page-indicator {
+  font-size: 14px;
+  color: #bd9255;
 }/*# sourceMappingURL=styles.css.map */

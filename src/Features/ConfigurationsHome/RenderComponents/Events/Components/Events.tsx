@@ -1,3 +1,4 @@
+import { useState } from "react";
 import icons from "../../../../Assets/Icons/icons";
 import images from "../../../../ImageVariables";
 import { EventComponentProps } from "../EventsTypes";
@@ -9,6 +10,24 @@ function Events({
   handleSave,
   eventData,
 }: EventComponentProps) {
+  const [currentPage, setCurrentPage] = useState(0);
+  const eventsPerPage = 3;
+
+  const pageCount = Math.ceil(eventData.length / eventsPerPage);
+
+  const displayedEvents = eventData.slice(
+    currentPage * eventsPerPage,
+    (currentPage + 1) * eventsPerPage
+  );
+
+  const handleNext = () => {
+    setCurrentPage((prevPage) => Math.min(prevPage + 1, pageCount - 1));
+  };
+
+  const handlePrevious = () => {
+    setCurrentPage((prevPage) => Math.max(prevPage - 1, 0));
+  };
+
   return (
     <div className="events-container">
       <div className="add-event-cover">
@@ -98,9 +117,9 @@ function Events({
       <div className="events-cards-cover">
         <div className="cards-event-header">Upcoming Events</div>
         <div className="cards-flex">
-          {eventData?.map((event: any) => {
+          {displayedEvents.map((event: any, index: number) => {
             return (
-              <div className="cards">
+              <div className="cards" key={index}>
                 <div className="card-left"></div>
                 <div className="card-right">
                   <div className="card-right-inner-cover">
@@ -129,6 +148,25 @@ function Events({
               </div>
             );
           })}
+        </div>
+        <div className="pagination-controls">
+          <button
+            className="pagination-button"
+            onClick={handlePrevious}
+            disabled={currentPage === 0}
+          >
+            Previous
+          </button>
+          <span className="page-indicator">
+            Page {currentPage + 1} of {pageCount}
+          </span>
+          <button
+            className="pagination-button"
+            onClick={handleNext}
+            disabled={currentPage === pageCount - 1}
+          >
+            Next
+          </button>
         </div>
       </div>
     </div>
