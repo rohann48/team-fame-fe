@@ -11,6 +11,7 @@ import {
   faUser,
   faArrowLeft,
   faFilm,
+  faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { faMessage, faTrashCan } from "@fortawesome/free-regular-svg-icons";
@@ -30,6 +31,7 @@ const icons = {
   userIcon: <FontAwesomeIcon icon={faUser} size="4x" color="#000000" />,
   backBtn: <FontAwesomeIcon icon={faArrowLeft} size="1x" color="#444444" />,
   videoLength: <FontAwesomeIcon icon={faFilm} size="1x" color="#BD9255" />,
+  avatar: <FontAwesomeIcon icon={faUserCircle} size="1x" color="#000000" />,
 
   // facebook: <FontAwesomeIcon icon={faSquareFacebook} />
 };

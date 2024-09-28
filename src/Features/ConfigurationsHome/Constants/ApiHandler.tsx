@@ -47,9 +47,9 @@ export const ApiHandler = {
   // },
 
   //post Events
-  postEvents: async (data: PostEventProps) => {
+  postEvents: async (data: FormData) => {
     try {
-      const response = await apiAuth.postApiwithoutAuth(
+      const response = await apiAuth.postApiForFormDatawithoutEncryption(
         Resource.url.postEvents,
         data
       );
@@ -59,16 +59,12 @@ export const ApiHandler = {
     }
   },
 
-  postTestimonial: async (data: PostTestimonialProps) => {
-    try {
-      const response = await apiAuth.postApiwithoutAuth(
-        Resource.url.postTestimonial,
-        data
-      );
-      return response.data;
-    } catch (error) {
-      console.log(error);
-    }
+  postTestimonial: async (data: FormData) => {
+    const response = await apiAuth.postApiForFormDatawithoutEncryption(
+      Resource.url.postTestimonial,
+      data
+    );
+    return response.data;
   },
 
   postProductDetails: async (formData: any) => {
@@ -102,9 +98,33 @@ export const ApiHandler = {
     );
     return response.data;
   },
+  deleteTestimonial: async (docId: string, fileKey: string) => {
+    const response = await apiAuth.deleteApiwithoutAuth(
+      Resource.url.deleteTestimonial(docId, fileKey)
+    );
+    return response.data;
+  },
+  deleteEvent: async (docId: string, fileKey: string) => {
+    const response = await apiAuth.deleteApiwithoutAuth(
+      Resource.url.deleteEvent(docId, fileKey)
+    );
+    return response.data;
+  },
   getSchemeDetails: async (clientId: string) => {
     const response = await apiAuth.getApiwithoutAuth(
       Resource.url.getSchemeDetails(clientId)
+    );
+    return response.data;
+  },
+  getTestiMonialData: async () => {
+    const response = await apiAuth.getApiwithoutAuth(
+      Resource.url.getTestiMonialData
+    );
+    return response.data;
+  },
+  getEventsData: async () => {
+    const response = await apiAuth.getApiwithoutAuth(
+      Resource.url.getEventsData
     );
     return response.data;
   },

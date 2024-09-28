@@ -13,5 +13,5 @@ export interface PostTestimonialProps {
   name: string;
   about: string;
   achievement: string;
-  image?: string;
+  image: File | null;
 }
