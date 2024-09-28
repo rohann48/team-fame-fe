@@ -1,21 +1,27 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import icons from "../../../../Assets/Icons/icons";
 import images from "../../../../ImageVariables";
 import { EventComponentProps } from "../EventsTypes";
 import "../SCSS/styles.css";
+import Tippy from "@tippyjs/react";
+import { format, parseISO } from "date-fns";
 
 function Events({
   handleChangeInputs,
   eventForms,
   handleSave,
-  eventData,
+  events,
+  handleChangeFile,
+  uploadedFile,
+  handleCancel,
+  confirmDeleteEvent,
 }: EventComponentProps) {
   const [currentPage, setCurrentPage] = useState(0);
-  const eventsPerPage = 3;
+  const eventsPerPage = 5;
 
-  const pageCount = Math.ceil(eventData.length / eventsPerPage);
+  const pageCount = Math.ceil(events.length / eventsPerPage);
 
-  const displayedEvents = eventData.slice(
+  const displayedEvents = events.slice(
     currentPage * eventsPerPage,
     (currentPage + 1) * eventsPerPage
   );
@@ -33,46 +39,47 @@ function Events({
       <div className="add-event-cover">
         <div className="add-event-inner-cover">
           <div className="event-header">EVENTS</div>
-          <div className="add-event-header">Add Events</div>
+          <div className="add-event-header">Add Event</div>
           <div className="event-input-field-cover">
             <div className="event-input-field-img-cover">
               <div className="event-logo-upload-img">
-                <input type="file" className="file" />
+                <Tippy
+                  content={`Uploaded files: ${uploadedFile?.length ?? 0}`}
+                  theme="light"
+                  placement="right"
+                >
+                  <input
+                    type="file"
+                    className="file"
+                    onChange={(e) => handleChangeFile(e)}
+                  />
+                </Tippy>
                 <div className="plus-img-cover">
-                  <img src={images.AddProfilePhotoPlus} alt="add profile" />
+                  <img src={images.userProfile} alt="add profile" />
                 </div>
               </div>
-              <div className="events-btn-cover">
-                <button className="cancel">Cancel</button>
+              <div className="event-btn-cover">
+                <button className="cancel" onClick={() => handleCancel()}>
+                  Cancel
+                </button>
                 <button className="save" onClick={() => handleSave()}>
                   SAVE
                 </button>
               </div>
             </div>
-            <div className="events-input-filed-cover">
+            <div className="event-input-filed-cover">
               <div className="event-name-cover">
                 <label className="event-label-cover">
                   <div className="event-text">Event Name</div>
                   <input
                     className="event-name-input"
                     type="text"
-                    onChange={(e) => handleChangeInputs(e, "eventName")}
-                    value={eventForms?.eventName}
+                    onChange={(e) => handleChangeInputs(e, "name")}
+                    value={eventForms.name}
                   />
                 </label>
-                <label className="event-date-cover">
-                  <div className="event-date">Event Date</div>
-                  <input
-                    className="event-date-input"
-                    type="date"
-                    onChange={(e) => handleChangeInputs(e, "date")}
-                    value={eventForms.date}
-                  />
-                </label>
-              </div>
-              <div className="event-title-cover">
-                <label className="event-label-cover">
-                  <div className="event-title">Event Title</div>
+                <label className="event-title-cover">
+                  <div className="event-text">Title</div>
                   <input
                     className="event-title-input"
                     type="text"
@@ -80,8 +87,19 @@ function Events({
                     value={eventForms.title}
                   />
                 </label>
+              </div>
+              <div className="event-details-cover">
+                <label className="event-date-cover">
+                  <div className="event-text">Date</div>
+                  <input
+                    className="event-date-input"
+                    type="date"
+                    onChange={(e) => handleChangeInputs(e, "date")}
+                    value={eventForms.date}
+                  />
+                </label>
                 <label className="event-time-cover">
-                  <div className="event-time">Event Time</div>
+                  <div className="event-text">Time</div>
                   <input
                     className="event-time-input"
                     type="time"
@@ -89,20 +107,19 @@ function Events({
                     value={eventForms.time}
                   />
                 </label>
-              </div>
-              <div className="event-location-cover">
                 <label className="event-location-cover">
-                  <div className="event-location">Event Location</div>
-                  <textarea
-                    className="event-location-text-area"
+                  <div className="event-text">Location</div>
+                  <input
+                    className="event-location-input"
+                    type="text"
                     onChange={(e) => handleChangeInputs(e, "location")}
                     value={eventForms.location}
                   />
                 </label>
               </div>
               <div className="event-description-cover">
-                <label className="event-description-cover">
-                  <div className="event-description">Event Description</div>
+                <label>
+                  <div className="event-description">Description</div>
                   <textarea
                     className="event-description-text-area"
                     onChange={(e) => handleChangeInputs(e, "description")}
@@ -114,60 +131,102 @@ function Events({
           </div>
         </div>
       </div>
-      <div className="events-cards-cover">
-        <div className="cards-event-header">Upcoming Events</div>
-        <div className="cards-flex">
-          {displayedEvents.map((event: any, index: number) => {
-            return (
-              <div className="cards" key={index}>
-                <div className="card-left"></div>
-                <div className="card-right">
-                  <div className="card-right-inner-cover">
-                    <div className="card-right-header">
-                      <span className="header-text">Coming Soon</span>
-                    </div>
-                    <div className="card-img-cover">
-                      <img
-                        className="card-event-img"
-                        src={images.videoThumbnail}
-                        alt="events"
-                      />
-                    </div>
-                    <div className="card-event-title">{event.title}</div>
-                    <div className="card-event-date">
-                      {icons.date} &nbsp; {event.date}
-                    </div>
-                    <div className="card-event-time">
-                      {icons.clock}&nbsp; {event.time}
-                    </div>
-                    <div className="card-event-location">
-                      {icons.location}&nbsp; {event.location}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+      <div className="event-table-cover">
+        <div className="table-event-header">All Events</div>
+        <div className="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Event Name</th>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Location</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {events.length === 0 ? (
+                <tr>
+                  <td colSpan={8} className="no-data-event">
+                    No events available
+                  </td>
+                </tr>
+              ) : (
+                displayedEvents.map((event, index) => (
+                  <tr key={index}>
+                    <td>{event.name}</td>
+                    <td>{event.title}</td>
+                    <td>
+                      {event.date &&
+                        format(parseISO(event.date), "MMMM dd, yyyy")}
+                    </td>
+                    <td>{event.time}</td>
+                    <td>{event.location}</td>
+                    <td className="description">{event.description}</td>
+                    <td>
+                      {event.imageInfo.length > 0 ? (
+                        <details>
+                          <summary>{event.imageInfo.length} image(s)</summary>
+                          <ul>
+                            {event.imageInfo.map((img, imgIndex) => (
+                              <li key={imgIndex}>
+                                <img src={images.pdfDownload} alt="img" />
+                                <div>{img.name}</div>
+                              </li>
+                            ))}
+                          </ul>
+                        </details>
+                      ) : (
+                        "No images"
+                      )}
+                    </td>
+                    <td>
+                      <button className="edit-btn" disabled>
+                        Edit
+                      </button>
+                      <button
+                        className="delete-btn"
+                        onClick={() =>
+                          confirmDeleteEvent(
+                            event._id,
+                            event.imageInfo[0]?.Key || "",
+                            index
+                          )
+                        }
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))
+              )}
+            </tbody>
+          </table>
         </div>
-        <div className="pagination-controls">
-          <button
-            className="pagination-button"
-            onClick={handlePrevious}
-            disabled={currentPage === 0}
-          >
-            Previous
-          </button>
-          <span className="page-indicator">
-            Page {currentPage + 1} of {pageCount}
-          </span>
-          <button
-            className="pagination-button"
-            onClick={handleNext}
-            disabled={currentPage === pageCount - 1}
-          >
-            Next
-          </button>
-        </div>
+        {events.length > 0 && (
+          <div className="pagination-controls">
+            <button
+              className="pagination-button"
+              onClick={handlePrevious}
+              disabled={currentPage === 0}
+            >
+              Previous
+            </button>
+            <span className="page-indicator">
+              Page {currentPage + 1} of {pageCount}
+            </span>
+            <button
+              className="pagination-button"
+              onClick={handleNext}
+              disabled={currentPage === pageCount - 1}
+            >
+              Next
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
