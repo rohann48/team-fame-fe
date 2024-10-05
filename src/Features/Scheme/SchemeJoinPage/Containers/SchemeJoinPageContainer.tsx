@@ -9,7 +9,8 @@ import { NotificationManager } from "react-notifications";
 import { Notify } from "../../../Common/Notify/NotificationMessages";
 
 function SchemeJoinPageContainer() {
-  const { handleSignUpModalToggle, userInfo } = useContext(LoginContext);
+  const { handleSignUpModalToggle, userInfo, handleLoginModalToggle } =
+    useContext(LoginContext);
   //navigate
   const navigate = useNavigate();
   //state maintained for period
@@ -66,6 +67,7 @@ function SchemeJoinPageContainer() {
       userInfo={userInfo}
       handleJoinScheme={handleJoinScheme}
       handleSelectPeriod={handleSelectPeriod}
+      handleLoginModalToggle={handleLoginModalToggle}
     />
   );
 }

@@ -9,5 +9,15 @@ export const Resource = {
     getProductDetails: `/shop/product/list`,
     // forgotPassword: `/suppliers/forgot/password`,
     postVideoInfo: `/video`,
+    deleteProductDetails: (docId: string, fileKey: string) =>
+      `/shop/product/delete?docId=${docId}&fileKey=${fileKey}`,
+    getSchemeDetails: (clientId: string) =>
+      `/gold-scheme/all-scheme?clientId=${clientId}`,
+    getTestiMonialData: "/testimonial",
+    getEventsData: `/event`,
+    deleteTestimonial: (docId: string, fileKey: string) =>
+      `/testimonial/delete?docId=${docId}&fileKey=${fileKey}`,
+    deleteEvent: (docId: string, fileKey: string) =>
+      `/event/delete?docId=${docId}&fileKey=${fileKey}`,
   },
 };
