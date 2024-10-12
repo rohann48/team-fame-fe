@@ -89,8 +89,10 @@ let images = {
   // disableEdit: require("./Assets/Images/disableEdit.svg").default,
   // storeAS: require("./Assets/Images/storeAS.svg").default,
   // orderDetailsAS: require("./Assets/Images/orderDetailsAS.svg").default,
+  // PageNotFound: require("./Assets/Images/page-not-found-img.svg").default
 
   //prod
+  PageNotFound: require("./Assets/Images/page-not-found-img.svg"),
   teamFameLogo: require("./Assets/Images/teamFameLogo.svg"),
   teamGroupPic: require("./Assets/Images/teamGroupPic.svg"),
   logoBackground: require("./Assets/Images/logoBackground.jpg"),
@@ -114,6 +116,8 @@ let images = {
   testimonial: require("./Assets/Images/testimonial.svg"),
   cancelButton: require("./Assets/Images/cancelButton.svg"),
   settings: require("./Assets/Images/configuration.svg"),
+  confirmAlert: require("./Assets/Images/deleteAlert.svg"),
+  pdfDownload: require("./Assets/Images/pdf.svg"),
 
   aboutusIcon: require("./Assets/Images/about-us.svg"),
   eventIcon: require("./Assets/Images/Events.svg"),
@@ -136,7 +140,7 @@ let images = {
   videoAdd: require("./Assets/Images/videoAdd.svg"),
   birlaLogo: require("./Assets/Images/birlaLogo.svg"),
   jewLogo: require("./Assets/Images/jewLogo.svg"),
-  userProfile: require("./Assets/Images/userprofile.svg").default,
+  userProfile: require("./Assets/Images/userprofile.svg"),
   storeAS: require("./Assets/Images/storeAS.svg"),
   orderDetailsAS: require("./Assets/Images/orderDetailsAS.svg"),
 };
