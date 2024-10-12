@@ -91,6 +91,7 @@ let images = {
   // orderDetailsAS: require("./Assets/Images/orderDetailsAS.svg").default,
 
   //prod
+  teamFameLogo: require("./Assets/Images/teamFameLogo.svg"),
   teamGroupPic: require("./Assets/Images/teamGroupPic.svg"),
   logoBackground: require("./Assets/Images/logoBackground.jpg"),
   fameRevolutionLogo: require("./Assets/Images/FameRevolutionLogo.svg"),
