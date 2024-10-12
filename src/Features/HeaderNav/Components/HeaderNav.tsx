@@ -174,7 +174,6 @@ const HeaderNav = ({
             )}
           </button>
         )}
-        {<>{console.log("userInfo", userInfo)}</>}
         {userInfo.role === "admin" && (
           <NavLink to="config/about-us">
             <Tippy placement="bottom-start" content="configuration">

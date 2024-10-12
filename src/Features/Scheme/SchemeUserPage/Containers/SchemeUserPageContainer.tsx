@@ -21,14 +21,13 @@ function SchemeUserPageContainer() {
     const fetchUserInfo = async () => {
       // Fetch user info from API using userId
       const response = await ApiHandler.fetchGoldSchemeUserInfo(userId);
-      console.log(response);
       setSchemeUserData(response?.results);
     };
     if (userId) {
       fetchUserInfo();
     }
   }, [userId]);
-  console.log(schemeUserData, "sdsds");
+
   const handleInvestments = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { valueAsNumber } = e.target;
     setInvestmentAmount(valueAsNumber);

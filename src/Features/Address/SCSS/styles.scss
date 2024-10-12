@@ -32,6 +32,7 @@
       color: #444444;
     }
   }
+
   .payment-text {
     width: 100%;
     height: 50px;
@@ -42,16 +43,19 @@
     font-weight: 500;
     color: #444444;
   }
+
   .address-card-cover {
     width: 100%;
     height: auto;
     display: flex;
+
     .address-left-cover {
       width: 50%;
       display: flex;
       flex-direction: column;
       padding-inline: 7rem;
       gap: 20px;
+
       .address-left-text-cover {
         display: flex;
         gap: 5px;
@@ -67,6 +71,7 @@
         display: flex;
         flex-direction: column;
         gap: 5px;
+
         .address-name-input-cover {
           .address-input-name {
             all: unset;
@@ -75,6 +80,7 @@
             border: 1px solid #d5d5d5;
             border-radius: 4px;
             padding: 0 5px;
+
             &::placeholder {
               color: #aeaeae;
               font-weight: 400;
@@ -82,6 +88,7 @@
           }
         }
       }
+
       .address-mob-number-cover {
         font-size: 14px;
         font-weight: 500;
@@ -89,6 +96,7 @@
         display: flex;
         flex-direction: column;
         gap: 5px;
+
         .address-mob-number-input-cover {
           .address-input-mob-number {
             all: unset;
@@ -97,6 +105,7 @@
             border: 1px solid #d5d5d5;
             border-radius: 4px;
             padding: 0 5px;
+
             &::placeholder {
               color: #aeaeae;
               font-weight: 400;
@@ -104,6 +113,7 @@
           }
         }
       }
+
       .address-pin-code-cover {
         font-size: 14px;
         font-weight: 500;
@@ -111,6 +121,7 @@
         display: flex;
         flex-direction: column;
         gap: 5px;
+
         .address-pin-code-input-cover {
           .address-input-pin-code {
             all: unset;
@@ -119,6 +130,7 @@
             border: 1px solid #d5d5d5;
             border-radius: 4px;
             padding: 0 5px;
+
             &::placeholder {
               color: #aeaeae;
               font-weight: 400;
@@ -126,6 +138,7 @@
           }
         }
       }
+
       .address-delivery-cover {
         font-size: 14px;
         font-weight: 500;
@@ -133,6 +146,7 @@
         display: flex;
         flex-direction: column;
         gap: 5px;
+
         .address-delivery-input-cover {
           .address-input-delivery {
             all: unset;
@@ -141,6 +155,7 @@
             border: 1px solid #d5d5d5;
             border-radius: 4px;
             padding: 0 5px;
+
             &::placeholder {
               color: #aeaeae;
               font-weight: 400;
@@ -148,10 +163,12 @@
           }
         }
       }
+
       .address-payment-method-cover {
         display: flex;
         flex-direction: column;
         gap: 20px;
+
         .address-payment-method-text-cover {
           display: flex;
           gap: 6px;
@@ -159,6 +176,7 @@
           font-weight: 500;
           color: #444444;
         }
+
         .payment-mode-cover {
           display: flex;
           gap: 6px;
@@ -168,25 +186,29 @@
         }
       }
     }
+
     .address-right-cover {
       width: 50%;
       display: flex;
       flex-direction: column;
       align-items: center;
+
       .address-right-summery-cover {
         width: 357px;
-        height: 180px;
+        height: 208px;
         display: flex;
         flex-direction: column;
         gap: 20px;
         background-color: #fcf5ee;
         padding: 1rem;
         border-radius: 5px;
+
         .summery-text {
           font-size: 16px;
           font-weight: 500;
           color: #444444;
         }
+
         .sub-total-text,
         .shipping-text,
         .order-text {
@@ -198,6 +220,7 @@
           justify-content: space-between;
         }
       }
+
       .product-offer-cover {
         width: 357px;
         height: 180px;
@@ -212,6 +235,7 @@
         align-items: center;
         justify-content: center;
         gap: 1rem;
+
         .product-offer-text {
           .offer-text {
             display: flex;
@@ -220,6 +244,7 @@
             padding-bottom: 5px;
           }
         }
+
         .offer-input {
           all: unset;
           height: 40px;
@@ -228,27 +253,28 @@
           border-radius: 4px;
           text-align: center;
         }
-        .offer-btn {
-          all: unset;
 
+        .offer-btn {
           all: unset;
           width: 150px;
           height: 30px;
-          background-color: #eaa837;
+          background-color: #8a8a8a;
           border-radius: 4px;
           color: #ffffff;
           font-size: 14px;
           font-weight: 500;
-          cursor: pointer;
+          pointer-events: none;
           text-align: center;
         }
       }
+
       .place-order-btn-cover {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         padding-top: 10px;
+
         .place-order-btn {
           all: unset;
           width: 279px;

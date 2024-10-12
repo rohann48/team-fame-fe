@@ -18,17 +18,18 @@ function ShoppingCartContainer() {
     setTempProducts,
   } = useContext(ShopContext);
   const { userInfo } = useContext(LoginContext);
-  console.log("prod", products, tempProducts);
+  // console.log("prod", products, tempProducts);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const navigate = useNavigate();
   //increment the product count
+
   const handleAddToCartIncrement = (
     index: number,
     prod: CommonTypes["product"]
   ) => {
     let isPresent = false;
     // if the item is already exists give error
-    if (productInfo.cartBasket[index]?.id === prod._id) {
+    if (productInfo.cartBasket?.[index]?.id === prod._id) {
       isPresent = true;
     }
     if (isPresent) {
@@ -42,13 +43,14 @@ function ShoppingCartContainer() {
           imageInfo: prod.imageInfo,
           price: prod.price,
           quantityCount: 1,
+          offers: prod.offers,
         });
       });
       addToCart(prod._id);
       NotificationManager.success("Product added to cart", "", 2000);
     }
   };
-  console.log("Product added to cart", productInfo.cartBasket);
+
   //navigate to view product
   const handleNavigateProduct = (prod: CommonTypes["product"]) => {
     navigate(`/shop/product/${prod._id}`);

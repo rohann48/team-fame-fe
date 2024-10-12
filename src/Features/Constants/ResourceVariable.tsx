@@ -11,6 +11,7 @@ export const Resource = {
     userCheck: "/client/auth/check",
     getRefferalCodeList: "/shop/offer-code/list",
     validateRefferalCode: "/shop/offer-code/validate/code",
+    placeYourOrder: "/order-details/online/transaction/phonpe",
     // forgotPassword: `/suppliers/forgot/password`,
     getEventAndNewsDetails: (id: string | null) => `/event/${id}`,
     getVideoById: (videoId: string | null) => `/video/${videoId}`,

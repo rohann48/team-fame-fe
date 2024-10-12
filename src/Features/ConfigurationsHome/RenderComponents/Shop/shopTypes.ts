@@ -5,6 +5,7 @@ export type ShopContainerProps = {
     details: string;
     imageURI?: string;
     price: string;
+    cashback: string;
   };
   products: Array<{
     _id: string;
@@ -12,6 +13,7 @@ export type ShopContainerProps = {
     name: string;
     details: string;
     price: number;
+    offers: { cashback: string };
     imageInfo: Array<{
       name: string;
       Key: string;
@@ -38,6 +40,7 @@ export type ShopComponentProps = {
     name: string;
     details: string;
     price: number;
+    offers: { cashback: string };
     imageInfo: Array<{
       name: string;
       Key: string;

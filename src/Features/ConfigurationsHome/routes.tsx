@@ -4,6 +4,7 @@ import Testimonial from "./RenderComponents/Testimonial";
 import Shop from "./RenderComponents/Shop";
 import AdminVideos from "./RenderComponents/AdminVideos";
 import AdminGoldScheme from "./RenderComponents/AdminGoldScheme";
+import OrderDetails from "./RenderComponents/OrderDetails";
 
 export const configRoutes = [
   {
@@ -29,5 +30,9 @@ export const configRoutes = [
   {
     path: "/shop",
     element: <Shop />,
+  },
+  {
+    path: "/order-details",
+    element: <OrderDetails />,
   },
 ];

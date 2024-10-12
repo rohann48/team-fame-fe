@@ -50,6 +50,7 @@ const ShopContextProvider = ({ children }: ShopContextTypes) => {
           imageInfo: product.productId.imageInfo,
           price: product.productId.price,
           quantityCount: product.quantity,
+          offers: product.productId?.offers || {},
         });
         draft.catTotalAmount += product.productId.price * product.quantity || 0;
       });
@@ -63,8 +64,6 @@ const ShopContextProvider = ({ children }: ShopContextTypes) => {
       getCartDataByClientId();
     }
   }, [userInfo._id]);
-
-  console.log(productInfo, "lloooo");
 
   const contextValue = useMemo(
     () => ({

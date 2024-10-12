@@ -98,7 +98,7 @@ function SignUpModal({
           </label>
           {!isEdit && (
             <label className="password-label-cover">
-              <div className="password-text">Password:</div>
+              <div className="password-text">Password</div>
               <input
                 className="password-input"
                 type="password"
@@ -109,7 +109,7 @@ function SignUpModal({
           )}
           {!isEdit && (
             <label className="password-label-cover">
-              <div className="password-text">Confirm Password:</div>
+              <div className="password-text">Confirm Password</div>
               <input
                 className="password-input"
                 type="password"
@@ -119,6 +119,16 @@ function SignUpModal({
               />
             </label>
           )}
+          <label className="email-label-cover">
+            <div className="email-text">Invited Refferal Code</div>
+            <input
+              className="email-input"
+              type="text"
+              name="invitedRefferal"
+              // value={}
+              onChange={(e) => handleOnChange(e)}
+            />
+          </label>
           <button
             className="sign-up-btn"
             type="button"

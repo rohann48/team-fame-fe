@@ -127,13 +127,13 @@ function SchemeJoinPage({
               </label>
             </div>
             <div className="scheme-btn-cover">
-              {!userInfo.goldSchemeId ? (
+              {!userInfo?.goldSchemeId && !userInfo?._id ? (
                 <button
                   className="join-scheme-btn"
                   onClick={() =>
-                    userInfo._id
-                      ? handleLoginModalToggle()
-                      : handleSignUpModalToggle()
+                    // userInfo._id
+                    //   ? handleLoginModalToggle()
+                    handleSignUpModalToggle()
                   }
                 >
                   Join Now

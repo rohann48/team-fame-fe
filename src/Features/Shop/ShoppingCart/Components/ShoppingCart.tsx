@@ -130,6 +130,7 @@ function ShoppingCart({
                 <select
                   onChange={(e) => onSelectChange(e.target.value)}
                   value={selectedCategory}
+                  style={{ textTransform: "capitalize" }}
                 >
                   <option value={"all"} key={"all"} selected>
                     {"all"}

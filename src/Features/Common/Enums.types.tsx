@@ -32,6 +32,10 @@ export enum RoleType {
   MEMBER = "member",
   GUEST = "guest",
 }
+
+export enum interceptedMessageTypes {
+  SESSION_END = "user session has ended",
+}
 export enum ErrorMessageEnum {
   UNAUTHORIZED_USER = "unauthorized user",
   SESSION_END = "session end",

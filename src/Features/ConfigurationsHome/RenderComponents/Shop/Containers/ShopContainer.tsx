@@ -16,6 +16,7 @@ let initialState = {
   category: "",
   details: "",
   price: "",
+  cashback: "",
 };
 function ShopContainer() {
   const navigate = useNavigate();
@@ -52,6 +53,7 @@ function ShopContainer() {
       form.append("details", productDetails.details);
       form.append("category", productDetails.category);
       form.append("price", productDetails.price);
+      form.append("cashback", productDetails.cashback);
       form.append("clientId", userInfo._id);
       // for (let i = 0; i < uploadedFiles.length; i++) {
       if (uploadedFiles.length) {

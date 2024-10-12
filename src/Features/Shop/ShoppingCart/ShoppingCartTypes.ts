@@ -14,6 +14,7 @@ export type ShoppingCartTypes = {
     price: number;
     imageInfo: Array<object>;
     quantiity?: number;
+    offers: { cashback: number };
   }>;
   categoryData: Array<string>;
   onSelectChange(category: string): void;

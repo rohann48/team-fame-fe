@@ -74,6 +74,9 @@
 .config-page-container .config-page-cover .config-container .config-container-left .config-links .config-links-height .config-links-border .config-links-title .title {
   width: 42%;
 }
+.config-page-container .config-page-cover .config-container .config-container-left .config-links .config-links-height .config-links-border.selected-tab {
+  background-color: #c1b8b8;
+}
 .config-page-container .config-page-cover .config-container .config-container-right {
   width: 82%;
   height: 100%;

@@ -37,6 +37,7 @@ const LoginContextProvider = ({ children, userData }: LoginContextTypes) => {
       };
     });
   }, []);
+  console.log("userData", userData);
 
   useEffect(() => {
     // const fetchUserInfo = async () => {
@@ -45,7 +46,7 @@ const LoginContextProvider = ({ children, userData }: LoginContextTypes) => {
     // };
     let sessionUserInfo = sessionStorage.getItem("userInfo");
     if (sessionUserInfo) {
-      console.log("sessionsss");
+      // console.log("sessionsss");
       const response = JSON.parse(sessionUserInfo);
       setUserInfo(response);
     } else if (userData && userData._id) {

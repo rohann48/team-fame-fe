@@ -19,5 +19,6 @@ export const Resource = {
       `/testimonial/delete?docId=${docId}&fileKey=${fileKey}`,
     deleteEvent: (docId: string, fileKey: string) =>
       `/event/delete?docId=${docId}&fileKey=${fileKey}`,
+    getOrderLists: "/order-details/list",
   },
 };

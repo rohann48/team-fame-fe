@@ -10,11 +10,7 @@ function Footer() {
   return (
     <footer className="footer-distributed">
       <div className="footer-left">
-        <img
-          className="logo-image"
-          src={images.teamFameLogo}
-          alt="updapt logo"
-        />
+        <img className="logo-image" src={images.teamFameLogo} alt="fame logo" />
 
         {/* <p className="footer-company-name">Te Name © 2015</p> */}
       </div>

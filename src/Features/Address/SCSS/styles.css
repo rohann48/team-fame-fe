@@ -285,7 +285,7 @@
 }
 .address-container .address-card-cover .address-right-cover .address-right-summery-cover {
   width: 357px;
-  height: 180px;
+  height: 208px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -365,15 +365,14 @@
 }
 .address-container .address-card-cover .address-right-cover .product-offer-cover .offer-btn {
   all: unset;
-  all: unset;
   width: 150px;
   height: 30px;
-  background-color: #eaa837;
+  background-color: #8a8a8a;
   border-radius: 4px;
   color: #ffffff;
   font-size: 14px;
   font-weight: 500;
-  cursor: pointer;
+  pointer-events: none;
   text-align: center;
 }
 .address-container .address-card-cover .address-right-cover .place-order-btn-cover {

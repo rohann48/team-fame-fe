@@ -1,11 +1,32 @@
 import axios from "axios";
 import cryptoEncryption from "./Common/CommonFunctions/EncryptDecrypt";
+import { interceptedMessageTypes } from "../Features/Common/Enums.types";
+
 axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
 axios.defaults.headers.common = {
   Accept: "application/json",
   "Content-Type": "application/json",
 };
 axios.defaults.withCredentials = true;
+
+export const initSessionInterceptor = (onSessionEnd: any) => {
+  axios.interceptors.response.use(
+    (response) => {
+      return response;
+    },
+    (error: any) => {
+      if (
+        error?.response?.data?.error?.message ===
+        interceptedMessageTypes.SESSION_END
+      ) {
+        onSessionEnd();
+        // Return a resolved Promise with the default response
+        error.interceptedMessage = interceptedMessageTypes.SESSION_END;
+      }
+      return Promise.reject(error);
+    }
+  );
+};
 
 export const apiAuth = {
   /**api method with encyrption */

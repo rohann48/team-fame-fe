@@ -3,7 +3,7 @@ import LoginComponent from "../Components/Login";
 import { LoginContainerTypes } from "../LoginTypes";
 import { NotificationManager } from "react-notifications";
 import { ApiHandler } from "../../Constants/ApiHandler";
-import bcrypt from "bcryptjs";
+import sha256 from "sha256";
 import { LoginContext } from "../../context/LoginContext";
 import { useNavigate } from "react-router-dom";
 import { handleErrorResponse } from "../../Common/CommonFunctions/CommonErrorHandler";
@@ -44,6 +44,7 @@ function LoginContainer({
       try {
         // const saltRounds = 10; // Number of salt rounds for bcrypt
         // const hashedPassword = bcrypt.hashSync(loginData.password, saltRounds);
+        const hashedPassword = sha256(loginData.password);
         const data = {
           contactNo: loginData.contactNo,
           password: loginData.password,

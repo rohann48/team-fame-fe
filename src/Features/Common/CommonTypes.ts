@@ -9,6 +9,7 @@ export type CommonTypes = {
     details: string;
     price: number;
     name: string;
+    offers: { cashback: number };
     imageInfo: Array<{
       _id: string;
       name: string;
