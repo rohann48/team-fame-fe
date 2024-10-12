@@ -21,8 +21,8 @@ function OrderDetails({ schemeDetails }: OrderDetailsTypes) {
           {schemeDetails.length > 0 ? (
             schemeDetails.map((order) => (
               <tr key={order._id}>
-                <td>{order.clientInfo.name}</td>
-                <td>{order.clientInfo.contactNo}</td>
+                <td>{order?.clientInfo?.name}</td>
+                <td>{order?.clientInfo?.contactNo}</td>
                 <td>
                   {order?.orderDetails?.length > 0
                     ? order.orderDetails.map((investment, index) => (

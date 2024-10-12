@@ -37,7 +37,7 @@ const LoginContextProvider = ({ children, userData }: LoginContextTypes) => {
       };
     });
   }, []);
-  console.log("userData", userData);
+  // console.log("userData", userData);
 
   useEffect(() => {
     // const fetchUserInfo = async () => {
