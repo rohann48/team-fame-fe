@@ -4,12 +4,30 @@ import icons from "../../Assets/Icons/icons";
 import "../SCSS/styles.css";
 
 function Address({
-  refferalCodeCheck,
-  handleChange,
   handleFormDataChange,
   handleSubmitForm,
   productInfo,
+  placeYourOrder,
+  userInfo,
 }: Readonly<AddressTypes>) {
+  const offerAppliedCalc = () => {
+    let offerPrice = productInfo.catTotalAmount;
+    productInfo.cartBasket.forEach((prod) => {
+      if (prod?.offers?.cashback > 1) {
+        offerPrice -= productInfo.catTotalAmount * (prod.offers.cashback / 100);
+      }
+    });
+    return offerPrice;
+  };
+  const orderOfferCalc = () => {
+    let offerPrice = 0;
+    productInfo.cartBasket.forEach((prod) => {
+      if (prod?.offers?.cashback > 1) {
+        offerPrice += prod.offers.cashback;
+      }
+    });
+    return offerPrice;
+  };
   return (
     <div className="address-container">
       <div className="address-back-btn-cover">
@@ -124,16 +142,23 @@ function Address({
           <div className="address-right-summery-cover">
             <div className="summery-text">YOUR ORDER SUMMARY</div>
             <div className="sub-total-text">
-              <span>Subtotal (inclusive of all taxes)</span>
+              <span>Subtotal (inclusive of all taxes):</span>
               <span>{productInfo.catTotalAmount}</span>
             </div>
             <div className="shipping-text">
-              <span>Shipping</span>
+              <span>Shipping:</span>
               <span>0</span>
             </div>
+            <div className="shipping-text">
+              <span>Offer applied:</span>
+              <span>
+                {orderOfferCalc()}
+                {"%"}
+              </span>
+            </div>
             <div className="order-text">
-              <span>Order Total</span>
-              <span>0</span>
+              <span>Order Total:</span>
+              <span>{offerAppliedCalc()}</span>
             </div>
           </div>
           <div className="product-offer-cover ">
@@ -145,11 +170,17 @@ function Address({
                 type="text"
                 placeholder="Enter refferal code here"
                 className="offer-input"
-                onChange={(e) => handleChange(e.target.value)}
+                value={userInfo?.shopVoucher?.invitedRefferal || null}
+                // onChange={(e) => handleChange(e.target.value)}
+                disabled={true}
               />
             </div>
-            <button className="offer-btn" onClick={() => refferalCodeCheck()}>
-              Apply Now
+            <button
+              className="offer-btn"
+              // onClick={() => refferalCodeCheck()}
+              disabled={true}
+            >
+              Offer Applied
             </button>
           </div>
           <div className="place-order-btn-cover">

@@ -67,6 +67,10 @@
                                     width: 42%;
                                 }
                             }
+
+                            &.selected-tab {
+                                background-color: #c1b8b8;
+                            }
                         }
 
                         .config-links-title {}

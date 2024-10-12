@@ -12,7 +12,12 @@ function ConfigurationContainer() {
     // { title: "videos", img: images.videoIcon, path: "videos" },
     // { title: "news", img: images.newsIcon, path: "about-us" },
     { title: "gold scheme", img: images.schemeIcon, path: "gold-scheme" },
-    { title: "shop", img: images.schemeIcon, path: "shop" },
+    { title: "shop", img: images.storeAS, path: "shop" },
+    {
+      title: "order details",
+      img: images.orderDetailsAS,
+      path: "order-details",
+    },
   ];
 
   const configurationRoutes = useRoutes(configRoutes);

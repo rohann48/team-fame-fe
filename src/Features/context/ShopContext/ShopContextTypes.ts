@@ -12,6 +12,7 @@ interface productInfo {
     details: string;
     price: number;
     imageInfo: Array<{ name: String; Key: String; path: String; date: Date }>;
+    offers: { cashback: number };
   }>;
 }
 
@@ -24,6 +25,7 @@ export interface ShoppingContextInitialState {
       description: string;
       price: number;
       quantityCount?: number;
+      offers: { cashback: number };
     }[];
     catTotalAmount: number;
   };

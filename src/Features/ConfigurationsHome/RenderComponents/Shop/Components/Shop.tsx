@@ -57,8 +57,8 @@ const Shop = ({
                   />
                 </label>
               </div>
-              <div>
-                <label className="product-amount-cover">
+              <div className="product-name-cover">
+                {/* <label className="product-amount-cover">
                   <div className="product-text">Price</div>
                   <input
                     className="product-amount-input"
@@ -67,6 +67,34 @@ const Shop = ({
                     value={productDetails?.price || ""}
                   />
                 </label>
+                <label>
+                  <div className="product-description">Cashback</div>
+                  <textarea
+                    className="product-description-text-area"
+                    onChange={(e) => handleChangeInputs(e, "cashback")}
+                    // value={productDetails?.details || ""}
+                  /> */}
+                {/* </label> */}
+                {/* <div className="product-name-cover"> */}
+                <label className="product-label-cover">
+                  <div className="product-text">Price</div>
+                  <input
+                    className="product-amount-input"
+                    type="text"
+                    onChange={(e) => handleChangeInputs(e, "price")}
+                    value={productDetails?.price || ""}
+                  />
+                </label>
+                <label className="product-achievement-cover">
+                  <div className="product-text">Cashback</div>
+                  <input
+                    type="number"
+                    className="product-description-text-area"
+                    onChange={(e) => handleChangeInputs(e, "cashback")}
+                    // value={productDetails?.details || ""}
+                  />
+                </label>
+                {/* </div> */}
               </div>
               <div className="product-description-cover">
                 <label>
@@ -92,6 +120,7 @@ const Shop = ({
                 <th>Name</th>
                 <th>Description</th>
                 <th>Price</th>
+                <th>Cashback</th>
                 <th>Images</th>
                 <th>Actions</th>
               </tr>
@@ -103,6 +132,10 @@ const Shop = ({
                   <td>{product.name}</td>
                   <td className="description">{product.details}</td>
                   <td>{product.price}</td>
+                  <td>
+                    {product?.offers?.cashback || "-"}
+                    {product?.offers?.cashback ? "%" : ""}
+                  </td>
                   <td>
                     {product.imageInfo.length > 0 ? (
                       <details>

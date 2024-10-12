@@ -20,7 +20,14 @@ const Configuration = ({
             <div className="config-links">
               {sideNavLinks.map((link, i) => (
                 <div key={i} className="config-links-height">
-                  <NavLink to={link.path} className="config-links-border">
+                  <NavLink
+                    to={link.path}
+                    className={({ isActive }) => {
+                      return isActive
+                        ? "config-links-border selected-tab"
+                        : "config-links-border";
+                    }}
+                  >
                     <div className="config-links-title">
                       <div className="config-links-img">
                         <img src={link.img} alt="config-icons" />

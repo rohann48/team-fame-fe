@@ -44,8 +44,6 @@ function AdminVideosContainer() {
       form.append("fileToUpload", uploadedVideoData.videoFiles[0]);
       let response = ApiHandler.postVideoInfo(form);
       NotificationManager.success(Notify.ADD, "", 2000);
-
-      console.log(response);
     } catch (err) {
       NotificationManager.warning(Notify.DEFAULT, "", 2000);
     }

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import {
   SignUpModalCommonTypes,
   SignUpModalContainerTypes,
@@ -18,6 +18,7 @@ const intialUserState = {
   // address: "",
   password: "",
   confirmPassword: "",
+  invitedRefferal: "",
 };
 function SignUpContainer({
   isSignUpModalOpen,
@@ -38,50 +39,109 @@ function SignUpContainer({
     });
   };
 
+  const [refferalCodeList, setRefferalCodeList] = useState<Array<string>>([]);
+  const [refferalCode, setRefferalCode] = useState<string | null>(null);
+  const getOfferRefferalInfo = async () => {
+    const res = await ApiHandler.getRefferalCodeList();
+    setRefferalCodeList([...res?.results?.[0]?.refferalCodes]);
+  };
+
+  const refferalCodeCheck = async () => {
+    if (registerUser.invitedRefferal?.length) {
+      if (refferalCodeList.includes(registerUser.invitedRefferal!)) {
+        try {
+          const data = {
+            refferalCode: registerUser.invitedRefferal,
+          };
+          const response = await ApiHandler.validateRefferalCode(data);
+          if (response.results) {
+            NotificationManager.success(
+              "Refferal code applied successfully",
+              "",
+              2000
+            );
+            return "success";
+          } else {
+            NotificationManager.warning("Refferal code already used", "", 2000);
+            return false;
+          }
+        } catch (error) {
+          console.log("error", error);
+        }
+      } else {
+        NotificationManager.warning("Invalid Refferal code", "", 2000);
+        return "Invalid Refferal code";
+      }
+    } else {
+      if (refferalCodeList.length === 0) {
+        const response = await ApiHandler.validateRefferalCode({
+          refferalCode: null,
+        });
+        return "success";
+      } else {
+        NotificationManager.warning("Refferal code required", "", 2000);
+        return "Refferal code required";
+      }
+    }
+  };
+
   const handleUserRegister = async () => {
     try {
-      if (registerUser.password !== registerUser.confirmPassword) {
-        NotificationManager.success("Password does not match!", "", 2000);
-      } else if (registerUser.password.length <= 7) {
-        NotificationManager.success(
-          "Password must have 8 or more characters!",
-          "",
-          2000
-        );
-      } else {
-        const saltRounds = 10; // Number of salt rounds for bcrypt
-        const hashedPassword = bcrypt.hashSync(
-          registerUser.password,
-          saltRounds
-        );
-        const hashedConfirmedPassword = bcrypt.hashSync(
-          registerUser.confirmPassword,
-          saltRounds
-        );
+      const refferalCheck = await refferalCodeCheck();
+      if (refferalCheck === "success") {
+        if (registerUser.password !== registerUser.confirmPassword) {
+          NotificationManager.success("Password does not match!", "", 2000);
+        } else if (registerUser.password.length <= 7) {
+          NotificationManager.success(
+            "Password must have 8 or more characters!",
+            "",
+            2000
+          );
+        } else if (
+          registerUser.invitedRefferal.length === 0 &&
+          refferalCheck !== "success"
+        ) {
+          NotificationManager.warning(
+            "Please fill all the fields",
+            "invited refferal code required",
+            2000
+          );
+        } else {
+          const saltRounds = 10; // Number of salt rounds for bcrypt
+          const hashedPassword = bcrypt.hashSync(
+            registerUser.password,
+            saltRounds
+          );
+          const hashedConfirmedPassword = bcrypt.hashSync(
+            registerUser.confirmPassword,
+            saltRounds
+          );
 
-        const userDetails = {
-          name: registerUser.name,
-          lastName: registerUser.lastName,
-          contactNo: registerUser.contactNo,
-          emailId: registerUser.emailId,
-          password: hashedPassword,
-          confirmPassword: hashedConfirmedPassword,
-        };
-        const res = await ApiHandler.registerUser(userDetails);
-        setRegisterUser((prev) => ({
-          ...prev,
-          name: res.results.name,
-          lastName: res.results.lastName,
-          contactNo: res.results.contactNo,
-          emailId: res.results.emailId,
-        }));
-        if (res.results._id) {
-          NotificationManager.success(Notify.USER_REGISTER, "", 2000);
-          setLoginInfo({
-            isSignUpModalOpen: false,
-            isLoginModalOpen: true,
-            isAuthenticated: false,
-          });
+          const userDetails = {
+            name: registerUser.name,
+            lastName: registerUser.lastName,
+            contactNo: registerUser.contactNo,
+            emailId: registerUser.emailId,
+            password: hashedPassword,
+            confirmPassword: hashedConfirmedPassword,
+            invitedRefferal: registerUser.invitedRefferal,
+          };
+          const res = await ApiHandler.registerUser(userDetails);
+          setRegisterUser((prev) => ({
+            ...prev,
+            name: res.results.name,
+            lastName: res.results.lastName,
+            contactNo: res.results.contactNo,
+            emailId: res.results.emailId,
+          }));
+          if (res.results._id) {
+            NotificationManager.success(Notify.USER_REGISTER, "", 2000);
+            setLoginInfo({
+              isSignUpModalOpen: false,
+              isLoginModalOpen: true,
+              isAuthenticated: false,
+            });
+          }
         }
       }
     } catch (error: any) {
@@ -101,7 +161,6 @@ function SignUpContainer({
         "66207ae88e9fc4d0c4c5aa15",
         modifiedData
       );
-      console.log(response);
       setSingleUserInfo!((prev) => ({
         ...prev,
         name: response.results.name,
@@ -118,7 +177,10 @@ function SignUpContainer({
       NotificationManager.warning(Notify.DEFAULT, "", 2000);
     }
   };
-  console.log(userInfo, "hdsds");
+
+  useEffect(() => {
+    getOfferRefferalInfo();
+  }, []);
 
   return (
     <SignUpModal

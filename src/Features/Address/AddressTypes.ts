@@ -1,11 +1,11 @@
 import { ShoppingContextInitialState } from "../context/ShopContext/ShopContextTypes";
 
 export type AddressTypes = {
-  refferalCodeCheck: () => void;
-  handleChange: (code: string) => void;
   handleFormDataChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSubmitForm: () => Promise<void>;
   productInfo: ShoppingContextInitialState["productInfo"];
+  placeYourOrder: () => void;
+  userInfo: any;
 };
 export type AddressContainerType = {
   formData: {

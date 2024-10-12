@@ -64,7 +64,6 @@ const GlobalDataContextProvider = ({
     handleGetTestimonial();
     fetchVideos();
   }, []);
-  console.log("response", allVideos);
 
   // To optimize the rendering of the context value and avoid unnecessary re-renders
   const contextValue = useMemo(

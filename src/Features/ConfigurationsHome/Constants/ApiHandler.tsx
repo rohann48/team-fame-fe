@@ -128,4 +128,10 @@ export const ApiHandler = {
     );
     return response.data;
   },
+  getOrderLists: async () => {
+    const response = await apiAuth.getApiwithoutAuth(
+      Resource.url.getOrderLists
+    );
+    return response.data;
+  },
 };

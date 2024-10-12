@@ -164,7 +164,6 @@ export const ApiHandler = {
     }
   },
   updateUserInfo: async (clientId: string, modifiedData: Object) => {
-    console.log(modifiedData);
     const response = await apiAuth.putApiwithoutAuth(
       Resource.url.EditUsers(clientId),
       modifiedData
@@ -195,15 +194,19 @@ export const ApiHandler = {
   },
 
   validateRefferalCode: async (data: any) => {
-    // try {
     const response = await apiAuth.postApiwithoutAuth(
       Resource.url.validateRefferalCode,
       data
     );
     return response.data;
-    // } catch (error) {
-    //   console.log(error);
-    // }
+  },
+
+  placeYourOrder: async (data: any) => {
+    const response = await apiAuth.postApiwithoutAuth(
+      Resource.url.placeYourOrder,
+      data
+    );
+    return response.data;
   },
   postOrderDetails: async (modifiedData: {}) => {
     try {

@@ -20,12 +20,15 @@ function CartContainers() {
     navigate("/shop");
   };
   //calculate the price of the products
+
   useEffect(() => {
-    setProductInfo((draft) => {
-      draft.catTotalAmount = productInfo.cartBasket.reduce((acc, curr) => {
-        return acc + curr.price * curr.quantityCount!;
-      }, 0);
-    });
+    if (productInfo?.cartBasket) {
+      setProductInfo((draft) => {
+        draft.catTotalAmount = productInfo.cartBasket.reduce((acc, curr) => {
+          return acc + curr.price * curr.quantityCount!;
+        }, 0);
+      });
+    }
   }, [productInfo]);
 
   //increment quantity

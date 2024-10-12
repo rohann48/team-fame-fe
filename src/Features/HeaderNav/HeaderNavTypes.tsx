@@ -12,6 +12,7 @@ export interface User {
   referralCode?: string;
   role?: string;
   goldSchemeId: string | null;
+  invitedRefferal: string;
 }
 export type HeaderNavProps = {
   activeTab: string;

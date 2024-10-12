@@ -32,5 +32,6 @@ export interface SignUpModalContainerTypes extends SignUpModalCommonTypes {
     // address: string;
     password: string;
     confirmPassword: string;
+    invitedRefferal: string;
   };
 }
