@@ -219,7 +219,9 @@ const HomePage = ({
                   (_, i) => (
                     <div className="slide" key={i}>
                       <img
-                        src={i % 2 === 0 ? images.birlaLogo : images.jewLogo}
+                        src={
+                          i % 2 === 0 ? images.adityaCapital : images.jewLogo
+                        }
                         alt=""
                       />
                     </div>

@@ -105,7 +105,7 @@ const HeaderNav = ({
             setActiveTab("scheme");
           }}
         >
-          SCHEME
+          SAVINGS
         </NavLink>
         <NavLink
           to="shop"
