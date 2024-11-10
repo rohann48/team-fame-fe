@@ -210,3 +210,105 @@
     }
   }
 }
+/* Responsive Breakpoints */
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .events-cards-container {
+    .events-bg-img-cover {
+      height: 300px;
+    }
+
+    .events-cards-and-header-cover {
+      .events-cards-header-text {
+        font-size: 18px;
+      }
+
+      .events-cards-render-cover {
+        padding-inline: 1rem;
+
+        .events-cards {
+          width: 300px;
+          height: 400px;
+        }
+      }
+    }
+
+    .events-former-text-main-cover {
+      .events-former-text-wrapper {
+        font-size: 72px;
+        gap: 2rem;
+      }
+
+      .events-former-text-student-cover {
+        font-size: 16px;
+        gap: 3rem;
+      }
+    }
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+  .events-cards-container {
+    .events-bg-img-cover {
+      height: 200px;
+    }
+
+    .events-cards-and-header-cover {
+      .events-cards-header-text {
+        font-size: 16px;
+      }
+
+      .events-cards-render-cover {
+        padding-inline: 0.5rem;
+
+        .events-cards {
+          width: 250px;
+          height: 350px;
+        }
+      }
+    }
+
+    .events-former-text-main-cover {
+      .events-former-text-wrapper {
+        font-size: 56px;
+        gap: 1rem;
+      }
+
+      .events-former-text-student-cover {
+        font-size: 14px;
+        gap: 1rem;
+      }
+    }
+  }
+}
+
+/* Extra small screens (very small phones) */
+@media (max-width: 320px) {
+  .events-cards-container {
+    .events-cards-and-header-cover {
+      .events-cards-header-text {
+        font-size: 14px;
+      }
+
+      .events-cards-render-cover {
+        .events-cards {
+          width: 200px;
+          height: 300px;
+        }
+      }
+    }
+
+    .events-former-text-main-cover {
+      .events-former-text-wrapper {
+        font-size: 40px;
+        gap: 0.5rem;
+      }
+
+      .events-former-text-student-cover {
+        font-size: 12px;
+      }
+    }
+  }
+}
