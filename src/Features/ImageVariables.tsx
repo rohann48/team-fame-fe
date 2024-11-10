@@ -90,7 +90,7 @@ let images = {
   storeAS: require("./Assets/Images/storeAS.svg").default,
   orderDetailsAS: require("./Assets/Images/orderDetailsAS.svg").default,
   // PageNotFound: require("./Assets/Images/page-not-found-img.svg").default,
-  logoBackground: require("./Assets/Images/logoBackground.jpg").default,
+  logoBackground: require("./Assets/Images/logoBackground.svg").default,
   adityaCapital: require("./Assets/Images/adityaCapital.svg").default,
 
   //prod

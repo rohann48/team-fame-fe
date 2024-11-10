@@ -21,6 +21,7 @@ const HeaderNav = ({
   handleEditUserProfile,
   singleUserInfo,
   logoutUser,
+  isMobile,
 }: HeaderNavProps) => {
   return (
     <div className="header-nav-container">
@@ -174,7 +175,7 @@ const HeaderNav = ({
             )}
           </button>
         )}
-        {userInfo.role === "admin" && (
+        {userInfo.role === "admin" && !isMobile && (
           <NavLink to="config/about-us">
             <Tippy placement="bottom-start" content="configuration">
               <img

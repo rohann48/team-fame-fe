@@ -20,6 +20,7 @@ const HomePage = ({
   return (
     <div className="home-page-container">
       <div className="home-page-cover">
+        <>{console.log(images.logoBackground, "images.logoBackground")}</>
         <div className="home-revolution-logo-cover">
           <img
             className="home-revolution-logo"
@@ -33,7 +34,7 @@ const HomePage = ({
               src={images.fameRevolutionLogo}
               alt="fameRevolutionLogo"
             />
-            <button className="contact-us-btn">Contact us</button>
+            {/* <button className="contact-us-btn">Contact us</button> */}
           </div>
         </div>
         <div className="home-four-icons-cover">
@@ -70,27 +71,13 @@ const HomePage = ({
             <p className="img-description">Politics</p>
           </div>
         </div>
-        <div className="home-about-us-cover">
+        {/* <div className="home-about-us-cover">
           <div className="about-us-header">
             <div className="about-text">ABOUT</div>
             <div className="us-text">US</div>
           </div>
-          <div className="about-us-description">
-            {aboutUsData?.content}
-            {/* Education is not the learning of facts, but the training of the mind
-            to think. The right kind of education is not concerned with any
-            ideology, however much it may promise a future utopia it is not
-            based on any system. The highest function of education is to bring
-            about an integrated individual who is capable of dealing with life
-            as a whole. From time immemorial, education continues to be the most
-            integral aspect of any civilization. Over the years, it has adapted
-            itself to the changing needs of time and to keep abreast with
-            evolutionary changes and steering towards becoming a meaningful
-            process and promoting lifelong learning. An education system that
-            originated in the eastern world and continues to be a source of
-            inspiration is the ancient Indian Gurukul System of Education. */}
-          </div>
-        </div>
+          <div className="about-us-description">{aboutUsData?.content}</div>
+        </div> */}
         <div className="home-events-cover">
           <div className="event-title">Upcoming Events</div>
           <div className="cards-cover">
@@ -364,9 +351,10 @@ const HomePage = ({
               </div>
               <div className="join-now-para">
                 {/* <p>Farmer join our community</p> */}
-                <p>From the students ; for the students ; to the students</p>
+                {/* <p>From the students ; for the students ; to the students</p> */}
+                <p>#REvolution</p>
               </div>
-              <button className="join-now-btn">Join Now</button>
+              {/* <button className="join-now-btn">Join Now</button> */}
             </div>
           </div>
           <div>

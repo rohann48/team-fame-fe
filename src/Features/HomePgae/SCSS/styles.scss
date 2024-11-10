@@ -348,7 +348,7 @@
 
     .home-vision-cover {
       width: 100%;
-      height: 80%;
+      height: 620px;
       background-image: url("../../Assets//Images/teamGroupPic.svg");
       background-size: cover;
 
@@ -1195,6 +1195,215 @@
 
       @media (max-width: 480px) {
         gap: 5px;
+      }
+    }
+  }
+}
+
+// Mobile-first approach
+@media screen and (max-width: 768px) {
+  .home-page-container {
+    .home-page-cover {
+      padding: 5% 3%;
+
+      .home-revolution-logo-cover {
+        .home-revolution-logo {
+          height: auto;
+          max-width: 100%;
+        }
+
+        .logo-and-btn-cover {
+          .logo-img {
+            width: 20rem;
+            height: auto;
+          }
+
+          .contact-us-btn {
+            font-size: 14px;
+            padding: 8px;
+            width: 120px;
+            height: 35px;
+          }
+        }
+      }
+
+      .home-four-icons-cover {
+        // flex-direction: column;
+        align-items: center;
+
+        .education-logo-cover,
+        .sports-logo-cover,
+        .spirituality-logo-cover,
+        .Politics-logo-cover {
+          margin-bottom: 15px;
+          img {
+            width: 50px !important;
+          }
+          .img-description {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .home-about-us-cover {
+        flex-direction: column;
+
+        .about-us-header {
+          font-size: 36px;
+        }
+
+        .about-us-description {
+          padding: 5%;
+          font-size: 14px;
+        }
+      }
+
+      .home-events-cover {
+        .cards-cover {
+          flex-direction: column;
+          align-items: center;
+
+          .cards {
+            width: 100%;
+            margin-bottom: 10px;
+
+            .card-right-cover {
+              .day,
+              .marathon-header,
+              .date-cover,
+              .time-cover,
+              .location-cover {
+                font-size: 14px;
+              }
+
+              .contact-us-btn {
+                font-size: 12px;
+                padding: 5px;
+                width: 80px;
+                height: 30px;
+              }
+            }
+          }
+        }
+      }
+
+      .home-testimonial-cover {
+        flex-direction: column;
+        padding: 10px;
+
+        .testimonial-container {
+          padding: 15px;
+
+          .testimonial-content {
+            .testimonial-image {
+              width: 100px;
+              height: 100px;
+            }
+
+            .testimonial-text {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// For smaller mobile screens
+@media screen and (max-width: 480px) {
+  .home-page-container {
+    .home-page-cover {
+      padding: 5% 2%;
+
+      .home-revolution-logo-cover {
+        .logo-and-btn-cover {
+          .logo-img {
+            // max-width: 80%;
+          }
+
+          .contact-us-btn {
+            font-size: 12px;
+            padding: 5px;
+            width: 100px;
+            height: 30px;
+          }
+        }
+      }
+
+      .home-four-icons-cover {
+        .education-logo-cover,
+        .sports-logo-cover,
+        .spirituality-logo-cover,
+        .Politics-logo-cover {
+          .img-description {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .home-about-us-cover {
+        .about-us-header {
+          font-size: 28px;
+        }
+
+        .about-us-description {
+          font-size: 12px;
+        }
+      }
+
+      .home-events-cover,
+      .home-testimonial-cover {
+        .cards,
+        .testimonial-container {
+          width: 100%;
+          padding: 10px;
+        }
+      }
+
+      .home-sponser-cover,
+      .home-mission-cover,
+      .home-vision-cover {
+        padding: 2%;
+        text-align: center;
+        height: auto;
+        .mission-img,
+        .vission-description {
+          width: 100%;
+          font-size: 80px;
+        }
+      }
+      .join-now-title {
+        font-size: 10px !important;
+      }
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  .home-page-container {
+    .home-page-cover {
+      .home-revolution-logo-cover .logo-and-btn-cover {
+        .logo-img {
+          width: 20rem;
+        }
+        .contact-us-btn {
+          font-size: 10px;
+          padding: 3px 8px;
+        }
+      }
+      .home-four-icons-cover {
+        flex-direction: column;
+        .education-logo-cover,
+        .sports-logo-cover,
+        .spirituality-logo-cover,
+        .Politics-logo-cover {
+          .img-description {
+            font-size: 12px;
+          }
+        }
+      }
+      .home-about-us-cover .about-us-header {
+        font-size: 16px;
       }
     }
   }
