@@ -23,8 +23,8 @@ function AdminGoldScheme({ schemeDetails }: AdminGoldSchemeTypes) {
           {schemeDetails.length > 0 ? (
             schemeDetails.map((scheme) => (
               <tr key={scheme._id}>
-                <td>{scheme.clientId.name}</td>
-                <td>{scheme.clientId.contactNo}</td>
+                <td>{scheme.clientId?.name}</td>
+                <td>{scheme.clientId?.contactNo}</td>
                 <td>{scheme.period}</td>
                 <td>{new Date(scheme.startDate).toLocaleDateString()}</td>
                 <td>{new Date(scheme.endDate).toLocaleDateString()}</td>

@@ -22,6 +22,11 @@ export type ShopContainerProps = {
       _id: string;
     }>;
   }>;
+  inventorySummary: {
+    remainingQuantity: number;
+    totalOrderedQuantity: number;
+    totalProductQuantity: number;
+  };
 };
 export type ShopComponentProps = {
   handleChangeInputs: (
@@ -54,4 +59,9 @@ export type ShopComponentProps = {
     fileKey: string,
     index: number
   ) => void;
+  inventorySummary: {
+    remainingQuantity: number;
+    totalOrderedQuantity: number;
+    totalProductQuantity: number;
+  };
 };

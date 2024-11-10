@@ -30,10 +30,10 @@ const ShopContextProvider = ({ children }: ShopContextTypes) => {
   const getProductData = async () => {
     const response = await ApiHandler.getProductDetails();
     if (response) {
-      setProducts([...response?.results]);
-      setTempProducts([...response?.results]);
+      setProducts([...response?.results?.products]);
+      setTempProducts([...response?.results?.products]);
       let catSet: Set<string> = new Set();
-      response.results.forEach((data: any) => {
+      response.results?.products.forEach((data: any) => {
         catSet.add(data.category);
       });
       let categoryArr: Array<string> = Array.from(catSet);

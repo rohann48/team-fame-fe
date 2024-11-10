@@ -27,6 +27,13 @@ function ShopContainer() {
   >({ ...initialState });
   const [uploadedFiles, setUploadedFiles] = useState<any>({});
   const [products, setProducts] = useState<ShopContainerProps["products"]>([]);
+  const [inventorySummary, setInventorySummary] = useState<
+    ShopContainerProps["inventorySummary"]
+  >({
+    remainingQuantity: 0,
+    totalOrderedQuantity: 0,
+    totalProductQuantity: 0,
+  });
   //handle change form inputs
   const handleChangeInputs = (e: any, type: string) => {
     const { value } = e.target;
@@ -39,7 +46,8 @@ function ShopContainer() {
 
   const getProductData = async () => {
     const response = await ApiHandler.getProductDetails();
-    setProducts([...response.results]);
+    setProducts([...response.results?.products]);
+    setInventorySummary({ ...response.results?.inventorySummary });
   };
   useEffect(() => {
     getProductData();
@@ -130,6 +138,7 @@ function ShopContainer() {
       eventData={eventData}
       products={products}
       confirmDeleteThreadFile={confirmDeleteThreadFile}
+      inventorySummary={inventorySummary}
     />
   );
 }

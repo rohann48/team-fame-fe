@@ -146,7 +146,7 @@ function ShoppingCart({
               )}
             </div>
           </div>
-          <div className="go-to-cart-btn">Go to Cart</div>
+          {/* <div className="go-to-cart-btn">Go to Cart</div> */}
         </div>
         <div className="product-card-outer-cover">
           <div className="product-card-cover">

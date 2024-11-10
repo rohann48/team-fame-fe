@@ -291,3 +291,94 @@
     }
   }
 }
+/* Desktop First Approach */
+.address-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+
+  /* Base styles remain the same */
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+  .address-container {
+    .address-card-cover {
+      .address-left-cover {
+        padding-inline: 3rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .address-container {
+    .address-card-cover {
+      flex-direction: column;
+
+      .address-left-cover,
+      .address-right-cover {
+        width: 90%;
+        padding-inline: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .address-container {
+    .address-card-cover {
+      .address-left-cover {
+        width: 100%;
+        padding-inline: 1rem;
+
+        .address-name-cover,
+        .address-mob-number-cover,
+        .address-pin-code-cover,
+        .address-delivery-cover {
+          width: 100%;
+
+          .address-name-input-cover,
+          .address-mob-number-input-cover,
+          .address-pin-code-input-cover,
+          .address-delivery-input-cover {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .address-container {
+    .address-card-cover {
+      .address-left-cover {
+        padding-inline: 0.75rem;
+        width: 100%;
+
+        .address-name-cover,
+        .address-mob-number-cover,
+        .address-pin-code-cover,
+        .address-delivery-cover {
+          width: 100%;
+
+          .address-name-input-cover,
+          .address-mob-number-input-cover,
+          .address-pin-code-input-cover,
+          .address-delivery-input-cover {
+            width: 100%;
+
+            .address-input-name,
+            .address-input-mob-number,
+            .address-input-pin-code,
+            .address-input-delivery {
+              width: 100%;
+              height: 45px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

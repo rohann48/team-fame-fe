@@ -221,6 +221,15 @@
   font-weight: 500;
   text-transform: capitalize;
   margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .products-container .products-cards-cover .table-container {
   overflow-x: auto;

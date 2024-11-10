@@ -76,13 +76,28 @@ function App() {
     crossTab: true,
   });
 
+  //mobile view
+  const [windowDimension, setWindowDimension] = useState<number | null>(null);
+  //to check isMobile view or not
+  useEffect(() => {
+    setWindowDimension(window.innerWidth);
+  }, []);
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimension(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  const isMobile = windowDimension && windowDimension <= 950 ? true : false;
   return (
     <LoginContextProvider userData={userData}>
       <GlobalDataContextProvider>
         <div className="App">
           <div className="main-header-container">
             <ShopContextProvider>
-              <HeaderNav />
+              <HeaderNav isMobile={isMobile} />
               <div className="home-render-routes-cover">
                 <div className="rendering-routes-components">
                   {renderRoutes}
