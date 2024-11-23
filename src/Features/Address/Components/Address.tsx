@@ -2,6 +2,7 @@ import React from "react";
 import { AddressTypes } from "../AddressTypes";
 import icons from "../../Assets/Icons/icons";
 import "../SCSS/styles.css";
+import PaymentButton from "../../PaymentGateway/Components/paymentGateway";
 
 function Address({
   handleFormDataChange,
@@ -9,7 +10,10 @@ function Address({
   productInfo,
   placeYourOrder,
   userInfo,
+  formData,
 }: Readonly<AddressTypes>) {
+  console.log("form", formData);
+
   const offerAppliedCalc = () => {
     let offerPrice = productInfo.catTotalAmount;
     productInfo.cartBasket.forEach((prod) => {
@@ -128,14 +132,24 @@ function Address({
               <h3>Select a payment method</h3>
             </div>
             <div className="payment-mode-cover">
-              <label>Cash on delivery</label>
+              <label>Cash On Delivery</label>
               <input
                 type="radio"
                 name="paymentMode"
+                value="cod"
                 onChange={(e) => handleFormDataChange(e)}
               />
             </div>
-            <div></div>
+            <div className="payment-mode-cover">
+              <label>Online Payment</label>
+              <input
+                type="radio"
+                name="paymentMode"
+                value="online"
+                onChange={(e) => handleFormDataChange(e)}
+                checked={formData.paymentMode === "online" ? true : false}
+              />
+            </div>
           </div>
         </div>
         <div className="address-right-cover">
@@ -184,12 +198,20 @@ function Address({
             </button>
           </div>
           <div className="place-order-btn-cover">
-            <button
-              className="place-order-btn"
-              onClick={() => handleSubmitForm()}
-            >
-              PLACE ORDER
-            </button>
+            {formData.paymentMode === "cod" ? (
+              <button
+                className="place-order-btn"
+                onClick={() => handleSubmitForm()}
+              >
+                PLACE ORDER
+              </button>
+            ) : (
+              <PaymentButton
+                paymentModel={"shop"}
+                userInfo={userInfo}
+                amount={productInfo.catTotalAmount}
+              />
+            )}
           </div>
         </div>
       </div>

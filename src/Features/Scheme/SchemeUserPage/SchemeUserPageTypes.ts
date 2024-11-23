@@ -19,4 +19,6 @@ export type SchemeUserPageTypes = {
   handleInvestments: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSelectMonth: (e: React.ChangeEvent<HTMLSelectElement>) => void;
   selectedMonth: string | undefined;
+  investmentAmount: number | null;
+  errorLog: boolean;
 };

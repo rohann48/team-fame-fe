@@ -6,6 +6,7 @@ export type AddressTypes = {
   productInfo: ShoppingContextInitialState["productInfo"];
   placeYourOrder: () => void;
   userInfo: any;
+  formData: any;
 };
 export type AddressContainerType = {
   formData: {

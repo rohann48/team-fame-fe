@@ -69,9 +69,13 @@ function AddressContainer() {
     // if("success"){}
   };
 
-  // useEffect(() => {
-  //   getOfferRefferalInfo();
-  // }, [userInfo]);
+  useEffect(() => {
+    // getOfferRefferalInfo();
+    setFormData((prevState) => ({
+      ...prevState,
+      paymentMode: "online",
+    }));
+  }, []);
   //handle change form data
   const handleFormDataChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -141,9 +145,10 @@ function AddressContainer() {
     // Return true if there are no errors, false otherwise
     return isValid;
   };
-
+  const [errorLog, setErrorLog] = useState(false);
   //handle submit form
   const handleSubmitForm = async () => {
+    setErrorLog(false);
     if (validateForm()) {
       try {
         let orderData: any = [];
@@ -171,8 +176,11 @@ function AddressContainer() {
         NotificationManager.success("Address updated successfully", "", 2000);
         navigate("/thankyou");
       } catch (error) {
+        setErrorLog(true);
         console.log("error", error);
       }
+    } else {
+      setErrorLog(true);
     }
     // placeYourOrder();
   };
@@ -183,6 +191,7 @@ function AddressContainer() {
       productInfo={productInfo}
       placeYourOrder={placeYourOrder}
       userInfo={userInfo}
+      formData={formData}
     />
   );
 }

@@ -27,7 +27,7 @@ function SchemeUserPageContainer() {
       fetchUserInfo();
     }
   }, [userId]);
-
+  const [errorLog, setErrorLog] = useState(false);
   const handleInvestments = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { valueAsNumber } = e.target;
     setInvestmentAmount(valueAsNumber);
@@ -35,6 +35,7 @@ function SchemeUserPageContainer() {
   const postInvestment = async () => {
     if (Number(selectedMonth) !== 0 && investmentAmount !== null) {
       try {
+        setErrorLog(false);
         const modifiedData = {
           clientId: userInfo._id,
           year: schemeUserData.period,
@@ -50,6 +51,7 @@ function SchemeUserPageContainer() {
         NotificationManager.success(Notify.ADD, "", 2000);
       } catch (err) {}
     } else {
+      setErrorLog(true);
       NotificationManager.warning("Please fill all the fields", "", 2000);
     }
   };
@@ -65,6 +67,8 @@ function SchemeUserPageContainer() {
       handleInvestments={handleInvestments}
       handleSelectMonth={handleSelectMonth}
       selectedMonth={selectedMonth}
+      investmentAmount={investmentAmount}
+      errorLog={errorLog}
     />
   );
 }

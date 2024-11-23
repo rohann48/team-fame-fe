@@ -2,6 +2,7 @@
   width: 100%;
   height: 100%;
   overflow-y: scroll;
+
   &::-webkit-scrollbar {
     width: 6px;
     background: transparent;
@@ -12,6 +13,7 @@
     border-radius: 5px;
     overflow: hidden;
   }
+
   .user-gold-scheme-img-one-cover {
     width: 100%;
     height: 280px;
@@ -19,14 +21,17 @@
     background-size: cover;
     background-position: center;
   }
+
   .user-gold-scheme-img-two-cover {
     width: 100%;
     height: 511px;
     background-image: url("../../../Assets/Images/Rectangle.svg");
     background-size: cover;
     display: flex;
+
     .user-gold-scheme-img-two-text-cover {
       width: 50%;
+
       .user-text-one-cover {
         display: flex;
         align-items: center;
@@ -35,6 +40,7 @@
         font-size: 24px;
         height: 10%;
       }
+
       .user-text-two-cover {
         font-size: 55px;
         color: #bd9255;
@@ -43,16 +49,19 @@
         flex-direction: column;
         padding-top: 2rem;
         gap: 10%;
+
         .user-header-two {
           display: flex;
           align-items: center;
           justify-content: center;
         }
+
         .user-header-three {
           display: flex;
           align-items: center;
           justify-content: center;
         }
+
         .user-header-four {
           display: flex;
           align-items: center;
@@ -60,11 +69,13 @@
         }
       }
     }
+
     .user-gold-scheme-user-details-cover {
       width: 50%;
       display: flex;
       flex-direction: column;
       align-items: center;
+
       .info {
         color: #bd9255;
         font-size: 18px;
@@ -73,12 +84,14 @@
         display: flex;
         width: 20rem;
         justify-content: space-between;
+
         .info-data {
           font-size: 18px;
           font-weight: 500;
           padding-left: 8px;
           text-transform: capitalize;
         }
+
         .edit-user-btn {
           all: unset;
           width: 122px;
@@ -95,12 +108,14 @@
       }
     }
   }
+
   .user-scheme-plan-info-cover {
     width: 100%;
     height: 300px;
     background-color: #ebeff3;
     color: #bd9255;
     padding: 2%;
+
     .user-scheme-plan-info-wrapper {
       border: 1px solid #bd9255;
       font-size: 12px;
@@ -110,10 +125,12 @@
       background-color: #f8f8f8;
     }
   }
+
   .user-scheme-details-cover {
     width: 100%;
     height: 480px;
     background-color: #ebeff3;
+
     .user-scheme-header {
       height: 10%;
       font-size: 40px;
@@ -123,19 +140,23 @@
       align-items: center;
       justify-content: center;
     }
+
     .user-scheme-table-cover {
       display: flex;
       width: 100%;
       height: 90%;
+
       .user-scheme-table-wrapper {
         width: 50%;
         height: 100%;
         padding: 1% 2%;
+
         .table-header {
           font-size: 14px;
           font-weight: 500;
           color: #bd9255;
           margin-bottom: 1rem;
+
           .header-period {
             color: #bd9255;
             font-size: 14px;
@@ -147,6 +168,7 @@
             border-radius: 5px;
           }
         }
+
         table {
           width: 100%;
           border-collapse: collapse;
@@ -154,24 +176,26 @@
           border-radius: 5px;
           font-size: 14px;
           background-color: #ffffff;
+
           thead {
             tr {
               color: #bd9255;
             }
           }
+
           tbody {
             tr {
               color: #444444;
             }
           }
+
           th,
           td {
             padding: 8px;
             text-align: left;
           }
 
-          th {
-          }
+          th {}
 
           tbody tr:last-child {
             font-weight: 500;
@@ -181,6 +205,7 @@
             white-space: nowrap;
           }
         }
+
         .table-no-data {
           width: 100%;
           border-collapse: collapse;
@@ -194,6 +219,7 @@
           justify-content: center;
         }
       }
+
       .user-scheme-form-cover {
         width: 50%;
         height: 100%;
@@ -201,8 +227,10 @@
         display: grid;
         align-items: center;
       }
+
       .user-scheme-form {
         height: 50%;
+
         .scheme-payee-label-cover {
           margin-bottom: 20px;
           display: flex;
@@ -211,6 +239,7 @@
           font-size: 14px;
           font-weight: 500;
           color: #bd9255;
+
           .scheme-payee-input {
             all: unset;
             border: 1px solid #bd9255;
@@ -220,11 +249,13 @@
             height: 40px;
             padding: 3px 5px;
             background-color: #ffffff;
+
             &::placeholder {
               color: #aeaeae;
             }
           }
         }
+
         .scheme-payee-contact-label-cover {
           margin-bottom: 20px;
           display: flex;
@@ -233,6 +264,7 @@
           font-size: 14px;
           font-weight: 500;
           color: #bd9255;
+
           .scheme-payee-contact-number-input {
             all: unset;
             border: 1px solid #bd9255;
@@ -249,6 +281,7 @@
             }
           }
         }
+
         .scheme-payee-period-label-cover {
           display: flex;
           justify-content: center;
@@ -256,6 +289,7 @@
           font-size: 14px;
           font-weight: 500;
           color: #bd9255;
+
           .scheme-payee-period-select {
             all: unset;
             border: 1px solid #bd9255;
@@ -264,20 +298,24 @@
             width: 269px;
             padding: 3px 5px;
             background-color: #ffffff;
+
             input::-webkit-outer-spin-button,
             input::-webkit-inner-spin-button {
               appearance: none;
             }
+
             &::placeholder {
               color: #aeaeae;
             }
           }
         }
+
         .user-scheme-btn-cover {
           display: flex;
           align-items: center;
           gap: 2%;
           margin-top: 20px;
+
           .join-scheme-btn {
             all: unset;
             width: 92px;
@@ -287,19 +325,24 @@
             text-align: center;
             font-size: 14px;
             font-weight: 400;
+            cursor: pointer;
+            color: white;
+
             &.cancel {
               border: 1px solid #444444;
               color: #444444;
               background-color: #ffffff;
             }
+
             &.pay {
-              color: #ffffff;
               border: 1px solid #000000;
               background-color: #000000;
+
             }
           }
         }
       }
+
       .payment-method-cover {
         margin-top: 20px;
 
@@ -308,14 +351,17 @@
           font-weight: 500;
           color: #bd9255;
         }
+
         .btn-cover {
           display: flex;
           gap: 2%;
           margin-top: 5px;
+
           .pay-label {
             color: #444444;
             font-size: 14px;
             font-weight: 400;
+
             .pay-text {
               padding-left: 3px;
             }

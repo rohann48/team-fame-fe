@@ -2,6 +2,7 @@ import "../SCSS/styles.css";
 import Footer from "../../../Common/CommonComponent/Footer/Components/footer";
 import { SchemeUserPageTypes } from "../SchemeUserPageTypes";
 import { format, parseISO } from "date-fns";
+import PaymentButton from "../../../PaymentGateway/Components/paymentGateway";
 
 const data = [
   { name: "20 Jan 2023", quantity: 5000 },
@@ -15,6 +16,8 @@ function SchemeUserPage({
   handleInvestments,
   handleSelectMonth,
   selectedMonth,
+  investmentAmount,
+  errorLog,
 }: SchemeUserPageTypes) {
   // Calculate total
   const total = schemeUserData?.investments?.reduce(
@@ -196,13 +199,13 @@ function SchemeUserPage({
                 <div className="payment-text">Payment Type</div>
                 <div className="btn-cover">
                   <label className="pay-label">
-                    <input type="radio" />
-                    <span className="pay-text"> Google Pay</span>
+                    <input type="radio" checked={true} />
+                    <span className="pay-text">Online Payment</span>
                   </label>
-                  <label className="pay-label">
+                  {/* <label className="pay-label">
                     <input type="radio" />{" "}
                     <span className="pay-text">Phone Pay</span>
-                  </label>
+                  </label> */}
                 </div>
               </div>
               <div className="user-scheme-btn-cover">
@@ -211,7 +214,12 @@ function SchemeUserPage({
                   className="join-scheme-btn pay"
                   onClick={() => postInvestment()}
                 >
-                  Pay
+                  <PaymentButton
+                    paymentModel={"goldScheme"}
+                    userInfo={userInfo}
+                    amount={investmentAmount}
+                    errorLog={errorLog}
+                  />
                 </button>
               </div>
             </div>

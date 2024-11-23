@@ -121,6 +121,7 @@ const HomePage = ({
                         <span className="date-icon">{icons.date}</span>
                         <span className="date">
                           {event &&
+                            event?.date &&
                             format(parseISO(event?.date), "dd-MMM-yyyy")}
                         </span>
                       </div>

@@ -403,6 +403,8 @@
   text-align: center;
   font-size: 14px;
   font-weight: 400;
+  cursor: pointer;
+  color: white;
 }
 .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .user-scheme-btn-cover .join-scheme-btn.cancel {
   border: 1px solid #444444;
@@ -410,7 +412,6 @@
   background-color: #ffffff;
 }
 .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .user-scheme-btn-cover .join-scheme-btn.pay {
-  color: #ffffff;
   border: 1px solid #000000;
   background-color: #000000;
 }

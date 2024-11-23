@@ -1,0 +1,25 @@
+.btn-cover {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 10px;
+}
+.btn-cover .place-order-btn {
+  all: unset;
+  width: 279px;
+  height: 50px;
+  background-color: #eaa837;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+}/*# sourceMappingURL=styles.css.map */
