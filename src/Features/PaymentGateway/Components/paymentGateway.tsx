@@ -41,7 +41,7 @@ export default function PaymentButton({
           // after making the payment
           handler: async (response: any) => {
             try {
-              await fetch("http://localhost:9001/verify-payment", {
+              await fetch(`${process.env.REACT_APP_BASE_URL}verify-payment`, {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",

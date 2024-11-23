@@ -7,7 +7,7 @@ import { NotificationManager } from "react-notifications";
 export const toblobWithAuth = async (url: string, fileName: string) => {
   try {
     const response = await axios({
-      url: `${process.env.REACT_APP_BASE_URL}/${url}`,
+      url: `${process.env.REACT_APP_BASE_URL}${url}`,
       method: "GET",
       // headers: authHead,
       responseType: "blob", // imp
