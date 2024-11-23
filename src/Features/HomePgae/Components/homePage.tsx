@@ -71,13 +71,13 @@ const HomePage = ({
             <p className="img-description">Politics</p>
           </div>
         </div>
-        {/* <div className="home-about-us-cover">
+        <div className="home-about-us-cover">
           <div className="about-us-header">
             <div className="about-text">ABOUT</div>
             <div className="us-text">US</div>
           </div>
           <div className="about-us-description">{aboutUsData?.content}</div>
-        </div> */}
+        </div>
         <div className="home-events-cover">
           <div className="event-title">Upcoming Events</div>
           <div className="cards-cover">

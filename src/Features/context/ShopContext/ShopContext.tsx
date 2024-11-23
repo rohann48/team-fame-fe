@@ -29,7 +29,7 @@ const ShopContextProvider = ({ children }: ShopContextTypes) => {
 
   const getProductData = async () => {
     const response = await ApiHandler.getProductDetails();
-    if (response) {
+    if (response?.results?.products) {
       setProducts([...response?.results?.products]);
       setTempProducts([...response?.results?.products]);
       let catSet: Set<string> = new Set();
