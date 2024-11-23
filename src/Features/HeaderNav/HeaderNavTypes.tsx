@@ -28,4 +28,8 @@ export type HeaderNavProps = {
   handleEditUserProfile: () => void;
   singleUserInfo: User;
   logoutUser: (userId: string) => void;
+  isMobile: boolean;
 };
+export interface HeaderReceivedProps {
+  isMobile: boolean;
+}

@@ -437,4 +437,133 @@
 }
 .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .payment-method-cover .btn-cover .pay-label .pay-text {
   padding-left: 3px;
+}
+
+@media (min-width: 1200px) {
+  .user-scheme-container .user-gold-scheme-img-two-cover .user-gold-scheme-img-two-text-cover .user-text-two-cover {
+    font-size: 48px;
+  }
+}
+@media (max-width: 1199px) {
+  .user-scheme-container .user-gold-scheme-img-one-cover {
+    height: 240px;
+  }
+  .user-scheme-container .user-gold-scheme-img-two-cover {
+    height: 450px;
+  }
+  .user-scheme-container .user-gold-scheme-img-two-cover .user-gold-scheme-img-two-text-cover .user-text-one-cover {
+    font-size: 18px;
+  }
+  .user-scheme-container .user-gold-scheme-img-two-cover .user-gold-scheme-img-two-text-cover .user-text-two-cover {
+    font-size: 20px;
+    padding-top: 1.5rem;
+  }
+  .user-scheme-container .user-gold-scheme-img-two-cover .user-gold-scheme-user-details-cover .info {
+    width: 18rem;
+    font-size: 16px;
+  }
+  .user-scheme-container .user-gold-scheme-img-two-cover .user-gold-scheme-user-details-cover .info .info-data {
+    font-size: 16px;
+  }
+}
+@media (max-width: 991px) {
+  .user-scheme-container .user-gold-scheme-img-two-cover {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .user-scheme-container .user-gold-scheme-img-two-cover .user-gold-scheme-img-two-text-cover,
+  .user-scheme-container .user-gold-scheme-img-two-cover .user-gold-scheme-user-details-cover {
+    width: 100%;
+    padding: 20px 0;
+  }
+  .user-scheme-container .user-scheme-details-cover {
+    height: auto;
+  }
+  .user-scheme-container .user-scheme-details-cover .user-scheme-header {
+    font-size: 32px;
+  }
+  .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper,
+  .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form-cover {
+    width: 100%;
+    padding: 20px;
+  }
+  .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper .user-scheme-form,
+  .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form-cover .user-scheme-form {
+    height: auto;
+  }
+  .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-label-cover .scheme-payee-input {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .user-scheme-container .user-gold-scheme-img-one-cover {
+    height: 110px;
+  }
+  .user-scheme-container .user-gold-scheme-img-two-text-cover .user-text-one-cover {
+    font-size: 18px;
+  }
+  .user-scheme-container .user-gold-scheme-img-two-text-cover .user-text-two-cover {
+    font-size: 20px;
+  }
+  .user-scheme-container .user-scheme-plan-info-cover {
+    height: auto;
+    padding: 15px;
+  }
+  .user-scheme-container .user-scheme-details-cover .user-scheme-header {
+    font-size: 28px;
+  }
+}
+@media (max-width: 575px) {
+  .user-scheme-container .user-gold-scheme-img-one-cover {
+    height: 110px;
+  }
+  .user-scheme-container .user-gold-scheme-img-two-text-cover .user-text-one-cover {
+    font-size: 16px;
+  }
+  .user-scheme-container .user-gold-scheme-img-two-text-cover .user-text-two-cover {
+    font-size: 20px;
+  }
+  .user-scheme-container .user-gold-scheme-user-details-cover .info {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .user-scheme-container .user-gold-scheme-user-details-cover .info .edit-user-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+  .user-scheme-container .user-scheme-details-cover .user-scheme-header {
+    font-size: 24px;
+  }
+  .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-contact-label-cover .scheme-payee-contact-number-input,
+  .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-contact-label-cover .scheme-payee-period-select,
+  .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-period-label-cover .scheme-payee-contact-number-input,
+  .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .scheme-payee-period-label-cover .scheme-payee-period-select {
+    width: 100%;
+  }
+  .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .user-scheme-btn-cover {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+  .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .user-scheme-btn-cover .join-scheme-btn {
+    width: 100%;
+  }
 }/*# sourceMappingURL=styles.css.map */

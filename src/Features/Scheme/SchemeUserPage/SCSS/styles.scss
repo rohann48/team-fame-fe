@@ -371,3 +371,190 @@
     }
   }
 }
+
+// _responsive.scss
+// Extra large devices (large desktops)
+@media (min-width: 1200px) {
+  .user-scheme-container {
+    .user-gold-scheme-img-two-cover {
+      .user-gold-scheme-img-two-text-cover {
+        .user-text-two-cover {
+          font-size: 48px;
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops)
+@media (max-width: 1199px) {
+  .user-scheme-container {
+    .user-gold-scheme-img-one-cover {
+      height: 240px;
+    }
+
+    .user-gold-scheme-img-two-cover {
+      height: 450px;
+
+      .user-gold-scheme-img-two-text-cover {
+        .user-text-one-cover {
+          font-size: 18px;
+        }
+
+        .user-text-two-cover {
+          font-size: 20px;
+          padding-top: 1.5rem;
+        }
+      }
+
+      .user-gold-scheme-user-details-cover {
+        .info {
+          width: 18rem;
+          font-size: 16px;
+
+          .info-data {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Medium devices (tablets)
+@media (max-width: 991px) {
+  .user-scheme-container {
+    .user-gold-scheme-img-two-cover {
+      height: auto;
+      flex-direction: column;
+
+      .user-gold-scheme-img-two-text-cover,
+      .user-gold-scheme-user-details-cover {
+        width: 100%;
+        padding: 20px 0;
+      }
+    }
+
+    .user-scheme-details-cover {
+      height: auto;
+
+      .user-scheme-header {
+        font-size: 32px;
+      }
+
+      .user-scheme-table-cover {
+        flex-direction: column;
+
+        .user-scheme-table-wrapper,
+        .user-scheme-form-cover {
+          width: 100%;
+          padding: 20px;
+
+          .user-scheme-form {
+            height: auto;
+          }
+        }
+
+        .user-scheme-form {
+          .scheme-payee-label-cover {
+            .scheme-payee-input {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones)
+@media (max-width: 767px) {
+  .user-scheme-container {
+    .user-gold-scheme-img-one-cover {
+      height: 110px;
+    }
+
+    .user-gold-scheme-img-two-text-cover {
+      .user-text-one-cover {
+        font-size: 18px;
+      }
+
+      .user-text-two-cover {
+        font-size: 20px;
+      }
+    }
+
+    .user-scheme-plan-info-cover {
+      height: auto;
+      padding: 15px;
+    }
+
+    .user-scheme-details-cover {
+      .user-scheme-header {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+// Extra small devices (phones)
+@media (max-width: 575px) {
+  .user-scheme-container {
+    .user-gold-scheme-img-one-cover {
+      height: 110px;
+    }
+
+    .user-gold-scheme-img-two-text-cover {
+      .user-text-one-cover {
+        font-size: 16px;
+      }
+
+      .user-text-two-cover {
+        font-size: 20px;
+      }
+    }
+
+    .user-gold-scheme-user-details-cover {
+      .info {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+
+        .edit-user-btn {
+          width: 100%;
+          max-width: 200px;
+        }
+      }
+    }
+
+    .user-scheme-details-cover {
+      .user-scheme-header {
+        font-size: 24px;
+      }
+
+      .user-scheme-table-cover {
+        .user-scheme-form {
+
+          .scheme-payee-contact-label-cover,
+          .scheme-payee-period-label-cover {
+
+            .scheme-payee-contact-number-input,
+            .scheme-payee-period-select {
+              width: 100%;
+            }
+          }
+
+          .user-scheme-btn-cover {
+            flex-direction: column;
+            gap: 10px;
+
+            .join-scheme-btn {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

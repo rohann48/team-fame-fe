@@ -66,13 +66,14 @@ function EventCardsHome({
           <span className="text-r">R</span>
         </div>
         <div className="events-former-text-student-cover">
-          <span>From the students</span>
+          {/* <span>From the students</span>
           <span>For the students</span>
-          <span>To the students</span>
+          <span>To the students</span> */}
+          <span>#REvolution</span>
         </div>
-        <div className="events-former-text-join-btn-cover">
+        {/* <div className="events-former-text-join-btn-cover">
           <button className="events-former-text-join-btn">Join Now</button>
-        </div>
+        </div> */}
         <Footer />
       </div>
     </div>

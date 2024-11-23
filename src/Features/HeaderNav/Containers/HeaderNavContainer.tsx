@@ -6,9 +6,9 @@ import { LoginContext } from "../../context/LoginContext";
 import { ShopContext } from "../../context/ShopContext/ShopContext";
 import { useNavigate } from "react-router-dom";
 import { ApiHandler } from "../../Constants/ApiHandler";
-import { HeaderNavProps } from "../HeaderNavTypes";
+import { HeaderNavProps, HeaderReceivedProps } from "../HeaderNavTypes";
 
-function HeaderNavContainer() {
+function HeaderNavContainer({ isMobile }: HeaderReceivedProps) {
   const {
     loginInfo,
     setLoginInfo,
@@ -116,6 +116,7 @@ function HeaderNavContainer() {
         handleEditUserProfile={handleEditUserProfile}
         singleUserInfo={singleUserInfo}
         logoutUser={logoutUser}
+        isMobile={isMobile}
       />
       {loginInfo.isLoginModalOpen && (
         <LoginComponent

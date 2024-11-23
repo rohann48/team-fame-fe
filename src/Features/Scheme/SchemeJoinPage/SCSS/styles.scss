@@ -279,3 +279,141 @@
     }
   }
 }
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .scheme-container {
+    .gold-scheme-img-one-cover {
+      width: 100%;
+      height: 280px;
+      background-image: url("../../../Assets/Images/goldSchemeCovered.svg");
+      background-size: cover; /* Ensures the image covers the container */
+      background-position: center; /* Centers the image */
+      background-repeat: no-repeat; /* Prevents the image from repeating */
+    }
+    .gold-scheme-img-one-cover {
+      height: 150px; /* Adjust the height for smaller screens */
+    }
+    .gold-scheme-img-two-cover {
+      flex-direction: column;
+      height: auto;
+      .gold-scheme-img-two-text-cover {
+        width: 100%;
+        .text-two-cover {
+          font-size: 36px;
+        }
+      }
+      .gold-scheme-img-two-locket-cover {
+        width: 100%;
+      }
+    }
+
+    .scheme-details-cover {
+      height: auto;
+      .scheme-welcome-header {
+        padding-left: 5rem;
+        font-size: 30px;
+      }
+
+      .scheme-description-and-form-cover {
+        flex-direction: column;
+
+        .scheme-description-cover,
+        .scheme-form-cover {
+          width: 100%;
+          height: auto;
+        }
+        .scheme-form-cover {
+          .scheme-btn-cover {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+  .scheme-container {
+    .gold-scheme-img-one-cover {
+      width: 100%;
+      height: 280px;
+      background-image: url("../../../Assets/Images/goldSchemeCovered.svg");
+      background-size: cover; /* Ensures the image covers the container */
+      background-position: center; /* Centers the image */
+      background-repeat: no-repeat; /* Prevents the image from repeating */
+    }
+    .gold-scheme-img-one-cover {
+      height: 110px; /* Adjust the height for smaller screens */
+    }
+    .gold-scheme-img-two-cover {
+      .gold-scheme-img-two-text-cover .text-two-cover {
+        font-size: 24px;
+      }
+    }
+
+    .scheme-details-cover {
+      height: auto;
+      .scheme-welcome-header {
+        padding-left: 1rem;
+        font-size: 24px;
+      }
+
+      .scheme-description-and-form-cover {
+        .scheme-description-cover .description {
+          font-size: 14px;
+          height: auto;
+        }
+
+        .scheme-form-cover .scheme-rate-header {
+          font-size: 20px;
+        }
+        .scheme-form-cover
+          .scheme-rate-cards-cover
+          .scheme-rate-card
+          .scheme-rate {
+          width: 150px;
+          height: 50px;
+        }
+        .scheme-form-cover {
+          .scheme-btn-cover {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Extra small screens (very small phones) */
+@media (max-width: 320px) {
+  .scheme-container {
+    .gold-scheme-img-one-cover {
+      width: 100%;
+      height: 280px;
+      background-image: url("../../../Assets/Images/goldSchemeCovered.svg");
+      background-size: cover; /* Ensures the image covers the container */
+      background-position: center; /* Centers the image */
+      background-repeat: no-repeat; /* Prevents the image from repeating */
+    }
+    .gold-scheme-img-one-cover {
+      height: 110px; /* Adjust the height for smaller screens */
+    }
+    .scheme-details-cover {
+      height: auto;
+      .scheme-description-and-form-cover
+        .scheme-form-cover
+        .scheme-rate-cards-cover
+        .scheme-rate-card
+        .scheme-rate {
+        width: 120px;
+        height: 40px;
+      }
+      .scheme-form-cover {
+        .scheme-btn-cover {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}

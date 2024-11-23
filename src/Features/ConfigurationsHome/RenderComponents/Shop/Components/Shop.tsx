@@ -10,6 +10,7 @@ const Shop = ({
   handleSave,
   products,
   confirmDeleteThreadFile,
+  inventorySummary,
 }: ShopComponentProps) => {
   return (
     <div className="products-container">
@@ -111,7 +112,24 @@ const Shop = ({
         </div>
       </div>
       <div className="products-cards-cover">
-        <div className="cards-product-header">All Products</div>
+        <div className="cards-product-header">
+          <div> All Products</div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "flex-end",
+              gap: "8px",
+            }}
+          >
+            <span>
+              totalProductQuantity:{inventorySummary.totalProductQuantity}
+            </span>
+            <span>
+              totalOrderedQuantity:{inventorySummary.totalOrderedQuantity}
+            </span>
+            <span>remainingQuantity:{inventorySummary.remainingQuantity}</span>
+          </div>
+        </div>
         <div className="table-container">
           <table>
             <thead>
