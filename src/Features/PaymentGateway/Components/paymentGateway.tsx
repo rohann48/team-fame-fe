@@ -16,13 +16,16 @@ export default function PaymentButton({
     try {
       if (!errorLog) {
         // Make the API call to backend
-        const response = await fetch("http://localhost:9001/create-order", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ amount: amount }),
-        });
+        const response = await fetch(
+          `${process.env.REACT_APP_BASE_URL}create-order`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ amount: amount }),
+          }
+        );
 
         const order = await response.json();
         console.log("order", order);

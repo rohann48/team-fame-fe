@@ -61,7 +61,7 @@ export const apiAuth = {
     if (!process.env.REACT_APP_ISDEVENV)
       options = { headers: { endpoint: cryptoEncryption(url) } };
     return axios.put(
-      `${process.env.REACT_APP_BASE_URL}${
+      `${process.env.REACT_APP_BASE_URL}tf${
         !process.env.REACT_APP_ISDEVENV ? "" : url
       }`,
       !process.env.REACT_APP_ISDEVENV
@@ -76,7 +76,7 @@ export const apiAuth = {
       options = { headers: { endpoint: cryptoEncryption(url) } };
 
     return await axios.delete(
-      `${process.env.REACT_APP_BASE_URL}${
+      `${process.env.REACT_APP_BASE_URL}tf${
         !process.env.REACT_APP_ISDEVENV ? "" : url
       }`,
       options
