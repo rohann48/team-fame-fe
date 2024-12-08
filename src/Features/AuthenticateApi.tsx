@@ -85,18 +85,22 @@ export const apiAuth = {
 
   /**api method with out encyrption */
   getApiwithoutEncryption: async (url: string) => {
-    return axios.get(`${process.env.REACT_APP_BASE_URL}${url}`);
+    return axios.get(`${process.env.REACT_APP_BASE_URL}tf${url}`);
   },
   postApiwithoutEncryption: async (url: string, data?: any) => {
-    return axios.post(`${process.env.REACT_APP_BASE_URL}${url}`, data);
+    return axios.post(`${process.env.REACT_APP_BASE_URL}tf${url}`, data);
   },
   putApiwithoutEncryption: async (url: string, data: any) => {
-    return axios.put(`${process.env.REACT_APP_BASE_URL}${url}`, data);
+    return axios.put(`${process.env.REACT_APP_BASE_URL}tf${url}`, data);
   },
   postApiForFormDatawithoutEncryption: async (url: string, data?: any) => {
     const config = {
       headers: { "content-type": "multipart/form-data" },
     };
-    return axios.post(`${process.env.REACT_APP_BASE_URL}${url}`, data, config);
+    return axios.post(
+      `${process.env.REACT_APP_BASE_URL}tf${url}`,
+      data,
+      config
+    );
   },
 };
