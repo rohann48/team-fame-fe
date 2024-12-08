@@ -58,7 +58,7 @@ function SchemeUserPage({
           <div className="info">
             <div>Start Date:</div>
             <div className="info-data">
-              {schemeUserData.startDate &&
+              {schemeUserData?.startDate &&
                 format(
                   parseISO(schemeUserData.startDate?.toString()),
                   "dd-MMM-yyyy"
@@ -68,7 +68,8 @@ function SchemeUserPage({
           <div className="info">
             <div>End Date:</div>
             <div className="info-data">
-              {schemeUserData.endDate &&
+              {schemeUserData &&
+                schemeUserData?.endDate &&
                 format(
                   parseISO(schemeUserData.endDate?.toString()),
                   "dd-MMM-yyyy"
@@ -117,10 +118,10 @@ function SchemeUserPage({
             <h4 className="table-header">
               Payment History{" "}
               <span className="header-period">
-                Period :{schemeUserData.period}
+                Period :{schemeUserData?.period}
               </span>
             </h4>
-            {schemeUserData.investments?.length > 0 ? (
+            {schemeUserData?.investments?.length > 0 ? (
               <table>
                 <thead>
                   <tr>
@@ -129,7 +130,7 @@ function SchemeUserPage({
                   </tr>
                 </thead>
                 <tbody>
-                  {schemeUserData.investments.map((item, index) => (
+                  {schemeUserData?.investments.map((item, index) => (
                     <tr key={item._id}>
                       <td>
                         {item.date &&

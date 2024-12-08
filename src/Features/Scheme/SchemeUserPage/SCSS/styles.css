@@ -200,7 +200,14 @@
   background-color: #444444;
   border-radius: 5px;
 }
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper table tbody {
+  display: block;
+  max-height: 300px;
+  overflow-y: scroll;
+}
 .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper table {
+  display: table;
+  table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
   border: 1px solid #bd9255;
@@ -208,7 +215,11 @@
   font-size: 14px;
   background-color: #ffffff;
 }
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper table thead {
+  width: 100%;
+}
 .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper table thead tr {
+  width: 100%;
   color: #bd9255;
 }
 .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper table tbody tr {
@@ -566,4 +577,16 @@
   .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-form .user-scheme-btn-cover .join-scheme-btn {
     width: 100%;
   }
+}
+table tbody {
+  display: block;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+table thead,
+table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
 }/*# sourceMappingURL=styles.css.map */

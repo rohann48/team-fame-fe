@@ -2,6 +2,7 @@
   width: 100%;
   height: 100%;
   overflow-y: scroll;
+
   &::-webkit-scrollbar {
     width: 6px;
     background: transparent;
@@ -12,6 +13,7 @@
     border-radius: 5px;
     overflow: hidden;
   }
+
   .gold-scheme-img-one-cover {
     width: 100%;
     height: 280px;
@@ -19,14 +21,17 @@
     background-size: cover;
     background-position: center;
   }
+
   .gold-scheme-img-two-cover {
     width: 100%;
     height: 511px;
     background-image: url("../../../Assets/Images/Rectangle.svg");
     background-size: cover;
     display: flex;
+
     .gold-scheme-img-two-text-cover {
       width: 50%;
+
       .text-one-cover {
         display: flex;
         align-items: center;
@@ -35,6 +40,7 @@
         font-size: 24px;
         height: 10%;
       }
+
       .text-two-cover {
         font-size: 55px;
         color: #bd9255;
@@ -43,16 +49,19 @@
         flex-direction: column;
         padding-top: 2rem;
         gap: 10%;
+
         .header-two {
           display: flex;
           align-items: center;
           justify-content: center;
         }
+
         .header-three {
           display: flex;
           align-items: center;
           justify-content: center;
         }
+
         .header-four {
           display: flex;
           align-items: center;
@@ -60,16 +69,19 @@
         }
       }
     }
+
     .gold-scheme-img-two-locket-cover {
       width: 50%;
       display: flex;
       justify-content: center;
     }
   }
+
   .scheme-details-cover {
     width: 100%;
     height: 610px;
     background-color: #ebeff3;
+
     .scheme-welcome-header {
       height: 10%;
       font-size: 40px;
@@ -79,27 +91,32 @@
       align-items: center;
       padding-left: 25rem;
     }
+
     .scheme-description-and-form-cover {
       display: flex;
       width: 100%;
       height: 90%;
+
       .scheme-description-cover {
         width: 50%;
         height: 100%;
         line-height: 26px;
         padding: 1% 2%;
         border-right: 1px solid #bd9255;
+
         .description {
           font-size: 16px;
           font-weight: 400;
           color: #bd9255;
         }
+
         .description-header {
           font-size: 20px;
           font-weight: 500;
           color: #bd9255;
         }
       }
+
       .scheme-form-cover {
         width: 50%;
         height: 100%;
@@ -114,6 +131,7 @@
           align-items: center;
           justify-content: center;
         }
+
         .scheme-rate-cards-cover {
           height: 20%;
           font-size: 24px;
@@ -123,10 +141,12 @@
           align-items: center;
           justify-content: center;
           gap: 20%;
+
           .scheme-rate-card {
             .scheme-rate-text {
               text-align: center;
             }
+
             .scheme-rate {
               width: 202px;
               height: 60px;
@@ -140,6 +160,7 @@
             }
           }
         }
+
         .scheme-join-text {
           height: 15%;
           font-size: 30px;
@@ -154,11 +175,13 @@
           }
         }
       }
+
       .scheme-form {
         height: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
+
         .scheme-payee-label-cover {
           margin-bottom: 20px;
           display: flex;
@@ -167,6 +190,7 @@
           font-size: 14px;
           font-weight: 500;
           color: #bd9255;
+
           .scheme-payee-input {
             all: unset;
             border: 1px solid #bd9255;
@@ -177,14 +201,17 @@
             background-color: #ffffff;
             display: flex;
             align-items: center;
+
             &::placeholder {
               color: #aeaeae;
             }
           }
         }
+
         .scheme-email-contact-cover {
           display: flex;
           gap: 2%;
+
           .scheme-payee-email-label-cover {
             margin-bottom: 20px;
             display: flex;
@@ -193,6 +220,7 @@
             font-size: 14px;
             font-weight: 500;
             color: #bd9255;
+
             .scheme-payee-email-input {
               all: unset;
               border: 1px solid #bd9255;
@@ -208,6 +236,7 @@
               }
             }
           }
+
           .scheme-payee-contact-label-cover {
             margin-bottom: 20px;
             display: flex;
@@ -216,6 +245,7 @@
             font-size: 14px;
             font-weight: 500;
             color: #bd9255;
+
             .scheme-payee-contact-number-input {
               all: unset;
               border: 1px solid #bd9255;
@@ -232,6 +262,7 @@
             }
           }
         }
+
         .scheme-payee-period-label-cover {
           display: flex;
           justify-content: center;
@@ -239,6 +270,7 @@
           font-size: 14px;
           font-weight: 500;
           color: #bd9255;
+
           .scheme-payee-period-select {
             all: unset;
             border: 1px solid #bd9255;
@@ -250,17 +282,20 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
             &::placeholder {
               color: #aeaeae;
             }
           }
         }
       }
+
       .scheme-btn-cover {
         height: 8%;
         display: flex;
         align-items: center;
         justify-content: center;
+
         .join-scheme-btn {
           all: unset;
           width: 202px;
@@ -279,6 +314,7 @@
     }
   }
 }
+
 /* Medium screens (tablets) */
 @media (max-width: 768px) {
   .scheme-container {
@@ -286,22 +322,31 @@
       width: 100%;
       height: 280px;
       background-image: url("../../../Assets/Images/goldSchemeCovered.svg");
-      background-size: cover; /* Ensures the image covers the container */
-      background-position: center; /* Centers the image */
-      background-repeat: no-repeat; /* Prevents the image from repeating */
+      background-size: cover;
+      /* Ensures the image covers the container */
+      background-position: center;
+      /* Centers the image */
+      background-repeat: no-repeat;
+      /* Prevents the image from repeating */
     }
+
     .gold-scheme-img-one-cover {
-      height: 150px; /* Adjust the height for smaller screens */
+      height: 150px;
+      /* Adjust the height for smaller screens */
     }
+
     .gold-scheme-img-two-cover {
       flex-direction: column;
       height: auto;
+
       .gold-scheme-img-two-text-cover {
         width: 100%;
+
         .text-two-cover {
           font-size: 36px;
         }
       }
+
       .gold-scheme-img-two-locket-cover {
         width: 100%;
       }
@@ -309,6 +354,7 @@
 
     .scheme-details-cover {
       height: auto;
+
       .scheme-welcome-header {
         padding-left: 5rem;
         font-size: 30px;
@@ -322,6 +368,7 @@
           width: 100%;
           height: auto;
         }
+
         .scheme-form-cover {
           .scheme-btn-cover {
             margin-top: 1rem;
@@ -333,19 +380,25 @@
 }
 
 /* Small screens (phones) */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .scheme-container {
     .gold-scheme-img-one-cover {
       width: 100%;
       height: 280px;
       background-image: url("../../../Assets/Images/goldSchemeCovered.svg");
-      background-size: cover; /* Ensures the image covers the container */
-      background-position: center; /* Centers the image */
-      background-repeat: no-repeat; /* Prevents the image from repeating */
+      background-size: cover;
+      /* Ensures the image covers the container */
+      background-position: center;
+      /* Centers the image */
+      background-repeat: no-repeat;
+      /* Prevents the image from repeating */
     }
+
     .gold-scheme-img-one-cover {
-      height: 110px; /* Adjust the height for smaller screens */
+      height: 110px;
+      /* Adjust the height for smaller screens */
     }
+
     .gold-scheme-img-two-cover {
       .gold-scheme-img-two-text-cover .text-two-cover {
         font-size: 24px;
@@ -354,6 +407,7 @@
 
     .scheme-details-cover {
       height: auto;
+
       .scheme-welcome-header {
         padding-left: 1rem;
         font-size: 24px;
@@ -368,13 +422,12 @@
         .scheme-form-cover .scheme-rate-header {
           font-size: 20px;
         }
-        .scheme-form-cover
-          .scheme-rate-cards-cover
-          .scheme-rate-card
-          .scheme-rate {
+
+        .scheme-form-cover .scheme-rate-cards-cover .scheme-rate-card .scheme-rate {
           width: 150px;
           height: 50px;
         }
+
         .scheme-form-cover {
           .scheme-btn-cover {
             margin-top: 1rem;
@@ -386,34 +439,34 @@
 }
 
 /* Extra small screens (very small phones) */
-@media (max-width: 320px) {
-  .scheme-container {
-    .gold-scheme-img-one-cover {
-      width: 100%;
-      height: 280px;
-      background-image: url("../../../Assets/Images/goldSchemeCovered.svg");
-      background-size: cover; /* Ensures the image covers the container */
-      background-position: center; /* Centers the image */
-      background-repeat: no-repeat; /* Prevents the image from repeating */
-    }
-    .gold-scheme-img-one-cover {
-      height: 110px; /* Adjust the height for smaller screens */
-    }
-    .scheme-details-cover {
-      height: auto;
-      .scheme-description-and-form-cover
-        .scheme-form-cover
-        .scheme-rate-cards-cover
-        .scheme-rate-card
-        .scheme-rate {
-        width: 120px;
-        height: 40px;
-      }
-      .scheme-form-cover {
-        .scheme-btn-cover {
-          margin-top: 1rem;
-        }
-      }
-    }
-  }
-}
+// @media (max-width: 320px) {
+//   .scheme-container {
+//     .gold-scheme-img-one-cover {
+//       width: 100%;
+//       height: 280px;
+//       background-image: url("../../../Assets/Images/goldSchemeCovered.svg");
+//       background-size: cover; /* Ensures the image covers the container */
+//       background-position: center; /* Centers the image */
+//       background-repeat: no-repeat; /* Prevents the image from repeating */
+//     }
+//     .gold-scheme-img-one-cover {
+//       height: 110px; /* Adjust the height for smaller screens */
+//     }
+//     .scheme-details-cover {
+//       height: auto;
+//       .scheme-description-and-form-cover
+//         .scheme-form-cover
+//         .scheme-rate-cards-cover
+//         .scheme-rate-card
+//         .scheme-rate {
+//         width: 120px;
+//         height: 40px;
+//       }
+//       .scheme-form-cover {
+//         .scheme-btn-cover {
+//           margin-top: 1rem;
+//         }
+//       }
+//     }
+//   }
+// }
