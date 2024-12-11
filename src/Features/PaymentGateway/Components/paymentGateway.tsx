@@ -11,6 +11,7 @@ export default function PaymentButton({
   console.log("userInfo", userInfo);
 
   const RAZORPAY_KEY_ID = process.env.REACT_APP_RAZORPAY_KEY_ID;
+  console.log("RAZORPAY_KEY_ID", RAZORPAY_KEY_ID);
 
   const handlePayment = async () => {
     try {
