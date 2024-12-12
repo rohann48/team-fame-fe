@@ -647,7 +647,7 @@
           align-items: center;
 }
 .home-page-container .home-page-cover .home-testimonial-cover .testimonial-container .testimonial-navigation .testimonial-author h3 {
-  margin: 14px;
+  margin-bottom: 12px;
   font-size: 1.5rem;
 }
 .home-page-container .home-page-cover .home-testimonial-cover .testimonial-container .testimonial-navigation .testimonial-author p {
@@ -1385,5 +1385,9 @@
   }
   .home-page-container .home-page-cover .join-now-title {
     font-size: 10px !important;
+    letter-spacing: 38px !important;
+  }
+  .home-page-container .home-page-cover .testimonial-author h3 {
+    font-size: 1rem !important;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -7,7 +7,7 @@
   font: bold 16px sans-serif;
   padding: 40px 50px;
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
 
   @media (max-width: 1024px) {
     padding: 30px;
@@ -260,6 +260,7 @@
     }
 
     .footer-contact-us {
+
       .footer-center,
       .footer-right {
         font-size: 60%;
