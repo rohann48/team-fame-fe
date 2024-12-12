@@ -8,7 +8,7 @@ export type AdminGoldSchemeTypes = {
     period: number;
     startDate: string;
     endDate: string;
-    investments: number[];
+    investments: [];
     createdAt: string;
     updatedAt: string;
     __v: number;

@@ -388,7 +388,7 @@
           justify-content: center;
   padding-top: 10px;
 }
-.address-container .address-card-cover .address-right-cover .place-order-btn-cover .place-order-btn {
+.address-container .address-card-cover .address-right-cover .place-order-btn-cover .btn-cover {
   all: unset;
   width: 279px;
   height: 50px;
@@ -399,6 +399,10 @@
   font-weight: 500;
   cursor: pointer;
   text-align: center;
+  display: block;
+}
+.address-container .address-card-cover .address-right-cover .place-order-btn-cover .btn-cover .place-order-btn {
+  margin-top: 6%;
 }
 
 /* Desktop First Approach */

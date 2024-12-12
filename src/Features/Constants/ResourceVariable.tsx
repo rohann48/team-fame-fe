@@ -25,5 +25,7 @@ export const Resource = {
     EditUsers: (clientId: string) => `/client/${clientId}`,
     getUserInfo: (clientId: string) => `/client/clientId?clientId=${clientId}`,
     postOrderDetails: `/order-details`,
+    postInvestment: (schemeId: string | null) =>
+      `/gold-scheme/investment/${schemeId}`,
   },
 };

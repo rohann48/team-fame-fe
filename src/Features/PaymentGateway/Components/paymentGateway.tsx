@@ -6,17 +6,18 @@ export default function PaymentButton({
   userInfo,
   amount,
   errorLog,
+  postInvestment,
 }: any) {
   const { Razorpay } = useRazorpay();
-  console.log("userInfo", userInfo);
 
   const RAZORPAY_KEY_ID = process.env.REACT_APP_RAZORPAY_KEY_ID;
-  console.log("RAZORPAY_KEY_ID", RAZORPAY_KEY_ID);
 
   const handlePayment = async () => {
     try {
       if (!errorLog) {
         // Make the API call to backend
+        console.log("vv");
+
         const response = await fetch(
           `${process.env.REACT_APP_BASE_URL}create-order`,
           {
@@ -58,6 +59,7 @@ export default function PaymentButton({
                 }),
               });
               // Add onPaymentSuccessfull function here
+              postInvestment();
               alert("Payment successful!");
             } catch (err: any) {
               // Add onPaymentUnSuccessfull function here

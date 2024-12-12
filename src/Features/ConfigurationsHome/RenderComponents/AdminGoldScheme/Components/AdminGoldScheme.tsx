@@ -15,8 +15,8 @@ function AdminGoldScheme({ schemeDetails }: AdminGoldSchemeTypes) {
             <th>Start Date</th>
             <th>End Date</th>
             <th>Investments</th>
-            <th>Created At</th>
-            <th>Updated At</th>
+            {/* <th>Created At</th> */}
+            {/* <th>Updated At</th> */}
           </tr>
         </thead>
         <tbody>
@@ -30,16 +30,16 @@ function AdminGoldScheme({ schemeDetails }: AdminGoldSchemeTypes) {
                 <td>{new Date(scheme?.endDate).toLocaleDateString()}</td>
                 <td>
                   {scheme.investments.length > 0
-                    ? scheme.investments.map((investment, index) => (
+                    ? scheme.investments.map((investment: any, index) => (
                         <span key={index}>
-                          {investment}
+                          {investment.amount}
                           {index < scheme.investments.length - 1 ? ", " : ""}
                         </span>
                       ))
                     : "No Investments"}
                 </td>
-                <td>{new Date(scheme.createdAt).toLocaleString()}</td>
-                <td>{new Date(scheme.updatedAt).toLocaleString()}</td>
+                {/* <td>{new Date(scheme.createdAt).toLocaleString()}</td> */}
+                {/* <td>{new Date(scheme.updatedAt).toLocaleString()}</td> */}
               </tr>
             ))
           ) : (

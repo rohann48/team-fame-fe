@@ -219,4 +219,19 @@ export const ApiHandler = {
       console.log(error);
     }
   },
+
+  postInvestment: async (
+    schemeId: string | null,
+    modifiedData: { [key: string]: any }
+  ) => {
+    try {
+      const response = await apiAuth.putApiwithoutAuth(
+        Resource.url.postInvestment(schemeId),
+        modifiedData
+      );
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };

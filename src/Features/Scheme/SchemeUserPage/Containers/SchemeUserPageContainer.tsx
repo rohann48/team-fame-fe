@@ -32,29 +32,29 @@ function SchemeUserPageContainer() {
     const { valueAsNumber } = e.target;
     setInvestmentAmount(valueAsNumber);
   };
-  const postInvestment = async () => {
-    if (Number(selectedMonth) !== 0 && investmentAmount !== null) {
-      try {
-        setErrorLog(false);
-        const modifiedData = {
-          clientId: userInfo._id,
-          year: schemeUserData.period,
-          month: Number(selectedMonth),
-          date: new Date(),
-          amount: investmentAmount,
-        };
-        const response = await ApiHandler.postInvestment(
-          userInfo.goldSchemeId,
-          modifiedData
-        );
-        setSchemeUserData(response.results);
-        NotificationManager.success(Notify.ADD, "", 2000);
-      } catch (err) {}
-    } else {
-      setErrorLog(true);
-      NotificationManager.warning("Please fill all the fields", "", 2000);
-    }
-  };
+  // const postInvestment = async () => {
+  //   if (Number(selectedMonth) !== 0 && investmentAmount !== null) {
+  //     try {
+  //       setErrorLog(false);
+  //       const modifiedData = {
+  //         clientId: userInfo._id,
+  //         year: schemeUserData.period,
+  //         month: Number(selectedMonth),
+  //         date: new Date(),
+  //         amount: investmentAmount,
+  //       };
+  //       const response = await ApiHandler.postInvestment(
+  //         userInfo.goldSchemeId,
+  //         modifiedData
+  //       );
+  //       setSchemeUserData(response.results);
+  //       NotificationManager.success(Notify.ADD, "", 2000);
+  //     } catch (err) {}
+  //   } else {
+  //     setErrorLog(true);
+  //     NotificationManager.warning("Please fill all the fields", "", 2000);
+  //   }
+  // };
   const handleSelectMonth = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedMonth(e.target.value);
   };
@@ -63,12 +63,12 @@ function SchemeUserPageContainer() {
     <SchemeUserPage
       schemeUserData={schemeUserData}
       userInfo={userInfo}
-      postInvestment={postInvestment}
+      // postInvestment={postInvestment}
       handleInvestments={handleInvestments}
       handleSelectMonth={handleSelectMonth}
       selectedMonth={selectedMonth}
       investmentAmount={investmentAmount}
-      errorLog={errorLog}
+      setSchemeUserData={setSchemeUserData}
     />
   );
 }

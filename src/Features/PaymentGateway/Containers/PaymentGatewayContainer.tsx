@@ -1,8 +1,42 @@
 import axios from "axios";
 import { useState } from "react";
 import PaymentGateway from "../Components/paymentGateway";
+import { NotificationManager } from "react-notifications";
+import { Notify } from "../../Common/Notify/NotificationMessages";
+import { ApiHandler } from "../../Constants/ApiHandler";
 
-function PaymentGatewayContainer({ userInfo, productInfo }: any) {
+function PaymentGatewayContainer({
+  paymentModel,
+  userInfo,
+  amount,
+  selectedMonth,
+  schemeUserData,
+  setSchemeUserData,
+}: any) {
+  const [errorLog, setErrorLog] = useState(false);
+  const postInvestment = async () => {
+    if (Number(selectedMonth) !== 0 && amount !== null) {
+      try {
+        setErrorLog(false);
+        const modifiedData = {
+          clientId: userInfo._id,
+          year: schemeUserData.period,
+          month: Number(selectedMonth),
+          date: new Date(),
+          amount: amount,
+        };
+        const response = await ApiHandler.postInvestment(
+          userInfo.goldSchemeId,
+          modifiedData
+        );
+        setSchemeUserData(response.results);
+        NotificationManager.success(Notify.ADD, "", 2000);
+      } catch (err) {}
+    } else {
+      setErrorLog(true);
+      NotificationManager.warning("Please fill all the fields", "", 2000);
+    }
+  };
   // const [displayRazorpay, setDisplayRazorpay] = useState(false);
   // const [orderDetails, setOrderDetails] = useState({
   //   orderId: null,
@@ -29,8 +63,11 @@ function PaymentGatewayContainer({ userInfo, productInfo }: any) {
 
   return (
     <PaymentGateway
+      paymentModel={paymentModel}
       userInfo={userInfo}
-      productInfo={productInfo}
+      amount={amount}
+      errorLog={errorLog}
+      postInvestment={postInvestment}
       // orderDetails={orderDetails}
     />
   );

@@ -15,10 +15,10 @@ export type SchemeUserPageTypes = {
     period: number;
   };
   userInfo: LoginContextInitialState["userInfo"];
-  postInvestment: () => void;
+  // postInvestment: () => void;
   handleInvestments: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSelectMonth: (e: React.ChangeEvent<HTMLSelectElement>) => void;
   selectedMonth: string | undefined;
   investmentAmount: number | null;
-  errorLog: boolean;
+  setSchemeUserData: any;
 };

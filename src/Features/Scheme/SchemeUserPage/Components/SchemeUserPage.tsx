@@ -2,7 +2,7 @@ import "../SCSS/styles.css";
 import Footer from "../../../Common/CommonComponent/Footer/Components/footer";
 import { SchemeUserPageTypes } from "../SchemeUserPageTypes";
 import { format, parseISO } from "date-fns";
-import PaymentButton from "../../../PaymentGateway/Components/paymentGateway";
+import PaymentButton from "../../../PaymentGateway";
 
 const data = [
   { name: "20 Jan 2023", quantity: 5000 },
@@ -12,12 +12,12 @@ const data = [
 function SchemeUserPage({
   schemeUserData,
   userInfo,
-  postInvestment,
+  // postInvestment,
   handleInvestments,
   handleSelectMonth,
   selectedMonth,
   investmentAmount,
-  errorLog,
+  setSchemeUserData,
 }: SchemeUserPageTypes) {
   // Calculate total
   const total = schemeUserData?.investments?.reduce(
@@ -213,13 +213,14 @@ function SchemeUserPage({
                 <button className="join-scheme-btn cancel">Cancel</button>
                 <button
                   className="join-scheme-btn pay"
-                  onClick={() => postInvestment()}
+                  // onClick={() => postInvestment()}
                 >
                   <PaymentButton
                     paymentModel={"goldScheme"}
                     userInfo={userInfo}
                     amount={investmentAmount}
-                    errorLog={errorLog}
+                    schemeUserData={schemeUserData}
+                    setSchemeUserData={setSchemeUserData}
                   />
                 </button>
               </div>

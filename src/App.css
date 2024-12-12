@@ -17,4 +17,18 @@
       width: 100%;
     }
   }
+  ::-webkit-scrollbar-thumb {
+    background: #f0e6d2;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5acc6c;
+  }
+
+  ::-webkit-scrollbar {
+    height: 8px;
+    width: 6px;
+  }
 }
