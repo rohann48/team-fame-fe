@@ -498,6 +498,9 @@
   .scheme-container .gold-scheme-img-two-cover .gold-scheme-img-two-locket-cover {
     width: 100%;
   }
+  .scheme-container .gold-scheme-img-two-cover .gold-scheme-img-two-locket-cover .locket {
+    width: 145px;
+  }
   .scheme-container .scheme-details-cover {
     height: auto;
   }
