@@ -234,4 +234,16 @@ export const ApiHandler = {
       console.log(error);
     }
   },
+
+  postPaymentDetails: async (modifiedData: { [key: string]: any }) => {
+    try {
+      const response = await apiAuth.postApiwithoutAuth(
+        Resource.url.postPaymentDetails,
+        modifiedData
+      );
+      return response.data;
+    } catch (error: any) {
+      throw error.response.data;
+    }
+  },
 };

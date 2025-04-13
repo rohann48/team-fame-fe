@@ -21,4 +21,13 @@ export type SchemeUserPageTypes = {
   selectedMonth: string | undefined;
   investmentAmount: number | null;
   setSchemeUserData: any;
+  validateForm: () => boolean;
+  postInvestment: () => void;
+};
+
+export type SchemeUserErrorTypes = {
+  error: {
+    investmentAmount: number;
+    selectedMonth: number;
+  };
 };

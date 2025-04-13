@@ -1,9 +1,13 @@
 import React from "react";
 import { OrderDetailsTypes } from "../OrderDetailsTypes";
 import "../SCSS/styles.scss";
+import { orderStatus } from "../../../../Common/Enums/status.enum";
 
-function OrderDetails({ schemeDetails }: OrderDetailsTypes) {
-  console.log("schemeDetails", schemeDetails);
+function OrderDetails({
+  schemeDetails,
+  confirmDeleteEvent,
+}: OrderDetailsTypes) {
+  // console.log("schemeDetails", schemeDetails);
 
   return (
     <div className="admin-gold-scheme-container">
@@ -14,6 +18,9 @@ function OrderDetails({ schemeDetails }: OrderDetailsTypes) {
             <th>Client Name</th>
             <th>Contact</th>
             <th>Details</th>
+            <th>Payment Mode</th>
+            <th>Payment Status</th>
+            <th>Order Status</th>
             <th>Created At</th>
           </tr>
         </thead>
@@ -37,6 +44,36 @@ function OrderDetails({ schemeDetails }: OrderDetailsTypes) {
                         </div>
                       ))
                     : ""}
+                </td>
+                <td>{order.paymentMode}</td>
+                <td>{order.paymentStatus}</td>
+                <td>
+                  <select
+                    className="order-status-select"
+                    value={order?.status || ""}
+                    onChange={(e) =>
+                      confirmDeleteEvent(e.target.value, order._id)
+                    }
+                  >
+                    <option value="" disabled>
+                      Select Order Status{" "}
+                    </option>
+                    <option value={orderStatus.ORDERPLACED}>
+                      {orderStatus.ORDERPLACED}
+                    </option>
+                    <option value={orderStatus.SHIPPED}>
+                      {orderStatus.SHIPPED}
+                    </option>
+                    <option value={orderStatus.OUTFORDELIVERY}>
+                      {orderStatus.OUTFORDELIVERY}
+                    </option>
+                    <option value={orderStatus.DELIVERED}>
+                      {orderStatus.DELIVERED}
+                    </option>
+                    <option value={orderStatus.DELAYED}>
+                      {orderStatus.DELAYED}
+                    </option>
+                  </select>
                 </td>
                 <td>{new Date(order.createdAt).toLocaleString()}</td>
                 {/* <td>{new Date(scheme.updatedAt).toLocaleString()}</td> */}

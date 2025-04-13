@@ -58,14 +58,25 @@ function AddressContainer() {
   //     NotificationManager.warning("Refferal code required", "", 2000);
   //   }
   // };
-
-  const placeYourOrder = async () => {
-    const data = {
-      amount: 20,
-      name: "rohan",
-      mobile: "8722840600",
-    };
-    const response = await ApiHandler.placeYourOrder(data);
+  const [orderValidate, setOrderValidate] = useState(false);
+  const orderValidation = async () => {
+    if (
+      formData.name.length === 0 &&
+      formData.addressLine1.length === 0 &&
+      formData.mobile.toString().length === 0 &&
+      formData.pincode.toString().length === 0
+    ) {
+      NotificationManager.warning("Please fill all the fields", "", 2000);
+      setOrderValidate(false);
+    } else {
+      setOrderValidate(true);
+    }
+    // const data = {
+    //   amount: 20,
+    //   name: "rohan",
+    //   mobile: "8722840600",
+    // };
+    // const response = await ApiHandler.placeYourOrder(data);
     // if("success"){}
   };
 
@@ -147,7 +158,7 @@ function AddressContainer() {
   };
   const [errorLog, setErrorLog] = useState(false);
   //handle submit form
-  const handleSubmitForm = async () => {
+  const handleSubmitForm = async (orderId?: any) => {
     setErrorLog(false);
     if (validateForm()) {
       try {
@@ -164,12 +175,23 @@ function AddressContainer() {
             });
           });
         }
+        let orderCode = "order_";
+        if (formData.paymentMode === "cod") {
+          const characters =
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+          for (let i = 0; i < 10; i++) {
+            const randomIndex = Math.floor(Math.random() * characters.length);
+            orderCode += characters[randomIndex];
+          }
+        }
+
         const modifiedData = {
           ...formData,
           amount: productInfo.catTotalAmount,
           clientId: userInfo._id,
           orderDetails: orderData,
           date: new Date(),
+          razorOrderId: formData.paymentMode === "cod" ? orderCode : orderId,
         };
         const response = await ApiHandler.postOrderDetails(modifiedData);
         setProductInfo({ cartBasket: [], catTotalAmount: 0 });
@@ -189,7 +211,7 @@ function AddressContainer() {
       handleFormDataChange={handleFormDataChange}
       handleSubmitForm={handleSubmitForm}
       productInfo={productInfo}
-      placeYourOrder={placeYourOrder}
+      validateForm={validateForm}
       userInfo={userInfo}
       formData={formData}
     />
