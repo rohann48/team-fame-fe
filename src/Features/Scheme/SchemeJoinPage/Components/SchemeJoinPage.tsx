@@ -16,16 +16,16 @@ function SchemeJoinPage({
       <div className="gold-scheme-img-two-cover">
         <div className="gold-scheme-img-two-text-cover">
           <div className="text-one-cover">
-            <h3 className="header-one">WELCOME TO SHREE RAKSHA GOLD</h3>
+            <h3 className="header-one">WELCOME TO SHREE RAKSHA SAVINGS</h3>
           </div>
           <div className="text-two-cover">
-            <h3 className="header-two">GOLD SAVINGS </h3>
-            <h3 className="header-three">SCHEME</h3>{" "}
+            <h3 className="header-two">SMART SAVINGS </h3>
+            <h3 className="header-three"></h3>{" "}
             <h3 className="header-four">AT YOUR FINGER TIP</h3>
           </div>
         </div>
         <div className="gold-scheme-img-two-locket-cover">
-          <img className="locket" src={images.locket} alt="locket" />
+          <img className="locket" src={images.goldcoin} alt="locket" />
         </div>
       </div>
       <div className="scheme-details-cover">

@@ -31,11 +31,11 @@ function SchemeUserPage({
       <div className="user-gold-scheme-img-two-cover">
         <div className="user-gold-scheme-img-two-text-cover">
           <div className="user-text-one-cover">
-            <h3 className="user-header-one">WELCOME TO SHREE RAKSHA GOLD</h3>
+            <h3 className="user-header-one">WELCOME TO SHREE RAKSHA SAVINGS</h3>
           </div>
           <div className="user-text-two-cover">
-            <h3 className="user-header-two">GOLD SAVINGS </h3>
-            <h3 className="user-header-three">SCHEME</h3>{" "}
+            <h3 className="user-header-two">SMART SAVINGS </h3>
+            <h3 className="user-header-three"></h3>{" "}
             <h3 className="user-header-four">AT YOUR FINGER TIP</h3>
           </div>
         </div>
