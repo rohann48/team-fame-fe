@@ -19,7 +19,12 @@ export type OrderDetailsTypes = {
     }>;
     createdAt: string;
     updatedAt: string;
+    paymentStatus: string;
+    status: string;
+    statusDescription: string;
+    paymentMode: string;
     __v: number;
     id: string;
   }[];
+  confirmDeleteEvent: (val: string, orderId: any) => void;
 };

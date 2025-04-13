@@ -18,6 +18,8 @@ function SchemeUserPage({
   selectedMonth,
   investmentAmount,
   setSchemeUserData,
+  validateForm,
+  postInvestment,
 }: SchemeUserPageTypes) {
   // Calculate total
   const total = schemeUserData?.investments?.reduce(
@@ -219,8 +221,10 @@ function SchemeUserPage({
                     paymentModel={"goldScheme"}
                     userInfo={userInfo}
                     amount={investmentAmount}
-                    schemeUserData={schemeUserData}
-                    setSchemeUserData={setSchemeUserData}
+                    validateForm={validateForm}
+                    handleSubmit={postInvestment}
+                    // schemeUserData={schemeUserData}
+                    // setSchemeUserData={setSchemeUserData}
                   />
                 </button>
               </div>

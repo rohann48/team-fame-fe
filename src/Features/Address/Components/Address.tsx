@@ -2,13 +2,13 @@ import React from "react";
 import { AddressTypes } from "../AddressTypes";
 import icons from "../../Assets/Icons/icons";
 import "../SCSS/styles.css";
-import PaymentButton from "../../PaymentGateway/Components/paymentGateway";
+import PaymentButton from "../../PaymentGateway";
 
 function Address({
   handleFormDataChange,
   handleSubmitForm,
   productInfo,
-  placeYourOrder,
+  validateForm,
   userInfo,
   formData,
 }: Readonly<AddressTypes>) {
@@ -210,6 +210,8 @@ function Address({
                 paymentModel={"shop"}
                 userInfo={userInfo}
                 amount={productInfo.catTotalAmount}
+                validateForm={validateForm}
+                handleSubmit={handleSubmitForm}
               />
             )}
           </div>

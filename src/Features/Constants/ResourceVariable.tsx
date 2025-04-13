@@ -27,5 +27,6 @@ export const Resource = {
     postOrderDetails: `/order-details`,
     postInvestment: (schemeId: string | null) =>
       `/gold-scheme/investment/${schemeId}`,
+    postPaymentDetails: `/payments/create-order`,
   },
 };

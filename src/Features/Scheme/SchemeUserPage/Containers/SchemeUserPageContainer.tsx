@@ -2,7 +2,10 @@ import React, { useContext, useEffect, useState } from "react";
 import SchemeUserPage from "../Components/SchemeUserPage";
 import { useParams } from "react-router-dom";
 import { ApiHandler } from "../../constants/ApiHandler";
-import { SchemeUserPageTypes } from "../SchemeUserPageTypes";
+import {
+  SchemeUserErrorTypes,
+  SchemeUserPageTypes,
+} from "../SchemeUserPageTypes";
 import { LoginContext } from "../../../context/LoginContext";
 import { useImmer } from "use-immer";
 import { Notify } from "../../../Common/Notify/NotificationMessages";
@@ -16,6 +19,10 @@ function SchemeUserPageContainer() {
 
   const [schemeUserData, setSchemeUserData] = useImmer(
     {} as SchemeUserPageTypes["schemeUserData"]
+  );
+
+  const [error, setError] = useState<SchemeUserErrorTypes["error"]>(
+    {} as SchemeUserErrorTypes["error"]
   );
   useEffect(() => {
     const fetchUserInfo = async () => {
@@ -32,29 +39,52 @@ function SchemeUserPageContainer() {
     const { valueAsNumber } = e.target;
     setInvestmentAmount(valueAsNumber);
   };
-  // const postInvestment = async () => {
-  //   if (Number(selectedMonth) !== 0 && investmentAmount !== null) {
-  //     try {
-  //       setErrorLog(false);
-  //       const modifiedData = {
-  //         clientId: userInfo._id,
-  //         year: schemeUserData.period,
-  //         month: Number(selectedMonth),
-  //         date: new Date(),
-  //         amount: investmentAmount,
-  //       };
-  //       const response = await ApiHandler.postInvestment(
-  //         userInfo.goldSchemeId,
-  //         modifiedData
-  //       );
-  //       setSchemeUserData(response.results);
-  //       NotificationManager.success(Notify.ADD, "", 2000);
-  //     } catch (err) {}
-  //   } else {
-  //     setErrorLog(true);
-  //     NotificationManager.warning("Please fill all the fields", "", 2000);
-  //   }
-  // };
+
+  const validateForm = (): boolean => {
+    const errors: any = {};
+    let isValid = true;
+
+    // Required fields
+    if (!investmentAmount) {
+      errors.investmentAmount = "Please fill all the investment amount";
+      NotificationManager.warning(errors.investmentAmount, "", 2000);
+      isValid = false;
+    }
+    if (Number(selectedMonth) == 0 || !selectedMonth) {
+      errors.selectedMonth = "Please select a month";
+      NotificationManager.warning(errors.selectedMonth, "", 2000);
+      isValid = false;
+    }
+    // Set the errors in the state
+    setError(errors);
+
+    // Return true if there are no errors, false otherwise
+    return isValid;
+  };
+
+  const postInvestment = async () => {
+    if (validateForm()) {
+      try {
+        setErrorLog(false);
+        const modifiedData = {
+          clientId: userInfo._id,
+          year: schemeUserData.period,
+          month: Number(selectedMonth),
+          date: new Date(),
+          amount: investmentAmount,
+        };
+        const response = await ApiHandler.postInvestment(
+          userInfo.goldSchemeId,
+          modifiedData
+        );
+        setSchemeUserData(response.results);
+        NotificationManager.success(Notify.ADD, "", 2000);
+      } catch (err) {}
+    } else {
+      setErrorLog(true);
+      // NotificationManager.warning("Please fill all the fields", "", 2000);
+    }
+  };
   const handleSelectMonth = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedMonth(e.target.value);
   };
@@ -69,6 +99,8 @@ function SchemeUserPageContainer() {
       selectedMonth={selectedMonth}
       investmentAmount={investmentAmount}
       setSchemeUserData={setSchemeUserData}
+      validateForm={validateForm}
+      postInvestment={postInvestment}
     />
   );
 }

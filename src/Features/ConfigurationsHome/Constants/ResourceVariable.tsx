@@ -20,5 +20,7 @@ export const Resource = {
     deleteEvent: (docId: string, fileKey: string) =>
       `/event/delete?docId=${docId}&fileKey=${fileKey}`,
     getOrderLists: "/order-details/list",
+    updateOrderStatus: (orderId: string, status: string) =>
+      `/order-details/update/status?orderId=${orderId}&status=${status}`,
   },
 };

@@ -2,9 +2,9 @@ import { ShoppingContextInitialState } from "../context/ShopContext/ShopContextT
 
 export type AddressTypes = {
   handleFormDataChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handleSubmitForm: () => Promise<void>;
+  handleSubmitForm: (orderId?: any) => Promise<void>;
   productInfo: ShoppingContextInitialState["productInfo"];
-  placeYourOrder: () => void;
+  validateForm: () => void;
   userInfo: any;
   formData: any;
 };

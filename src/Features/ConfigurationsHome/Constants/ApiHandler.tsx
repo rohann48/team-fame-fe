@@ -134,4 +134,11 @@ export const ApiHandler = {
     );
     return response.data;
   },
+
+  updateOrderStatus: async (orderId: string, status: string) => {
+    const response = await apiAuth.putApiwithoutAuth(
+      Resource.url.updateOrderStatus(orderId, status)
+    );
+    return response.data;
+  },
 };
