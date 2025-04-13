@@ -29,9 +29,9 @@ function SchemeJoinPage({
         </div>
       </div>
       <div className="scheme-details-cover">
-        <div className="scheme-welcome-header">WELCOME</div>
+        <div className="scheme-welcome-header">JOIN SAVINGS</div>
         <div className="scheme-description-and-form-cover">
-          <div className="scheme-description-cover">
+          {/* <div className="scheme-description-cover">
             <p className="description">
               Your favourite Jeweller has made owning your most favourite
               jewellery easier,more secure and convenient. With the SHREE RAKSHA
@@ -68,9 +68,9 @@ function SchemeJoinPage({
               enjoy for generations to come.
             </p>
             <p className="description">Thank you</p>
-          </div>
+          </div> */}
           <div className="scheme-form-cover">
-            <div className="scheme-rate-header">Today's Gold Rate</div>
+            {/* <div className="scheme-rate-header">Today's Gold Rate</div>
             <div className="scheme-rate-cards-cover">
               <div className="scheme-rate-card">
                 <div className="scheme-rate-text">24 Carat Gold</div>
@@ -81,7 +81,7 @@ function SchemeJoinPage({
                 <div className="scheme-rate">5493 /gm</div>
               </div>
             </div>
-            <div className="scheme-join-text">Join Our Scheme Now.</div>
+            <div className="scheme-join-text">Join Our Scheme Now.</div> */}
             <div className="scheme-form">
               {/* <label className="scheme-payee-label-cover">
                 <div className="scheme-payee-text">Payee Name:</div>
