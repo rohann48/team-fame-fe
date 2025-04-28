@@ -208,6 +208,23 @@
 .header-nav-container .login-register-container .user-profile-cover .user-profile-view-cover .user-profile-view-inner-cover .user-prof:hover {
   background-color: #bd9255;
 }
+.header-nav-container .login-register-container .user-profile-cover .user-profile-view-cover .user-profile-view-inner-cover .user-order-history {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #bd9255;
+  border-left: none;
+  border-right: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.header-nav-container .login-register-container .user-profile-cover .user-profile-view-cover .user-profile-view-inner-cover .user-order-history:hover {
+  background-color: #bd9255;
+}
 .header-nav-container .login-register-container .user-profile-cover .user-profile-view-cover .user-profile-view-inner-cover .user-logout-btn-cover {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -27,4 +27,16 @@ export type OrderDetailsTypes = {
     id: string;
   }[];
   confirmDeleteEvent: (val: string, orderId: any) => void;
+  userInfo: {
+    _id: string;
+    name: string;
+    role?: string;
+    lastName: string;
+    emailId: string;
+    contactNo: string;
+    password: "";
+    confirmPassword: "";
+    goldSchemeId: string;
+    membership: boolean;
+  };
 };

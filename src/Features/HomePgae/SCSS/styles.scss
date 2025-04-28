@@ -209,15 +209,14 @@
       border-top: 2px solid #bd9255;
 
       .about-us-header {
-        font-size: 83px;
         font-weight: 600;
         color: #bd9255;
         padding-top: 1%;
-
-        .us-text {
-          display: flex;
-          align-items: center;
-          justify-content: end;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        .about-text {
+          font-size: 50px;
         }
       }
 
@@ -368,7 +367,7 @@
 
       .vission-description {
         color: #ffffff;
-        font-size: 150px;
+        font-size: 100px;
         font-weight: 500;
         display: flex;
         align-items: center;
@@ -1270,6 +1269,10 @@
 
         .about-us-header {
           font-size: 36px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
         }
 
         .about-us-description {
@@ -1288,7 +1291,6 @@
             margin-bottom: 10px;
 
             .card-right-cover {
-
               .day,
               .marathon-header,
               .date-cover,
@@ -1428,7 +1430,6 @@
       }
 
       .home-four-icons-cover {
-
         .education-logo-cover,
         .sports-logo-cover,
         .spirituality-logo-cover,
@@ -1442,6 +1443,10 @@
       .home-about-us-cover {
         .about-us-header {
           font-size: 28px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
         }
 
         .about-us-description {
@@ -1451,7 +1456,6 @@
 
       .home-events-cover,
       .home-testimonial-cover {
-
         .cards,
         .testimonial-container {
           width: 100%;

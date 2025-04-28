@@ -10,6 +10,7 @@ import images from "../../../../ImageVariables";
 import ConfirmAlertHome from "../../../../Common/CommonComponent/ConfirmAlert/Component/ConfirmAlertHome";
 import { handleErrorResponse } from "../../../../Common/CommonFunctions/CommonErrorHandler";
 import { useNavigate } from "react-router-dom";
+import { ca } from "date-fns/locale";
 
 let initialState = {
   name: "",
@@ -129,6 +130,20 @@ function ShopContainer() {
       }
     }
   };
+  const handleEditProduct = async (id: string) => {
+    const modifiedData = {};
+    try {
+      const response = await ApiHandler.updateProduct(id, modifiedData);
+      setProductDetails({
+        name: response.results.name,
+        category: response.results.category,
+        details: response.results.details,
+        price: response.results.price,
+        cashback: response.results.cashback,
+      });
+      setUploadedFiles(response.results.imageInfo);
+    } catch (error) {}
+  };
 
   return (
     <Shop
@@ -139,6 +154,7 @@ function ShopContainer() {
       products={products}
       confirmDeleteThreadFile={confirmDeleteThreadFile}
       inventorySummary={inventorySummary}
+      handleEditProduct={handleEditProduct}
     />
   );
 }

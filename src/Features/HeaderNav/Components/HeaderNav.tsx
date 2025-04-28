@@ -162,6 +162,16 @@ const HeaderNav = ({
                   >
                     Profile
                   </div>
+                  <NavLink
+                    to="config/order-details"
+                    style={{
+                      all: "unset",
+                    }}
+                    onClick={handleToggleUserProfile}
+                  >
+                    <div className="user-order-history"> Order History </div>
+                  </NavLink>
+
                   <div className="user-logout-btn-cover">
                     <button
                       className="logout-btn"

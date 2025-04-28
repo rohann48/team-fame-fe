@@ -64,4 +64,5 @@ export type ShopComponentProps = {
     totalOrderedQuantity: number;
     totalProductQuantity: number;
   };
+  handleEditProduct: (id: string) => void;
 };

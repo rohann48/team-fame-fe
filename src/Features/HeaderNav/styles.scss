@@ -164,6 +164,20 @@
               background-color: #bd9255;
             }
           }
+          .user-order-history {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            border: 1px solid #bd9255;
+            border-left: none;
+            border-right: none;
+            padding: 10px;
+            cursor: pointer;
+
+            &:hover {
+              background-color: #bd9255;
+            }
+          }
 
           .user-logout-btn-cover {
             display: flex;

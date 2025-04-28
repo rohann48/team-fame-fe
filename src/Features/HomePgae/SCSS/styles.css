@@ -191,12 +191,9 @@
   border-top: 2px solid #bd9255;
 }
 .home-page-container .home-page-cover .home-about-us-cover .about-us-header {
-  font-size: 83px;
   font-weight: 600;
   color: #bd9255;
   padding-top: 1%;
-}
-.home-page-container .home-page-cover .home-about-us-cover .about-us-header .us-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -206,6 +203,9 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+}
+.home-page-container .home-page-cover .home-about-us-cover .about-us-header .about-text {
+  font-size: 50px;
 }
 .home-page-container .home-page-cover .home-about-us-cover .about-us-description {
   font-size: 16px;
@@ -289,7 +289,7 @@
 }
 .home-page-container .home-page-cover .home-vision-cover .vission-description {
   color: #ffffff;
-  font-size: 150px;
+  font-size: 100px;
   font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1289,6 +1289,16 @@
   }
   .home-page-container .home-page-cover .home-about-us-cover .about-us-header {
     font-size: 36px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
   }
   .home-page-container .home-page-cover .home-about-us-cover .about-us-description {
     padding: 5%;
@@ -1356,6 +1366,16 @@
   }
   .home-page-container .home-page-cover .home-about-us-cover .about-us-header {
     font-size: 28px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
   }
   .home-page-container .home-page-cover .home-about-us-cover .about-us-description {
     font-size: 12px;

@@ -8,6 +8,7 @@ import { configurationType } from "../configurationTypes";
 const Configuration = ({
   configurationRoutes,
   sideNavLinks,
+  userInfo,
 }: configurationType) => {
   return (
     <div className="config-page-container">
@@ -15,7 +16,9 @@ const Configuration = ({
         <div className="config-container">
           <div className="config-container-left">
             <div className="config-container-name">
-              <span>Admin Setting</span>
+              <span>{`${
+                userInfo?.role === "admin" ? "Admin Setting" : "Details"
+              }`}</span>
             </div>
             <div className="config-links">
               {sideNavLinks.map((link, i) => (

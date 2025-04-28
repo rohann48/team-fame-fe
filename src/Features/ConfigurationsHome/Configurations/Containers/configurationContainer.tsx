@@ -1,18 +1,30 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Configuration from "../Components/configuration";
 import images from "../../../ImageVariables";
 import { useRoutes } from "react-router-dom";
 import { configRoutes } from "../../routes";
+import { LoginContext } from "../../../context/LoginContext";
 
 function ConfigurationContainer() {
+  const { userInfo } = useContext(LoginContext);
+  const isAdmin = userInfo?.role === "admin";
+
   const sideNavLinks = [
-    { title: "about us", img: images.aboutusIcon, path: "about-us" },
-    { title: "events", img: images.eventIcon, path: "events" },
-    { title: "testimonial", img: images.testimonialIcon, path: "testimonial" },
-    // { title: "videos", img: images.videoIcon, path: "videos" },
-    // { title: "news", img: images.newsIcon, path: "about-us" },
-    { title: "gold scheme", img: images.schemeIcon, path: "gold-scheme" },
-    { title: "shop", img: images.storeAS, path: "shop" },
+    ...(isAdmin
+      ? [
+          { title: "about us", img: images.aboutusIcon, path: "about-us" },
+          { title: "events", img: images.eventIcon, path: "events" },
+          {
+            title: "testimonial",
+            img: images.testimonialIcon,
+            path: "testimonial",
+          },
+          // { title: "videos", img: images.videoIcon, path: "videos" },
+          // { title: "news", img: images.newsIcon, path: "about-us" },
+          { title: "gold scheme", img: images.schemeIcon, path: "gold-scheme" },
+          { title: "shop", img: images.storeAS, path: "shop" },
+        ]
+      : []),
     {
       title: "order details",
       img: images.orderDetailsAS,
@@ -26,6 +38,7 @@ function ConfigurationContainer() {
     <Configuration
       configurationRoutes={configurationRoutes}
       sideNavLinks={sideNavLinks}
+      userInfo={userInfo}
     />
   );
 }

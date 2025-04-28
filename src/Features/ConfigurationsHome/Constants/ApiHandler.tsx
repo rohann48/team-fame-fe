@@ -1,3 +1,4 @@
+import { AnyNaptrRecord } from "dns";
 import { apiAuth } from "../../AuthenticateApi";
 import { PostEventProps, PostTestimonialProps } from "./ApiHandlerTypes";
 // import { loginParams } from "./ApiHandlerTypes";
@@ -138,6 +139,19 @@ export const ApiHandler = {
   updateOrderStatus: async (orderId: string, status: string) => {
     const response = await apiAuth.putApiwithoutAuth(
       Resource.url.updateOrderStatus(orderId, status)
+    );
+    return response.data;
+  },
+  updateProduct: async (productId: string, data: any) => {
+    const response = await apiAuth.putApiwithoutAuth(
+      Resource.url.uppdateProduct(productId),
+      data
+    );
+    return response.data;
+  },
+  getProductById: async (productId: string) => {
+    const response = await apiAuth.getApiwithoutAuth(
+      Resource.url.getProductById(productId)
     );
     return response.data;
   },

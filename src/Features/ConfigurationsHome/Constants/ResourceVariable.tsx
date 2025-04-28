@@ -22,5 +22,8 @@ export const Resource = {
     getOrderLists: "/order-details/list",
     updateOrderStatus: (orderId: string, status: string) =>
       `/order-details/update/status?orderId=${orderId}&status=${status}`,
+    uppdateProduct: (productId: string) =>
+      `/shop/product/update?productId=${productId}`,
+    getProductById: (productId: string) => `/shop/product/${productId}`,
   },
 };

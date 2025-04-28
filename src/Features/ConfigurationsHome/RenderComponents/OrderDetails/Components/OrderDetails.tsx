@@ -6,6 +6,7 @@ import { orderStatus } from "../../../../Common/Enums/status.enum";
 function OrderDetails({
   schemeDetails,
   confirmDeleteEvent,
+  userInfo,
 }: OrderDetailsTypes) {
   // console.log("schemeDetails", schemeDetails);
 
@@ -20,7 +21,7 @@ function OrderDetails({
             <th>Details</th>
             <th>Payment Mode</th>
             <th>Payment Status</th>
-            <th>Order Status</th>
+            {userInfo?.role === "admin" && <th>Order Status</th>}
             <th>Created At</th>
           </tr>
         </thead>
@@ -47,34 +48,39 @@ function OrderDetails({
                 </td>
                 <td>{order.paymentMode}</td>
                 <td>{order.paymentStatus}</td>
-                <td>
-                  <select
-                    className="order-status-select"
-                    value={order?.status || ""}
-                    onChange={(e) =>
-                      confirmDeleteEvent(e.target.value, order._id)
-                    }
-                  >
-                    <option value="" disabled>
-                      Select Order Status{" "}
-                    </option>
-                    <option value={orderStatus.ORDERPLACED}>
-                      {orderStatus.ORDERPLACED}
-                    </option>
-                    <option value={orderStatus.SHIPPED}>
-                      {orderStatus.SHIPPED}
-                    </option>
-                    <option value={orderStatus.OUTFORDELIVERY}>
-                      {orderStatus.OUTFORDELIVERY}
-                    </option>
-                    <option value={orderStatus.DELIVERED}>
-                      {orderStatus.DELIVERED}
-                    </option>
-                    <option value={orderStatus.DELAYED}>
-                      {orderStatus.DELAYED}
-                    </option>
-                  </select>
-                </td>
+                {userInfo?.role === "admin" && (
+                  <td>
+                    <select
+                      className="order-status-select"
+                      value={order?.status || ""}
+                      onChange={(e) =>
+                        confirmDeleteEvent(e.target.value, order._id)
+                      }
+                      style={{
+                        width: "110px",
+                      }}
+                    >
+                      <option value="" disabled>
+                        Select Order Status{" "}
+                      </option>
+                      <option value={orderStatus.ORDERPLACED}>
+                        {orderStatus.ORDERPLACED}
+                      </option>
+                      <option value={orderStatus.SHIPPED}>
+                        {orderStatus.SHIPPED}
+                      </option>
+                      <option value={orderStatus.OUTFORDELIVERY}>
+                        {orderStatus.OUTFORDELIVERY}
+                      </option>
+                      <option value={orderStatus.DELIVERED}>
+                        {orderStatus.DELIVERED}
+                      </option>
+                      <option value={orderStatus.DELAYED}>
+                        {orderStatus.DELAYED}
+                      </option>
+                    </select>
+                  </td>
+                )}
                 <td>{new Date(order.createdAt).toLocaleString()}</td>
                 {/* <td>{new Date(scheme.updatedAt).toLocaleString()}</td> */}
               </tr>

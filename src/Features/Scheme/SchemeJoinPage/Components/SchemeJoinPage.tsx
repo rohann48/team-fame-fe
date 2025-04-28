@@ -25,7 +25,7 @@ function SchemeJoinPage({
           </div>
         </div>
         <div className="gold-scheme-img-two-locket-cover">
-          <img className="locket" src={images.goldcoin} alt="locket" />
+          <div className="locket"></div>
         </div>
       </div>
       <div className="scheme-details-cover">

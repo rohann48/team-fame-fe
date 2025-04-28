@@ -8,4 +8,16 @@ export type configurationType = {
     any,
     string | React.JSXElementConstructor<any>
   > | null;
+  userInfo: {
+    _id: string;
+    name: string;
+    role?: string;
+    lastName: string;
+    emailId: string;
+    contactNo: string;
+    password: "";
+    confirmPassword: "";
+    goldSchemeId: string;
+    membership: boolean;
+  };
 };

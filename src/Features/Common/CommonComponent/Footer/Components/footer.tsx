@@ -38,19 +38,30 @@ function Footer() {
 
         <div className="footer-right">
           <div className="title">Find us</div>
-          <div>
-            <i>
-              <img src={images.facebook} alt="facebook" />
-            </i>
-            <p>@teamfame</p>
-          </div>
-
-          <div>
-            <i>
-              <img src={images.instagram} alt="instagram" />
-            </i>
-            <p>@_teamfame_</p>
-          </div>
+          <a
+            href="https://x.com/teamfame96?t=7wwGkaLvaDKCt2Hl0w1ocw&s=09"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div>
+              <i>
+                <img src={images.twitter} alt="facebook" />
+              </i>
+              <p>@teamfame96</p>
+            </div>
+          </a>
+          <a
+            href="https://www.instagram.com/_teamfame_?utm_source=qr&igsh=MXUxMGRidTgyMTByZA=="
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div>
+              <i>
+                <img src={images.instagram} alt="instagram" />
+              </i>
+              <p>@_teamfame_</p>
+            </div>
+          </a>
 
           <div>
             <i>

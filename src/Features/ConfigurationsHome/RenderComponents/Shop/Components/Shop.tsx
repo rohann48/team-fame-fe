@@ -11,6 +11,7 @@ const Shop = ({
   products,
   confirmDeleteThreadFile,
   inventorySummary,
+  handleEditProduct,
 }: ShopComponentProps) => {
   return (
     <div className="products-container">
@@ -172,7 +173,11 @@ const Shop = ({
                     )}
                   </td>
                   <td>
-                    <button className="edit-btn" disabled>
+                    <button
+                      className="edit-btn"
+                      disabled
+                      onClick={() => handleEditProduct(product._id)}
+                    >
                       Edit
                     </button>
                     <button

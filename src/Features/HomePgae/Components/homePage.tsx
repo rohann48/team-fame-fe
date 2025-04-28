@@ -38,43 +38,66 @@ const HomePage = ({
           </div>
         </div>
         <div className="home-four-icons-cover">
-          <div className="education-logo-cover">
-            <img
-              src={images.educationLogo}
-              alt="educationLogo"
-              className="education-logo"
-            />
-            <p className="img-description">Education</p>
-          </div>
-          <div className="sports-logo-cover">
-            <img
-              src={images.sportsLogo}
-              alt="sportsLogo"
-              className="sports-logo"
-            />
-            <p className="img-description">Sports</p>
-          </div>
-          <div className="spirituality-logo-cover">
-            <img
-              src={images.spiritualityLogo}
-              alt="spiritualityLogo"
-              className="spirituality-logo"
-            />
-            <p className="img-description">Spirituality</p>
-          </div>{" "}
-          <div className="Politics-logo-cover">
-            <img
-              src={images.lawLogo}
-              alt="Politics"
-              className="Politics-logo"
-            />
-            <p className="img-description">Politics</p>
-          </div>
+          <a
+            href="https://www.youtube.com/@fame96"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="education-logo-cover">
+              <img
+                src={images.educationLogo}
+                alt="educationLogo"
+                className="education-logo"
+              />
+              <p className="img-description">Education</p>
+            </div>
+          </a>
+          <a
+            href="https://www.youtube.com/@fame96"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="sports-logo-cover">
+              <img
+                src={images.sportsLogo}
+                alt="sportsLogo"
+                className="sports-logo"
+              />
+              <p className="img-description">Sports</p>
+            </div>
+          </a>
+          <a
+            href="https://www.youtube.com/@fame96"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="spirituality-logo-cover">
+              <img
+                src={images.spiritualityLogo}
+                alt="spiritualityLogo"
+                className="spirituality-logo"
+              />
+              <p className="img-description">Spirituality</p>
+            </div>{" "}
+          </a>
+          <a
+            href="https://www.youtube.com/@fame96"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="Politics-logo-cover">
+              <img
+                src={images.lawLogo}
+                alt="Politics"
+                className="Politics-logo"
+              />
+              <p className="img-description">Politics</p>
+            </div>
+          </a>
         </div>
         <div className="home-about-us-cover">
           <div className="about-us-header">
-            <div className="about-text">ABOUT</div>
-            <div className="us-text">US</div>
+            <div className="about-text">ABOUT US</div>
           </div>
           <div className="about-us-description">{aboutUsData?.content}</div>
         </div>

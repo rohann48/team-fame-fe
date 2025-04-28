@@ -55,21 +55,21 @@ function EventCardsHome({
       </div>
       <div className="events-former-text-main-cover">
         <div className="events-former-text-top-border">
-          <div className="events-former-text-top-border-inner"></div>
+          {/* <div className="events-former-text-top-border-inner"></div> */}
         </div>
-        <div className="events-former-text-wrapper">
+        {/* <div className="events-former-text-wrapper">
           <span>F</span>
           <span>A</span>
           <span className="text-r">R</span>
           <span>M</span>
           <span>E</span>
           <span className="text-r">R</span>
-        </div>
+        </div> */}
         <div className="events-former-text-student-cover">
           {/* <span>From the students</span>
           <span>For the students</span>
           <span>To the students</span> */}
-          <span>#REvolution</span>
+          {/* <span>#REvolution</span> */}
         </div>
         {/* <div className="events-former-text-join-btn-cover">
           <button className="events-former-text-join-btn">Join Now</button>

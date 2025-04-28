@@ -76,6 +76,7 @@ function OrderDetailsContainer() {
     <OrderDetails
       schemeDetails={schemeDetails}
       confirmDeleteEvent={confirmDeleteEvent}
+      userInfo={userInfo}
     />
   );
 }
