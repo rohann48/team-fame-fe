@@ -144,6 +144,8 @@ let images = {
   storeAS: require("./Assets/Images/storeAS.svg"),
   orderDetailsAS: require("./Assets/Images/orderDetailsAS.svg"),
   adityaCapital: require("./Assets/Images/adityaCapital.svg"),
-  goldcoin: require("./Assets/Images/goldcoin.svg"),
+  smartScheme: require("./Assets/Images/smartScheme.svg"),
+  goldbag: require("./Assets/Images/goldbag.png"),
+  twitter: require("./Assets/Images/twitter.svg"),
 };
 export default images;
