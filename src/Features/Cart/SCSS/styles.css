@@ -255,6 +255,7 @@
   border-radius: 4px;
   color: white;
   font-size: 14px;
+  cursor: pointer;
 }
 .cart-product-container .cart-product-cover .empty-cart-cover {
   width: 100%;
@@ -406,6 +407,7 @@
   .cart-product-container .cart-product-cover .cart-product-main-wrapper .cart-buy-now-cover .cart-buy-btn {
     width: 90%;
     max-width: 279px;
+    cursor: pointer;
   }
   .cart-product-container .cart-product-cover .empty-cart-cover .empty-cart-inner-cover {
     padding: 2rem;
@@ -478,6 +480,7 @@
   .cart-product-container .cart-product-cover .cart-product-main-wrapper .cart-buy-now-cover .cart-buy-btn {
     height: 45px;
     font-size: 13px;
+    cursor: pointer;
   }
 }
 @media (max-width: 575px) {

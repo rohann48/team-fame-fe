@@ -14,7 +14,7 @@ import { NotificationManager } from "react-notifications";
 function SchemeUserPageContainer() {
   const { userId } = useParams() as { userId: string | null };
   const { userInfo } = useContext(LoginContext);
-  const [investmentAmount, setInvestmentAmount] = useState<null | number>(null);
+  const [investmentAmount, setInvestmentAmount] = useState<number>(0);
   const [selectedMonth, setSelectedMonth] = useState("");
 
   const [schemeUserData, setSchemeUserData] = useImmer(
@@ -46,7 +46,7 @@ function SchemeUserPageContainer() {
 
     // Required fields
     if (!investmentAmount) {
-      errors.investmentAmount = "Please fill all the investment amount";
+      errors.investmentAmount = "Please fill the investment amount";
       NotificationManager.warning(errors.investmentAmount, "", 2000);
       isValid = false;
     }
@@ -63,7 +63,7 @@ function SchemeUserPageContainer() {
   };
 
   const postInvestment = async () => {
-    if (validateForm()) {
+    if (investmentAmount > 0 && validateForm()) {
       try {
         setErrorLog(false);
         const modifiedData = {
@@ -79,6 +79,8 @@ function SchemeUserPageContainer() {
         );
         setSchemeUserData(response.results);
         NotificationManager.success(Notify.ADD, "", 2000);
+        setInvestmentAmount(0);
+        setSelectedMonth("");
       } catch (err) {}
     } else {
       setErrorLog(true);

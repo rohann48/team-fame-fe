@@ -22,7 +22,7 @@ function OrderedSuccessfully({ handleNavigate }: OrderSuccessFullyTypes) {
             </div>
             <div className="order-page-header-text-cover">
               <h3 className="order-page-header">
-                Any queries on your order please contact +91 9843568430
+                Any queries on your order please contact +91 9481770086
               </h3>
             </div>
           </div>

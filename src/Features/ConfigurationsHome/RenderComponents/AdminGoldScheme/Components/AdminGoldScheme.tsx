@@ -6,6 +6,9 @@ function AdminGoldScheme({ schemeDetails }: AdminGoldSchemeTypes) {
   return (
     <div className="admin-gold-scheme-container">
       <h2>Admin Gold Scheme Details</h2>
+      {/* <div>
+        <button>Add Non Refundable Deposits</button>
+      </div> */}
       <table>
         <thead>
           <tr>

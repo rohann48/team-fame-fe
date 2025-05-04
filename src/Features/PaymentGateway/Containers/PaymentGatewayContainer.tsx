@@ -64,7 +64,7 @@ function PaymentGatewayContainer({
   //     setDisplayRazorpay(true);
   //   }
 
-  const handlePayment = async () => {
+  const handlePayment = async (type: string) => {
     try {
       const validate = validateForm();
       console.log("validate", validate);
@@ -87,7 +87,6 @@ function PaymentGatewayContainer({
         const order = await ApiHandler.postPaymentDetails(data);
         console.log("response", order);
         if (order?.results) {
-          handleSubmit(order.results.id);
           // add option for the payment gateway it can be dynamic if you want
           // we can use prop drilling to make it dynamic
 
@@ -116,12 +115,15 @@ function PaymentGatewayContainer({
                       razorpay_payment_id: response.razorpay_payment_id,
                       razorpay_signature: response.razorpay_signature,
                       amount: order.results.amount,
+                      orderType: type,
                     }),
                   }
                 );
                 // Add onPaymentSuccessfull function here
                 // postInvestment();
                 // handleSubmit(response);
+                handleSubmit(order.results.id);
+
                 alert("Payment successful!");
               } catch (err: any) {
                 // Add onPaymentUnSuccessfull function here

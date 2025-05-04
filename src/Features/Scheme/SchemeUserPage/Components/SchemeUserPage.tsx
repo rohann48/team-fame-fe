@@ -21,6 +21,8 @@ function SchemeUserPage({
   validateForm,
   postInvestment,
 }: SchemeUserPageTypes) {
+  console.log("investmentAmount", investmentAmount);
+
   // Calculate total
   const total = schemeUserData?.investments?.reduce(
     (acc, item) => acc + item.amount,
@@ -178,7 +180,7 @@ function SchemeUserPage({
                     select month
                   </option>
                   {Array.from(
-                    { length: schemeUserData.period },
+                    { length: schemeUserData?.period },
                     (_, i) => i + 1
                   ).map((month) => (
                     <>
@@ -194,6 +196,7 @@ function SchemeUserPage({
                   className="scheme-payee-period-select"
                   placeholder="Please select period"
                   type="number"
+                  value={investmentAmount}
                   onWheel={(e: any) => e.target.blur()}
                   onChange={(e) => handleInvestments(e)}
                 />

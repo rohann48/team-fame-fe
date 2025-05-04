@@ -48,7 +48,7 @@ let images = {
   // birlaLogo: require("./Assets/Images/birlaLogo.svg").default,
   // jewLogo: require("./Assets/Images/jewLogo.svg").default,
   // userProfile: require("./Assets/Images/userprofile.svg").default,
-  // goldcoin: require("./Assets/Images/goldcoin.svg").default,
+  // // goldcoin: require("./Assets/Images/goldcoin.svg").default,
   // // };
   // // } else {
   // //   images = {
@@ -92,6 +92,9 @@ let images = {
   // // PageNotFound: require("./Assets/Images/page-not-found-img.svg").default,
   // logoBackground: require("./Assets/Images/logoBackground.svg").default,
   // adityaCapital: require("./Assets/Images/adityaCapital.svg").default,
+  // smartScheme: require("./Assets/Images/smartScheme.svg").default,
+  // goldbag: require("./Assets/Images/goldbag.png").default,
+  // twitter: require("./Assets/Images/twitter.svg").default,
   //prod
   PageNotFound: require("./Assets/Images/page-not-found-img.svg"),
   teamFameLogo: require("./Assets/Images/teamFameLogo.svg"),

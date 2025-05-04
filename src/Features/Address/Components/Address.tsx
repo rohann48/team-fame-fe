@@ -202,19 +202,19 @@ function Address({
               <button
                 className="place-order-btn"
                 onClick={() => handleSubmitForm()}
-                // style={{
-                //   all: "unset",
-                //   width: "279px",
-                //   height: "50px",
-                //   backgroundColor: "#eaa837",
-                //   borderRadius: "4px",
-                //   color: "#ffffff",
-                //   fontSize: "14px",
-                //   fontWeight: 500,
-                //   cursor: "pointer",
-                //   textAlign: "center",
-                //   display: "block",
-                // }}
+                style={{
+                  all: "unset",
+                  width: "279px",
+                  height: "50px",
+                  backgroundColor: "#eaa837",
+                  borderRadius: "4px",
+                  color: "#ffffff",
+                  fontSize: "14px",
+                  fontWeight: 500,
+                  cursor: "pointer",
+                  textAlign: "center",
+                  display: "block",
+                }}
               >
                 PLACE ORDER
               </button>
