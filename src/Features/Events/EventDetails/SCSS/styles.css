@@ -54,6 +54,7 @@
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  margin-bottom: 0.5rem;
 }
 .events-details-cards-container .events-details-cards-and-header-cover .events-details-cards-render-cover .events-details-cards-left-img-cover {
   width: 50%;

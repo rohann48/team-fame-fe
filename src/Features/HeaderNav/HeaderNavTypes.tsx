@@ -29,6 +29,7 @@ export type HeaderNavProps = {
   singleUserInfo: User;
   logoutUser: (userId: string) => void;
   isMobile: boolean;
+  confirmMessageForIsMemberOrNot: () => true | JSX.Element;
 };
 export interface HeaderReceivedProps {
   isMobile: boolean;

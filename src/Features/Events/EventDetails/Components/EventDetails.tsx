@@ -46,7 +46,7 @@ function EventDetails({ eventAndNewsDetails }: EventsDetailsTypes) {
           </div>
         </div>
       </div>
-      <div className="events-details-former-text-main-cover">
+      {/* <div className="events-details-former-text-main-cover">
         <div className="events-details-former-text-top-border">
           <div className="events-details-former-text-top-border-inner"></div>
         </div>
@@ -68,7 +68,7 @@ function EventDetails({ eventAndNewsDetails }: EventsDetailsTypes) {
             Join Now
           </button>
         </div>
-      </div>
+      </div> */}
       <Footer />
     </div>
   );

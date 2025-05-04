@@ -22,7 +22,10 @@ const HeaderNav = ({
   singleUserInfo,
   logoutUser,
   isMobile,
+  confirmMessageForIsMemberOrNot,
 }: HeaderNavProps) => {
+  console.log("userInfo", userInfo);
+
   return (
     <div className="header-nav-container">
       <div className="icon-cover">
@@ -74,6 +77,7 @@ const HeaderNav = ({
           }
           onClick={() => {
             setActiveTab("events-and-news");
+            confirmMessageForIsMemberOrNot();
           }}
         >
           EVENTS/NEWS{" "}
@@ -104,6 +108,7 @@ const HeaderNav = ({
           }
           onClick={() => {
             setActiveTab("scheme");
+            confirmMessageForIsMemberOrNot();
           }}
         >
           SAVINGS
