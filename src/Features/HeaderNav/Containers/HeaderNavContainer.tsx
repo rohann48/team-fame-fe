@@ -7,6 +7,9 @@ import { ShopContext } from "../../context/ShopContext/ShopContext";
 import { useNavigate } from "react-router-dom";
 import { ApiHandler } from "../../Constants/ApiHandler";
 import { HeaderNavProps, HeaderReceivedProps } from "../HeaderNavTypes";
+import { isMemberOrNot } from "../../Common/CommonFunctions/isMemberOrNot";
+import ConfirmAlertHome from "../../Common/CommonComponent/ConfirmAlert";
+import images from "../../ImageVariables";
 
 function HeaderNavContainer({ isMobile }: HeaderReceivedProps) {
   const {
@@ -100,6 +103,37 @@ function HeaderNavContainer({ isMobile }: HeaderReceivedProps) {
     }
   };
 
+  const confirmMessageForIsMemberOrNot = () => {
+    if (!isMemberOrNot(userInfo)) {
+      const confirmParameters = {
+        title: {
+          images: images.confirmAlert,
+          titleName: "Membership Required",
+        },
+        descriptions: {
+          first: `This feature is available to members only.`,
+          second: `Please purchase a product and become a member to unlock this feature.`,
+        },
+        buttons: {
+          Yes: "Go to Shop",
+          No: "Cancel",
+        },
+        onClick: () => {
+          navigate("/shop");
+        },
+        onCancel: () => {
+          navigate("/page-not-found");
+        },
+        buttonClassName: {
+          yes: "button-delete-yes",
+          no: "button-delete-no",
+        },
+      };
+      return ConfirmAlertHome({ confirmParameters });
+    }
+    return true;
+  };
+
   return (
     <>
       <HeaderNav
@@ -117,6 +151,7 @@ function HeaderNavContainer({ isMobile }: HeaderReceivedProps) {
         singleUserInfo={singleUserInfo}
         logoutUser={logoutUser}
         isMobile={isMobile}
+        confirmMessageForIsMemberOrNot={confirmMessageForIsMemberOrNot}
       />
       {loginInfo.isLoginModalOpen && (
         <LoginComponent
