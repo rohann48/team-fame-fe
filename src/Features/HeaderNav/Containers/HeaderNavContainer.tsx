@@ -104,7 +104,7 @@ function HeaderNavContainer({ isMobile }: HeaderReceivedProps) {
   };
 
   const confirmMessageForIsMemberOrNot = () => {
-    if (isMemberOrNot(userInfo)) {
+    if (!isMemberOrNot(userInfo)) {
       const confirmParameters = {
         title: {
           images: images.confirmAlert,
