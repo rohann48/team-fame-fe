@@ -8,6 +8,24 @@
     font-weight: 600;
     margin-bottom: 20px;
   }
+  .add-deposit-btn {
+    padding: 8px 16px;
+    background-color: white;
+    border: 1px solid #b89153;
+    color: #5a3e1b;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #f7f2ea;
+    }
+
+    &:active {
+      background-color: #ebdfc7;
+    }
+  }
 
   table {
     width: 100%;

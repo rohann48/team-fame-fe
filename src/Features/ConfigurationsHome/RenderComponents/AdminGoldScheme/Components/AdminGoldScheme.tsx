@@ -7,10 +7,7 @@ function AdminGoldScheme({ schemeDetails, toggleModal }: AdminGoldSchemeTypes) {
     <div className="admin-gold-scheme-container">
       <h2>Admin Gold Scheme Details</h2>
       <span>
-        <button
-          className="add-non-refundable-deposit-button"
-          onClick={() => toggleModal()}
-        >
+        <button className="add-deposit-btn" onClick={() => toggleModal()}>
           Add Non Refundable Deposits
         </button>
       </span>
