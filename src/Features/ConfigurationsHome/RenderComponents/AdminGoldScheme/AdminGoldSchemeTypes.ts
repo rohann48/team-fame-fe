@@ -14,4 +14,5 @@ export type AdminGoldSchemeTypes = {
     __v: number;
     id: string;
   }[];
+  toggleModal: () => void;
 };

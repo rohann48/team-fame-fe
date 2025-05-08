@@ -25,5 +25,6 @@ export const Resource = {
     uppdateProduct: (productId: string) =>
       `/shop/product/update?productId=${productId}`,
     getProductById: (productId: string) => `/shop/product/${productId}`,
+    addInvestmentManually: `/gold-scheme/add-scheme-manually`,
   },
 };

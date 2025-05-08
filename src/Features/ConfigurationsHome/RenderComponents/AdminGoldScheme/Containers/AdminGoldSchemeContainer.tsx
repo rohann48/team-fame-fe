@@ -4,6 +4,7 @@ import { LoginContext } from "../../../../context/LoginContext";
 import { ApiHandler } from "../../../Constants/ApiHandler";
 import { AdminGoldSchemeTypes } from "../AdminGoldSchemeTypes";
 import { useImmer } from "use-immer";
+import InvestmentModal from "../../InvestmentModal";
 
 function AdminGoldSchemeContainer() {
   const [schemeDetails, setSchemeDetails] = useImmer<
@@ -21,7 +22,19 @@ function AdminGoldSchemeContainer() {
       fetchClientDetails();
     }
   }, [userInfo._id]);
-  return <AdminGoldScheme schemeDetails={schemeDetails} />;
+  const [open, setOpen] = useState(false);
+  const toggleModal = () => {
+    setOpen(!open);
+  };
+  return (
+    <>
+      <AdminGoldScheme
+        schemeDetails={schemeDetails}
+        toggleModal={toggleModal}
+      />
+      {open && <InvestmentModal open={open} onClose={toggleModal} />}
+    </>
+  );
 }
 
 export default AdminGoldSchemeContainer;

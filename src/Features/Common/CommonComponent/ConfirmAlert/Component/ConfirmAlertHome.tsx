@@ -3,14 +3,6 @@ import "../SCSS/styles.css";
 import { ConfirmAlertHomeTypes } from "../ConfirmAlerHometTypes";
 
 function ConfirmAlertHome({ confirmParameters }: ConfirmAlertHomeTypes) {
-  // function makeBold(message:string) {
-  //   // Original message with a placeholder for the dynamic word
-
-  //   // Replace the placeholder with the dynamic word wrapped in <strong> tags
-  //   const boldMessage = message.replace(/{{dynamicWord}}/g, `<strong>${dynamicWord}</strong>`);
-
-  //   return boldMessage;
-  // }
   function firstLineClassName(
     confirmParameters: ConfirmAlertHomeTypes["confirmParameters"]
   ) {
@@ -22,6 +14,7 @@ function ConfirmAlertHome({ confirmParameters }: ConfirmAlertHomeTypes) {
       return "without-notify";
     }
   }
+
   confirmAlert({
     customUI: ({ onClose }) => {
       return (
@@ -73,6 +66,7 @@ function ConfirmAlertHome({ confirmParameters }: ConfirmAlertHomeTypes) {
             )}
           </div>
           <div className="delete-button-covers">
+            {/* Only render buttons that exist AND have a truthy value */}
             {confirmParameters?.buttons?.No && (
               <button
                 className={confirmParameters?.buttonClassName?.no}
@@ -126,8 +120,9 @@ function ConfirmAlertHome({ confirmParameters }: ConfirmAlertHomeTypes) {
         </div>
       );
     },
-    closeOnEscape: confirmParameters.enableOnClose,
-    closeOnClickOutside: confirmParameters.enableOnClose,
+    // Prevent closing with outside click or escape key
+    closeOnEscape: confirmParameters.enableOnClose !== false,
+    closeOnClickOutside: confirmParameters.enableOnClose !== false,
   });
 }
 

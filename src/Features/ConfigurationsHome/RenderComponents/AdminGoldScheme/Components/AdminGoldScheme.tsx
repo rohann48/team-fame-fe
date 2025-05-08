@@ -2,10 +2,18 @@ import React from "react";
 import { AdminGoldSchemeTypes } from "../AdminGoldSchemeTypes";
 import "../SCSS/styles.scss";
 
-function AdminGoldScheme({ schemeDetails }: AdminGoldSchemeTypes) {
+function AdminGoldScheme({ schemeDetails, toggleModal }: AdminGoldSchemeTypes) {
   return (
     <div className="admin-gold-scheme-container">
       <h2>Admin Gold Scheme Details</h2>
+      <span>
+        <button
+          className="add-non-refundable-deposit-button"
+          onClick={() => toggleModal()}
+        >
+          Add Non Refundable Deposits
+        </button>
+      </span>
       {/* <div>
         <button>Add Non Refundable Deposits</button>
       </div> */}

@@ -104,7 +104,7 @@ function HeaderNavContainer({ isMobile }: HeaderReceivedProps) {
   };
 
   const confirmMessageForIsMemberOrNot = () => {
-    if (!isMemberOrNot(userInfo)) {
+    if (isMemberOrNot(userInfo)) {
       const confirmParameters = {
         title: {
           images: images.confirmAlert,
@@ -114,20 +114,22 @@ function HeaderNavContainer({ isMobile }: HeaderReceivedProps) {
           first: `This feature is available to members only.`,
           second: `Please purchase a product and become a member to unlock this feature.`,
         },
+        // Only include the Yes button and omit No completely
         buttons: {
           Yes: "Go to Shop",
-          No: "Cancel",
+          // Don't set No to null, just don't include it
         },
         onClick: () => {
           navigate("/shop");
         },
-        onCancel: () => {
-          navigate("/page-not-found");
-        },
         buttonClassName: {
           yes: "button-delete-yes",
-          no: "button-delete-no",
+          // Don't set no to null, just don't include it
         },
+        // Prevent closing on outside click or escape key
+        enableOnClose: false,
+        // Custom property to indicate single button mode
+        singleButtonMode: true,
       };
       return ConfirmAlertHome({ confirmParameters });
     }

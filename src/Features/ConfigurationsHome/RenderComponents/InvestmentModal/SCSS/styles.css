@@ -1,0 +1,23 @@
+.investment-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+}
+.investment-modal .MuiTypography-root {
+  font-weight: 600;
+}
+.investment-modal .MuiTextField-root {
+  margin-top: 8px;
+}
+.investment-modal .MuiButton-root {
+  margin-top: 16px;
+}/*# sourceMappingURL=styles.css.map */
