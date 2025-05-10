@@ -10,6 +10,7 @@ import { HeaderNavProps, HeaderReceivedProps } from "../HeaderNavTypes";
 import { isMemberOrNot } from "../../Common/CommonFunctions/isMemberOrNot";
 import ConfirmAlertHome from "../../Common/CommonComponent/ConfirmAlert";
 import images from "../../ImageVariables";
+import { GlobalDataContext } from "../../context/GlobalDataContext";
 
 function HeaderNavContainer({ isMobile }: HeaderReceivedProps) {
   const {
@@ -31,6 +32,7 @@ function HeaderNavContainer({ isMobile }: HeaderReceivedProps) {
   const [singleUserInfo, setSingleUserInfo] = useState(
     {} as HeaderNavProps["singleUserInfo"]
   );
+  const { userMemberShipCheck } = useContext(GlobalDataContext);
   //ref for showUserProf n logout outsideClick
   const outsideClickUserProf = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
@@ -104,7 +106,7 @@ function HeaderNavContainer({ isMobile }: HeaderReceivedProps) {
   };
 
   const confirmMessageForIsMemberOrNot = () => {
-    if (!isMemberOrNot(userInfo)) {
+    if (!isMemberOrNot(userMemberShipCheck)) {
       const confirmParameters = {
         title: {
           images: images.confirmAlert,

@@ -18,18 +18,18 @@ function SchemeJoinPageContainer() {
   //state for gold rate
   const [goldRate, setGoldRate] = useState([]);
   //get gold rate
-  useEffect(() => {
-    const getGoldRate = async () => {
-      try {
-        const response = await ApiHandler.getGoldRate();
-        setGoldRate(response);
-        //set gold rate in context
-      } catch (error) {
-        console.error("Failed to get gold rate:", error);
-      }
-    };
-    getGoldRate();
-  }, []);
+  // useEffect(() => {
+  //   const getGoldRate = async () => {
+  //     try {
+  //       const response = await ApiHandler.getGoldRate();
+  //       setGoldRate(response);
+  //       //set gold rate in context
+  //     } catch (error) {
+  //       console.error("Failed to get gold rate:", error);
+  //     }
+  //   };
+  //   getGoldRate();
+  // }, []);
   const handleSelectPeriod = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setPeriod(Number(e.target.value));
   };

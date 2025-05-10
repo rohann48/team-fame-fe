@@ -1,10 +1,11 @@
 // import axios from "axios";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import PaymentGateway from "../Components/paymentGateway";
 import { NotificationManager } from "react-notifications";
 // import { Notify } from "../../Common/Notify/NotificationMessages";
 import { ApiHandler } from "../../Constants/ApiHandler";
 import { useRazorpay } from "react-razorpay";
+import { LoginContext } from "../../context/LoginContext";
 
 function PaymentGatewayContainer({
   paymentModel,
@@ -13,6 +14,8 @@ function PaymentGatewayContainer({
   validateForm,
   handleSubmit,
 }: any) {
+  const { handleSignUpModalToggle } = useContext(LoginContext);
+
   const { Razorpay } = useRazorpay();
 
   const RAZORPAY_KEY_ID = process.env.REACT_APP_RAZORPAY_KEY_ID;
@@ -66,13 +69,12 @@ function PaymentGatewayContainer({
 
   const handlePayment = async (type: string) => {
     try {
+      if (!userInfo?._id) {
+        return handleSignUpModalToggle();
+      }
       const validate = validateForm();
-      console.log("validate", validate);
-
       if (validate) {
         // Make the API call to backend
-        console.log("vv");
-
         // const response = await fetch(
         //   `${process.env.REACT_APP_BASE_URL}create-order`,
         //   {

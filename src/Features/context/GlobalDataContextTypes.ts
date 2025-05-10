@@ -65,4 +65,5 @@ export interface GlobalDataContextTypes {
   setTestimonialData: setTestimonialData;
   allVideos: allVideos;
   setAllVideos: Updater<allVideos>;
+  userMemberShipCheck: any;
 }

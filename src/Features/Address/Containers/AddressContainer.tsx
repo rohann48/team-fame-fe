@@ -9,8 +9,7 @@ import { ShopContext } from "../../context/ShopContext/ShopContext";
 
 function AddressContainer() {
   const navigate = useNavigate();
-  const { setLoginInfo, loginInfo, isEdit, setIsEdit, userInfo, setUserInfo } =
-    useContext(LoginContext);
+  const { handleSignUpModalToggle, userInfo } = useContext(LoginContext);
   const { productInfo, setProductInfo } = useContext(ShopContext);
 
   // const [refferalCode, setRefferalCode] = useState<string | null>(null);
@@ -159,6 +158,9 @@ function AddressContainer() {
   const [errorLog, setErrorLog] = useState(false);
   //handle submit form
   const handleSubmitForm = async (orderId?: any) => {
+    if (!userInfo?._id) {
+      return handleSignUpModalToggle();
+    }
     setErrorLog(false);
     if (validateForm()) {
       try {
@@ -214,6 +216,7 @@ function AddressContainer() {
       validateForm={validateForm}
       userInfo={userInfo}
       formData={formData}
+      handleSignUpModalToggle={handleSignUpModalToggle}
     />
   );
 }

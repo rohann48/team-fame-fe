@@ -182,6 +182,17 @@ export const ApiHandler = {
     }
   },
 
+  getUserMembership: async (clientId: string) => {
+    try {
+      const response = await apiAuth.getApiwithoutAuth(
+        Resource.url.getUserMembership(clientId)
+      );
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
   getRefferalCodeList: async () => {
     try {
       const response = await apiAuth.getApiwithoutAuth(

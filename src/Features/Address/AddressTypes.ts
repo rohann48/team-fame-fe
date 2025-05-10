@@ -7,6 +7,7 @@ export type AddressTypes = {
   validateForm: () => void;
   userInfo: any;
   formData: any;
+  handleSignUpModalToggle: () => void;
 };
 export type AddressContainerType = {
   formData: {
