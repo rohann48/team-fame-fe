@@ -29,7 +29,11 @@ function SchemeJoinPage({
         </div>
       </div>
       <div className="scheme-details-cover">
-        <div className="scheme-welcome-header">JOIN SAVINGS</div>
+        {
+          <div className="scheme-welcome-header">{`${
+            !userInfo?.goldSchemeId ? "JOIN" : "VIEW YOUR"
+          } SAVINGS`}</div>
+        }
         <div className="scheme-description-and-form-cover">
           {/* <div className="scheme-description-cover">
             <p className="description">
@@ -82,8 +86,9 @@ function SchemeJoinPage({
               </div>
             </div>
             <div className="scheme-join-text">Join Our Scheme Now.</div> */}
-            <div className="scheme-form">
-              {/* <label className="scheme-payee-label-cover">
+            {!userInfo?.goldSchemeId && (
+              <div className="scheme-form">
+                {/* <label className="scheme-payee-label-cover">
                 <div className="scheme-payee-text">Payee Name:</div>
                 <input
                   className="scheme-payee-input"
@@ -91,7 +96,7 @@ function SchemeJoinPage({
                   placeholder="Enter name"
                 />
               </label> */}
-              {/* <div className="scheme-email-contact-cover">
+                {/* <div className="scheme-email-contact-cover">
                 <label className="scheme-payee-email-label-cover">
                   <div className="scheme-payee-email-text">Email:</div>
                   <input
@@ -111,21 +116,22 @@ function SchemeJoinPage({
                   />
                 </label>
               </div> */}
-              <label className="scheme-payee-period-label-cover">
-                <div className="scheme-payee-period-text"> Period:</div>
-                <select
-                  className="scheme-payee-period-select"
-                  placeholder="Please select period in months"
-                  onChange={(e) => handleSelectPeriod(e)}
-                >
-                  <option value={12} defaultValue={12}>
-                    12 months
-                  </option>
-                  <option value={24}>24 months</option>
-                  <option value={36}>36 months</option>
-                </select>
-              </label>
-            </div>
+                <label className="scheme-payee-period-label-cover">
+                  <div className="scheme-payee-period-text"> Period:</div>
+                  <select
+                    className="scheme-payee-period-select"
+                    placeholder="Please select period in months"
+                    onChange={(e) => handleSelectPeriod(e)}
+                  >
+                    <option value={12} defaultValue={12}>
+                      12 months
+                    </option>
+                    <option value={24}>24 months</option>
+                    <option value={36}>36 months</option>
+                  </select>
+                </label>
+              </div>
+            )}
             <div className="scheme-btn-cover">
               {!userInfo?.goldSchemeId && !userInfo?._id ? (
                 <button
