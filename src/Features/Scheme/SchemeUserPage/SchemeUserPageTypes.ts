@@ -6,6 +6,7 @@ export type investmentSchema = {
   date: Date;
   amount: number;
   _id: string;
+  type: string;
 };
 export type SchemeUserPageTypes = {
   schemeUserData: {

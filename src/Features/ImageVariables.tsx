@@ -90,6 +90,7 @@ if (process.env.NODE_ENV === "development") {
     smartScheme: require("./Assets/Images/smartScheme.svg").default,
     goldbag: require("./Assets/Images/goldbag.png").default,
     twitter: require("./Assets/Images/twitter.svg").default,
+    logSchemeValuenew: require("./Assets/Images/logSchemeValuenew.svg").default,
   };
 } else {
   images = {
@@ -148,6 +149,7 @@ if (process.env.NODE_ENV === "development") {
     smartScheme: require("./Assets/Images/smartScheme.svg"),
     goldbag: require("./Assets/Images/goldbag.png"),
     twitter: require("./Assets/Images/twitter.svg"),
+    logSchemeValuenew: require("./Assets/Images/logSchemeValuenew.svg"),
   };
 }
 
