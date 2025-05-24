@@ -1,60 +1,298 @@
 .admin-gold-scheme-container {
   padding: 20px;
-  width: 100%;
-  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 .admin-gold-scheme-container h2 {
-  color: #bd9255;
+  color: #b8860b;
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 20px;
 }
 .admin-gold-scheme-container .add-deposit-btn {
-  padding: 8px 16px;
-  background-color: white;
-  border: 1px solid #b89153;
-  color: #5a3e1b;
-  font-weight: 500;
+  background-color: #b8860b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
   border-radius: 6px;
+  font-weight: 500;
   cursor: pointer;
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 .admin-gold-scheme-container .add-deposit-btn:hover {
-  background-color: #f7f2ea;
-}
-.admin-gold-scheme-container .add-deposit-btn:active {
-  background-color: #ebdfc7;
+  background-color: #9a7209;
 }
 .admin-gold-scheme-container table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
 }
-.admin-gold-scheme-container table th,
-.admin-gold-scheme-container table td {
-  border: 1px solid #bd9255;
-  padding: 12px;
+.admin-gold-scheme-container table thead tr {
+  background: linear-gradient(135deg, #daa520 0%, #b8860b 100%);
+}
+.admin-gold-scheme-container table thead tr th {
+  padding: 16px 12px;
   text-align: left;
+  font-weight: 600;
   font-size: 14px;
+  color: #9a7209;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #9a7209;
+  position: relative;
 }
-.admin-gold-scheme-container table th:first-child,
-.admin-gold-scheme-container table td:first-child {
-  width: 15%;
+.admin-gold-scheme-container table thead tr th:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
-.admin-gold-scheme-container table th {
-  background-color: #f0e6d2;
-  color: #bd9255;
+.admin-gold-scheme-container table thead tr th::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+}
+.admin-gold-scheme-container table tbody tr {
+  border-bottom: 1px solid #e5e5e5;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+.admin-gold-scheme-container table tbody tr:hover {
+  background-color: #fafafa;
+}
+.admin-gold-scheme-container table tbody tr:last-child {
+  border-bottom: none;
+}
+.admin-gold-scheme-container table tbody tr td {
+  padding: 14px 12px;
+  font-size: 14px;
+  color: #333;
+  vertical-align: top;
+}
+.admin-gold-scheme-container table tbody tr td:not(:last-child) {
+  border-right: 1px solid #f0f0f0;
+}
+
+.investment-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 8px;
+  padding: 10px 12px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border-left: 3px solid transparent;
+  font-size: 13px;
+  min-height: 44px;
+}
+.investment-item:last-child {
+  margin-bottom: 8px;
+}
+.investment-item .investment-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.investment-item .investment-amount {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 14px;
+  line-height: 1.2;
+}
+.investment-item .investment-date {
+  font-size: 11px;
+  color: #6c757d;
   font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
-.admin-gold-scheme-container table tr:nth-child(even) {
-  background-color: #f9f9f9;
+.investment-item .investment-type {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3px;
+  white-space: nowrap;
 }
-.admin-gold-scheme-container table tr:hover {
-  background-color: #f1f1f1;
+.investment-item .investment-type.savings-type {
+  background-color: #e8f5e8;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
 }
-.admin-gold-scheme-container table tbody tr.empty td {
-  text-align: center;
+.investment-item .investment-type.fd-type {
+  background-color: #e3f2fd;
+  color: #1565c0;
+  border: 1px solid #bbdefb;
+}
+.investment-item:has(.savings-type) {
+  border-left-color: #4caf50;
+}
+.investment-item:has(.fd-type) {
+  border-left-color: #2196f3;
+}
+.investment-item .savings-type ~ .investment-item {
+  border-left-color: #4caf50;
+}
+.investment-item .fd-type ~ .investment-item {
+  border-left-color: #2196f3;
+}
+
+.investment-totals {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 2px solid #e9ecef;
+}
+.investment-totals .total-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 6px 10px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.investment-totals .total-item.fd-total {
+  background-color: #e3f2fd;
+  color: #1565c0;
+  border-left: 3px solid #2196f3;
+}
+.investment-totals .total-item.savings-total {
+  background-color: #e8f5e8;
+  color: #2e7d32;
+  border-left: 3px solid #4caf50;
+}
+.investment-totals .total-item.grand-total {
+  background-color: #fff3e0;
+  color: #ef6c00;
+  border-left: 3px solid #ff9800;
+  margin-top: 6px;
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 6px;
+}
+.investment-totals .total-item .total-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+}
+.investment-totals .total-item .total-amount {
+  font-weight: 700;
+}
+
+.investment-item .savings-type {
+  border-left-color: #4caf50;
+}
+
+.investment-item .fd-type {
+  border-left-color: #2196f3;
+}
+
+.no-investments {
+  color: #6c757d;
   font-style: italic;
-  color: #bd9255;
+  font-size: 13px;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .admin-gold-scheme-container {
+    padding: 10px;
+  }
+  .admin-gold-scheme-container table {
+    font-size: 12px;
+  }
+  .admin-gold-scheme-container table thead th {
+    padding: 12px 8px;
+    font-size: 12px;
+  }
+  .admin-gold-scheme-container table tbody td {
+    padding: 10px 8px;
+  }
+  .admin-gold-scheme-container .investment-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 8px;
+    padding: 8px 10px;
+  }
+  .admin-gold-scheme-container .investment-item .investment-details {
+    width: 100%;
+  }
+  .admin-gold-scheme-container .investment-item .investment-type {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .admin-gold-scheme-container .investment-totals .total-item {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+  .admin-gold-scheme-container .investment-totals .total-item.grand-total {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) and (max-width: 480px) {
+  .investment-item .investment-amount {
+    font-size: 13px;
+  }
+  .investment-item .investment-date {
+    font-size: 10px;
+  }
+  .investment-item .investment-type {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+  .investment-totals .total-item {
+    font-size: 10px;
+    padding: 4px 6px;
+  }
+  .investment-totals .total-item.grand-total {
+    font-size: 11px;
+  }
 }/*# sourceMappingURL=styles.css.map */

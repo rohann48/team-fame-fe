@@ -17,7 +17,7 @@ import { ApiHandler } from "../../../Constants/ApiHandler";
 import { NotificationManager } from "react-notifications";
 import { Notify } from "../../../../Common/Notify/NotificationMessages";
 
-const InvestmentModal = ({ open, onClose }: any) => {
+const InvestmentModal = ({ open, onClose, setSchemeDetails }: any) => {
   const [formData, setFormData] = useState({
     mobileNumber: "",
     investmentAmount: "",
@@ -88,6 +88,28 @@ const InvestmentModal = ({ open, onClose }: any) => {
     return Object.keys(newErrors).length === 0;
   };
 
+  // const handleSubmit = async () => {
+  //   if (!validateFields()) return;
+
+  //   const investmentData = {
+  //     mobileNumber: formData.mobileNumber,
+  //     investmentAmount: formData.investmentAmount,
+  //     startDate: formData.startDate,
+  //     endDate: formData.endDate,
+  //     period: formData.period,
+  //     schemeType: formData.schemeType,
+  //   };
+
+  //   try {
+  //     await ApiHandler.addInvestmentManually(investmentData);
+  //     NotificationManager.success(Notify.ADD, "", 2000);
+
+  //     onClose();
+  //   } catch (error) {
+  //     console.error("Error while submitting investment:", error);
+  //     alert("Failed to submit investment. Please try again."); // Replace with toast if needed
+  //   }
+  // };
   const handleSubmit = async () => {
     if (!validateFields()) return;
 
@@ -101,8 +123,45 @@ const InvestmentModal = ({ open, onClose }: any) => {
     };
 
     try {
-      await ApiHandler.addInvestmentManually(investmentData);
+      const response = await ApiHandler.addInvestmentManually(investmentData);
       NotificationManager.success(Notify.ADD, "", 2000);
+
+      // Update the local state with the new data from the API response
+      if (response && response.results) {
+        setSchemeDetails((prevDetails: any) => {
+          if (Array.isArray(prevDetails)) {
+            // If prevDetails is an array, find the matching scheme and update it
+            const existingIndex = prevDetails.findIndex(
+              (scheme) => scheme.id === response.results.id
+            );
+            if (existingIndex !== -1) {
+              // Update existing scheme
+              const updatedArray = [...prevDetails];
+              updatedArray[existingIndex] = response.results;
+              return updatedArray;
+            } else {
+              // Add new scheme to array
+              return [...prevDetails, response.results];
+            }
+          } else if (prevDetails && prevDetails.id === response.results.id) {
+            // If prevDetails is a single object and matches, replace it
+            return response.results;
+          } else {
+            // If it's a new scheme or different object, return the new data
+            return response.results;
+          }
+        });
+      }
+
+      // Reset form data
+      setFormData({
+        mobileNumber: "",
+        investmentAmount: "",
+        startDate: "",
+        endDate: "",
+        period: "",
+        schemeType: "NonRefundable",
+      });
 
       onClose();
     } catch (error) {
@@ -208,7 +267,7 @@ const InvestmentModal = ({ open, onClose }: any) => {
               <FormControlLabel
                 value="NonRefundable"
                 control={<Radio />}
-                label="Non-Refundable"
+                label="SAVINGS"
               />
             </RadioGroup>
           </FormControl>

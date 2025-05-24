@@ -15,9 +15,9 @@ function SchemeJoinPage({
       <div className="gold-scheme-img-one-cover"></div>
       <div className="gold-scheme-img-two-cover">
         <div className="gold-scheme-img-two-text-cover">
-          <div className="text-one-cover">
+          {/* <div className="text-one-cover">
             <h3 className="header-one">WELCOME TO SHREE RAKSHA SAVINGS</h3>
-          </div>
+          </div> */}
           <div className="text-two-cover">
             <h3 className="header-two">SMART SAVINGS </h3>
             <h3 className="header-three"></h3>{" "}

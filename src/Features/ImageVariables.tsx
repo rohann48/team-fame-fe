@@ -91,6 +91,8 @@ if (process.env.NODE_ENV === "development") {
     goldbag: require("./Assets/Images/goldbag.png").default,
     twitter: require("./Assets/Images/twitter.svg").default,
     logSchemeValuenew: require("./Assets/Images/logSchemeValuenew.svg").default,
+    shreeLogo: require("./Assets/Images/shreeLogo.svg").default,
+    eventNewLogo: require("./Assets/Images/eventNewLogo.svg").default,
   };
 } else {
   images = {
@@ -150,6 +152,8 @@ if (process.env.NODE_ENV === "development") {
     goldbag: require("./Assets/Images/goldbag.png"),
     twitter: require("./Assets/Images/twitter.svg"),
     logSchemeValuenew: require("./Assets/Images/logSchemeValuenew.svg"),
+    shreeLogo: require("./Assets/Images/shreeLogo.svg"),
+    eventNewLogo: require("./Assets/Images/eventNewLogo.svg"),
   };
 }
 

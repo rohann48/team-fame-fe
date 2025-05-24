@@ -17,7 +17,7 @@
   .gold-scheme-img-one-cover {
     width: 100%;
     height: 280px;
-    background-image: url("../../../Assets/Images/logSchemeValuenew.svg");
+    background-image: url("../../../Assets/Images/shreeLogo.svg");
     background-size: cover;
     background-position: center;
   }
@@ -334,7 +334,7 @@
     .gold-scheme-img-one-cover {
       width: 100%;
       height: 280px;
-      background-image: url("../../../Assets/Images/goldSchemeCovered.svg");
+      background-image: url("../../../Assets/Images/shreeLogo.svg");
       background-size: cover;
       /* Ensures the image covers the container */
       background-position: center;
@@ -398,12 +398,14 @@
     .gold-scheme-img-one-cover {
       width: 100%;
       height: 280px;
-      background-image: url("../../../Assets/Images/goldSchemeCovered.svg");
-      background-size: cover;
+      background-image: url("../../../Assets/Images/shreeLogo.svg");
+      background-size: contain;
       /* Ensures the image covers the container */
       background-position: center;
       /* Centers the image */
       background-repeat: no-repeat;
+      aspect-ratio: 3 / 2;
+
       /* Prevents the image from repeating */
     }
 

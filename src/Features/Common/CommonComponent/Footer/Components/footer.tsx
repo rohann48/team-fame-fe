@@ -63,12 +63,18 @@ function Footer() {
             </div>
           </a>
 
-          <div>
-            <i>
-              <img src={images.whatsapp} alt="whatsapp" />
-            </i>
-            <p>+91 9481770086</p>
-          </div>
+          <a
+            href="https://whatsapp.com/channel/0029VaaUQuQ7tkj1a2al411w"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div>
+              <i>
+                <img src={images.whatsapp} alt="whatsapp" />
+              </i>
+              <p>+91 9481770086</p>
+            </div>
+          </a>
         </div>
       </div>
     </footer>

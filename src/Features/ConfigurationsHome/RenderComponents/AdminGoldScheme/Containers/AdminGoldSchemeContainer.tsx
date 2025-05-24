@@ -32,7 +32,13 @@ function AdminGoldSchemeContainer() {
         schemeDetails={schemeDetails}
         toggleModal={toggleModal}
       />
-      {open && <InvestmentModal open={open} onClose={toggleModal} />}
+      {open && (
+        <InvestmentModal
+          open={open}
+          onClose={toggleModal}
+          setSchemeDetails={setSchemeDetails}
+        />
+      )}
     </>
   );
 }
