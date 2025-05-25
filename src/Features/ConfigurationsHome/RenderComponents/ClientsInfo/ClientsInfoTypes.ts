@@ -9,6 +9,10 @@ export interface Client {
   role: "admin" | "member";
   membership: boolean;
   goldSchemeId?: string;
+  referralCode: string;
+  shopVoucher: {
+    invitedRefferal: string;
+  };
 }
 
 // Props Interface for ClientsInfo Component

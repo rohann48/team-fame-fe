@@ -109,6 +109,7 @@
   font-weight: 600;
   color: #333333;
   font-size: 1rem;
+  text-transform: capitalize;
 }
 .clients-info .name-cell .name-container .current-user-indicator {
   display: -webkit-box;
@@ -154,59 +155,6 @@
 .clients-info .contact-cell .contact-info .phone {
   font-weight: 500;
   color: #495057;
-}
-.clients-info .role-cell .role-badge {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-.clients-info .role-cell .role-badge.admin {
-  background-color: #ffe4e1;
-  color: #8b0000;
-  border: 1px solid #cd5c5c;
-}
-.clients-info .role-cell .role-badge.member {
-  background-color: #e6f3ff;
-  color: #1e90ff;
-  border: 1px solid #87ceeb;
-}
-.clients-info .role-cell .role-badge i {
-  font-size: 0.75rem;
-}
-.clients-info .membership-cell .membership-badge {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-.clients-info .membership-cell .membership-badge.active {
-  background-color: #e8f5e8;
-  color: #228b22;
-  border: 1px solid #90ee90;
-}
-.clients-info .membership-cell .membership-badge.inactive {
-  background-color: #f5f5f5;
-  color: #696969;
-  border: 1px solid #d3d3d3;
-}
-.clients-info .membership-cell .membership-badge i {
-  font-size: 0.75rem;
 }
 .clients-info .status-cell .status-indicators {
   display: -webkit-box;
@@ -260,6 +208,164 @@
   font-size: 0.6rem;
   -webkit-animation: pulse 2s infinite;
           animation: pulse 2s infinite;
+}
+.clients-info .referral-cell {
+  min-width: 250px;
+}
+.clients-info .referral-cell .referral-info .referred-by-container {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 12px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.clients-info .referral-cell .referral-info .referred-by-container:hover {
+  background: #e9ecef;
+  border-color: #daa520;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0 2px 8px rgba(218, 165, 32, 0.15);
+          box-shadow: 0 2px 8px rgba(218, 165, 32, 0.15);
+}
+.clients-info .referral-cell .referral-info .referred-by-container .referrer-header {
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #dee2e6;
+}
+.clients-info .referral-cell .referral-info .referred-by-container .referrer-header .referrer-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #495057;
+}
+.clients-info .referral-cell .referral-info .referred-by-container .referrer-header .referrer-name i {
+  color: #6f42c1;
+  font-size: 0.9rem;
+}
+.clients-info .referral-cell .referral-info .referred-by-container .referrer-header .referrer-name .name {
+  color: #333;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+}
+.clients-info .referral-cell .referral-info .referred-by-container .referrer-header .referrer-name .you-indicator {
+  background: #ffc107;
+  color: #212529;
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: 4px;
+}
+.clients-info .referral-cell .referral-info .referred-by-container .referrer-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+}
+.clients-info .referral-cell .referral-info .referred-by-container .referrer-contact .referrer-phone,
+.clients-info .referral-cell .referral-info .referred-by-container .referrer-contact .referrer-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+.clients-info .referral-cell .referral-info .referred-by-container .referrer-contact .referrer-phone i,
+.clients-info .referral-cell .referral-info .referred-by-container .referrer-contact .referrer-email i {
+  width: 12px;
+  font-size: 0.75rem;
+  color: #495057;
+}
+.clients-info .referral-cell .referral-info .referred-by-container .referrer-contact .referrer-phone span,
+.clients-info .referral-cell .referral-info .referred-by-container .referrer-contact .referrer-email span {
+  color: #495057;
+}
+.clients-info .referral-cell .referral-info .referred-by-container .referrer-contact .referrer-phone i {
+  color: #28a745;
+}
+.clients-info .referral-cell .referral-info .referred-by-container .referrer-contact .referrer-email i {
+  color: #17a2b8;
+}
+.clients-info .referral-cell .referral-info .direct-signup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  color: #6c757d;
+  font-size: 0.85rem;
+  font-style: italic;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border: 1px dashed #dee2e6;
+  border-radius: 6px;
+}
+.clients-info .referral-cell .referral-info .direct-signup i {
+  color: #28a745;
+  font-size: 0.9rem;
+}
+.clients-info .referral-code-cell .referral-code-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+}
+.clients-info .referral-code-cell .referral-code-info .code-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 8px 12px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.clients-info .referral-code-cell .referral-code-info .code-display:hover {
+  background-color: #e9ecef;
+  border-color: #daa520;
+}
+.clients-info .referral-code-cell .referral-code-info .code-display i {
+  color: #6c757d;
+  font-size: 0.8rem;
+}
+.clients-info .referral-code-cell .referral-code-info .code-display .code {
+  font-family: "Courier New", monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #495057;
+  background: white;
+  padding: 2px 6px;
+  border-radius: 3px;
+  border: 1px solid #dee2e6;
 }
 .clients-info .no-clients {
   text-align: center;
@@ -352,6 +458,18 @@
     opacity: 1;
   }
 }
+@media (max-width: 1200px) {
+  .clients-info .referral-cell {
+    min-width: 220px;
+  }
+  .clients-info .referral-cell .referral-info .referred-by-container {
+    padding: 10px;
+  }
+  .clients-info .referral-cell .referral-info .referred-by-container .referrer-contact .referrer-phone,
+  .clients-info .referral-cell .referral-info .referred-by-container .referrer-contact .referrer-email {
+    font-size: 0.75rem;
+  }
+}
 @media (max-width: 768px) {
   .clients-info {
     padding: 15px;
@@ -399,12 +517,54 @@
   .clients-info .status-cell .status-indicators .active-status {
     font-size: 0.7rem;
   }
+  .clients-info .referral-cell {
+    min-width: 200px;
+  }
+  .clients-info .referral-cell .referral-info .referred-by-container {
+    padding: 8px;
+  }
+  .clients-info .referral-cell .referral-info .referred-by-container .referrer-header .referrer-name {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 4px;
+  }
+  .clients-info .referral-cell .referral-info .referred-by-container .referrer-header .referrer-name .name {
+    font-size: 0.8rem;
+  }
+  .clients-info .referral-cell .referral-info .referred-by-container .referrer-header .referrer-name .you-indicator {
+    font-size: 0.65rem;
+    margin-left: 0;
+  }
+  .clients-info .referral-cell .referral-info .referred-by-container .referrer-contact .referrer-phone,
+  .clients-info .referral-cell .referral-info .referred-by-container .referrer-contact .referrer-email {
+    font-size: 0.7rem;
+  }
+  .clients-info .referral-cell .referral-info .referred-by-container .referrer-contact .referrer-phone span,
+  .clients-info .referral-cell .referral-info .referred-by-container .referrer-contact .referrer-email span {
+    word-break: break-all;
+  }
+  .clients-info .referral-cell .referral-info .direct-signup {
+    font-size: 0.75rem;
+    padding: 6px 8px;
+  }
+  .clients-info .referral-code-cell .referral-code-info .code-display {
+    padding: 6px 8px;
+  }
+  .clients-info .referral-code-cell .referral-code-info .code-display .code {
+    font-size: 0.75rem;
+  }
 }
 @media (max-width: 480px) {
-  .clients-table-container {
-    overflow-x: scroll;
+  .clients-info .referral-cell {
+    min-width: 180px;
   }
-  .clients-table {
-    min-width: 600px;
+  .clients-info .referral-cell .referral-info .referred-by-container .referrer-contact .referrer-phone span,
+  .clients-info .referral-cell .referral-info .referred-by-container .referrer-contact .referrer-email span {
+    font-size: 0.65rem;
   }
 }/*# sourceMappingURL=styles.css.map */
