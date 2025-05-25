@@ -164,9 +164,12 @@ const InvestmentModal = ({ open, onClose, setSchemeDetails }: any) => {
       });
 
       onClose();
-    } catch (error) {
-      console.error("Error while submitting investment:", error);
-      alert("Failed to submit investment. Please try again."); // Replace with toast if needed
+    } catch (error: any) {
+      NotificationManager.warning(
+        error?.response?.data?.error?.message || "Failed to submit investment",
+        "",
+        2000
+      );
     }
   };
 

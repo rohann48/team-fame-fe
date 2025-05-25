@@ -23,6 +23,11 @@ function ConfigurationContainer() {
           // { title: "news", img: images.newsIcon, path: "about-us" },
           { title: "gold scheme", img: images.schemeIcon, path: "gold-scheme" },
           { title: "shop", img: images.storeAS, path: "shop" },
+          {
+            title: "Clients details",
+            img: images.userProfile,
+            path: "clients-info",
+          },
         ]
       : []),
     {

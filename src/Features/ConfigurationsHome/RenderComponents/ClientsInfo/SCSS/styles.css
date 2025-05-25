@@ -1,0 +1,410 @@
+.clients-info {
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+.clients-info .clients-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+}
+.clients-info .clients-header h2 {
+  color: #b8860b;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.clients-info .clients-header .clients-count {
+  background-color: #daa520;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.clients-info .clients-header .clients-count span {
+  font-weight: 700;
+}
+.clients-info .clients-table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+.clients-info .clients-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  font-size: 0.9rem;
+}
+.clients-info .clients-table thead {
+  background: linear-gradient(135deg, #daa520 0%, #b8860b 100%);
+}
+.clients-info .clients-table thead th {
+  padding: 15px 12px;
+  text-align: left;
+  font-weight: 600;
+  color: white;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+}
+.clients-info .clients-table thead th:first-child {
+  border-top-left-radius: 8px;
+}
+.clients-info .clients-table thead th:last-child {
+  border-top-right-radius: 8px;
+}
+.clients-info .clients-table tbody tr {
+  border-bottom: 1px solid #e9ecef;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.clients-info .clients-table tbody tr:hover {
+  background-color: #f8f9fa;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.clients-info .clients-table tbody tr.current-user-row {
+  background: -webkit-gradient(linear, left top, right top, from(#fff3cd), to(#ffffff));
+  background: linear-gradient(90deg, #fff3cd 0%, #ffffff 100%);
+  border-left: 4px solid #ffc107;
+}
+.clients-info .clients-table tbody tr.current-user-row:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#ffeaa7), to(#f8f9fa));
+  background: linear-gradient(90deg, #ffeaa7 0%, #f8f9fa 100%);
+}
+.clients-info .clients-table tbody tr:last-child {
+  border-bottom: none;
+}
+.clients-info .clients-table tbody td {
+  padding: 15px 12px;
+  vertical-align: middle;
+  border: none;
+}
+.clients-info .name-cell .name-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.clients-info .name-cell .name-container .name-text {
+  font-weight: 600;
+  color: #333333;
+  font-size: 1rem;
+}
+.clients-info .name-cell .name-container .current-user-indicator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+  background: #daa520;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.clients-info .name-cell .name-container .current-user-indicator i {
+  font-size: 0.8rem;
+}
+.clients-info .contact-cell .contact-info .phone,
+.clients-info .contact-cell .contact-info .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+.clients-info .contact-cell .contact-info .phone:last-child,
+.clients-info .contact-cell .contact-info .email:last-child {
+  margin-bottom: 0;
+}
+.clients-info .contact-cell .contact-info .phone i,
+.clients-info .contact-cell .contact-info .email i {
+  width: 14px;
+  color: #495057;
+}
+.clients-info .contact-cell .contact-info .phone {
+  font-weight: 500;
+  color: #495057;
+}
+.clients-info .role-cell .role-badge {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.clients-info .role-cell .role-badge.admin {
+  background-color: #ffe4e1;
+  color: #8b0000;
+  border: 1px solid #cd5c5c;
+}
+.clients-info .role-cell .role-badge.member {
+  background-color: #e6f3ff;
+  color: #1e90ff;
+  border: 1px solid #87ceeb;
+}
+.clients-info .role-cell .role-badge i {
+  font-size: 0.75rem;
+}
+.clients-info .membership-cell .membership-badge {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.clients-info .membership-cell .membership-badge.active {
+  background-color: #e8f5e8;
+  color: #228b22;
+  border: 1px solid #90ee90;
+}
+.clients-info .membership-cell .membership-badge.inactive {
+  background-color: #f5f5f5;
+  color: #696969;
+  border: 1px solid #d3d3d3;
+}
+.clients-info .membership-cell .membership-badge i {
+  font-size: 0.75rem;
+}
+.clients-info .status-cell .status-indicators {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 6px;
+}
+.clients-info .status-cell .status-indicators .gold-scheme-indicator {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+  background-color: #fff8dc;
+  color: #ff8c00;
+  border: 1px solid #ffd700;
+  border-left: 3px solid #ff8c00;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.clients-info .status-cell .status-indicators .gold-scheme-indicator i {
+  font-size: 0.7rem;
+}
+.clients-info .status-cell .status-indicators .active-status {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+  color: #2e8b57;
+  font-size: 0.75rem;
+  font-weight: 600;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.clients-info .status-cell .status-indicators .active-status i {
+  font-size: 0.6rem;
+  -webkit-animation: pulse 2s infinite;
+          animation: pulse 2s infinite;
+}
+.clients-info .no-clients {
+  text-align: center;
+  padding: 60px 20px;
+  color: #888888;
+  background: white;
+}
+.clients-info .no-clients i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  opacity: 0.5;
+  color: #b8860b;
+}
+.clients-info .no-clients p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+.clients-info .clients-loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 60px 20px;
+  color: #888888;
+}
+.clients-info .clients-loading .spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e0e0e0;
+  border-top: 4px solid #daa520;
+  border-radius: 50%;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+.clients-info .clients-loading p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  .clients-info {
+    padding: 15px;
+  }
+  .clients-info .clients-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .clients-info .clients-header .clients-count {
+    -ms-flex-item-align: stretch;
+        align-self: stretch;
+    text-align: center;
+  }
+  .clients-info .clients-table {
+    font-size: 0.8rem;
+  }
+  .clients-info .clients-table thead th {
+    padding: 12px 8px;
+    font-size: 0.75rem;
+  }
+  .clients-info .clients-table tbody td {
+    padding: 12px 8px;
+  }
+  .clients-info .name-cell .name-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 6px;
+  }
+  .clients-info .contact-cell .contact-info .phone,
+  .clients-info .contact-cell .contact-info .email {
+    font-size: 0.75rem;
+  }
+  .clients-info .status-cell .status-indicators .gold-scheme-indicator,
+  .clients-info .status-cell .status-indicators .active-status {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 480px) {
+  .clients-table-container {
+    overflow-x: scroll;
+  }
+  .clients-table {
+    min-width: 600px;
+  }
+}/*# sourceMappingURL=styles.css.map */

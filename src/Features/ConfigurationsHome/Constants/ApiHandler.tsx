@@ -163,4 +163,10 @@ export const ApiHandler = {
     );
     return response.data;
   },
+  getClientDetails: async () => {
+    const response = await apiAuth.getApiwithoutAuth(
+      Resource.url.getClientDetails
+    );
+    return response.data;
+  },
 };

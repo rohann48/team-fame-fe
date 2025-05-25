@@ -5,6 +5,7 @@ import Shop from "./RenderComponents/Shop";
 import AdminVideos from "./RenderComponents/AdminVideos";
 import AdminGoldScheme from "./RenderComponents/AdminGoldScheme";
 import OrderDetails from "./RenderComponents/OrderDetails";
+import ClientsInfo from "./RenderComponents/ClientsInfo";
 
 export const configRoutes = [
   {
@@ -34,5 +35,9 @@ export const configRoutes = [
   {
     path: "/order-details",
     element: <OrderDetails />,
+  },
+  {
+    path: "/clients-info",
+    element: <ClientsInfo />,
   },
 ];
