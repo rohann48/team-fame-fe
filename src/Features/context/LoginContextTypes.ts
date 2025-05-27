@@ -24,6 +24,7 @@ export interface LoginContextInitialState {
     confirmPassword: "";
     goldSchemeId: string;
     membership: boolean;
+    nominee?: string;
   };
   isEdit: boolean;
   setIsEdit: React.Dispatch<React.SetStateAction<boolean>>;

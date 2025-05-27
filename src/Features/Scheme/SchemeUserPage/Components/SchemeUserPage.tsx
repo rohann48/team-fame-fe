@@ -266,7 +266,6 @@ function SchemeUserPage({
   validateForm,
   postInvestment,
 }: SchemeUserPageTypes) {
-  console.log("investmentAmount", investmentAmount);
   const FDinvestment = schemeUserData.investments?.filter(
     (item) => item.type === "FD"
   );
@@ -332,6 +331,10 @@ function SchemeUserPage({
                   "dd-MMM-yyyy"
                 )}{" "}
             </div>
+          </div>
+          <div className="info">
+            <div>Nominee:</div>
+            <div className="info-data">{userInfo?.nominee}</div>
           </div>
           {/* <div className="info">
             <button className="edit-user-btn">Edit User Details</button>
