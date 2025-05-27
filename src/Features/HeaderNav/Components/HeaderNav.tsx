@@ -168,7 +168,7 @@ const HeaderNav = ({
                     Profile
                   </div>
                   <NavLink
-                    to="config/order-details"
+                    to={`config/order-details/${userInfo._id}`}
                     style={{
                       all: "unset",
                     }}

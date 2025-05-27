@@ -7,17 +7,18 @@ import { useImmer } from "use-immer";
 import images from "../../../../ImageVariables";
 import ConfirmAlertHome from "../../../../Common/CommonComponent/ConfirmAlert/Component/ConfirmAlertHome";
 import { NotificationManager } from "react-notifications";
+import { useParams } from "react-router-dom";
 
 function OrderDetailsContainer() {
   const [schemeDetails, setSchemeDetails] = useImmer<
     OrderDetailsTypes["schemeDetails"]
   >([]);
   const { userInfo } = useContext(LoginContext);
-
+  const { userId } = useParams();
   useEffect(() => {
     // Fetch all order details
     const fetchOrderLists = async () => {
-      const response = await ApiHandler.getOrderLists();
+      const response = await ApiHandler.getOrderLists(userId);
       setSchemeDetails(response.results);
     };
     if (userInfo._id) {

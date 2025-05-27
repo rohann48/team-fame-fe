@@ -129,9 +129,9 @@ export const ApiHandler = {
     );
     return response.data;
   },
-  getOrderLists: async () => {
+  getOrderLists: async (userId: string | undefined) => {
     const response = await apiAuth.getApiwithoutAuth(
-      Resource.url.getOrderLists
+      Resource.url.getOrderLists(userId)
     );
     return response.data;
   },

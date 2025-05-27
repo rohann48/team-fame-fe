@@ -19,7 +19,8 @@ export const Resource = {
       `/testimonial/delete?docId=${docId}&fileKey=${fileKey}`,
     deleteEvent: (docId: string, fileKey: string) =>
       `/event/delete?docId=${docId}&fileKey=${fileKey}`,
-    getOrderLists: "/order-details/list",
+    getOrderLists: (userId: string | undefined) =>
+      `/order-details/list?userId=${userId}`,
     updateOrderStatus: (orderId: string, status: string) =>
       `/order-details/update/status?orderId=${orderId}&status=${status}`,
     uppdateProduct: (productId: string) =>

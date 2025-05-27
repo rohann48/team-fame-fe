@@ -37,6 +37,10 @@ export const configRoutes = [
     element: <OrderDetails />,
   },
   {
+    path: "/order-details/:userId",
+    element: <OrderDetails />,
+  },
+  {
     path: "/clients-info",
     element: <ClientsInfo />,
   },
