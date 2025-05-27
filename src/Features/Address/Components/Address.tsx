@@ -12,7 +12,7 @@ function Address({
   userInfo,
   formData,
 }: Readonly<AddressTypes>) {
-  console.log("form", formData);
+  console.log("form", productInfo);
 
   const offerAppliedCalc = () => {
     let offerPrice = productInfo.catTotalAmount;

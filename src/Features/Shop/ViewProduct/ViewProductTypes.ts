@@ -18,6 +18,9 @@ export type ViewProductTypes = {
       Key: string;
       date: Date;
     }[];
+    offers?: {
+      cashback: number;
+    };
   };
   handleBuyNow: (productId: string) => void;
 };

@@ -93,6 +93,7 @@ if (process.env.NODE_ENV === "development") {
     logSchemeValuenew: require("./Assets/Images/logSchemeValuenew.svg").default,
     shreeLogo: require("./Assets/Images/shreeLogo.svg").default,
     eventNewLogo: require("./Assets/Images/eventNewLogo.svg").default,
+    eventsMarathon: require("./Assets/Images/eventsMarathon.svg").default,
   };
 } else {
   images = {
@@ -154,6 +155,8 @@ if (process.env.NODE_ENV === "development") {
     logSchemeValuenew: require("./Assets/Images/logSchemeValuenew.svg"),
     shreeLogo: require("./Assets/Images/shreeLogo.svg"),
     eventNewLogo: require("./Assets/Images/eventNewLogo.svg"),
+    eventsMarathon: require("./Assets/Images/eventsMarathon.svg"),
+
   };
 }
 
