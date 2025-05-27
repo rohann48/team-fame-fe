@@ -60,7 +60,7 @@ function ClientsInfo({
               <th>Referral Code</th>
             </tr>
           </thead>
-          <tbody style={{ maxHeight: "560px" }}>
+          <tbody style={{ maxHeight: "485px" }}>
             {clientDetails.map((client) => {
               const referredBy = getReferredBy(client);
               return (

@@ -28,7 +28,7 @@ function AdminGoldScheme({ schemeDetails, toggleModal }: AdminGoldSchemeTypes) {
             {/* <th>Updated At</th> */}
           </tr>
         </thead>
-        <tbody style={{ maxHeight: "560px" }}>
+        <tbody style={{ maxHeight: "485px" }}>
           {schemeDetails?.length > 0 ? (
             schemeDetails.map((scheme) => (
               <tr key={scheme._id}>
