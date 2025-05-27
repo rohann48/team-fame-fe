@@ -12,6 +12,7 @@ export interface SignUpModalCommonTypes {
     // address: string;
     password: string;
     confirmPassword: string;
+    nominee?: string;
   };
   singleUserInfo: HeaderNavProps["singleUserInfo"];
   setSingleUserInfo?: React.Dispatch<React.SetStateAction<User>>;
@@ -33,5 +34,6 @@ export interface SignUpModalContainerTypes extends SignUpModalCommonTypes {
     password: string;
     confirmPassword: string;
     invitedRefferal: string;
+    nominee?: string;
   };
 }

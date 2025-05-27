@@ -108,24 +108,37 @@ function SignUpModal({
             </label>
           )}
           {!isEdit && (
-            <label className="password-label-cover">
-              <div className="password-text">Confirm Password</div>
-              <input
-                className="password-input"
-                type="password"
-                name="confirmPassword"
-                // value={password}
-                onChange={(e) => handleOnChange(e)}
-              />
-            </label>
+            <>
+              <label className="password-label-cover">
+                <div className="password-text">Confirm Password</div>
+                <input
+                  className="password-input"
+                  type="password"
+                  name="confirmPassword"
+                  // value={password}
+                  onChange={(e) => handleOnChange(e)}
+                />
+              </label>
+
+              <label className="email-label-cover">
+                <div className="email-text">Invited Refferal Code</div>
+                <input
+                  className="email-input"
+                  type="text"
+                  name="invitedRefferal"
+                  // value={}
+                  onChange={(e) => handleOnChange(e)}
+                />
+              </label>
+            </>
           )}
-          <label className="email-label-cover">
-            <div className="email-text">Invited Refferal Code</div>
+          <label className="nominee-label-cover">
+            <div className="nominee-text">Nominee Name</div>
             <input
-              className="email-input"
+              className="nominee-input"
               type="text"
-              name="invitedRefferal"
-              // value={}
+              name="nominee"
+              value={registerUser?.nominee}
               onChange={(e) => handleOnChange(e)}
             />
           </label>

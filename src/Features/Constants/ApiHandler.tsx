@@ -45,7 +45,7 @@ export const ApiHandler = {
       console.log(error);
     }
   },
-  registerUser: async (data: { [key: string]: string }) => {
+  registerUser: async (data: { [key: string]: string | undefined }) => {
     try {
       const response = await apiAuth.postApiwithoutAuth(
         Resource.url.registerUser,

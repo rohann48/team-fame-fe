@@ -125,6 +125,7 @@ function SignUpContainer({
             password: hashedPassword,
             confirmPassword: hashedConfirmedPassword,
             invitedRefferal: registerUser.invitedRefferal,
+            nominee: registerUser?.nominee,
           };
           const res = await ApiHandler.registerUser(userDetails);
           setRegisterUser((prev) => ({
@@ -156,9 +157,10 @@ function SignUpContainer({
         lastName: registerUser.lastName,
         contactNo: registerUser.contactNo,
         emailId: registerUser.emailId,
+        nominee: registerUser?.nominee,
       };
       const response = await ApiHandler.updateUserInfo(
-        "66207ae88e9fc4d0c4c5aa15",
+        userInfo._id,
         modifiedData
       );
       setSingleUserInfo!((prev) => ({
@@ -167,6 +169,7 @@ function SignUpContainer({
         lastName: response.results.lastName,
         contactNo: response.results.contactNo,
         emailId: response.results.emailId,
+        nominee: response.results?.nominee,
       }));
       NotificationManager.success("User Updated Successfully", "", 2000);
       setLoginInfo((prev) => ({

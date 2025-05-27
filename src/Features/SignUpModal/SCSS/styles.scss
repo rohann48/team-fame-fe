@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: end;
+
     .sign-up-modal-close {
       all: unset !important;
       color: #bd9255 !important;
@@ -10,24 +11,29 @@
       cursor: pointer;
     }
   }
+
   .content-logo-cover {
     width: 100%;
     height: auto;
+
     .logo-cover {
       display: flex;
       align-items: center;
       justify-content: center;
+
       .logo-image {
         width: 91px;
         height: 91px;
       }
     }
+
     .sign-up-text {
       font-size: 50px;
       color: #bd9255;
       font-weight: 700;
       text-align: center;
     }
+
     .sign-up-member-text {
       font-size: 14px;
       color: #bd9255;
@@ -36,12 +42,14 @@
       margin-top: 5px;
     }
   }
+
   .form-main-cover {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 15px;
+
     .first-name-label-cover {
       margin-bottom: 20px;
       font-weight: bold;
@@ -58,6 +66,7 @@
         height: 30px;
       }
     }
+
     .last-name-label-cover {
       margin-bottom: 20px;
       font-weight: bold;
@@ -74,6 +83,7 @@
         height: 30px;
       }
     }
+
     .contact-label-cover {
       margin-bottom: 20px;
       font-weight: bold;
@@ -89,11 +99,13 @@
         border-bottom: 1px solid #bd9255;
         height: 30px;
       }
+
       input::-webkit-outer-spin-button,
       input::-webkit-inner-spin-button {
         appearance: none;
       }
     }
+
     .email-label-cover {
       margin-bottom: 20px;
       font-weight: bold;
@@ -110,6 +122,7 @@
         height: 30px;
       }
     }
+
     .password-label-cover {
       margin-bottom: 15px;
       font-weight: bold;
@@ -126,6 +139,24 @@
         height: 30px;
       }
     }
+
+    .nominee-label-cover {
+      margin-bottom: 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 20rem;
+      font-size: 16px;
+      color: #bd9255;
+
+      .nominee-input {
+        all: unset;
+        border-bottom: 1px solid #bd9255;
+        height: 30px;
+      }
+    }
+
     .sign-up-btn {
       background-color: #bd9255;
       color: #2b2b2b;
@@ -139,6 +170,7 @@
       margin-top: 5px;
     }
   }
+
   //   .sign-up-cover {
   //     display: flex;
   //     align-items: center;

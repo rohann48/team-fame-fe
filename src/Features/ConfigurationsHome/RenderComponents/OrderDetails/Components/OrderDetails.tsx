@@ -25,7 +25,7 @@ function OrderDetails({
             <th>Created At</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody style={{ maxHeight: "560px" }}>
           {schemeDetails.length > 0 ? (
             schemeDetails.map((order) => (
               <tr key={order._id}>
