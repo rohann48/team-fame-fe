@@ -156,7 +156,6 @@ export const ApiHandler = {
     return response.data;
   },
   addInvestmentManually: async (data: any) => {
-    console.log("data", data);
     const response = await apiAuth.postApiwithoutAuth(
       Resource.url.addInvestmentManually,
       data

@@ -6,6 +6,7 @@ import { NotificationManager } from "react-notifications";
 import { ApiHandler } from "../../Constants/ApiHandler";
 import { useRazorpay } from "react-razorpay";
 import { LoginContext } from "../../context/LoginContext";
+import { useNavigate } from "react-router-dom";
 
 function PaymentGatewayContainer({
   paymentModel,
@@ -14,6 +15,8 @@ function PaymentGatewayContainer({
   validateForm,
   handleSubmit,
 }: any) {
+  const navigate = useNavigate();
+
   const { handleSignUpModalToggle } = useContext(LoginContext);
 
   const { Razorpay } = useRazorpay();
@@ -87,7 +90,6 @@ function PaymentGatewayContainer({
         // );
         const data = { amount: amount };
         const order = await ApiHandler.postPaymentDetails(data);
-        console.log("response", order);
         if (order?.results) {
           // add option for the payment gateway it can be dynamic if you want
           // we can use prop drilling to make it dynamic
@@ -102,8 +104,8 @@ function PaymentGatewayContainer({
             // this is make function which will verify the payment
             // after making the payment
             handler: async (response: any) => {
-              console.log("response", response);
               try {
+                const data = await handleSubmit(order.results.id);
                 await fetch(
                   `${process.env.REACT_APP_BASE_URL}tf/payments/verify-payment`,
                   {
@@ -118,15 +120,18 @@ function PaymentGatewayContainer({
                       razorpay_signature: response.razorpay_signature,
                       amount: order.results.amount,
                       orderType: type,
+                      ...(type !== "shop" && { schemeId: data._id }),
                     }),
                   }
                 );
                 // Add onPaymentSuccessfull function here
                 // postInvestment();
                 // handleSubmit(response);
-                handleSubmit(order.results.id);
 
                 alert("Payment successful!");
+                if (type === "shop") {
+                  navigate("/thankyou");
+                } else window.location.reload();
               } catch (err: any) {
                 // Add onPaymentUnSuccessfull function here
                 alert("Payment failed: " + err.message);

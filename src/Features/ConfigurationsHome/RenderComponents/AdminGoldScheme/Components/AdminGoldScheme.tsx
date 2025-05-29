@@ -62,6 +62,9 @@ function AdminGoldScheme({ schemeDetails, toggleModal }: AdminGoldSchemeTypes) {
                                 ? `${investment.day}/${investment.month}/${investment.year}`
                                 : "Date N/A"}
                             </span>
+                            <span className="investment-payid">
+                              {investment?.paymentId}
+                            </span>
                           </div>
                           <span
                             className={`investment-type ${

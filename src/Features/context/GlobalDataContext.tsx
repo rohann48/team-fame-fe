@@ -80,7 +80,7 @@ const GlobalDataContextProvider = ({
       getUserMembership();
     }
   }, [userInfo?._id, location.pathname]);
-  console.log("userMemberShipCheck", userMemberShipCheck);
+  // console.log("userMemberShipCheck", userMemberShipCheck);
 
   // To optimize the rendering of the context value and avoid unnecessary re-renders
   const contextValue = useMemo(

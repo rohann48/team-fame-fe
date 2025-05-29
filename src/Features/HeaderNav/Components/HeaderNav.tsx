@@ -24,7 +24,7 @@ const HeaderNav = ({
   isMobile,
   confirmMessageForIsMemberOrNot,
 }: HeaderNavProps) => {
-  console.log("userInfo", userInfo);
+  // console.log("userInfo", userInfo);
 
   return (
     <div className="header-nav-container">

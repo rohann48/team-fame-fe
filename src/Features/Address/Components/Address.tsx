@@ -12,8 +12,6 @@ function Address({
   userInfo,
   formData,
 }: Readonly<AddressTypes>) {
-  console.log("form", productInfo);
-
   const offerAppliedCalc = () => {
     let offerPrice = productInfo.catTotalAmount;
     productInfo.cartBasket.forEach((prod) => {

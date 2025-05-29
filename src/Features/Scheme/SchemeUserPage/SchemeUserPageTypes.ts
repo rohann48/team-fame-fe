@@ -7,6 +7,8 @@ export type investmentSchema = {
   amount: number;
   _id: string;
   type: string;
+  paymentId?: string;
+  paymentStatus?: string;
 };
 export type SchemeUserPageTypes = {
   schemeUserData: {

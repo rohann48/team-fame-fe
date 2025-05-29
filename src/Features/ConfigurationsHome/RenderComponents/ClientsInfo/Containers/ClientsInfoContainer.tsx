@@ -26,7 +26,7 @@ function ClientsInfoContainer() {
     }
   }, [userInfo?._id]);
 
-  console.log("Client Details:", clientDetails);
+  // console.log("Client Details:", clientDetails);
 
   return (
     <ClientsInfo

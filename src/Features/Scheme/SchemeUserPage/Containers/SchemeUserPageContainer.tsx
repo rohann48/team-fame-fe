@@ -62,16 +62,17 @@ function SchemeUserPageContainer() {
     return isValid;
   };
 
-  const postInvestment = async () => {
+  const postInvestment = async (orderId?: string) => {
     if (investmentAmount > 0 && validateForm()) {
       try {
         setErrorLog(false);
         const modifiedData = {
           clientId: userInfo._id,
-          year: schemeUserData.period,
+          year: new Date().getFullYear(), //schemeUserData.period,
           month: Number(selectedMonth),
           date: new Date(),
           amount: investmentAmount,
+          razorOrderId: orderId,
         };
         const response = await ApiHandler.postInvestment(
           userInfo.goldSchemeId,
@@ -81,6 +82,7 @@ function SchemeUserPageContainer() {
         NotificationManager.success(Notify.ADD, "", 2000);
         setInvestmentAmount(0);
         setSelectedMonth("");
+        return response.results;
       } catch (err) {}
     } else {
       setErrorLog(true);

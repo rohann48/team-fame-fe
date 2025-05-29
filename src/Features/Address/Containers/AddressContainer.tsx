@@ -197,8 +197,8 @@ function AddressContainer() {
         };
         const response = await ApiHandler.postOrderDetails(modifiedData);
         setProductInfo({ cartBasket: [], catTotalAmount: 0 });
-        NotificationManager.success("Address updated successfully", "", 2000);
-        navigate("/thankyou");
+        // NotificationManager.success("Address updated successfully", "", 2000);
+        // navigate("/thankyou");
       } catch (error) {
         setErrorLog(true);
         console.log("error", error);

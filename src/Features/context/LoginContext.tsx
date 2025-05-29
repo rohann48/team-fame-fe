@@ -50,7 +50,6 @@ const LoginContextProvider = ({ children, userData }: LoginContextTypes) => {
       const response = JSON.parse(sessionUserInfo);
       setUserInfo(response);
     } else if (userData && userData._id) {
-      console.log("checkk");
       setUserInfo(userData);
     }
     // fetchUserInfo();

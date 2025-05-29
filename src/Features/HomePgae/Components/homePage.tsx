@@ -20,7 +20,6 @@ const HomePage = ({
   return (
     <div className="home-page-container">
       <div className="home-page-cover">
-        <>{console.log(images.logoBackground, "images.logoBackground")}</>
         <div className="home-revolution-logo-cover">
           <img
             className="home-revolution-logo"

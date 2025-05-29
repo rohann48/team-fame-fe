@@ -440,6 +440,8 @@ function SchemeUserPage({
                       <tr>
                         <th>Payment Date</th>
                         <th>Amount</th>
+                        <th>Payment Id</th>
+                        <th>Status</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -453,11 +455,15 @@ function SchemeUserPage({
                               )}
                           </td>
                           <td>{item.amount}</td>
+                          <td>{item?.paymentId}</td>
+                          <td>{item?.paymentStatus}</td>
                         </tr>
                       ))}
                       <tr>
                         <td>Total</td>
                         <td>{totalInv}</td>
+                        <td></td>
+                        <td></td>
                       </tr>
                     </tbody>
                   </table>
