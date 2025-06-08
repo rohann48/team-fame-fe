@@ -37,7 +37,9 @@ function ConfigurationContainer() {
     },
   ];
 
-  const configurationRoutes = useRoutes(configRoutes);
+  let isUserAdmin = isAdmin ? true : false;
+  const routes = configRoutes({ isUserAdmin });
+  const configurationRoutes = useRoutes(routes);
 
   return (
     <Configuration

@@ -24,7 +24,7 @@
 
   .user-gold-scheme-img-two-cover {
     width: 100%;
-    height: 511px;
+    height: 380px;
     background-image: url("../../../Assets/Images/Rectangle.svg");
     background-size: cover;
     display: flex;
@@ -111,18 +111,31 @@
 
   .user-scheme-plan-info-cover {
     width: 100%;
-    height: 300px;
+    height: 600px;
     background-color: #ebeff3;
     color: #bd9255;
     padding: 2%;
 
     .user-scheme-plan-info-wrapper {
       border: 1px solid #bd9255;
-      font-size: 12px;
+      font-size: 13px;
       padding: 2%;
       line-height: 20px;
       border-radius: 5px;
       background-color: #f8f8f8;
+
+      h3 {
+        margin-bottom: 0.8%
+      }
+
+
+      .content {
+        line-height: 22px;
+      }
+
+      .sub-content {
+        margin-left: 1%;
+      }
     }
   }
 
@@ -198,11 +211,29 @@
             tr {
               color: #444444;
             }
+
+            .paymentstatus {
+              background: green;
+              color: white;
+              border-radius: 1rem;
+              width: 38%;
+              padding: 1px 0px 1px 0px;
+              text-align: center;
+            }
+
+            .paymentid {
+              background: #143ff1bf;
+              color: white;
+              border-radius: 1rem;
+              width: 92%;
+              padding: 1px 0px 1px 0px;
+              text-align: center;
+            }
           }
 
           th,
           td {
-            padding: 8px;
+            padding: 8px 2px 8px 8px;
             text-align: left;
           }
 

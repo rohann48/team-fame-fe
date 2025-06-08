@@ -10,6 +10,7 @@ import VideoHomePage from "./Videos/VideosHomePage";
 import Cart from "./Cart";
 import Address from "./Address";
 import OrderedSuccessfully from "./OrderedSuccessfully";
+
 export const mainRoutes = [
   {
     path: "*",

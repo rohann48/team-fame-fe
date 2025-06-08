@@ -6,23 +6,44 @@ import AdminVideos from "./RenderComponents/AdminVideos";
 import AdminGoldScheme from "./RenderComponents/AdminGoldScheme";
 import OrderDetails from "./RenderComponents/OrderDetails";
 import ClientsInfo from "./RenderComponents/ClientsInfo";
+import AdminRoute from "../Common/ProtectedRoutes/admin";
 
-export const configRoutes = [
+interface MainRoutesProps {
+  isUserAdmin: boolean;
+}
+
+export const configRoutes = ({ isUserAdmin }: MainRoutesProps) => [
   {
     path: "/about-us",
-    element: <AboutUs />,
+    element: (
+      <AdminRoute isAdmin={isUserAdmin}>
+        <AboutUs />
+      </AdminRoute>
+    ),
   },
   {
     path: "/events",
-    element: <Events />,
+    element: (
+      <AdminRoute isAdmin={isUserAdmin}>
+        <Events />
+      </AdminRoute>
+    ),
   },
   {
     path: "/testimonial",
-    element: <Testimonial />,
+    element: (
+      <AdminRoute isAdmin={isUserAdmin}>
+        <Testimonial />
+      </AdminRoute>
+    ),
   },
   {
     path: "/gold-scheme",
-    element: <AdminGoldScheme />,
+    element: (
+      <AdminRoute isAdmin={isUserAdmin}>
+        <AdminGoldScheme />
+      </AdminRoute>
+    ),
   },
   // {
   //   path: "/videos",
@@ -30,11 +51,19 @@ export const configRoutes = [
   // },
   {
     path: "/shop",
-    element: <Shop />,
+    element: (
+      <AdminRoute isAdmin={isUserAdmin}>
+        <Shop />
+      </AdminRoute>
+    ),
   },
   {
     path: "/order-details",
-    element: <OrderDetails />,
+    element: (
+      <AdminRoute isAdmin={isUserAdmin}>
+        <OrderDetails />
+      </AdminRoute>
+    ),
   },
   {
     path: "/order-details/:userId",
@@ -42,6 +71,10 @@ export const configRoutes = [
   },
   {
     path: "/clients-info",
-    element: <ClientsInfo />,
+    element: (
+      <AdminRoute isAdmin={isUserAdmin}>
+        <ClientsInfo />
+      </AdminRoute>
+    ),
   },
 ];

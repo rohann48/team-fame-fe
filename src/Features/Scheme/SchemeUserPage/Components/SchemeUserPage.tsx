@@ -343,32 +343,101 @@ function SchemeUserPage({
       </div>
       <div className="user-scheme-plan-info-cover">
         <div className="user-scheme-plan-info-wrapper">
-          <h3> Plan Details: </h3>
-          <p>
-            •Shree Raksha Gold purchase plan starts from Rs.500/month. It can
+          <h3>Savings Plan Details: </h3>
+          <p className="content">
+            • Shree Raksha Gold purchase plan starts from Rs.500/month. It can
             increase to any fixed amount in multiples of 500.
           </p>
-          <p>
-            •You have to pay a fixed monthly installment for a period of 12 or
+          <p className="content">
+            • You have to pay a fixed monthly installment for a period of 12 or
             24 months only.
           </p>
-          <p>
-            •On the maturity of the plan,a customer can purchase the jewelry at
-            the existing gold rate with minimum wastage charges. All kinds of
+          <p className="content">
+            • On the maturity of the plan, a customer can purchase the jewelry
+            at the existing gold rate with minimum wastage charges. All kinds of
             taxes, making and stone charges are applicable.
           </p>
-          <p>
-            •You can buy hallmarked 916 gold coins, jewellery,silver
-            ornaments,any gemstone and diamond jewellery from the Jewellers
+          <p className="content">
+            • You can buy hallmarked 916 gold coins, jewellery, silver
+            ornaments, any gemstone and diamond jewellery from the Jeweller's
             collection only after the completion of the plan period.
           </p>
-          <p>
-            •There will not be any transfer/refund available on any of the plan
-            in case of discontinuity of the same •When you buy gold jewellery
-            from SHREE RAKSHA JEWELLERS, you are assured of quality, purity and
-            a sound investment that you can enjoy for generations to come.
+          <p className="content">
+            • There will not be any transfer/refund available on any of the plan
+            in case of discontinuity of the same.
           </p>
-          <p> Thank you</p>
+          <p className="content">
+            • When you buy gold jewellery from SHREE RAKSHA JEWELLERS, you are
+            assured of quality, purity and a sound investment that you can enjoy
+            for generations to come.
+          </p>
+          <p className="content">
+            • FIXED DEPOSIT Plan Details: NON REFUNDABLE FIXED DEPOSIT / SHARE
+            VALUE
+          </p>
+          <p className="content">
+            • WHY choose this plan? BECAUSE, the investment allotted under NRFD
+            plans will be deposited in the name of the investor for a period of
+            lifetime; profits of which will be utilised to provide free health
+            seminars, coaching/education for the needy.
+          </p>
+          <p className="content">
+            • ELIGIBILITY: Any individual, organisation, or a
+            company/establishment can invest in this plan.
+          </p>
+          <p className="content">
+            • DEFINITION AND NATURE: Non-Refundable Fixed Deposits (NRFDs) are a
+            special category of fixed deposits where the principal amount cannot
+            be withdrawn on any conditions except in cases of critical illness
+            or government-declared emergencies, as per RBI guidelines effective
+            January 1, 2025.
+          </p>
+          <p className="content">
+            • NRFD/SHARE VALUE is offered to provide guaranteed dividends every
+            year from the profits of the company.
+          </p>
+          <p className="content">
+            • Every year the company allots some profit percentage as dividends
+            that is to be distributed among the NRFD/SHARE VALUE holders equally
+            based on share value which can be withdrawn by adding it to the
+            savings plan only.
+          </p>
+          <div>
+            <p className="content">• Tax Implications:</p>
+            <p className="sub-content">
+              1. Interest earned is taxable as per the depositor`s income tax
+              slab under the Income Tax Act, 1961.
+            </p>
+            <p className="sub-content">
+              2. Tax Deducted at Source (TDS) applies if interest exceeds
+              ₹40,000 (₹50,000 for senior citizens) in a financial year.
+            </p>
+            <p className="sub-content">
+              3. Depositors may submit Form 15G/15H to avoid TDS if their total
+              income is below the taxable threshold.
+            </p>
+          </div>
+          <div>
+            <p className="content">• TRANSPARENCY and WEBSITE DISCLOSURE:</p>
+            <p className="sub-content">
+              • All terms, conditions, and dividend rates will be clearly
+              displayed in the company meetings at the time of application.
+            </p>
+            <p className="sub-content">
+              • Customers must acknowledge understanding the non-refundable
+              nature before confirming the deposit.
+            </p>
+            <p className="sub-content">
+              • Every offline payment will be provided with an invoice with a
+              unique code as the confirmation at the time of payment via SMS /
+              Whatsapp message or registered Email-ID.
+            </p>
+            <p className="sub-content">
+              • The company reserves the right to modify these regulations, with
+              prior notice to depositors, as per regulatory requirements.
+            </p>
+          </div>
+          <p className="content"> Thank you.</p>
         </div>
       </div>
       <div className="user-scheme-details-cover">
@@ -455,8 +524,18 @@ function SchemeUserPage({
                               )}
                           </td>
                           <td>{item.amount}</td>
-                          <td>{item?.paymentId}</td>
-                          <td>{item?.paymentStatus}</td>
+                          <td>
+                            {item?.paymentId && (
+                              <div className="paymentid">{item?.paymentId}</div>
+                            )}
+                          </td>
+                          <td>
+                            {item?.paymentStatus && (
+                              <div className="paymentstatus">
+                                {item?.paymentStatus}
+                              </div>
+                            )}
+                          </td>
                         </tr>
                       ))}
                       <tr>

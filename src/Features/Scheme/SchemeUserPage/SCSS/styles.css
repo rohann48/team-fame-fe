@@ -21,7 +21,7 @@
 }
 .user-scheme-container .user-gold-scheme-img-two-cover {
   width: 100%;
-  height: 511px;
+  height: 380px;
   background-image: url("../../../Assets/Images/Rectangle.svg");
   background-size: cover;
   display: -webkit-box;
@@ -139,18 +139,27 @@
 }
 .user-scheme-container .user-scheme-plan-info-cover {
   width: 100%;
-  height: 300px;
+  height: 600px;
   background-color: #ebeff3;
   color: #bd9255;
   padding: 2%;
 }
 .user-scheme-container .user-scheme-plan-info-cover .user-scheme-plan-info-wrapper {
   border: 1px solid #bd9255;
-  font-size: 12px;
+  font-size: 13px;
   padding: 2%;
   line-height: 20px;
   border-radius: 5px;
   background-color: #f8f8f8;
+}
+.user-scheme-container .user-scheme-plan-info-cover .user-scheme-plan-info-wrapper h3 {
+  margin-bottom: 0.8%;
+}
+.user-scheme-container .user-scheme-plan-info-cover .user-scheme-plan-info-wrapper .content {
+  line-height: 22px;
+}
+.user-scheme-container .user-scheme-plan-info-cover .user-scheme-plan-info-wrapper .sub-content {
+  margin-left: 1%;
 }
 .user-scheme-container .user-scheme-details-cover {
   width: 100%;
@@ -225,9 +234,25 @@
 .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper table tbody tr {
   color: #444444;
 }
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper table tbody .paymentstatus {
+  background: green;
+  color: white;
+  border-radius: 1rem;
+  width: 38%;
+  padding: 1px 0px 1px 0px;
+  text-align: center;
+}
+.user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper table tbody .paymentid {
+  background: rgba(20, 63, 241, 0.7490196078);
+  color: white;
+  border-radius: 1rem;
+  width: 92%;
+  padding: 1px 0px 1px 0px;
+  text-align: center;
+}
 .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper table th,
 .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper table td {
-  padding: 8px;
+  padding: 8px 2px 8px 8px;
   text-align: left;
 }
 .user-scheme-container .user-scheme-details-cover .user-scheme-table-cover .user-scheme-table-wrapper table tbody tr:last-child {

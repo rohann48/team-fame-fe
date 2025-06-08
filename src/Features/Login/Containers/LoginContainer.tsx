@@ -56,7 +56,7 @@ function LoginContainer({
           isAuthenticated: true,
         });
         setUserInfo(res.results);
-        sessionStorage.setItem("userInfo", JSON.stringify(res.results));
+        // sessionStorage.setItem("userInfo", JSON.stringify(res.results));
         if (!res.results.membership) {
           navigate("/shop");
         }

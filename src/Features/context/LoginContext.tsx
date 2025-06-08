@@ -20,14 +20,17 @@ let initialState = {
 export const LoginContext = createContext<LoginContextInitialState>(
   {} as LoginContextInitialState
 );
-const LoginContextProvider = ({ children, userData }: LoginContextTypes) => {
+const LoginContextProvider = ({
+  children,
+  checkUserInfo,
+}: LoginContextTypes) => {
   const [loginInfo, setLoginInfo] = useState({ ...initialState });
   const [userInfo, setUserInfo] = useState<
     LoginContextInitialState["userInfo"]
   >({} as LoginContextInitialState["userInfo"]);
   //state maintained for editing users
   const [isEdit, setIsEdit] = useState(false);
-
+  const [isUserInfoEdit, setIsUserInfoEdit] = useState<boolean>(false);
   //login modal open
   const handleLoginModalToggle = useCallback(() => {
     setLoginInfo((prev) => {
@@ -37,23 +40,21 @@ const LoginContextProvider = ({ children, userData }: LoginContextTypes) => {
       };
     });
   }, []);
-  // console.log("userData", userData);
 
   useEffect(() => {
-    // const fetchUserInfo = async () => {
-    //   const response = await ApiHandler.getUserInfo("66916299255e4f1e8cd54b6a");
-    //   console.log(response);
-    // };
-    let sessionUserInfo = sessionStorage.getItem("userInfo");
-    if (sessionUserInfo) {
-      // console.log("sessionsss");
-      const response = JSON.parse(sessionUserInfo);
-      setUserInfo(response);
-    } else if (userData && userData._id) {
-      setUserInfo(userData);
-    }
-    // fetchUserInfo();
-  }, []);
+    const fetchUserInfo = async () => {
+      // const response = await ApiHandler.getUserInfo(userData._id);
+      // sessionStorage.setItem("userInfo", JSON.stringify(response.results));
+      // setUserInfo(response.results);
+      // console.log(response.results);
+      const data: any = await checkUserInfo();
+      if (data?.results?.userInfo) {
+        setUserInfo(data.results.userInfo);
+      }
+      setIsUserInfoEdit(false);
+    };
+    fetchUserInfo();
+  }, [isUserInfoEdit]);
 
   //sign up modak open
   const handleSignUpModalToggle = useCallback(() => {
@@ -77,6 +78,7 @@ const LoginContextProvider = ({ children, userData }: LoginContextTypes) => {
       isEdit,
       setIsEdit,
       setUserInfo,
+      setIsUserInfoEdit,
     }),
     [
       loginInfo,
@@ -87,6 +89,7 @@ const LoginContextProvider = ({ children, userData }: LoginContextTypes) => {
       isEdit,
       setIsEdit,
       setUserInfo,
+      setIsUserInfoEdit,
     ]
   );
 

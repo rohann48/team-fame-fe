@@ -9,8 +9,13 @@ import { NotificationManager } from "react-notifications";
 import { Notify } from "../../../Common/Notify/NotificationMessages";
 
 function SchemeJoinPageContainer() {
-  const { handleSignUpModalToggle, userInfo, handleLoginModalToggle } =
-    useContext(LoginContext);
+  const {
+    handleSignUpModalToggle,
+    userInfo,
+    handleLoginModalToggle,
+    setUserInfo,
+    setIsUserInfoEdit,
+  } = useContext(LoginContext);
   //navigate
   const navigate = useNavigate();
   //state maintained for period
@@ -55,9 +60,11 @@ function SchemeJoinPageContainer() {
         endDate: formattedEndDate,
       };
       await ApiHandler.JoinScheme(modifiedData);
+      setIsUserInfoEdit(true);
       navigate(`users/${id}`);
       NotificationManager.success(Notify.ADD, "", 2000);
     } catch (err) {
+      setIsUserInfoEdit(false);
       NotificationManager.warning(err, "", 2000);
     }
   };

@@ -16,11 +16,11 @@ import GlobalDataContextProvider from "./Features/context/GlobalDataContext";
 import ShopContextProvider from "./Features/context/ShopContext/ShopContext";
 function App() {
   const renderRoutes = useRoutes(mainRoutes);
-  const [userData, setUserData] = useState(null);
-  const navigate = useNavigate();
-  useEffect(() => {
-    // navigate("home");
-  }, []);
+  // const [userData, setUserData] = useState(null);
+  // const navigate = useNavigate();
+  // useEffect(() => {
+  //   // navigate("home");
+  // }, []);
   //will change logout func later
   // const logoutUser = async () => {
   //   try {
@@ -43,17 +43,10 @@ function App() {
   //     });
   //   }
   // };
-
-  useEffect(() => {
-    const checkUserInfo = async () => {
-      const data = await ApiHandler.userCheck();
-      if (data?.results?.userInfo) {
-        setUserData(data.results.userInfo);
-      }
-    };
-
-    checkUserInfo();
-  }, []);
+  const checkUserInfo = async () => {
+    const data = await ApiHandler.userCheck();
+    return data;
+  };
 
   const onIdle = () => {
     // Close Modal Prompt
@@ -92,7 +85,7 @@ function App() {
   }, []);
   const isMobile = windowDimension && windowDimension <= 950 ? true : false;
   return (
-    <LoginContextProvider userData={userData}>
+    <LoginContextProvider checkUserInfo={checkUserInfo}>
       <GlobalDataContextProvider>
         <div className="App">
           <div className="main-header-container">
