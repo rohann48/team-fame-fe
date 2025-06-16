@@ -32,4 +32,5 @@ export interface LoginContextInitialState {
     React.SetStateAction<LoginContextInitialState["userInfo"]>
   >;
   setIsUserInfoEdit: React.Dispatch<React.SetStateAction<boolean>>;
+  isLoadingUserInfo: boolean;
 }
