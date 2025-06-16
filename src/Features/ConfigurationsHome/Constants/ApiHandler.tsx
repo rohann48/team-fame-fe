@@ -68,6 +68,22 @@ export const ApiHandler = {
     return response.data;
   },
 
+  updateTestimonial: async (testimonialId: string, data: FormData) => {
+    const response = await apiAuth.putApiForFormDatawithoutEncryption(
+      Resource.url.updateTestimonial(testimonialId),
+      data
+    );
+    return response.data;
+  },
+
+  updateEvents: async (eventId: string, data: FormData) => {
+    const response = await apiAuth.putApiForFormDatawithoutEncryption(
+      Resource.url.updateEvents(eventId),
+      data
+    );
+    return response.data;
+  },
+
   postProductDetails: async (formData: any) => {
     const response = await apiAuth.postApiForFormDatawithoutEncryption(
       Resource.url.postProductInfo,
@@ -143,7 +159,7 @@ export const ApiHandler = {
     return response.data;
   },
   updateProduct: async (productId: string, data: any) => {
-    const response = await apiAuth.putApiwithoutAuth(
+    const response = await apiAuth.putApiForFormDatawithoutEncryption(
       Resource.url.uppdateProduct(productId),
       data
     );

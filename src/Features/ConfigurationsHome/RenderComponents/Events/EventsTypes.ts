@@ -40,4 +40,6 @@ export type EventComponentProps = {
   events: EventData[];
   uploadedFile: File[];
   confirmDeleteEvent: (eventId: string, fileKey: string, index: number) => void;
+  handleEditClick: (id: string) => void;
+  editBool: boolean;
 };

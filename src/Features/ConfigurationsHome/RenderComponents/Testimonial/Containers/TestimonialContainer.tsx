@@ -26,6 +26,8 @@ function TestimonialContainer() {
   const [testiMonials, setTestiMonials] = useImmer<
     TestimonialContainerProps["testiMonials"]
   >([]);
+  const [editBool, setEditBool] = useState(false);
+  const [testmonialId, setTestmonialId] = useState("");
 
   const handleChangeInputs = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -43,22 +45,26 @@ function TestimonialContainer() {
 
   const handleSave = async () => {
     try {
-      let form = new FormData();
-      form.append("name", testimonialDetails.name);
-      form.append("about", testimonialDetails.about);
-      form.append("achievement", testimonialDetails.achievement);
-      form.append("clientId", userInfo._id);
+      if (editBool) {
+        handleUpdate();
+      } else {
+        let form = new FormData();
+        form.append("name", testimonialDetails.name);
+        form.append("about", testimonialDetails.about);
+        form.append("achievement", testimonialDetails.achievement);
+        form.append("clientId", userInfo._id);
 
-      if (uploadedFile.length) {
-        form.append("fileToUpload", uploadedFile[0]);
+        if (uploadedFile.length) {
+          form.append("fileToUpload", uploadedFile[0]);
+        }
+        const response = await ApiHandler.postTestimonial(form);
+        setTestiMonials((draft) => {
+          draft.push(response.results);
+        });
+        setUploadedFile([]);
+        setTestimonialDetails(initialState);
+        NotificationManager.success(Notify.ADD, "", 2000);
       }
-      const response = await ApiHandler.postTestimonial(form);
-      setTestiMonials((draft) => {
-        draft.push(response.results);
-      });
-      setUploadedFile([]);
-      setTestimonialDetails(initialState);
-      NotificationManager.success(Notify.ADD, "", 2000);
     } catch (err) {
       console.error(err);
       NotificationManager.warning(Notify.DEFAULT, "", 2000);
@@ -69,12 +75,13 @@ function TestimonialContainer() {
     setTestiMonials([...response.results]);
   };
   useEffect(() => {
-    getTestiMonialData();
-  }, [userInfo._id]);
+    if (userInfo?._id && !editBool) getTestiMonialData();
+  }, [userInfo._id, editBool]);
 
   const handleCancel = () => {
     setUploadedFile([]);
     setTestimonialDetails(initialState);
+    setEditBool(false);
   };
   const confirmDeleteTestimonial = (
     docId: string,
@@ -127,6 +134,41 @@ function TestimonialContainer() {
       }
     }
   };
+
+  const handleEditClick = (id: string) => {
+    if (testiMonials.length > 0) {
+      setEditBool(true);
+      const data = testiMonials.find((ele) => ele._id === id)!;
+      setTestimonialDetails(data);
+      setTestmonialId(id);
+    } else setEditBool(false);
+  };
+
+  const handleUpdate = async () => {
+    try {
+      let form = new FormData();
+      form.append("name", testimonialDetails.name);
+      form.append("about", testimonialDetails.about);
+      form.append("achievement", testimonialDetails.achievement);
+      form.append("clientId", userInfo._id);
+
+      if (uploadedFile.length) {
+        form.append("fileToUpload", uploadedFile[0]);
+      }
+      const response = await ApiHandler.updateTestimonial(testmonialId, form);
+      // setTestiMonials((draft) => {
+      //   draft.push(response.results);
+      // });
+      setUploadedFile([]);
+      setTestimonialDetails(initialState);
+      setTestmonialId("");
+      setEditBool(false);
+      NotificationManager.success(Notify.UPDATE, "", 2000);
+    } catch (err) {
+      console.error(err);
+      NotificationManager.warning(Notify.DEFAULT, "", 2000);
+    }
+  };
   return (
     <Testimonial
       handleChangeInputs={handleChangeInputs}
@@ -137,6 +179,8 @@ function TestimonialContainer() {
       uploadedFile={uploadedFile}
       handleCancel={handleCancel}
       confirmDeleteTestimonial={confirmDeleteTestimonial}
+      handleEditClick={handleEditClick}
+      editBool={editBool}
     />
   );
 }

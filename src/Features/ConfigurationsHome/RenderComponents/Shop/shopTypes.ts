@@ -64,5 +64,7 @@ export type ShopComponentProps = {
     totalOrderedQuantity: number;
     totalProductQuantity: number;
   };
-  handleEditProduct: (id: string) => void;
+  handleEditClick: (id: string) => void;
+  editBool: boolean;
+  handleClose: () => void;
 };

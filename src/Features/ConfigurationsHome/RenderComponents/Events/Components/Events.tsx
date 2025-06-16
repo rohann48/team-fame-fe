@@ -15,6 +15,8 @@ function Events({
   uploadedFile,
   handleCancel,
   confirmDeleteEvent,
+  handleEditClick,
+  editBool,
 }: EventComponentProps) {
   const [currentPage, setCurrentPage] = useState(0);
   const eventsPerPage = 5;
@@ -63,7 +65,7 @@ function Events({
                   Cancel
                 </button>
                 <button className="save" onClick={() => handleSave()}>
-                  SAVE
+                  {editBool ? "UPDATE" : "SAVE"}
                 </button>
               </div>
             </div>
@@ -95,7 +97,10 @@ function Events({
                     className="event-date-input"
                     type="date"
                     onChange={(e) => handleChangeInputs(e, "date")}
-                    value={eventForms.date}
+                    value={
+                      eventForms?.date &&
+                      format(parseISO(eventForms?.date), "yyyy-MM-dd")
+                    }
                   />
                 </label>
                 <label className="event-time-cover">
@@ -184,7 +189,10 @@ function Events({
                       )}
                     </td>
                     <td>
-                      <button className="edit-btn" disabled>
+                      <button
+                        className="edit-btn"
+                        onClick={() => handleEditClick(event._id)}
+                      >
                         Edit
                       </button>
                       <button
