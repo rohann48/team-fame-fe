@@ -1,8 +1,9 @@
-/** @format */
 .react-confirm-alert .custom-ui {
   background-color: white;
   border: 1px solid rgba(44, 40, 40, 0.1098039216);
   border-radius: 5px;
+  -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 .react-confirm-alert .custom-ui.notify {
   width: 582px !important;
@@ -48,6 +49,7 @@
 }
 .react-confirm-alert .custom-ui .delete-title .delete-text .delete-text-header {
   text-transform: capitalize;
+  margin: 0;
 }
 .react-confirm-alert .custom-ui .delete-title .delete-text .delete-text-header.without-notify {
   font-size: 20px;
@@ -77,6 +79,7 @@
   font-weight: 400;
   padding-bottom: 2%;
   line-height: 1.5;
+  margin: 0;
 }
 .react-confirm-alert .custom-ui .delete-description .delete-description-text-one.without-notify {
   font-size: 16px;
@@ -94,6 +97,7 @@
   font-weight: 400;
   padding-bottom: 3%;
   color: #667286;
+  margin: 0;
 }
 .react-confirm-alert .custom-ui .delete-description .delete-description-text-two.without-notify {
   font-size: 16px;
@@ -135,6 +139,13 @@
   border-radius: 5px;
   background-color: white;
   cursor: pointer;
+  font-size: 13px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.react-confirm-alert .custom-ui .delete-button-covers .button-delete-no:hover {
+  background-color: #5b677b;
+  color: white;
 }
 .react-confirm-alert .custom-ui .delete-button-covers .button-delete-yes {
   width: 90px;
@@ -146,6 +157,11 @@
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.react-confirm-alert .custom-ui .delete-button-covers .button-delete-yes:hover {
+  background-color: #e85555;
 }
 .react-confirm-alert .custom-ui .delete-button-covers .button-yes {
   width: 90px;
@@ -157,6 +173,11 @@
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.react-confirm-alert .custom-ui .delete-button-covers .button-yes:hover {
+  background-color: #0007b8;
 }
 .react-confirm-alert .custom-ui .delete-button-covers .button-confirm-cancel {
   width: 90px;
@@ -167,6 +188,12 @@
   background-color: #ffffff;
   cursor: pointer;
   font-size: 13px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.react-confirm-alert .custom-ui .delete-button-covers .button-confirm-cancel:hover {
+  background-color: #5b677b;
+  color: white;
 }
 .react-confirm-alert .custom-ui .delete-button-covers .medium-size-button-confirm-cancel {
   width: 158px;
@@ -176,6 +203,13 @@
   color: #0009d6;
   background-color: #ffffff;
   cursor: pointer;
+  font-size: 13px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.react-confirm-alert .custom-ui .delete-button-covers .medium-size-button-confirm-cancel:hover {
+  background-color: #0009d6;
+  color: white;
 }
 .react-confirm-alert .custom-ui .delete-button-covers .button-confirm-ok {
   width: 90px;
@@ -185,6 +219,12 @@
   background-color: #2863ff;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 13px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.react-confirm-alert .custom-ui .delete-button-covers .button-confirm-ok:hover {
+  background-color: #1a4dd9;
 }
 .react-confirm-alert .custom-ui .delete-button-covers .button-confirm-process-ok {
   width: 107px;
@@ -194,161 +234,315 @@
   background-color: #2863ff;
   border-radius: 5px;
   cursor: pointer;
-}
-.react-confirm-alert .mobile-resp-custom-ui {
-  background-color: white;
-  width: auto;
-  height: auto;
-  border: 1px solid rgba(44, 40, 40, 0.1098039216);
-  border-radius: 5px;
-  padding: 5%;
-  line-height: 25px;
-  margin: 3%;
-}
-.react-confirm-alert .mobile-resp-custom-ui .delete-title {
-  height: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 10px;
-  padding: 5% 0% 10% 0%;
-}
-.react-confirm-alert .mobile-resp-custom-ui .delete-title .delete-img-cover {
-  height: 30px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.react-confirm-alert .mobile-resp-custom-ui .delete-title .delete-text {
-  height: 30px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-right: 5%;
-  line-height: 30px;
-  color: #0e244c;
-}
-.react-confirm-alert .mobile-resp-custom-ui .delete-title .delete-text .delete-text-header {
-  font-size: 20px;
-  font-weight: 600;
-}
-.react-confirm-alert .mobile-resp-custom-ui .delete-title .delete-text .delete-text-header.without-notify {
-  font-size: 20px;
-  font-weight: 600;
-}
-.react-confirm-alert .mobile-resp-custom-ui .delete-title .delete-text .delete-text-header.notify {
-  font-size: 20px;
-  font-weight: 600;
-}
-.react-confirm-alert .mobile-resp-custom-ui .delete-title .delete-text .delete-text-header.review {
-  font-size: 14px;
-  font-weight: 600;
-}
-.react-confirm-alert .mobile-resp-custom-ui .delete-title .close-button {
-  height: 35px;
-  font-weight: bold;
-}
-.react-confirm-alert .mobile-resp-custom-ui .delete-description {
-  height: 40%;
-  padding: 5% 5% 0% 5%;
-  color: #ce902d;
-  background-color: #f4e7d1;
-  border-radius: 10px;
-  line-height: 30px;
-}
-.react-confirm-alert .mobile-resp-custom-ui .delete-description .delete-description-text-one {
-  font-size: 18px;
-  font-weight: 400;
-  padding-bottom: 3%;
-  color: rgb(243, 8, 8);
-  word-break: break-word;
-}
-.react-confirm-alert .mobile-resp-custom-ui .delete-description .delete-description-text-two {
-  font-size: 18px;
-  font-weight: 400;
-  padding-bottom: 3%;
-  color: #ce902d;
-  word-break: break-word;
-}
-.react-confirm-alert .mobile-resp-custom-ui .note {
-  height: 10%;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 2% 0%;
-  color: #0e244a;
-}
-.react-confirm-alert .mobile-resp-custom-ui .delete-button-covers {
-  height: 20%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding: 5% 0% 0% 0%;
-  gap: 3%;
-}
-.react-confirm-alert .mobile-resp-custom-ui .delete-button-covers .button-delete-no {
-  width: 100px;
-  height: 50px;
-  border: 1px solid #2863ff;
-  border-radius: 5px;
-  color: #2863ff;
-  background-color: white;
-  cursor: pointer;
-}
-.react-confirm-alert .mobile-resp-custom-ui .delete-button-covers .button-delete-yes {
-  width: 100px;
-  height: 50px;
-  color: white;
-  border: 1px solid #f47267;
-  border-radius: 5px;
-  background-color: #f47267;
-  font-size: 15px;
-  font-weight: 500;
-  cursor: pointer;
-}
-.react-confirm-alert .mobile-resp-custom-ui .delete-button-covers .button-confirm-cancel {
-  width: 90px;
-  height: 40px;
-  color: #2863ff;
-  border: 1px solid #2863ff;
-  border-radius: 5px;
-  background-color: white;
-  cursor: pointer;
   font-size: 13px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-.react-confirm-alert .mobile-resp-custom-ui .delete-button-covers .button-submit-ok {
-  width: 90px;
-  height: 40px;
-  color: white;
-  border: 1px solid #2863ff;
-  background-color: #2863ff;
-  border-radius: 5px;
-  cursor: pointer;
+.react-confirm-alert .custom-ui .delete-button-covers .button-confirm-process-ok:hover {
+  background-color: #1a4dd9;
 }
 
 .react-confirm-alert-overlay {
   z-index: 9000 !important;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .react-confirm-alert .custom-ui.notify {
+    width: 520px !important;
+    height: 240px !important;
+  }
+  .react-confirm-alert .custom-ui.without-notify {
+    width: 450px !important;
+    height: 240px !important;
+  }
+  .react-confirm-alert .custom-ui.review {
+    width: 420px !important;
+    height: 190px !important;
+  }
+  .react-confirm-alert .custom-ui .delete-title {
+    padding-left: 6%;
+  }
+  .react-confirm-alert .custom-ui .delete-title .delete-text .delete-text-header.without-notify, .react-confirm-alert .custom-ui .delete-title .delete-text .delete-text-header.notify {
+    font-size: 18px;
+  }
+  .react-confirm-alert .custom-ui .delete-title .delete-text .delete-text-header.review {
+    font-size: 13px;
+  }
+  .react-confirm-alert .custom-ui .delete-description .delete-description-text-one.without-notify, .react-confirm-alert .custom-ui .delete-description .delete-description-text-one.notify {
+    font-size: 15px;
+  }
+  .react-confirm-alert .custom-ui .delete-description .delete-description-text-one.review {
+    font-size: 13px;
+  }
+  .react-confirm-alert .custom-ui .delete-description .delete-description-text-two.without-notify, .react-confirm-alert .custom-ui .delete-description .delete-description-text-two.notify {
+    font-size: 15px;
+  }
+}
+@media (max-width: 767px) and (min-width: 576px) {
+  .react-confirm-alert .custom-ui.notify {
+    width: 480px !important;
+    height: 280px !important;
+  }
+  .react-confirm-alert .custom-ui.without-notify {
+    width: 420px !important;
+    height: 280px !important;
+  }
+  .react-confirm-alert .custom-ui.review {
+    width: 380px !important;
+    height: 220px !important;
+  }
+  .react-confirm-alert .custom-ui .delete-title {
+    padding-left: 5%;
+    height: 25%;
+  }
+  .react-confirm-alert .custom-ui .delete-title .delete-text .delete-text-header.without-notify, .react-confirm-alert .custom-ui .delete-title .delete-text .delete-text-header.notify {
+    font-size: 16px;
+  }
+  .react-confirm-alert .custom-ui .delete-title .delete-text .delete-text-header.review {
+    font-size: 12px;
+  }
+  .react-confirm-alert .custom-ui .delete-description.without-notify, .react-confirm-alert .custom-ui .delete-description.review {
+    height: 50%;
+    padding: 2% 7% 2% 7%;
+  }
+  .react-confirm-alert .custom-ui .delete-description.notify {
+    height: 45%;
+    padding: 2% 5% 2% 7%;
+  }
+  .react-confirm-alert .custom-ui .delete-description .delete-description-text-one.without-notify, .react-confirm-alert .custom-ui .delete-description .delete-description-text-one.notify {
+    font-size: 14px;
+  }
+  .react-confirm-alert .custom-ui .delete-description .delete-description-text-one.review {
+    font-size: 12px;
+  }
+  .react-confirm-alert .custom-ui .delete-description .delete-description-text-two.without-notify, .react-confirm-alert .custom-ui .delete-description .delete-description-text-two.notify {
+    font-size: 14px;
+  }
+  .react-confirm-alert .custom-ui .delete-button-covers {
+    height: 25%;
+    padding-right: 4%;
+    gap: 3%;
+  }
+  .react-confirm-alert .custom-ui .delete-button-covers button {
+    font-size: 12px;
+  }
+  .react-confirm-alert .custom-ui .delete-button-covers .medium-size-button-confirm-cancel {
+    width: 140px;
+  }
+}
+@media (max-width: 575px) and (min-width: 481px) {
+  .react-confirm-alert .custom-ui.notify {
+    width: 95% !important;
+    max-width: 450px !important;
+    height: 320px !important;
+  }
+  .react-confirm-alert .custom-ui.without-notify {
+    width: 95% !important;
+    max-width: 400px !important;
+    height: 320px !important;
+  }
+  .react-confirm-alert .custom-ui.review {
+    width: 95% !important;
+    max-width: 360px !important;
+    height: 260px !important;
+  }
+  .react-confirm-alert .custom-ui .delete-title {
+    padding-left: 4%;
+    height: 20%;
+  }
+  .react-confirm-alert .custom-ui .delete-title .delete-text .delete-text-header.without-notify, .react-confirm-alert .custom-ui .delete-title .delete-text .delete-text-header.notify {
+    font-size: 15px;
+  }
+  .react-confirm-alert .custom-ui .delete-title .delete-text .delete-text-header.review {
+    font-size: 11px;
+  }
+  .react-confirm-alert .custom-ui .delete-description.without-notify, .react-confirm-alert .custom-ui .delete-description.review {
+    height: 55%;
+    padding: 3% 5% 3% 5%;
+  }
+  .react-confirm-alert .custom-ui .delete-description.notify {
+    height: 50%;
+    padding: 3% 4% 3% 5%;
+  }
+  .react-confirm-alert .custom-ui .delete-description .delete-description-text-one.without-notify, .react-confirm-alert .custom-ui .delete-description .delete-description-text-one.notify {
+    font-size: 13px;
+  }
+  .react-confirm-alert .custom-ui .delete-description .delete-description-text-one.review {
+    font-size: 11px;
+  }
+  .react-confirm-alert .custom-ui .delete-description .delete-description-text-two.without-notify, .react-confirm-alert .custom-ui .delete-description .delete-description-text-two.notify {
+    font-size: 13px;
+  }
+  .react-confirm-alert .custom-ui .delete-button-covers {
+    height: 25%;
+    padding-right: 3%;
+    gap: 2%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .react-confirm-alert .custom-ui .delete-button-covers button {
+    font-size: 11px;
+    min-width: 80px;
+  }
+  .react-confirm-alert .custom-ui .delete-button-covers .medium-size-button-confirm-cancel {
+    width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .react-confirm-alert .custom-ui {
+    width: 95% !important;
+    max-width: 350px !important;
+    min-height: 280px !important;
+    height: auto !important;
+    margin: 5%;
+  }
+  .react-confirm-alert .custom-ui.notify {
+    min-height: 320px !important;
+  }
+  .react-confirm-alert .custom-ui.review {
+    min-height: 250px !important;
+  }
+  .react-confirm-alert .custom-ui .delete-title {
+    height: auto;
+    min-height: 60px;
+    padding: 5% 4% 3% 4%;
+  }
+  .react-confirm-alert .custom-ui .delete-title .delete-img-cover {
+    height: 25px;
+  }
+  .react-confirm-alert .custom-ui .delete-title .delete-img-cover img {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .react-confirm-alert .custom-ui .delete-title .delete-text {
+    height: auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .react-confirm-alert .custom-ui .delete-title .delete-text .delete-text-header.without-notify, .react-confirm-alert .custom-ui .delete-title .delete-text .delete-text-header.notify {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+  .react-confirm-alert .custom-ui .delete-title .delete-text .delete-text-header.review {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+  .react-confirm-alert .custom-ui .delete-description {
+    height: auto;
+    padding: 3% 4% 5% 4%;
+  }
+  .react-confirm-alert .custom-ui .delete-description .delete-description-text-one.without-notify, .react-confirm-alert .custom-ui .delete-description .delete-description-text-one.notify {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  .react-confirm-alert .custom-ui .delete-description .delete-description-text-one.review {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+  .react-confirm-alert .custom-ui .delete-description .delete-description-text-two.without-notify, .react-confirm-alert .custom-ui .delete-description .delete-description-text-two.notify {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  .react-confirm-alert .custom-ui .delete-button-covers {
+    height: auto;
+    padding: 5% 4% 4% 4%;
+    gap: 8px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .react-confirm-alert .custom-ui .delete-button-covers button {
+    font-size: 11px;
+    min-width: 75px;
+    height: 36px;
+    padding: 0 8px;
+  }
+  .react-confirm-alert .custom-ui .delete-button-covers .medium-size-button-confirm-cancel {
+    width: 100px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 319px) {
+  .react-confirm-alert .custom-ui {
+    width: 98% !important;
+    max-width: 280px !important;
+    margin: 2%;
+  }
+  .react-confirm-alert .custom-ui .delete-title {
+    padding: 4% 3% 2% 3%;
+  }
+  .react-confirm-alert .custom-ui .delete-title .delete-img-cover {
+    height: 20px;
+  }
+  .react-confirm-alert .custom-ui .delete-title .delete-img-cover img {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  .react-confirm-alert .custom-ui .delete-title .delete-text .delete-text-header.without-notify, .react-confirm-alert .custom-ui .delete-title .delete-text .delete-text-header.notify {
+    font-size: 12px;
+  }
+  .react-confirm-alert .custom-ui .delete-title .delete-text .delete-text-header.review {
+    font-size: 10px;
+  }
+  .react-confirm-alert .custom-ui .delete-description {
+    padding: 2% 3% 4% 3%;
+  }
+  .react-confirm-alert .custom-ui .delete-description .delete-description-text-one.without-notify, .react-confirm-alert .custom-ui .delete-description .delete-description-text-one.notify {
+    font-size: 11px;
+  }
+  .react-confirm-alert .custom-ui .delete-description .delete-description-text-one.review {
+    font-size: 10px;
+  }
+  .react-confirm-alert .custom-ui .delete-description .delete-description-text-two.without-notify, .react-confirm-alert .custom-ui .delete-description .delete-description-text-two.notify {
+    font-size: 11px;
+  }
+  .react-confirm-alert .custom-ui .delete-button-covers {
+    padding: 4% 3% 3% 3%;
+    gap: 6px;
+  }
+  .react-confirm-alert .custom-ui .delete-button-covers button {
+    font-size: 10px;
+    min-width: 65px;
+    height: 32px;
+  }
+  .react-confirm-alert .custom-ui .delete-button-covers .medium-size-button-confirm-cancel {
+    width: 90px;
+    font-size: 9px;
+  }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .react-confirm-alert .custom-ui {
+    max-height: 90vh !important;
+    height: auto !important;
+  }
+  .react-confirm-alert .custom-ui .delete-title {
+    height: auto;
+    min-height: 40px;
+    padding: 3% 4% 2% 4%;
+  }
+  .react-confirm-alert .custom-ui .delete-description {
+    height: auto;
+    padding: 2% 4% 3% 4%;
+  }
+  .react-confirm-alert .custom-ui .delete-button-covers {
+    height: auto;
+    padding: 3% 4% 3% 4%;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .react-confirm-alert .custom-ui .delete-button-covers button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .react-confirm-alert .custom-ui .delete-title .delete-img-cover img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -47,11 +47,21 @@ function CartContainers() {
     index,
     basket
   ) => {
-    setProductInfo((draft) => {
-      draft.cartBasket[index].quantityCount &&
-        draft.cartBasket[index].quantityCount!--;
-    });
-    updateToCartInfo(basket, "--");
+    // Check if quantity is greater than 1 before decrementing
+    if (basket.quantityCount! > 1) {
+      setProductInfo((draft) => {
+        draft.cartBasket[index].quantityCount &&
+          draft.cartBasket[index].quantityCount!--;
+      });
+      updateToCartInfo(basket, "--");
+    } else {
+      // Optional: Show notification when user tries to decrement below 1
+      NotificationManager.warning(
+        "Minimum quantity is 1. Use 'Remove from cart' to delete this item.",
+        "",
+        2000
+      );
+    }
   };
 
   //remove the product from cart
