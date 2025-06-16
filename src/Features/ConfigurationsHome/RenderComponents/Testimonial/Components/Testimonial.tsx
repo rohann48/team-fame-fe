@@ -14,6 +14,8 @@ function Testimonial({
   uploadedFile,
   handleCancel,
   confirmDeleteTestimonial,
+  handleEditClick,
+  editBool,
 }: TestimonialComponentProps) {
   const [currentPage, setCurrentPage] = useState(0);
   const testimonialsPerPage = 5;
@@ -62,7 +64,7 @@ function Testimonial({
                   Cancel
                 </button>
                 <button className="save" onClick={() => handleSave()}>
-                  SAVE
+                  {editBool ? "UPDATE" : "SAVE"}
                 </button>
               </div>
             </div>
@@ -142,7 +144,10 @@ function Testimonial({
                     )}
                   </td>
                   <td>
-                    <button className="edit-btn" disabled>
+                    <button
+                      className="edit-btn"
+                      onClick={() => handleEditClick(testimonial._id)}
+                    >
                       Edit
                     </button>
                     <button

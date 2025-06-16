@@ -28,6 +28,8 @@ function EventsContainer() {
     useState<EventContainerProps["eventForms"]>(initialState);
   const [uploadedFile, setUploadedFile] = useState<File[]>([]);
   const [events, setEvents] = useImmer<EventContainerProps["events"]>([]);
+  const [editBool, setEditBool] = useState(false);
+  const [eventId, setEventId] = useState("");
 
   const handleChangeInputs = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -48,27 +50,31 @@ function EventsContainer() {
 
   const handleSave = async () => {
     try {
-      let form = new FormData();
-      form.append("name", eventForms.name);
-      form.append("title", eventForms.title);
-      form.append("date", eventForms.date);
-      form.append("time", eventForms.time);
-      form.append("location", eventForms.location);
-      form.append("description", eventForms.description);
-      form.append("status", "completed");
-      form.append("clientId", userInfo._id);
+      if (editBool) {
+        handleUpdate();
+      } else {
+        let form = new FormData();
+        form.append("name", eventForms.name);
+        form.append("title", eventForms.title);
+        form.append("date", eventForms.date);
+        form.append("time", eventForms.time);
+        form.append("location", eventForms.location);
+        form.append("description", eventForms.description);
+        form.append("status", "completed");
+        form.append("clientId", userInfo._id);
 
-      if (uploadedFile.length) {
-        form.append("fileToUpload", uploadedFile[0]);
+        if (uploadedFile.length) {
+          form.append("fileToUpload", uploadedFile[0]);
+        }
+
+        const response = await ApiHandler.postEvents(form);
+        setEvents((draft) => {
+          draft.unshift(response.results);
+        });
+        setUploadedFile([]);
+        setEventForms(initialState);
+        NotificationManager.success(Notify.ADD, "", 2000);
       }
-
-      const response = await ApiHandler.postEvents(form);
-      setEvents((draft) => {
-        draft.unshift(response.results);
-      });
-      setUploadedFile([]);
-      setEventForms(initialState);
-      NotificationManager.success(Notify.ADD, "", 2000);
     } catch (err) {
       console.error(err);
       NotificationManager.warning(Notify.DEFAULT, "", 2000);
@@ -81,12 +87,13 @@ function EventsContainer() {
   };
 
   useEffect(() => {
-    getEventsData();
-  }, [userInfo._id]);
+    if (userInfo._id && !editBool) getEventsData();
+  }, [userInfo._id, editBool]);
 
   const handleCancel = () => {
     setUploadedFile([]);
     setEventForms(initialState);
+    setEditBool(false);
   };
 
   const confirmDeleteEvent = (
@@ -140,6 +147,45 @@ function EventsContainer() {
     }
   };
 
+  const handleEditClick = (id: string) => {
+    if (events.length > 0) {
+      setEditBool(true);
+      const data = events.find((ele) => ele._id === id)!;
+      setEventForms(data);
+      setEventId(id);
+    } else setEditBool(false);
+  };
+
+  const handleUpdate = async () => {
+    try {
+      let form = new FormData();
+      form.append("name", eventForms.name);
+      form.append("title", eventForms.title);
+      form.append("date", eventForms.date);
+      form.append("time", eventForms.time);
+      form.append("location", eventForms.location);
+      form.append("description", eventForms.description);
+      form.append("status", "completed");
+      form.append("clientId", userInfo._id);
+
+      if (uploadedFile.length) {
+        form.append("fileToUpload", uploadedFile[0]);
+      }
+      const response = await ApiHandler.updateEvents(eventId, form);
+      // setTestiMonials((draft) => {
+      //   draft.push(response.results);
+      // });
+      setUploadedFile([]);
+      setEventForms(initialState);
+      setEventId("");
+      setEditBool(false);
+      NotificationManager.success(Notify.UPDATE, "", 2000);
+    } catch (err) {
+      console.error(err);
+      NotificationManager.warning(Notify.DEFAULT, "", 2000);
+    }
+  };
+
   return (
     <Events
       handleChangeInputs={handleChangeInputs}
@@ -150,6 +196,8 @@ function EventsContainer() {
       handleCancel={handleCancel}
       confirmDeleteEvent={confirmDeleteEvent}
       uploadedFile={uploadedFile}
+      handleEditClick={handleEditClick}
+      editBool={editBool}
     />
   );
 }

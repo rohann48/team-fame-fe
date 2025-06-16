@@ -105,4 +105,10 @@ export const apiAuth = {
       config
     );
   },
+  putApiForFormDatawithoutEncryption: async (url: string, data?: any) => {
+    const config = {
+      headers: { "content-type": "multipart/form-data" },
+    };
+    return axios.put(`${process.env.REACT_APP_BASE_URL}tf${url}`, data, config);
+  },
 };
