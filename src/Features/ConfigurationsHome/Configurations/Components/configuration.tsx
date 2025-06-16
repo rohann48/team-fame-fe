@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import icons from "../../../Assets/Icons/icons";
 import Footer from "../../../Common/CommonComponent/Footer";
 import images from "../../../ImageVariables";
@@ -10,6 +11,9 @@ const Configuration = ({
   sideNavLinks,
   userInfo,
 }: configurationType) => {
+  const isAdmin = userInfo?.role === "admin";
+  const [hoveredLink, setHoveredLink] = useState<any>(null);
+
   return (
     <div className="config-page-container">
       <div className="config-page-cover">
@@ -30,12 +34,22 @@ const Configuration = ({
                         ? "config-links-border selected-tab"
                         : "config-links-border";
                     }}
+                    onMouseEnter={() => setHoveredLink(i)}
+                    onMouseLeave={() => setHoveredLink(null)}
                   >
                     <div className="config-links-title">
                       <div className="config-links-img">
                         <img src={link.img} alt="config-icons" />
                       </div>
-                      <div className="title">{link.title}</div>
+                      {(!isAdmin || hoveredLink === i) && (
+                        <div
+                          className={`title ${
+                            hoveredLink === i ? "title-hovered" : ""
+                          }`}
+                        >
+                          {link.title}
+                        </div>
+                      )}
                     </div>
                   </NavLink>
                 </div>

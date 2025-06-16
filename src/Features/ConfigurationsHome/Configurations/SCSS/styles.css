@@ -26,8 +26,10 @@
 .config-page-container .config-page-cover .config-container .config-container-left {
   width: 18%;
   height: 100%;
-  border: 1px solid #E4E6E9;
+  border: 1px solid #e4e6e9;
   background: #fafafa;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
 }
 .config-page-container .config-page-cover .config-container .config-container-left .config-links {
   padding: 2%;
@@ -39,13 +41,16 @@
 .config-page-container .config-page-cover .config-container .config-container-left .config-links .config-links-height .config-links-border {
   height: 100%;
   padding: 1%;
-  border-bottom: 1px solid #E4E6E9;
+  border-bottom: 1px solid #e4e6e9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
   text-decoration: none;
   color: #444444;
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .config-page-container .config-page-cover .config-container .config-container-left .config-links .config-links-height .config-links-border .config-links-title {
   display: -webkit-box;
@@ -61,6 +66,7 @@
   cursor: pointer;
   height: 100%;
   width: 100%;
+  position: relative;
 }
 .config-page-container .config-page-cover .config-container .config-container-left .config-links .config-links-height .config-links-border .config-links-title:hover {
   background-color: rgba(133, 132, 132, 0.1607843137);
@@ -70,19 +76,39 @@
   display: -ms-flexbox;
   display: flex;
   width: 15%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .config-page-container .config-page-cover .config-container .config-container-left .config-links .config-links-height .config-links-border .config-links-title .title {
   width: 42%;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.config-page-container .config-page-cover .config-container .config-container-left .config-links .config-links-height .config-links-border .config-links-title .title.title-hovered {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 .config-page-container .config-page-cover .config-container .config-container-left .config-links .config-links-height .config-links-border.selected-tab {
   background-color: #c1b8b8;
 }
-.config-page-container .config-page-cover .config-container .config-container-right {
-  width: 82%;
-  height: 100%;
+.config-page-container .config-page-cover .config-container .config-container-left .config-links .config-links-height .config-links-border:hover .config-links-title .config-links-img {
+  width: 20%;
 }
-.config-page-container .config-page-cover .config-container .config-container-name {
-  font-size: 26px;
+.config-page-container .config-page-cover .config-container .config-container-left .config-links .config-links-height .config-links-border:hover .config-links-title .title {
+  opacity: 1;
+  visibility: visible;
+}
+.config-page-container .config-page-cover .config-container .config-container-left .config-container-name {
+  font-size: 20px;
   padding: 10%;
   height: 18%;
   display: -webkit-box;
@@ -94,7 +120,73 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid #E4E6E9;
+  border-bottom: 1px solid #e4e6e9;
   color: #444444;
   font-weight: 500;
+}
+.config-page-container .config-page-cover .config-container .config-container-right {
+  width: 82%;
+  height: 100%;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+
+.config-page-container .config-container .config-container-left:hover .config-links .config-links-height .config-links-border .config-links-title .title {
+  opacity: 1;
+  visibility: visible;
+  -webkit-animation: slideInTitle 0.3s ease forwards;
+          animation: slideInTitle 0.3s ease forwards;
+}
+
+@-webkit-keyframes slideInTitle {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInTitle {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@media (max-width: 768px) {
+  .config-page-container .config-container .config-container-left {
+    width: 25%;
+  }
+  .config-page-container .config-container .config-container-left .config-container-name {
+    font-size: 18px;
+    padding: 5%;
+  }
+  .config-page-container .config-container .config-container-left .config-links .config-links-height .config-links-border .config-links-title .title {
+    font-size: 12px;
+  }
+  .config-page-container .config-container .config-container-right {
+    width: 75%;
+  }
+}
+@media (max-width: 576px) {
+  .config-page-container .config-container .config-container-left {
+    width: 30%;
+  }
+  .config-page-container .config-container .config-container-left .config-links .config-links-height .config-links-border .config-links-title .title {
+    font-size: 10px;
+    width: 60%;
+  }
+  .config-page-container .config-container .config-container-right {
+    width: 70%;
+  }
 }/*# sourceMappingURL=styles.css.map */
