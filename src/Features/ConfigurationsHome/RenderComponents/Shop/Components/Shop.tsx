@@ -11,7 +11,9 @@ const Shop = ({
   products,
   confirmDeleteThreadFile,
   inventorySummary,
-  handleEditProduct,
+  handleEditClick,
+  editBool,
+  handleClose,
 }: ShopComponentProps) => {
   return (
     <div className="products-container">
@@ -32,9 +34,11 @@ const Shop = ({
                 </div>
               </div>
               <div className="products-btn-cover">
-                <button className="cancel">Cancel</button>
+                <button className="cancel" onClick={() => handleClose()}>
+                  Cancel
+                </button>
                 <button className="save" onClick={handleSave}>
-                  SAVE
+                  {editBool ? "UPDATE" : "SAVE"}
                 </button>
               </div>
             </div>
@@ -175,8 +179,7 @@ const Shop = ({
                   <td>
                     <button
                       className="edit-btn"
-                      disabled
-                      onClick={() => handleEditProduct(product._id)}
+                      onClick={() => handleEditClick(product._id)}
                     >
                       Edit
                     </button>

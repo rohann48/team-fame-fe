@@ -35,6 +35,9 @@ function ShopContainer() {
     totalOrderedQuantity: 0,
     totalProductQuantity: 0,
   });
+  const [editBool, setEditBool] = useState(false);
+  const [productId, setProductId] = useState("");
+
   //handle change form inputs
   const handleChangeInputs = (e: any, type: string) => {
     const { value } = e.target;
@@ -51,29 +54,33 @@ function ShopContainer() {
     setInventorySummary({ ...response.results?.inventorySummary });
   };
   useEffect(() => {
-    getProductData();
-  }, [userInfo._id]);
+    if (userInfo?._id && !editBool) getProductData();
+  }, [userInfo._id, editBool]);
 
   //save
   const handleSave = async () => {
     try {
-      let form = new FormData();
-      form.append("name", productDetails.name);
-      form.append("details", productDetails.details);
-      form.append("category", productDetails.category);
-      form.append("price", productDetails.price);
-      form.append("cashback", productDetails.cashback);
-      form.append("clientId", userInfo._id);
-      // for (let i = 0; i < uploadedFiles.length; i++) {
-      if (uploadedFiles.length) {
-        form.append("fileToUpload", uploadedFiles[0]);
+      if (editBool) {
+        handleUpdate();
+      } else {
+        let form = new FormData();
+        form.append("name", productDetails.name);
+        form.append("details", productDetails.details);
+        form.append("category", productDetails.category);
+        form.append("price", productDetails.price);
+        form.append("cashback", productDetails.cashback);
+        form.append("clientId", userInfo._id);
+        // for (let i = 0; i < uploadedFiles.length; i++) {
+        if (uploadedFiles.length) {
+          form.append("fileToUpload", uploadedFiles[0]);
+        }
+        // }
+        let response = await ApiHandler.postProductDetails(form);
+        setUploadedFiles([]);
+        // const response = await ApiHandler.postProductDetails(modifiedData);
+        setProducts([...products, response.results]);
+        NotificationManager.success(Notify.ADD, "", 2000);
       }
-      // }
-      let response = await ApiHandler.postProductDetails(form);
-      setUploadedFiles([]);
-      // const response = await ApiHandler.postProductDetails(modifiedData);
-      setProducts([...products, response.results]);
-      NotificationManager.success(Notify.ADD, "", 2000);
     } catch (err) {
       console.log(err);
       NotificationManager.warning(Notify.DEFAULT, "", 2000);
@@ -109,6 +116,12 @@ function ShopContainer() {
     };
     return ConfirmAlertHome({ confirmParameters });
   };
+
+  const handleClose = () => {
+    setProductDetails({ ...initialState });
+    setUploadedFiles([]);
+    setEditBool(false);
+  };
   const deleteProduct = async (
     docId: string,
     fileKey: string,
@@ -130,19 +143,39 @@ function ShopContainer() {
       }
     }
   };
-  const handleEditProduct = async (id: string) => {
-    const modifiedData = {};
+
+  const handleEditClick = (id: string) => {
+    if (products.length > 0) {
+      setEditBool(true);
+      const data: any = products.find((ele) => ele._id === id)!;
+      setProductDetails(data);
+      setProductId(id);
+    } else setEditBool(false);
+  };
+
+  const handleUpdate = async () => {
     try {
-      const response = await ApiHandler.updateProduct(id, modifiedData);
-      setProductDetails({
-        name: response.results.name,
-        category: response.results.category,
-        details: response.results.details,
-        price: response.results.price,
-        cashback: response.results.cashback,
-      });
-      setUploadedFiles(response.results.imageInfo);
-    } catch (error) {}
+      let form = new FormData();
+      form.append("name", productDetails.name);
+      form.append("category", productDetails.category);
+      form.append("details", productDetails.details);
+      form.append("price", productDetails.price);
+      form.append("cashback", productDetails.cashback);
+      form.append("clientId", userInfo._id);
+
+      if (uploadedFiles.length) {
+        form.append("fileToUpload", uploadedFiles[0]);
+      }
+      const response = await ApiHandler.updateProduct(productId, form);
+      setUploadedFiles([]);
+      setProductDetails(initialState);
+      setProductId("");
+      setEditBool(false);
+      NotificationManager.success(Notify.UPDATE, "", 2000);
+    } catch (err) {
+      console.error(err);
+      NotificationManager.warning(Notify.DEFAULT, "", 2000);
+    }
   };
 
   return (
@@ -154,7 +187,9 @@ function ShopContainer() {
       products={products}
       confirmDeleteThreadFile={confirmDeleteThreadFile}
       inventorySummary={inventorySummary}
-      handleEditProduct={handleEditProduct}
+      handleEditClick={handleEditClick}
+      editBool={editBool}
+      handleClose={handleClose}
     />
   );
 }

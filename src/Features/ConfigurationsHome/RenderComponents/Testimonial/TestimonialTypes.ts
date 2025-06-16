@@ -53,6 +53,8 @@ export type TestimonialComponentProps = {
     fileKey: string,
     index: number
   ) => JSX.Element;
+  handleEditClick: (id: string) => void;
+  editBool: boolean;
 };
 
 export type EventData = {

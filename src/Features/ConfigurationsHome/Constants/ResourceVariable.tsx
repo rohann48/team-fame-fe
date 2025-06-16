@@ -28,5 +28,8 @@ export const Resource = {
     getProductById: (productId: string) => `/shop/product/${productId}`,
     addInvestmentManually: `/gold-scheme/add-scheme-manually`,
     getClientDetails: `/client`,
+    updateTestimonial: (testimonialId: string) =>
+      `/testimonial/update?testimonialId=${testimonialId}`,
+    updateEvents: (eventId: string) => `/event/update?eventId=${eventId}`,
   },
 };
