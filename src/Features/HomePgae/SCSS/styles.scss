@@ -630,13 +630,13 @@
             position: relative;
             padding-left: 15px;
 
-            &::before {
-              content: "“";
-              font-size: 2rem;
-              position: absolute;
-              left: 0;
-              top: 0;
-            }
+            // &::before {
+            //   content: "“";
+            //   font-size: 2rem;
+            //   position: absolute;
+            //   left: 0;
+            //   top: 0;
+            // }
           }
         }
 

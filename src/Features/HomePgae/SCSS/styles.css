@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .home-page-container {
   width: 100%;
   height: 100%;
@@ -619,13 +618,6 @@
   margin-bottom: 20px;
   position: relative;
   padding-left: 15px;
-}
-.home-page-container .home-page-cover .home-testimonial-cover .testimonial-container .testimonial-content .testimonial-text::before {
-  content: "“";
-  font-size: 2rem;
-  position: absolute;
-  left: 0;
-  top: 0;
 }
 .home-page-container .home-page-cover .home-testimonial-cover .testimonial-container .testimonial-navigation {
   -webkit-box-pack: center;

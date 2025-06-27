@@ -621,14 +621,22 @@ const HomePage = ({
                   <div className="testimonial-text">
                     <p>{testimonialData?.[currentIndex]?.name}</p>
                   </div>
+                  <div className="testimonial-text">
+                    <p
+                      style={{
+                        color: "#bd9255",
+                      }}
+                    >
+                      {testimonialData?.[currentIndex]?.achievement}
+                    </p>
+                  </div>
                 </div>
                 <div className="testimonial-navigation">
                   <div className="testimonial-author">
                     <h3>{testimonialData?.[currentIndex]?.about}</h3>
-                    <p>{testimonialData?.[currentIndex]?.achievement}</p>
                   </div>
                   <div className="action-btn-cover">
-                    <button
+                    {/* <button
                       className="nav-button"
                       onClick={() => goToPreviousTestimonial()}
                     >
@@ -639,7 +647,7 @@ const HomePage = ({
                       onClick={() => goToNextTestimonial()}
                     >
                       {">"}
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>
