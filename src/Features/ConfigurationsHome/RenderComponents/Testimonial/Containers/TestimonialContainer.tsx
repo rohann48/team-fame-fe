@@ -29,6 +29,29 @@ function TestimonialContainer() {
   const [editBool, setEditBool] = useState(false);
   const [testmonialId, setTestmonialId] = useState("");
 
+  // Validation function
+  const validateForm = () => {
+    if (!testimonialDetails.name || !testimonialDetails.name.trim()) {
+      NotificationManager.error("Name is required", "", 3000);
+      return false;
+    }
+
+    if (!testimonialDetails.about || !testimonialDetails.about.trim()) {
+      NotificationManager.error("About field is required", "", 3000);
+      return false;
+    }
+
+    if (
+      !testimonialDetails.achievement ||
+      !testimonialDetails.achievement.trim()
+    ) {
+      NotificationManager.error("Achievement is required", "", 3000);
+      return false;
+    }
+
+    return true;
+  };
+
   const handleChangeInputs = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     type: string
@@ -44,6 +67,11 @@ function TestimonialContainer() {
   };
 
   const handleSave = async () => {
+    // Validate form before submission
+    if (!validateForm()) {
+      return;
+    }
+
     try {
       if (editBool) {
         handleUpdate();
@@ -70,10 +98,12 @@ function TestimonialContainer() {
       NotificationManager.warning(Notify.DEFAULT, "", 2000);
     }
   };
+
   const getTestiMonialData = async () => {
     const response = await ApiHandler.getTestiMonialData();
     setTestiMonials([...response.results]);
   };
+
   useEffect(() => {
     if (userInfo?._id && !editBool) getTestiMonialData();
   }, [userInfo._id, editBool]);
@@ -83,6 +113,7 @@ function TestimonialContainer() {
     setTestimonialDetails(initialState);
     setEditBool(false);
   };
+
   const confirmDeleteTestimonial = (
     docId: string,
     fileKey: string,
@@ -145,6 +176,11 @@ function TestimonialContainer() {
   };
 
   const handleUpdate = async () => {
+    // Validate form before updating
+    if (!validateForm()) {
+      return;
+    }
+
     try {
       let form = new FormData();
       form.append("name", testimonialDetails.name);
@@ -169,6 +205,7 @@ function TestimonialContainer() {
       NotificationManager.warning(Notify.DEFAULT, "", 2000);
     }
   };
+
   return (
     <Testimonial
       handleChangeInputs={handleChangeInputs}

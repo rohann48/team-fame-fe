@@ -10,7 +10,6 @@ import images from "../../../../ImageVariables";
 import ConfirmAlertHome from "../../../../Common/CommonComponent/ConfirmAlert/Component/ConfirmAlertHome";
 import { handleErrorResponse } from "../../../../Common/CommonFunctions/CommonErrorHandler";
 import { useNavigate } from "react-router-dom";
-import { ca } from "date-fns/locale";
 
 let initialState = {
   name: "",
@@ -19,6 +18,7 @@ let initialState = {
   price: "",
   cashback: "",
 };
+
 function ShopContainer() {
   const navigate = useNavigate();
   const { eventData } = useContext(GlobalDataContext);
@@ -38,6 +38,58 @@ function ShopContainer() {
   const [editBool, setEditBool] = useState(false);
   const [productId, setProductId] = useState("");
 
+  // Validation function
+  const validateForm = () => {
+    if (!productDetails.name || !productDetails.name.trim()) {
+      NotificationManager.error("Product name is required", "", 3000);
+      return false;
+    }
+
+    if (!productDetails.category || !productDetails.category.trim()) {
+      NotificationManager.error("Product category is required", "", 3000);
+      return false;
+    }
+
+    if (!productDetails.details || !productDetails.details.trim()) {
+      NotificationManager.error("Product details are required", "", 3000);
+      return false;
+    }
+
+    if (!productDetails.price || !productDetails.price.trim()) {
+      NotificationManager.error("Product price is required", "", 3000);
+      return false;
+    }
+
+    // Validate price is a valid number
+    const priceValue = parseFloat(productDetails.price);
+    if (isNaN(priceValue) || priceValue <= 0) {
+      NotificationManager.error(
+        "Please enter a valid price greater than 0",
+        "",
+        3000
+      );
+      return false;
+    }
+
+    if (!productDetails.cashback || !productDetails.cashback.trim()) {
+      NotificationManager.error("Cashback amount is required", "", 3000);
+      return false;
+    }
+
+    // Validate cashback is a valid number
+    const cashbackValue = parseFloat(productDetails.cashback);
+    if (isNaN(cashbackValue) || cashbackValue < 0) {
+      NotificationManager.error(
+        "Please enter a valid cashback amount",
+        "",
+        3000
+      );
+      return false;
+    }
+
+    return true;
+  };
+
   //handle change form inputs
   const handleChangeInputs = (e: any, type: string) => {
     const { value } = e.target;
@@ -53,12 +105,18 @@ function ShopContainer() {
     setProducts([...response.results?.products]);
     setInventorySummary({ ...response.results?.inventorySummary });
   };
+
   useEffect(() => {
     if (userInfo?._id && !editBool) getProductData();
   }, [userInfo._id, editBool]);
 
   //save
   const handleSave = async () => {
+    // Validate form before submission
+    if (!validateForm()) {
+      return;
+    }
+
     try {
       if (editBool) {
         handleUpdate();
@@ -86,11 +144,11 @@ function ShopContainer() {
       NotificationManager.warning(Notify.DEFAULT, "", 2000);
     }
   };
+
   //confirm delete
   const confirmDeleteThreadFile = (
     docId: string,
     fileKey: string,
-
     index: number
   ) => {
     const confirmParameters = {
@@ -122,6 +180,7 @@ function ShopContainer() {
     setUploadedFiles([]);
     setEditBool(false);
   };
+
   const deleteProduct = async (
     docId: string,
     fileKey: string,
@@ -154,6 +213,11 @@ function ShopContainer() {
   };
 
   const handleUpdate = async () => {
+    // Validate form before updating
+    if (!validateForm()) {
+      return;
+    }
+
     try {
       let form = new FormData();
       form.append("name", productDetails.name);

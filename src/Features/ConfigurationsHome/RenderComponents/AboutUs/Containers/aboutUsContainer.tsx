@@ -7,15 +7,37 @@ import { NotificationManager } from "react-notifications";
 
 function AboutUsContainer() {
   const { aboutUsData, setAboutUsData } = useContext(GlobalDataContext);
+
+  // Validation function
+  const validateForm = () => {
+    if (!aboutUsData?.content || !aboutUsData.content.trim()) {
+      NotificationManager.error("About Us content is required", "", 3000);
+      return false;
+    }
+
+    return true;
+  };
+
   const postAboutData = async () => {
-    const data = await ApiHandler.postAboutUs(aboutUsData);
-    setAboutUsData(data.results);
-    NotificationManager.success(Notify.ADD, "", 2000);
+    // Validate form before submission
+    if (!validateForm()) {
+      return;
+    }
+
+    try {
+      const data = await ApiHandler.postAboutUs(aboutUsData);
+      setAboutUsData(data.results);
+      NotificationManager.success(Notify.ADD, "", 2000);
+    } catch (err) {
+      console.error(err);
+      NotificationManager.warning(Notify.DEFAULT, "", 2000);
+    }
   };
 
   const handleOnChange = (val: string) => {
     setAboutUsData({ content: val });
   };
+
   return (
     <AboutUs
       aboutUsData={aboutUsData}
@@ -24,4 +46,5 @@ function AboutUsContainer() {
     />
   );
 }
+
 export default AboutUsContainer;

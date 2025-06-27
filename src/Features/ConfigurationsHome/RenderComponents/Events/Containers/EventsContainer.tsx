@@ -31,6 +31,41 @@ function EventsContainer() {
   const [editBool, setEditBool] = useState(false);
   const [eventId, setEventId] = useState("");
 
+  // Validation function
+  const validateForm = () => {
+    if (!eventForms.name || !eventForms.name.trim()) {
+      NotificationManager.error("Event name is required", "", 3000);
+      return false;
+    }
+
+    if (!eventForms.title || !eventForms.title.trim()) {
+      NotificationManager.error("Event title is required", "", 3000);
+      return false;
+    }
+
+    if (!eventForms.date || !eventForms.date.trim()) {
+      NotificationManager.error("Event date is required", "", 3000);
+      return false;
+    }
+
+    if (!eventForms.time || !eventForms.time.trim()) {
+      NotificationManager.error("Event time is required", "", 3000);
+      return false;
+    }
+
+    if (!eventForms.location || !eventForms.location.trim()) {
+      NotificationManager.error("Event location is required", "", 3000);
+      return false;
+    }
+
+    if (!eventForms.description || !eventForms.description.trim()) {
+      NotificationManager.error("Event description is required", "", 3000);
+      return false;
+    }
+
+    return true;
+  };
+
   const handleChangeInputs = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     type: string
@@ -49,6 +84,11 @@ function EventsContainer() {
   };
 
   const handleSave = async () => {
+    // Validate form before submission
+    if (!validateForm()) {
+      return;
+    }
+
     try {
       if (editBool) {
         handleUpdate();
@@ -157,6 +197,11 @@ function EventsContainer() {
   };
 
   const handleUpdate = async () => {
+    // Validate form before updating
+    if (!validateForm()) {
+      return;
+    }
+
     try {
       let form = new FormData();
       form.append("name", eventForms.name);
