@@ -40,11 +40,12 @@
           flex-direction: column;
   position: absolute;
   top: 4%;
-  left: 50%;
-  right: 50%;
+  width: 100%;
 }
 .home-page-container .home-page-cover .home-revolution-logo-cover .logo-and-btn-cover .logo-img {
   opacity: 0.8;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .home-page-container .home-page-cover .home-revolution-logo-cover .logo-and-btn-cover .contact-us-btn {
   color: #bd9255;

@@ -39,11 +39,14 @@
         flex-direction: column;
         position: absolute;
         top: 4%;
-        left: 50%;
-        right: 50%;
+        // left: 50%;
+        // right: 50%;
+        width: 100%;
 
         .logo-img {
           opacity: 0.8;
+          object-fit: contain;
+
         }
 
         .contact-us-btn {
@@ -215,6 +218,7 @@
         display: flex;
         align-items: center;
         justify-content: end;
+
         .about-text {
           font-size: 50px;
         }
@@ -1291,6 +1295,7 @@
             margin-bottom: 10px;
 
             .card-right-cover {
+
               .day,
               .marathon-header,
               .date-cover,
@@ -1430,6 +1435,7 @@
       }
 
       .home-four-icons-cover {
+
         .education-logo-cover,
         .sports-logo-cover,
         .spirituality-logo-cover,
@@ -1456,6 +1462,7 @@
 
       .home-events-cover,
       .home-testimonial-cover {
+
         .cards,
         .testimonial-container {
           width: 100%;
