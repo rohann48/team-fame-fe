@@ -43,6 +43,7 @@
   width: 100%;
 }
 .home-page-container .home-page-cover .home-revolution-logo-cover .logo-and-btn-cover .logo-img {
+  width: 50vw;
   opacity: 0.8;
   -o-object-fit: contain;
      object-fit: contain;
@@ -1242,7 +1243,6 @@
     max-width: 100%;
   }
   .home-page-container .home-page-cover .home-revolution-logo-cover .logo-and-btn-cover .logo-img {
-    width: 20rem;
     height: auto;
   }
   .home-page-container .home-page-cover .home-revolution-logo-cover .logo-and-btn-cover .contact-us-btn {
