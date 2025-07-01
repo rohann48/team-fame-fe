@@ -393,7 +393,7 @@
 .home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .marathon-img-cover,
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .card-right-cover .marathon-img-cover {
   width: 100%;
-  height: 30%;
+  height: 35%;
   overflow: hidden;
   border-radius: 8px;
   background-color: #f5f5f5;
@@ -406,23 +406,26 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 8px 0;
 }
 .home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .marathon-img-cover .marathon-img,
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .card-right-cover .marathon-img-cover .marathon-img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 8px;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  max-width: 100%;
+  max-height: 100%;
 }
 .home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .marathon-img-cover .marathon-img:hover,
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .card-right-cover .marathon-img-cover .marathon-img:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 .home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .marathon-header,
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .card-right-cover .marathon-header {
@@ -433,6 +436,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin: 5px 0;
 }
 .home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .date-cover,
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .card-right-cover .date-cover {
@@ -444,6 +448,7 @@
           align-items: center;
   gap: 10px;
   height: 10%;
+  margin: 3px 0;
 }
 .home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .date-cover .date,
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .card-right-cover .date-cover .date {
@@ -462,6 +467,7 @@
           align-items: center;
   gap: 10px;
   height: 10%;
+  margin: 3px 0;
 }
 .home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .time-cover .time,
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .card-right-cover .time-cover .time {
@@ -479,10 +485,11 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
-  height: 16%;
+  height: 12%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin: 3px 0;
 }
 .home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .location-cover .location,
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .card-right-cover .location-cover .location {
@@ -494,6 +501,7 @@
 .home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .contact-us-cover,
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .card-right-cover .contact-us-cover {
   height: 10%;
+  margin: 5px 0;
 }
 .home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .contact-us-cover .contact-us-btn,
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .card-right-cover .contact-us-cover .contact-us-btn {
@@ -505,6 +513,14 @@
   background-color: #2b2b2b;
   font-size: 14px;
   font-weight: 400;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .contact-us-cover .contact-us-btn:hover,
+.home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .card-right-cover .contact-us-cover .contact-us-btn:hover {
+  background-color: #bd9255;
 }
 .home-page-container .home-page-cover .home-events-cover .cards-cover .view-all-video-card,
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .view-all-video-card {
@@ -719,14 +735,13 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  height: 450px;
   height: 350px;
   margin: 5px;
   cursor: pointer;
 }
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .cards-img {
   height: 70%;
-  width: 100;
+  width: 100%;
 }
 .home-page-container .home-page-cover .home-videos-and-news-cover .cards-cover .cards .cards-img .thumbnail {
   width: 100%;
@@ -1331,6 +1346,9 @@
     width: 100%;
     margin-bottom: 10px;
   }
+  .home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .marathon-img-cover {
+    height: 40%;
+  }
   .home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .day,
   .home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .marathon-header,
   .home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .date-cover,
@@ -1423,5 +1441,8 @@
   }
   .home-page-container .home-page-cover .testimonial-author h3 {
     font-size: 1rem !important;
+  }
+  .home-page-container .home-page-cover .home-events-cover .cards-cover .cards .card-right-cover .marathon-img-cover {
+    height: 35%;
   }
 }/*# sourceMappingURL=styles.css.map */
