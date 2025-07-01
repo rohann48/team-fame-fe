@@ -86,6 +86,9 @@
 .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-left {
   width: 7%;
   background-image: url("../../../Assets//Images/cardLabelSide.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right {
   width: 93%;
@@ -114,16 +117,38 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: #000000;
 }
 .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-img-cover {
   width: 100%;
   height: 50%;
   overflow: hidden;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-img-cover .events-card-event-img {
-  aspect-ratio: 3/2;
-  -o-object-fit: contain;
-     object-fit: contain;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-img-cover .events-card-event-img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-event-title {
   height: 10%;
@@ -141,6 +166,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-top: 8px;
 }
 .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-event-date {
   height: 10%;
@@ -151,9 +177,10 @@
       -ms-flex-align: center;
           align-items: center;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   color: white;
   text-transform: uppercase;
+  gap: 8px;
 }
 .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-event-time {
   height: 10%;
@@ -164,9 +191,10 @@
       -ms-flex-align: center;
           align-items: center;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   color: white;
   text-transform: uppercase;
+  gap: 8px;
 }
 .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-event-location {
   height: 10%;
@@ -177,13 +205,14 @@
       -ms-flex-align: center;
           align-items: center;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   color: white;
   text-transform: uppercase;
   text-align: justify;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  gap: 8px;
 }
 .events-cards-container .events-former-text-main-cover {
   width: 100%;
@@ -260,6 +289,12 @@
   text-align: center;
   border: 1px solid #bd9255;
   border-radius: 4px;
+  cursor: pointer;
+}
+.events-cards-container .events-former-text-main-cover .events-former-text-join-btn-cover .events-former-text-join-btn:hover {
+  background-color: #a67c41;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
 /* Responsive Breakpoints */
@@ -273,10 +308,20 @@
   }
   .events-cards-container .events-cards-and-header-cover .events-cards-render-cover {
     padding-inline: 1rem;
+    gap: 15px;
   }
   .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards {
     width: 300px;
     height: 400px;
+  }
+  .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-img-cover {
+    height: 45%;
+  }
+  .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-event-title,
+  .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-event-date,
+  .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-event-time,
+  .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-event-location {
+    font-size: 13px;
   }
   .events-cards-container .events-former-text-main-cover .events-former-text-wrapper {
     font-size: 72px;
@@ -297,10 +342,24 @@
   }
   .events-cards-container .events-cards-and-header-cover .events-cards-render-cover {
     padding-inline: 0.5rem;
+    gap: 10px;
   }
   .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards {
-    width: 250px;
-    height: 350px;
+    width: 280px;
+    height: 380px;
+  }
+  .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover {
+    padding: 2%;
+  }
+  .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-img-cover {
+    height: 40%;
+  }
+  .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-event-title,
+  .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-event-date,
+  .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-event-time,
+  .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-event-location {
+    font-size: 12px;
+    height: 12%;
   }
   .events-cards-container .events-former-text-main-cover .events-former-text-wrapper {
     font-size: 56px;
@@ -317,8 +376,18 @@
     font-size: 14px;
   }
   .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards {
-    width: 200px;
-    height: 300px;
+    width: 250px;
+    height: 350px;
+  }
+  .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-img-cover {
+    height: 35%;
+  }
+  .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-event-title,
+  .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-event-date,
+  .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-event-time,
+  .events-cards-container .events-cards-and-header-cover .events-cards-render-cover .events-cards .events-card-right .events-card-right-inner-cover .events-card-event-location {
+    font-size: 11px;
+    height: 14%;
   }
   .events-cards-container .events-former-text-main-cover .events-former-text-wrapper {
     font-size: 40px;

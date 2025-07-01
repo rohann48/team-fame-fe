@@ -63,6 +63,9 @@
         .events-card-left {
           width: 7%;
           background-image: url("../../../Assets//Images/cardLabelSide.svg");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
         }
 
         .events-card-right {
@@ -89,6 +92,7 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                color: #000000;
               }
             }
 
@@ -96,11 +100,22 @@
               width: 100%;
               height: 50%;
               overflow: hidden;
+              border-radius: 8px;
+              background-color: #f5f5f5;
+              display: flex;
+              align-items: center;
+              justify-content: center;
 
               .events-card-event-img {
-                aspect-ratio: 3 / 2;
-                object-fit: contain;
-                // mix-blend-mode: darken;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 8px;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                  transform: scale(1.05);
+                }
               }
             }
 
@@ -116,6 +131,7 @@
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
+              margin-top: 8px;
             }
 
             .events-card-event-date {
@@ -123,9 +139,10 @@
               display: flex;
               align-items: center;
               font-size: 14px;
-              font-weight: 500;
+              font-weight: 400;
               color: white;
               text-transform: uppercase;
+              gap: 8px;
             }
 
             .events-card-event-time {
@@ -133,9 +150,10 @@
               display: flex;
               align-items: center;
               font-size: 14px;
-              font-weight: 500;
+              font-weight: 400;
               color: white;
               text-transform: uppercase;
+              gap: 8px;
             }
 
             .events-card-event-location {
@@ -143,13 +161,14 @@
               display: flex;
               align-items: center;
               font-size: 14px;
-              font-weight: 500;
+              font-weight: 400;
               color: white;
               text-transform: uppercase;
               text-align: justify;
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
+              gap: 8px;
             }
           }
         }
@@ -206,10 +225,17 @@
         text-align: center;
         border: 1px solid #bd9255;
         border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #a67c41;
+          transform: translateY(-2px);
+        }
       }
     }
   }
 }
+
 /* Responsive Breakpoints */
 
 /* Medium screens (tablets) */
@@ -226,10 +252,26 @@
 
       .events-cards-render-cover {
         padding-inline: 1rem;
+        gap: 15px;
 
         .events-cards {
           width: 300px;
           height: 400px;
+
+          .events-card-right {
+            .events-card-right-inner-cover {
+              .events-card-img-cover {
+                height: 45%;
+              }
+
+              .events-card-event-title,
+              .events-card-event-date,
+              .events-card-event-time,
+              .events-card-event-location {
+                font-size: 13px;
+              }
+            }
+          }
         }
       }
     }
@@ -262,10 +304,29 @@
 
       .events-cards-render-cover {
         padding-inline: 0.5rem;
+        gap: 10px;
 
         .events-cards {
-          width: 250px;
-          height: 350px;
+          width: 280px;
+          height: 380px;
+
+          .events-card-right {
+            .events-card-right-inner-cover {
+              padding: 2%;
+
+              .events-card-img-cover {
+                height: 40%;
+              }
+
+              .events-card-event-title,
+              .events-card-event-date,
+              .events-card-event-time,
+              .events-card-event-location {
+                font-size: 12px;
+                height: 12%;
+              }
+            }
+          }
         }
       }
     }
@@ -294,8 +355,24 @@
 
       .events-cards-render-cover {
         .events-cards {
-          width: 200px;
-          height: 300px;
+          width: 250px;
+          height: 350px;
+
+          .events-card-right {
+            .events-card-right-inner-cover {
+              .events-card-img-cover {
+                height: 35%;
+              }
+
+              .events-card-event-title,
+              .events-card-event-date,
+              .events-card-event-time,
+              .events-card-event-location {
+                font-size: 11px;
+                height: 14%;
+              }
+            }
+          }
         }
       }
     }

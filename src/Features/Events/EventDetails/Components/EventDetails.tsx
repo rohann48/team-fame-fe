@@ -15,7 +15,10 @@ function EventDetails({ eventAndNewsDetails }: EventsDetailsTypes) {
           <div className="events-details-cards-left-img-cover">
             <img
               className="events-details-cards-left-img"
-              src={images.eventCard}
+              src={
+                eventAndNewsDetails?.imageInfo?.[0]?.path ||
+                images.logoBackground
+              }
               alt="events"
             />
           </div>
@@ -41,7 +44,7 @@ function EventDetails({ eventAndNewsDetails }: EventsDetailsTypes) {
               {icons.location}&nbsp; {eventAndNewsDetails.location}
             </div>
             <div className="events-details-cards-register-btn-cover">
-              <div className="events-details-cards-register-btn">Register</div>
+              {/* <div className="events-details-cards-register-btn">Register</div> */}
             </div>
           </div>
         </div>

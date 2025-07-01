@@ -32,19 +32,30 @@ function EventCardsHome({
                     <div className="events-card-img-cover">
                       <img
                         className="events-card-event-img"
-                        src={images.eventCard}
-                        alt="events"
+                        src={
+                          event?.imageInfo?.[0]?.path || images.logoBackground
+                        }
+                        alt={event?.title || "Event"}
+                        onError={(e) => {
+                          e.currentTarget.src = images.logoBackground;
+                        }}
+                        onLoad={(e) => {
+                          e.currentTarget.style.opacity = "1";
+                        }}
+                        style={{ opacity: 0, transition: "opacity 0.3s ease" }}
                       />
                     </div>
-                    <div className="events-card-event-title">{event.title}</div>
+                    <div className="events-card-event-title">
+                      {event?.title || "Event Title"}
+                    </div>
                     <div className="events-card-event-date">
-                      {icons.date} &nbsp; {event.date}
+                      {icons.date} &nbsp; {event?.date || "Date TBD"}
                     </div>
                     <div className="events-card-event-time">
-                      {icons.clock}&nbsp; {event.time}
+                      {icons.clock}&nbsp; {event?.time || "Time TBD"}
                     </div>
                     <div className="events-card-event-location">
-                      {icons.location}&nbsp; {event.location}
+                      {icons.location}&nbsp; {event?.location || "Location TBD"}
                     </div>
                   </div>
                 </div>

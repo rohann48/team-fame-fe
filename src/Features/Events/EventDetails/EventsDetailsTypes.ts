@@ -13,6 +13,13 @@ export type EventsDetailsTypes = {
     title: string;
     updatedAt: string;
     _id: string;
+    imageInfo: {
+      Key: string;
+      date: Date;
+      name: string;
+      path: string;
+      _id: string;
+    }[];
   };
 };
 export type EventsDetailsContainerTypes = {

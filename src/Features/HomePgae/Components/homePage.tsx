@@ -438,6 +438,25 @@ const HomePage = ({
     setShowAlert(false);
     navigate("/shop");
   };
+  function getDaysRemaining(dateStr: string) {
+    const eventDate = new Date(dateStr);
+    const today = new Date();
+
+    // Reset time for accurate diff in days
+    eventDate.setHours(0, 0, 0, 0);
+    today.setHours(0, 0, 0, 0);
+
+    const diffTime = eventDate.getTime() - today.getTime();
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+    if (diffDays > 0) {
+      return `${diffDays} day${diffDays !== 1 ? "s" : ""} left`;
+    } else if (diffDays === 0) {
+      return "Today";
+    } else {
+      return "Past Event";
+    }
+  }
 
   return (
     <div className="home-page-container">
@@ -540,11 +559,17 @@ const HomePage = ({
                       />
                     </div>
                     <div className="card-right-cover">
-                      <div className="day">TOMORROW</div>
+                      <div className="day"> {getDaysRemaining(event.date)}</div>
                       <div className="marathon-img-cover">
                         <img
-                          src={images.logoBackground}
+                          src={
+                            event?.imageInfo?.[0]?.path || images.logoBackground
+                          }
+                          alt={event.title}
                           className="marathon-img"
+                          onError={(e) => {
+                            e.currentTarget.src = images.logoBackground;
+                          }}
                         />
                       </div>
                       <div className="marathon-header">{event.title}</div>
