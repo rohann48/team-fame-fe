@@ -21,6 +21,9 @@ export type EventsDetailsTypes = {
       _id: string;
     }[];
   };
+  handleRegsiterEvent: (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => void;
 };
 export type EventsDetailsContainerTypes = {
   eventAndNewsDetails: EventsDetailsTypes["eventAndNewsDetails"];

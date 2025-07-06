@@ -31,5 +31,6 @@ export const Resource = {
     updateTestimonial: (testimonialId: string) =>
       `/testimonial/update?testimonialId=${testimonialId}`,
     updateEvents: (eventId: string) => `/event/update?eventId=${eventId}`,
+    getClientEvents: `/event/client-events`,
   },
 };

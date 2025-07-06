@@ -56,6 +56,8 @@ import images from "../../../ImageVariables";
 import { useRoutes } from "react-router-dom";
 import { configRoutes } from "../../routes";
 import { LoginContext } from "../../../context/LoginContext";
+import { title } from "process";
+import path from "path";
 
 function ConfigurationContainer() {
   const { userInfo, isLoadingUserInfo } = useContext(LoginContext);
@@ -134,6 +136,11 @@ function ConfigurationContainer() {
             title: "Clients details",
             img: images.userProfile,
             path: "clients-info",
+          },
+          {
+            title: "Event Registration",
+            img: images.eventIcon,
+            path: "event-registration",
           },
         ]
       : []),

@@ -5,7 +5,10 @@ import images from "../../../ImageVariables";
 import { EventsDetailsTypes } from "../EventsDetailsTypes";
 import "../SCSS/styles.css";
 
-function EventDetails({ eventAndNewsDetails }: EventsDetailsTypes) {
+function EventDetails({
+  eventAndNewsDetails,
+  handleRegsiterEvent,
+}: EventsDetailsTypes) {
   return (
     <div className="events-details-cards-container">
       <div className="events-details-bg-img-cover"></div>
@@ -44,7 +47,12 @@ function EventDetails({ eventAndNewsDetails }: EventsDetailsTypes) {
               {icons.location}&nbsp; {eventAndNewsDetails.location}
             </div>
             <div className="events-details-cards-register-btn-cover">
-              {/* <div className="events-details-cards-register-btn">Register</div> */}
+              <div
+                className="events-details-cards-register-btn"
+                onClick={(e) => handleRegsiterEvent(e)}
+              >
+                Register
+              </div>
             </div>
           </div>
         </div>

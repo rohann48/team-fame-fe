@@ -184,4 +184,10 @@ export const ApiHandler = {
     );
     return response.data;
   },
+  getClientEvents: async () => {
+    const response = await apiAuth.getApiwithoutAuth(
+      Resource.url.getClientEvents
+    );
+    return response.data;
+  },
 };

@@ -30,5 +30,7 @@ export const Resource = {
     postInvestment: (schemeId: string | null) =>
       `/gold-scheme/investment/${schemeId}`,
     postPaymentDetails: `/payments/create-order`,
+    registerEvent: (eventId: string | null) =>
+      `/event/register-event?eventId=${eventId}`,
   },
 };

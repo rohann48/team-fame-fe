@@ -12,6 +12,7 @@ import {
   faArrowLeft,
   faFilm,
   faUserCircle,
+  faCalendarDays,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { faMessage, faTrashCan } from "@fortawesome/free-regular-svg-icons";
@@ -32,6 +33,9 @@ const icons = {
   backBtn: <FontAwesomeIcon icon={faArrowLeft} size="1x" color="#444444" />,
   videoLength: <FontAwesomeIcon icon={faFilm} size="1x" color="#BD9255" />,
   avatar: <FontAwesomeIcon icon={faUserCircle} size="1x" color="#000000" />,
+  eventLogo: (
+    <FontAwesomeIcon icon={faCalendarDays} size="2x" color="#F39C12" />
+  ),
 
   // facebook: <FontAwesomeIcon icon={faSquareFacebook} />
 };

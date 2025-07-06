@@ -4,8 +4,9 @@ import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import { NavLink } from "react-router-dom";
 import { HeaderNavProps } from "../HeaderNavTypes";
-import icons from "../../Assets/Icons/icons";
-import { RoleType } from "../../Common/Enums.types";
+
+import { useState } from "react";
+import { NotificationManager } from "react-notifications";
 
 const HeaderNav = ({
   activeTab,
@@ -24,6 +25,42 @@ const HeaderNav = ({
   isMobile,
   confirmMessageForIsMemberOrNot,
 }: HeaderNavProps) => {
+  const [copyFeedback, setCopyFeedback] = useState<string>("");
+
+  const handleCopyReferralCode = async () => {
+    try {
+      await navigator.clipboard.writeText(singleUserInfo?.referralCode!);
+      setCopyFeedback("Copied!");
+      setTimeout(() => setCopyFeedback(""), 2000);
+      NotificationManager.success(
+        "Referral code copied successfully",
+        "",
+        2000
+      );
+    } catch (err) {
+      // Fallback for older browsers
+      const textArea = document.createElement("textarea");
+      textArea.value = singleUserInfo?.referralCode!;
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand("copy");
+        setCopyFeedback("Copied!");
+        setTimeout(() => setCopyFeedback(""), 2000);
+        NotificationManager.success(
+          "Referral code copied successfully",
+          "",
+          2000
+        );
+      } catch (fallbackErr) {
+        setCopyFeedback("Copy failed");
+        setTimeout(() => setCopyFeedback(""), 2000);
+        NotificationManager.error("Failed to copy referral code", "", 2000);
+      }
+      document.body.removeChild(textArea);
+    }
+  };
   return (
     <div className="header-nav-container">
       <div className="icon-cover">
@@ -153,7 +190,9 @@ const HeaderNav = ({
                   </div>
                   <div className="user-id-cover">
                     <div>Referral ID</div>
-                    <div>{singleUserInfo.referralCode}</div>
+                    <div onClick={() => handleCopyReferralCode()}>
+                      {singleUserInfo.referralCode}
+                    </div>
                   </div>
                   <div className="user-email-cover">
                     <div>Email ID</div>

@@ -257,4 +257,11 @@ export const ApiHandler = {
       throw error.response.data;
     }
   },
+  registerEvent: async (eventId: string | null, clientId: string) => {
+    const response = await apiAuth.putApiwithoutAuth(
+      Resource.url.registerEvent(eventId),
+      { clientId }
+    );
+    return response.data;
+  },
 };
