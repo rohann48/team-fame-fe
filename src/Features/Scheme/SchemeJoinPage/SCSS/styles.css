@@ -14,10 +14,13 @@
 }
 .scheme-container .gold-scheme-img-one-cover {
   width: 100%;
-  height: 280px;
+  min-height: 120px;
+  height: 28vw;
+  max-height: 320px;
   background-image: url("../../../Assets/Images/shreeLogo.svg");
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
 }
 .scheme-container .gold-scheme-img-two-cover {
   width: 100%;
@@ -30,6 +33,22 @@
 }
 .scheme-container .gold-scheme-img-two-cover .gold-scheme-img-two-text-cover {
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .scheme-container .gold-scheme-img-two-cover .gold-scheme-img-two-text-cover .text-one-cover {
   display: -webkit-box;
@@ -38,17 +57,19 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #bd9255;
   font-size: 24px;
-  height: 10%;
+  height: auto;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 .scheme-container .gold-scheme-img-two-cover .gold-scheme-img-two-text-cover .text-two-cover {
-  font-size: 55px;
+  font-size: 48px;
   color: #bd9255;
-  height: 90%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,31 +77,17 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 2rem;
-  gap: 10%;
-}
-.scheme-container .gold-scheme-img-two-cover .gold-scheme-img-two-text-cover .text-two-cover .header-two {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 1rem;
+  gap: 1rem;
 }
-.scheme-container .gold-scheme-img-two-cover .gold-scheme-img-two-text-cover .text-two-cover .header-three {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
+.scheme-container .gold-scheme-img-two-cover .gold-scheme-img-two-text-cover .text-two-cover .header-two,
+.scheme-container .gold-scheme-img-two-cover .gold-scheme-img-two-text-cover .text-two-cover .header-three,
 .scheme-container .gold-scheme-img-two-cover .gold-scheme-img-two-text-cover .text-two-cover .header-four {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,6 +98,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
+  word-break: break-word;
 }
 .scheme-container .gold-scheme-img-two-cover .gold-scheme-img-two-locket-cover {
   width: 50%;
@@ -477,18 +486,13 @@
 @media (max-width: 768px) {
   .scheme-container .gold-scheme-img-one-cover {
     width: 100%;
-    height: 280px;
+    height: 18vw;
+    min-height: 80px;
+    max-height: 180px;
     background-image: url("../../../Assets/Images/shreeLogo.svg");
-    background-size: cover;
-    /* Ensures the image covers the container */
+    background-size: contain;
     background-position: center;
-    /* Centers the image */
     background-repeat: no-repeat;
-    /* Prevents the image from repeating */
-  }
-  .scheme-container .gold-scheme-img-one-cover {
-    height: 150px;
-    /* Adjust the height for smaller screens */
   }
   .scheme-container .gold-scheme-img-two-cover {
     -webkit-box-orient: vertical;
@@ -499,9 +503,13 @@
   }
   .scheme-container .gold-scheme-img-two-cover .gold-scheme-img-two-text-cover {
     width: 100%;
+    padding: 1rem 0.5rem;
+  }
+  .scheme-container .gold-scheme-img-two-cover .gold-scheme-img-two-text-cover .text-one-cover {
+    font-size: 18px;
   }
   .scheme-container .gold-scheme-img-two-cover .gold-scheme-img-two-text-cover .text-two-cover {
-    font-size: 36px;
+    font-size: 32px;
   }
   .scheme-container .gold-scheme-img-two-cover .gold-scheme-img-two-locket-cover {
     width: 100%;
@@ -532,22 +540,23 @@
 @media (max-width: 600px) {
   .scheme-container .gold-scheme-img-one-cover {
     width: 100%;
-    height: 280px;
+    height: 80px;
+    min-height: 60px;
+    max-height: 110px;
     background-image: url("../../../Assets/Images/shreeLogo.svg");
     background-size: contain;
-    /* Ensures the image covers the container */
     background-position: center;
-    /* Centers the image */
     background-repeat: no-repeat;
-    aspect-ratio: 3/2;
-    /* Prevents the image from repeating */
   }
-  .scheme-container .gold-scheme-img-one-cover {
-    height: 110px;
-    /* Adjust the height for smaller screens */
+  .scheme-container .gold-scheme-img-two-cover .gold-scheme-img-two-text-cover {
+    width: 100%;
+    padding: 0.5rem 0.2rem;
+  }
+  .scheme-container .gold-scheme-img-two-cover .gold-scheme-img-two-text-cover .text-one-cover {
+    font-size: 14px;
   }
   .scheme-container .gold-scheme-img-two-cover .gold-scheme-img-two-text-cover .text-two-cover {
-    font-size: 24px;
+    font-size: 20px;
   }
   .scheme-container .scheme-details-cover {
     height: auto;

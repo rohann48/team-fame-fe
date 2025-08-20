@@ -37,9 +37,30 @@
         width: 100%;
 
         .logo-img {
-          width: 50vw;
+          max-width: 50vw;
+          width: 100%;
+          height: auto;
           opacity: 0.8;
           object-fit: contain;
+          display: block;
+          margin: 0 auto;
+        }
+
+        @media (max-width: 1220px) {
+          .logo-img {
+            max-width: 70vw;
+          }
+        }
+        @media (max-width: 900px) {
+          .logo-img {
+            max-width: 90vw;
+          }
+        }
+        @media (max-width: 600px) {
+          .logo-img {
+            max-width: 100vw;
+            padding: 0 10px;
+          }
         }
 
         .contact-us-btn {

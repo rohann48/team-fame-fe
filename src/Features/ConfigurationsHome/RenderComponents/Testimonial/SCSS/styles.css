@@ -183,7 +183,7 @@
   margin: 0 5px;
 }
 .testimonial-container .testimonial-table-cover .pagination-controls .pagination-button:disabled {
-  background-color: #cbaa7a;
+  background-color: rgb(203.2627118644, 169.5550847458, 121.7372881356);
   cursor: not-allowed;
 }
 .testimonial-container .testimonial-table-cover .pagination-controls .page-indicator {
