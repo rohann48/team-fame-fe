@@ -471,8 +471,8 @@ const HomePage = ({
           <div className="logo-and-btn-cover">
             <img
               className="logo-img"
-              src={images.fameRevolutionLogo}
-              alt="fameRevolutionLogo"
+              src={images.fameNewLogo}
+              alt="fameNewLogo"
             />
           </div>
         </div>
