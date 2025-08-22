@@ -95,7 +95,7 @@ if (process.env.NODE_ENV === "development") {
     eventNewLogo: require("./Assets/Images/eventNewLogo.svg").default,
     eventsMarathon: require("./Assets/Images/eventsMarathon.svg").default,
     fameNewLogo: require("./Assets/Images/fameNewLogo.png"),
-    shreeLogoNew: require("./Assets/Images/shreeLogoNew.png"),
+    shreeLogoNew: require("./Assets/Images/shreenewlogo.png"),
   };
 } else {
   images = {

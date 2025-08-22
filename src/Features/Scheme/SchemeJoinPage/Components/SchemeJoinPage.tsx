@@ -12,7 +12,13 @@ function SchemeJoinPage({
 }: Readonly<SchemeJoinPageTypes>) {
   return (
     <div className="scheme-container">
-      <div className="gold-scheme-img-one-cover"></div>
+      <div className="gold-scheme-img-one-cover">
+        <h1 className="title">
+          WELCOME TO SHREE RAKSHA
+          <br />
+          SMART INVESTMENT PLAN
+        </h1>
+      </div>
       <div className="gold-scheme-img-two-cover">
         <div className="gold-scheme-img-two-text-cover">
           {/* <div className="text-one-cover">
