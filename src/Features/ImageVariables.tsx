@@ -159,7 +159,7 @@ if (process.env.NODE_ENV === "development") {
     eventNewLogo: require("./Assets/Images/eventNewLogo.svg"),
     eventsMarathon: require("./Assets/Images/eventsMarathon.svg"),
     fameNewLogo: require("./Assets/Images/fameNewLogo.png"),
-    shreeLogoNew: require("./Assets/Images/shreeLogoNew.png"),
+    shreeLogoNew: require("./Assets/Images/shreenewlogo.png"),
   };
 }
 
