@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import "./App.css";
 import { mainRoutes } from "./Features/routes";
 import { useRoutes, useNavigate } from "react-router-dom";
@@ -14,6 +14,7 @@ import HeaderNav from "./Features/HeaderNav";
 import Footer from "./Features/Common/CommonComponent/Footer/Components/footer";
 import GlobalDataContextProvider from "./Features/context/GlobalDataContext";
 import ShopContextProvider from "./Features/context/ShopContext/ShopContext";
+import LogoLoader from "./Features/Common/CommonComponent/FameLoader/Components/FameLoader";
 function App() {
   const renderRoutes = useRoutes(mainRoutes);
   // const [userData, setUserData] = useState(null);
@@ -93,12 +94,13 @@ function App() {
               <HeaderNav isMobile={isMobile} />
               <div className="home-render-routes-cover">
                 <div className="rendering-routes-components">
-                  {renderRoutes}
+                  <Suspense fallback={<LogoLoader />}>{renderRoutes}</Suspense>
                 </div>
               </div>
             </ShopContextProvider>
           </div>
           <NotificationContainer />
+          {/* <Footer /> */}
         </div>
       </GlobalDataContextProvider>
     </LoginContextProvider>

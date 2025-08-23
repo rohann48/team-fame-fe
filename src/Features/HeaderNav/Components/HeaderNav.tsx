@@ -190,9 +190,14 @@ const HeaderNav = ({
                   </div>
                   <div className="user-id-cover">
                     <div>Referral ID</div>
-                    <div onClick={() => handleCopyReferralCode()}>
-                      {singleUserInfo.referralCode}
-                    </div>
+                    <Tippy content="click to copy" placement="bottom">
+                      <div
+                        style={{ cursor: "pointer" }}
+                        onClick={() => handleCopyReferralCode()}
+                      >
+                        {singleUserInfo.referralCode}
+                      </div>
+                    </Tippy>
                   </div>
                   <div className="user-email-cover">
                     <div>Email ID</div>

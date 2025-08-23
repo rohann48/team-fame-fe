@@ -54,17 +54,17 @@
 }
 @media (max-width: 1220px) {
   .home-page-container .home-page-cover .home-revolution-logo-cover .logo-and-btn-cover .logo-img {
-    max-width: 70vw;
+    max-width: 65vw;
   }
 }
 @media (max-width: 900px) {
   .home-page-container .home-page-cover .home-revolution-logo-cover .logo-and-btn-cover .logo-img {
-    max-width: 90vw;
+    max-width: 70vw;
   }
 }
 @media (max-width: 600px) {
   .home-page-container .home-page-cover .home-revolution-logo-cover .logo-and-btn-cover .logo-img {
-    max-width: 100vw;
+    max-width: 80vw;
     padding: 0 10px;
   }
 }
@@ -1292,7 +1292,7 @@
 
 @media screen and (max-width: 768px) {
   .home-page-container .home-page-cover {
-    padding: 5% 3%;
+    padding: 1% 2%;
   }
   .home-page-container .home-page-cover .home-revolution-logo-cover .home-revolution-logo {
     height: auto;
@@ -1402,7 +1402,7 @@
 }
 @media screen and (max-width: 600px) {
   .home-page-container .home-page-cover {
-    padding: 5% 2%;
+    padding: 2% 2%;
   }
   .home-page-container .home-page-cover .home-revolution-logo-cover .logo-and-btn-cover .contact-us-btn {
     font-size: 12px;
